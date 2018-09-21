@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BookCollector
+namespace BookCollector.Screens.Collections
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RecentCollectionView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RecentCollectionView : UserControl
     {
-        public MainWindow()
+        public RecentCollectionView()
         {
             InitializeComponent();
         }

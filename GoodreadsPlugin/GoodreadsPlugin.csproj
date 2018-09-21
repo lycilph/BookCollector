@@ -4,44 +4,34 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76B0136B-6134-41DA-8C81-FA5F830E2B87}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>BookCollector</RootNamespace>
-    <AssemblyName>BookCollector</AssemblyName>
+    <ProjectGuid>{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>GoodreadsPlugin</RootNamespace>
+    <AssemblyName>GoodreadsPlugin</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\BookCollector\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\BookCollector\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>Images\book_open_page_black.ico</ApplicationIcon>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
@@ -102,48 +92,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Application\ApplicationController.cs" />
-    <Compile Include="Application\ApplicationMessage.cs" />
-    <Compile Include="Application\Repository.cs" />
-    <Compile Include="Application\StateManager.cs" />
-    <Compile Include="Screens\Books\BooksView.xaml.cs">
-      <DependentUpon>BooksView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Books\BooksViewModel.cs" />
-    <Compile Include="Screens\Collections\CollectionsView.xaml.cs">
-      <DependentUpon>CollectionsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Collections\CollectionsViewModel.cs" />
-    <Compile Include="Screens\Collections\RecentCollectionView.xaml.cs">
-      <DependentUpon>RecentCollectionView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Collections\RecentCollectionViewModel.cs" />
-    <Compile Include="Screens\Logs\LogsViewModel.cs" />
-    <Compile Include="Screens\Logs\LogsView.xaml.cs">
-      <DependentUpon>LogsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Modules\IModulesViewModel.cs" />
-    <Compile Include="Screens\Modules\ModulesView.xaml.cs">
-      <DependentUpon>ModulesView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Modules\ModulesViewModel.cs" />
-    <Compile Include="Screens\Shell\IShellViewModel.cs" />
-    <Compile Include="Screens\Shell\ShellView.xaml.cs">
-      <DependentUpon>ShellView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Shell\ShellViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Application\ApplicationNinjectModule.cs" />
-    <Compile Include="Application\Bootstrapper.cs" />
+    <Compile Include="GoodreadsNinjectModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -157,28 +106,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Screens\Import\ImportView.xaml.cs">
+      <DependentUpon>ImportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Import\ImportViewModel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Images\remove from list.png" />
-    <Content Include="NLog.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\book_open_page_black.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
@@ -191,36 +132,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Screens\Books\BooksView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Collections\CollectionsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Collections\RecentCollectionView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Logs\LogsView.xaml">
+    <Page Include="Screens\Import\ImportView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Screens\Modules\ModulesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Shell\ShellView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\Notes\" />
-    <Folder Include="Screens\Series\" />
-    <Folder Include="Screens\Settings\" />
-    <Folder Include="Screens\Shelves\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
