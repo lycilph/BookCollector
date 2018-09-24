@@ -25,7 +25,7 @@ namespace BookCollector.Application
             Bind<IDialogManager>().To<DialogManager>().InSingletonScope();
 
             Bind<IShellViewModel>().To<ShellViewModel>().InSingletonScope();
-            Bind<IModule, IModulesViewModel>().To<ModulesViewModel>().InSingletonScope();
+            Bind<IModulesViewModel>().To<ModulesViewModel>().InSingletonScope();
             Bind<IModule>().To<BooksViewModel>().InSingletonScope();
             Bind<IModule>().To<CollectionsViewModel>().InSingletonScope();
             Bind<IModule>().To<LogsViewModel>().InSingletonScope();

@@ -8,7 +8,7 @@
         Shelves,
         Series,
         Notes,
-        // Plugin modules
+        // Plugin modules (these are also specific to a collection
         Plugin,
         // Generic modules
         Collections,

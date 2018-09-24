@@ -1,5 +1,6 @@
 ﻿using BookCollector.Application;
 using BookCollector.Screens.Modules;
+using Core;
 using Core.Application;
 using Core.Infrastructure;
 using NLog;
@@ -15,12 +16,11 @@ namespace BookCollector.Screens.Shell
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly string application_name = "Book Collector";
-        private readonly List<ModuleType> shell_modules = new List<ModuleType> { ModuleType.Collections, ModuleType.Settings };
         private IModule previous_module;
 
         private IStateManager state_manager;
-        private IEnumerable<IModule> Modules { get; set; }
         private IModulesViewModel modules_view_model;
+        private IEnumerable<IModule> Modules;
 
         private IModule _CurrentModule;
         public IModule CurrentModule
@@ -52,12 +52,12 @@ namespace BookCollector.Screens.Shell
             set { this.RaiseAndSetIfChanged(ref _ToggleLogCommand, value); }
         }
 
-        public ShellViewModel(IStateManager state_manager, IEnumerable<IModule> Modules, IModulesViewModel modules_view_model)
+        public ShellViewModel(IStateManager state_manager, IModulesViewModel modules_view_model, IEnumerable<IModule> Modules)
         {
             DisplayName = application_name;
             this.state_manager = state_manager;
-            this.Modules = Modules;
             this.modules_view_model = modules_view_model;
+            this.Modules = Modules;
 
             this.WhenAnyValue(x => x.state_manager.CurrentCollection, x => x.state_manager.CurrentCollection.Name)
                 .Subscribe(x =>
@@ -79,7 +79,7 @@ namespace BookCollector.Screens.Shell
         public void NavigateTo(ModuleType module)
         {
             logger.Trace($"Navigating to [{module}] module");
-            if (shell_modules.Contains(module))
+            if (Constants.GenericModules.Contains(module))
             {
                 CurrentModule = Modules.FirstOrDefault(m => m.Type == module);
             }

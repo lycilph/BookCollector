@@ -3,9 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:panda="Panda"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="modules"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   Text="{Binding CurrentCollection.Name}"
+                   FontSize="24"/>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="0,0,20,0">
+            <ListBox BorderBrush="Transparent"
+                     ItemsSource="{Binding CollectionModules}"
+                     SelectedItem="{Binding CurrentModule}"
+                     DisplayMemberPath="DisplayName"/>
+            <Separator/>
+            <ListBox BorderBrush="Transparent"
+                     ItemsSource="{Binding PluginModules}"
+                     SelectedItem="{Binding CurrentModule}"
+                     DisplayMemberPath="DisplayName"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="0,0,20,0">
+            <Button Content="Collections" 
+                    Command="{Binding CollectionsCommand}"/>
+            <Button Content="Settings" 
+                    Margin="0,10,0,0"
+                    Command="{Binding SettingsCommand}"/>
+        </StackPanel>
+
+        <ContentControl Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        panda:View.Bind="{Binding CurrentModule}"
+                        Background="AliceBlue"/>
     </Grid>
 </UserControl>

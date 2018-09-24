@@ -20,9 +20,9 @@
         <StatusBar Grid.Row="1"
                    Background="White">
             <StatusBarItem DockPanel.Dock="Right">
-                <Button Content="Log"
-                        Padding="2"
-                        Command="{Binding ToggleLogCommand}"/>
+                <ToggleButton Content="Log"
+                              Padding="2"
+                              Command="{Binding ToggleLogCommand}"/>
             </StatusBarItem>
             <Separator DockPanel.Dock="Right" Width="1"/>
             <StatusBarItem>
