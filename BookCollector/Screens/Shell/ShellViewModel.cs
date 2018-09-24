@@ -57,7 +57,7 @@ namespace BookCollector.Screens.Shell
             DisplayName = application_name;
             this.state_manager = state_manager;
             this.modules_view_model = modules_view_model;
-            this.Modules = Modules;
+            this.Modules = new List<IModule>(Modules).Append(modules_view_model);
 
             this.WhenAnyValue(x => x.state_manager.CurrentCollection, x => x.state_manager.CurrentCollection.Name)
                 .Subscribe(x =>

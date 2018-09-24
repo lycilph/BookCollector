@@ -135,6 +135,10 @@
       <DependentUpon>ModulesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Modules\ModulesViewModel.cs" />
+    <Compile Include="Screens\Settings\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings\SettingsViewModel.cs" />
     <Compile Include="Screens\Shell\IShellViewModel.cs" />
     <Compile Include="Screens\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -211,6 +215,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Screens\Settings\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screens\Shell\ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -219,7 +227,6 @@
   <ItemGroup>
     <Folder Include="Screens\Notes\" />
     <Folder Include="Screens\Series\" />
-    <Folder Include="Screens\Settings\" />
     <Folder Include="Screens\Shelves\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

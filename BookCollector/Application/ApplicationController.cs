@@ -62,6 +62,9 @@ namespace BookCollector.Application
                 case ApplicationMessage.NavigateToSettings:
                     shell.NavigateTo(ModuleType.Settings);
                     break;
+                case ApplicationMessage.NavigateToModules:
+                    shell.NavigateTo(ModuleType.Modules);
+                    break;
                 default:
                     throw new ArgumentException($"Unhandled application message {message}");
             }
