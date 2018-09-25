@@ -88,6 +88,10 @@ namespace BookCollector.Screens.Collections
                 else
                     c.Name = collection.Name;
             }
+
+            // Save the CurrentCollection in case it is replaced
+            if (state_manager.CurrentCollection != null)
+                repository.SaveCollection(state_manager.CurrentCollection);
         }
 
         private void SelectCollection(RecentCollectionViewModel recent_collection)

@@ -35,6 +35,6 @@ using System.Windows.Markup;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: XmlnsDefinition("Panda", "Panda.Infrastructure")]
-[assembly: XmlnsDefinition("Panda", "Panda.Converters")]
-[assembly: XmlnsDefinition("Panda", "Panda.Utils")]
+[assembly: XmlnsDefinition("http://www.panda.com", "Panda.Infrastructure")]
+[assembly: XmlnsDefinition("http://www.panda.com", "Panda.Converters")]
+[assembly: XmlnsDefinition("http://www.panda.com", "Panda.Utils")]
