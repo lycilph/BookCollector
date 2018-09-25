@@ -117,6 +117,10 @@
       <DependentUpon>BooksView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Books\BooksViewModel.cs" />
+    <Compile Include="Screens\Books\BookView.xaml.cs">
+      <DependentUpon>BookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Books\BookViewModel.cs" />
     <Compile Include="Screens\Collections\CollectionsView.xaml.cs">
       <DependentUpon>CollectionsView.xaml</DependentUpon>
     </Compile>
@@ -199,6 +203,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Screens\Books\BooksView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Books\BookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

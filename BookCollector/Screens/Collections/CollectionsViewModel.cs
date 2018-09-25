@@ -1,5 +1,4 @@
-﻿using BookCollector.Application;
-using Core;
+﻿using Core;
 using Core.Application;
 using Core.Infrastructure;
 using NLog;

@@ -3,9 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:panda="Panda"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Books"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock FontSize="24">
+                <Run Text="{Binding DisplayName}"/>
+                <Run Text=" - "/>
+                <Run Text="{Binding Books.Count, Mode=OneWay}"/>
+            </TextBlock>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1"
+                  Margin="0,5,0,0"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding Books}"
+                  SelectedItem="{Binding SelectedBook}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="Authors" Binding="{Binding Authors}" Width="*"/>
+                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <GridSplitter Grid.Row="0"
+                      Grid.RowSpan="2"
+                      Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Stretch"
+                      Width="3"
+                      Margin="2,0"/>
+
+        <ContentControl Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Grid.Column="2"
+                        Margin="5,0,0,0"
+                        panda:View.Bind="{Binding SelectedBook}"/>
     </Grid>
 </UserControl>
