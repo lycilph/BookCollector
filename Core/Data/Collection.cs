@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Core.Data
 {
-    [DebuggerDisplay("Name = {Name}, Filename = {Filename}, Id = {Id}")]
+    [DebuggerDisplay("Name = {Name}")]
     [JsonObject(MemberSerialization.OptOut)]
     public class Collection : ReactiveObject
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         private string _Filename;
         [JsonIgnore]
         public string Filename
@@ -38,6 +38,18 @@ namespace Core.Data
         {
             get { return _Notes; }
             set { this.RaiseAndSetIfChanged(ref _Notes, value); }
+        }
+
+        public bool IsBookInCollection(string title, string isbn, string isbn13)
+        {
+            return Books.Any(b => string.Equals(b.Title, title, StringComparison.InvariantCultureIgnoreCase) ||
+                                  string.Equals(b.ISBN, isbn, StringComparison.InvariantCultureIgnoreCase) ||
+                                  string.Equals(b.ISBN13, isbn13, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        public void Add(IEnumerable<Book> books)
+        {
+            Books.AddRange(books);
         }
     }
 }

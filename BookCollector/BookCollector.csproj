@@ -111,7 +111,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application\ApplicationController.cs" />
-    <Compile Include="Application\ApplicationMessage.cs" />
     <Compile Include="Application\Repository.cs" />
     <Compile Include="Application\StateManager.cs" />
     <Compile Include="Screens\Books\BooksView.xaml.cs">
