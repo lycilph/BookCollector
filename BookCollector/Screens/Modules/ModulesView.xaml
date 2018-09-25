@@ -6,6 +6,14 @@
              xmlns:panda="Panda"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="grouped_modules_collection" Source="{Binding GroupedModules}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Group"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,19 +31,27 @@
                    Text="{Binding CurrentCollection.Name}"
                    FontSize="24"/>
 
-        <StackPanel Grid.Row="1"
-                    Grid.Column="0"
-                    Margin="0,0,20,0">
-            <ListBox BorderBrush="Transparent"
-                     ItemsSource="{Binding CollectionModules}"
-                     SelectedItem="{Binding CurrentModule}"
-                     DisplayMemberPath="DisplayName"/>
-            <Separator/>
-            <ListBox BorderBrush="Transparent"
-                     ItemsSource="{Binding PluginModules}"
-                     SelectedItem="{Binding CurrentModule}"
-                     DisplayMemberPath="DisplayName"/>
-        </StackPanel>
+        <ListBox Grid.Row="1"
+                 Grid.Column="0"
+                 Margin="0,0,20,0"
+                 BorderThickness="0"
+                 ItemsSource="{Binding Source={StaticResource grouped_modules_collection}}"
+                 SelectedItem="{Binding CurrentModule}">
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Margin" Value="0,0,0,10"/>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListBox.GroupStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl panda:View.Bind="{Binding}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
         <StackPanel Grid.Row="2"
                     Grid.Column="0"
@@ -50,7 +66,6 @@
         <ContentControl Grid.Row="1"
                         Grid.RowSpan="2"
                         Grid.Column="1"
-                        panda:View.Bind="{Binding CurrentModule}"
-                        Background="AliceBlue"/>
+                        panda:View.Bind="{Binding CurrentModule.Obj}"/>
     </Grid>
 </UserControl>

@@ -25,22 +25,15 @@ namespace BookCollector.Screens.Modules
             set { this.RaiseAndSetIfChanged(ref _CurrentCollection, value); }
         }
 
-        private ReactiveList<IModule> _CollectionModules;
-        public ReactiveList<IModule> CollectionModules
+        private ReactiveList<ModuleGroupViewModel> _GroupedModules;
+        public ReactiveList<ModuleGroupViewModel> GroupedModules
         {
-            get { return _CollectionModules; }
-            set { this.RaiseAndSetIfChanged(ref _CollectionModules, value); }
+            get { return _GroupedModules; }
+            set { this.RaiseAndSetIfChanged(ref _GroupedModules, value); }
         }
 
-        private ReactiveList<IModule> _PluginModules;
-        public ReactiveList<IModule> PluginModules
-        {
-            get { return _PluginModules; }
-            set { this.RaiseAndSetIfChanged(ref _PluginModules, value); }
-        }
-
-        private IModule _CurrentModule;
-        public IModule CurrentModule
+        private ModuleGroupViewModel _CurrentModule;
+        public ModuleGroupViewModel CurrentModule
         {
             get { return _CurrentModule; }
             set
@@ -74,11 +67,12 @@ namespace BookCollector.Screens.Modules
             this.state_manager = state_manager;
             this.Modules = Modules;
 
-            CollectionModules = Modules.Where(m => Constants.CollectionModules.Contains(m.Type))
-                                       .ToReactiveList();
-
-            PluginModules = Modules.Where(m => Constants.PluginModules.Contains(m.Type))
-                                   .ToReactiveList();
+            var collection_modules = Modules.Where(m => Constants.CollectionModules.Contains(m.Type))
+                                            .Select(m => new ModuleGroupViewModel(m, "Collection"));
+            var plugin_modules = Modules.Where(m => Constants.PluginModules.Contains(m.Type))
+                                        .Select(m => new ModuleGroupViewModel(m, "Plugin"));
+            GroupedModules = collection_modules.Concat(plugin_modules)
+                                               .ToReactiveList();
 
             CollectionsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(ApplicationMessage.NavigateToCollections));
             SettingsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(ApplicationMessage.NavigateToSettings));
@@ -87,7 +81,7 @@ namespace BookCollector.Screens.Modules
         public override void OnActivated()
         {
             CurrentCollection = state_manager.CurrentCollection;
-            CurrentModule?.Activate();
+            CurrentModule?.Obj?.Activate();
         }
 
         public override void OnDeactivated()
@@ -98,7 +92,7 @@ namespace BookCollector.Screens.Modules
 
         public void SetModule(ModuleType module)
         {
-            CurrentModule = Modules.FirstOrDefault(m => m.Type == module);
+            CurrentModule = GroupedModules.FirstOrDefault(m => m.Type == module);
         }
     }
 }

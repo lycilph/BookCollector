@@ -131,6 +131,10 @@
       <DependentUpon>LogsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Modules\IModulesViewModel.cs" />
+    <Compile Include="Screens\Modules\ModuleGroupView.xaml.cs">
+      <DependentUpon>ModuleGroupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Modules\ModuleGroupViewModel.cs" />
     <Compile Include="Screens\Modules\ModulesView.xaml.cs">
       <DependentUpon>ModulesView.xaml</DependentUpon>
     </Compile>
@@ -210,6 +214,10 @@
     <Page Include="Screens\Logs\LogsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\Modules\ModuleGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Modules\ModulesView.xaml">
       <SubType>Designer</SubType>
