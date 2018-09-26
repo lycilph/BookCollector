@@ -16,7 +16,8 @@
                            Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}"/>
                 <TextBox x:Name="editable_text"
                          VerticalAlignment="Center"
-                         Text="{Binding EditedText, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource TemplatedParent}}" Visibility="Hidden"/>
+                         Text="{Binding EditedText, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource TemplatedParent}}" 
+                         Visibility="Hidden"/>
             </Grid>
             <ControlTemplate.Triggers>
                 <Trigger Property="IsEditing" Value="True">
