@@ -26,10 +26,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0"
-                   Grid.Column="1"
-                   Text="{Binding CurrentCollection.Name}"
-                   FontSize="24"/>
+        <panda:EditableTextControl Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding CurrentCollection.Name}"
+                                   FontSize="24"/>
 
         <ListBox Grid.Row="1"
                  Grid.Column="0"

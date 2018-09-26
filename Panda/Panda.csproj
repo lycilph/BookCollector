@@ -105,6 +105,9 @@
     <Compile Include="Dialog\InputDialog.xaml.cs">
       <DependentUpon>InputDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\EditableTextControl.xaml.cs">
+      <DependentUpon>EditableTextControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\BindingProxy.cs" />
     <Compile Include="Utils\DirtyTrackingBase.cs" />
     <Compile Include="Utils\EnumerableExtensions.cs" />
@@ -135,6 +138,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UI\EditableTextControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
