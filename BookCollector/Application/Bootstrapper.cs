@@ -20,7 +20,9 @@ namespace BookCollector.Application
 
         public override void InitializeLogging()
         {
-            LogManager.Configuration.AddTarget("memory", new MemoryTarget());
+            var memory_target = new MemoryTarget() { Layout = "${uppercase:${level}} [${logger:shortName=true}] ${message}" };
+
+            LogManager.Configuration.AddTarget("memory", memory_target);
             LogManager.Configuration.AddRuleForAllLevels("memory");
             LogManager.Configuration.Reload();
         }
