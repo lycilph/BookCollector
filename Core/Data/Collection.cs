@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Core.Utility;
+using Newtonsoft.Json;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Core.Data
 {
     [DebuggerDisplay("Name = {Name}")]
     [JsonObject(MemberSerialization.OptOut)]
-    public class Collection : ReactiveObject
+    public class Collection : DirtyTrackingBase
     {
         private string _Filename;
         [JsonIgnore]

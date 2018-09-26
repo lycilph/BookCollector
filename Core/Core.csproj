@@ -99,7 +99,7 @@
     <Compile Include="Data\Note.cs" />
     <Compile Include="Data\RecentlyOpenedCollection.cs" />
     <Compile Include="Data\Settings.cs" />
-    <Compile Include="Infrastructure\ApplicationMessage.cs" />
+    <Compile Include="Application\ApplicationMessage.cs" />
     <Compile Include="Infrastructure\IModule.cs" />
     <Compile Include="Infrastructure\ModuleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

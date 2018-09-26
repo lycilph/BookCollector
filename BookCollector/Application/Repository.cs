@@ -59,6 +59,7 @@ namespace BookCollector.Application
 
                 collection = JsonUtils.ReadFromFile<Collection>(filename);
                 collection.Filename = filename;
+                collection.IsDirty = false;
             }
             catch (Exception)
             {
@@ -76,8 +77,7 @@ namespace BookCollector.Application
                 return;
             }
 
-            logger.Trace($"Saving collection {collection.Name}");
-
+            // If the collection doesn't have a filename, create one
             if (string.IsNullOrWhiteSpace(collection.Filename))
             {
                 var filename = string.Empty;
@@ -96,7 +96,16 @@ namespace BookCollector.Application
                 collection.Filename = Path.Combine(app_path, filename);
             }
 
+            if (File.Exists(collection.Filename) && !collection.IsDirty)
+            {
+                logger.Trace("Collection has not been changed, skipping save");
+                return;
+            }
+
+            logger.Trace($"Saving collection {collection.Name} as [{collection.Filename}]");
+
             JsonUtils.WriteToFile(collection.Filename, collection);
+            collection.IsDirty = false;
         }
 
         public Collection CreateCollection(string collection_name = "")
