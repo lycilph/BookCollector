@@ -111,7 +111,7 @@ namespace BookCollector.Screens.Collections
             {
                 var collection = repository.LoadCollection(recent_collection.Filename);
                 state_manager.CurrentCollection = collection;
-                MessageBus.Current.SendMessage(ApplicationMessage.CollectionSelected);
+                MessageBus.Current.SendMessage(ApplicationMessage.NavigateToBooks);
             }
         }
 
@@ -140,7 +140,7 @@ namespace BookCollector.Screens.Collections
                 var name = Path.GetFileNameWithoutExtension(dialog_result.Filename);
                 var collection = repository.CreateCollection(name);
                 state_manager.CurrentCollection = collection;
-                MessageBus.Current.SendMessage(ApplicationMessage.CollectionSelected);
+                MessageBus.Current.SendMessage(ApplicationMessage.NavigateToBooks);
             }
         }
 
@@ -151,7 +151,7 @@ namespace BookCollector.Screens.Collections
             {
                 var collection = repository.LoadCollection(dialog_result.Fullpath);
                 state_manager.CurrentCollection = collection;
-                MessageBus.Current.SendMessage(ApplicationMessage.CollectionSelected);
+                MessageBus.Current.SendMessage(ApplicationMessage.NavigateToBooks);
             }
         }
     }

@@ -1,4 +1,4 @@
 ﻿namespace Core.Application
 {
-    public enum ApplicationMessage { ShellLoaded, CollectionSelected, BooksImported, NavigateToCollections, NavigateToSettings, NavigateToModules }
+    public enum ApplicationMessage { ShellLoaded, NavigateToBooks, NavigateToCollections, NavigateToSettings, NavigateToModules }
 }

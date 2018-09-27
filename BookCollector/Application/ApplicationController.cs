@@ -53,10 +53,7 @@ namespace BookCollector.Application
                             shell.NavigateTo(ModuleType.Books);
                     }
                     break;
-                case ApplicationMessage.CollectionSelected:
-                    shell.NavigateTo(ModuleType.Books);
-                    break;
-                case ApplicationMessage.BooksImported:
+                case ApplicationMessage.NavigateToBooks:
                     shell.NavigateTo(ModuleType.Books);
                     break;
                 case ApplicationMessage.NavigateToCollections:

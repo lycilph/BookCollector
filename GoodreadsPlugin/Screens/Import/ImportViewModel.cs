@@ -83,7 +83,7 @@ namespace GoodreadsPlugin.Screens.Import
             state_manager.CurrentCollection.Add(imported_books);
 
             Clear();
-            MessageBus.Current.SendMessage(ApplicationMessage.BooksImported);
+            MessageBus.Current.SendMessage(ApplicationMessage.NavigateToBooks);
         }
 
         private void Clear()
