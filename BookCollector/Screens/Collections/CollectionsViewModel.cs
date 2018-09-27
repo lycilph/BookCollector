@@ -94,6 +94,12 @@ namespace BookCollector.Screens.Collections
                 repository.SaveCollection(state_manager.CurrentCollection);
         }
 
+        public override void OnDeactivated()
+        {
+            RecentCollections.DisposeAll();
+            RecentCollections = null;
+        }
+
         private void SelectCollection(RecentCollectionViewModel recent_collection)
         {
             logger.Trace($"Selected collection [{recent_collection.Name}]");

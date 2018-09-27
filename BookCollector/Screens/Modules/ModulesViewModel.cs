@@ -81,7 +81,7 @@ namespace BookCollector.Screens.Modules
         public override void OnActivated()
         {
             CurrentCollection = state_manager.CurrentCollection;
-            CurrentModule?.Obj?.Activate();
+            CurrentModule?.Activate();
         }
 
         public override void OnDeactivated()
