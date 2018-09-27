@@ -2,6 +2,7 @@
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Logs;
 using BookCollector.Screens.Modules;
+using BookCollector.Screens.Notes;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using Core.Application;
@@ -28,6 +29,7 @@ namespace BookCollector.Application
             Bind<IShellViewModel>().To<ShellViewModel>().InSingletonScope();
             Bind<IModulesViewModel>().To<ModulesViewModel>().InSingletonScope();
             Bind<IModule>().To<BooksViewModel>().InSingletonScope();
+            Bind<IModule>().To<NotesViewModel>().InSingletonScope();
             Bind<IModule>().To<CollectionsViewModel>().InSingletonScope();
             Bind<IModule>().To<LogsViewModel>().InSingletonScope();
             Bind<IModule>().To<SettingsViewModel>().InSingletonScope();

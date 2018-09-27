@@ -52,5 +52,15 @@ namespace Core.Data
         {
             Books.AddRange(books);
         }
+
+        public void Add(Note note)
+        {
+            Notes.Add(note);
+        }
+
+        public void Remove(Note note)
+        {
+            Notes.Remove(note);
+        }
     }
 }
