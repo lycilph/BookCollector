@@ -6,10 +6,12 @@ using BookCollector.Screens.Notes;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using Core.Application;
+using Core.Data;
 using Core.Infrastructure;
 using Ninject.Modules;
 using NLog;
 using Panda.Dialog;
+using Panda.Search;
 
 namespace BookCollector.Application
 {
@@ -25,6 +27,9 @@ namespace BookCollector.Application
             Bind<IStateManager>().To<StateManager>().InSingletonScope();
             Bind<IRepository>().To<Repository>().InSingletonScope();
             Bind<IDialogManager>().To<DialogManager>().InSingletonScope();
+
+            Bind<ISearchEngine<Book>>().To<SearchEngine<Book>>().InSingletonScope()
+                                                                .WithConstructorArgument("stopwords_filename", @".\Content\stopwords_en.txt");
 
             Bind<IShellViewModel>().To<ShellViewModel>().InSingletonScope();
             Bind<IModulesViewModel>().To<ModulesViewModel>().InSingletonScope();

@@ -10,7 +10,7 @@ namespace BookCollector.Screens.Notes
             InitializeComponent();
 
             if (SpellChecker.Default.HunspellInstance == null)
-                SpellChecker.Default.HunspellInstance = new Hunspell(@".\Dictionaries\en_US.aff", @".\Dictionaries\en_US.dic");
+                SpellChecker.Default.HunspellInstance = new Hunspell(@".\Content\en_US.aff", @".\Content\en_US.dic");
 
             editor.TextArea.TextView.LineTransformers.Add(new SpellCheckerColorizer());
         }

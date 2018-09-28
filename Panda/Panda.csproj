@@ -112,6 +112,13 @@
     <Compile Include="Dialog\InputDialog.xaml.cs">
       <DependentUpon>InputDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Search\Document.cs" />
+    <Compile Include="Search\ISearchEngine.cs" />
+    <Compile Include="Search\PorterStemmer.cs" />
+    <Compile Include="Search\SearchEngine.cs" />
+    <Compile Include="Search\SearchExtensions.cs" />
+    <Compile Include="Search\SearchResult.cs" />
+    <Compile Include="Search\StopWordHandler.cs" />
     <Compile Include="UI\AvalonEdit\SpellChecker.cs" />
     <Compile Include="UI\AvalonEdit\SpellCheckerBehavior.cs" />
     <Compile Include="UI\AvalonEdit\SpellCheckerColorizer.cs" />
@@ -162,5 +169,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
