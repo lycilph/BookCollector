@@ -1,5 +1,6 @@
 ﻿using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
+using BookCollector.Screens.gr;
 using BookCollector.Screens.Logs;
 using BookCollector.Screens.Modules;
 using BookCollector.Screens.Notes;
@@ -38,6 +39,8 @@ namespace BookCollector.Application
             Bind<IModule>().To<CollectionsViewModel>().InSingletonScope();
             Bind<IModule>().To<LogsViewModel>().InSingletonScope();
             Bind<IModule>().To<SettingsViewModel>().InSingletonScope();
+
+            Bind<IModule>().To<grViewModel>().InSingletonScope();
         }
     }
 }

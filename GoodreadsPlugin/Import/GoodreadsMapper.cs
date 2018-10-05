@@ -24,7 +24,8 @@ namespace GoodreadsPlugin.Import
                 {
                     {"Bookshelves", goodreads_book.Bookshelves},
                     {"ExclusiveShelf", goodreads_book.ExclusiveShelf},
-                    {"Source", goodreads_book.Source}
+                    {"Source", goodreads_book.Source},
+                    {"GoodreadsBookId", goodreads_book.BookId}
                 }
             };
 

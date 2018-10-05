@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodreadsPlugin", "GoodreadsPlugin\GoodreadsPlugin.csproj", "{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{63938386-BEBD-4463-A0BD-0AA5BF6CC97A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63938386-BEBD-4463-A0BD-0AA5BF6CC97A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63938386-BEBD-4463-A0BD-0AA5BF6CC97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63938386-BEBD-4463-A0BD-0AA5BF6CC97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63938386-BEBD-4463-A0BD-0AA5BF6CC97A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
