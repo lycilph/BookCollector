@@ -41,6 +41,13 @@ namespace Core.Data
             set { this.RaiseAndSetIfChanged(ref _Notes, value); }
         }
 
+        private ReactiveList<Series> _Series = new ReactiveList<Series>();
+        public ReactiveList<Series> Series
+        {
+            get { return _Series; }
+            set { this.RaiseAndSetIfChanged(ref _Series, value); }
+        }
+
         public bool IsBookInCollection(string title, string isbn, string isbn13)
         {
             return Books.Any(b => string.Equals(b.Title, title, StringComparison.InvariantCultureIgnoreCase) ||

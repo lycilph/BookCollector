@@ -10,15 +10,22 @@ namespace Sandbox
 {
     public class GoodreadsClient : IDisposable
     {
-        private const string api_key = "";
+        private const string cache_filename = "cache.json";
+        private const string goodreads_api_secret_filename = "api_secret.txt";
+        private readonly string api_key;
         private bool disposed = false; // To detect redundant calls
         private Dictionary<string, string> cache = new Dictionary<string, string>();
         private RestClient client = new RestClient(@"https://www.goodreads.com");
 
         public GoodreadsClient()
         {
-            if (File.Exists("cache.json"))
+            if (File.Exists(cache_filename))
                 cache = JsonUtils.ReadFromFile<Dictionary<string, string>>("cache.json");
+
+            if (File.Exists(goodreads_api_secret_filename))
+                api_key = File.ReadAllText(goodreads_api_secret_filename);
+            else
+                throw new InvalidOperationException($"Cannot find api secret {goodreads_api_secret_filename}");
         }
 
         private (T result, bool cache_hit) ExecuteRequest<T>(IRestRequest request, string uri) where T : new()
@@ -98,7 +105,7 @@ namespace Sandbox
 
             if (disposing)
             {
-                JsonUtils.WriteToFile("cache.json", cache);
+                JsonUtils.WriteToFile(cache_filename, cache);
             }
 
             disposed = true;

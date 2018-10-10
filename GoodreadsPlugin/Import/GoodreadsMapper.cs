@@ -14,7 +14,7 @@ namespace GoodreadsPlugin.Import
             if (!string.IsNullOrWhiteSpace(goodreads_book.AdditionalAuthors))
                 authors.AddRange(goodreads_book.AdditionalAuthors.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(a => a.Trim()));
 
-            var book = new Book
+            return new Book
             {
                 Title = goodreads_book.Title,
                 Authors = authors,
@@ -28,8 +28,6 @@ namespace GoodreadsPlugin.Import
                     {"GoodreadsBookId", goodreads_book.BookId}
                 }
             };
-
-            return book;
         }
 
         public static IEnumerable<Book> Map(IEnumerable<GoodreadsBook> goodreads_books)

@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GoodreadsClient.cs" />
+    <Compile Include="Mapper.cs" />
     <Compile Include="Model\GoodreadsBook.cs" />
     <Compile Include="Model\GoodreadsSeries.cs" />
     <Compile Include="Model\GoodreadsWork.cs" />
@@ -100,6 +101,15 @@
       <Project>{547e1766-fb9f-4ed7-b6b5-2574690f8590}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Panda\Panda.csproj">
+      <Project>{2f5a59f3-5894-443e-8800-adce9fc94391}</Project>
+      <Name>Panda</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api_secret.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

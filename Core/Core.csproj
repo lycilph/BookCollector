@@ -98,6 +98,8 @@
     <Compile Include="Data\Collection.cs" />
     <Compile Include="Data\Note.cs" />
     <Compile Include="Data\RecentlyOpenedCollection.cs" />
+    <Compile Include="Data\Series.cs" />
+    <Compile Include="Data\SeriesEntry.cs" />
     <Compile Include="Data\Settings.cs" />
     <Compile Include="Application\ApplicationMessage.cs" />
     <Compile Include="Infrastructure\IModule.cs" />
