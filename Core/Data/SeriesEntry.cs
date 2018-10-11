@@ -21,6 +21,13 @@ namespace Core.Data
             set { this.RaiseAndSetIfChanged(ref _Position, value); }
         }
 
+        private bool _MissingInCollection = true;
+        public bool MissingInCollection
+        {
+            get { return _MissingInCollection; }
+            set { this.RaiseAndSetIfChanged(ref _MissingInCollection, value); }
+        }
+
         private Dictionary<string, string> _Tags = new Dictionary<string, string>();
         public Dictionary<string, string> Tags
         {

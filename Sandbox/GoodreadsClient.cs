@@ -20,7 +20,7 @@ namespace Sandbox
         public GoodreadsClient()
         {
             if (File.Exists(cache_filename))
-                cache = JsonUtils.ReadFromFile<Dictionary<string, string>>("cache.json");
+                cache = JsonUtils.ReadFromFile<Dictionary<string, string>>(cache_filename);
 
             if (File.Exists(goodreads_api_secret_filename))
                 api_key = File.ReadAllText(goodreads_api_secret_filename);

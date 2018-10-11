@@ -17,10 +17,9 @@ namespace Sandbox
 
             var sw = Stopwatch.StartNew();
 
-            ProcessBooks(collection, sw);
-            //FindSeries(collection);
-            //ProcessingSeriesForMissingEntries(collection);
-            //ShowUnfinishedSeries(collection);
+            ProcessBooks(collection);
+            ProcessSeries(collection);
+            ProcessMissingBooksInSeries(collection);
 
             if (collection.IsDirty)
             {
@@ -35,41 +34,7 @@ namespace Sandbox
             Console.ReadKey();
         }
 
-        private static void ShowUnfinishedSeries(Collection collection)
-        {
-            var unfinished_series = collection.Series.Where(s => s.Entries.Any(e => e.Book == null));
-            foreach (var series in unfinished_series)
-            {
-                Console.WriteLine($"Found unfinished series {series.Title}");
-                foreach (var entry in series.Entries)
-                {
-                    if (entry.Book == null)
-                        Console.WriteLine($" - Found missing book for entry {entry.Tags["GoodreadsWorkId"]}");
-                    else
-                        Console.WriteLine($" - Book: {entry.Book.Title}");
-                }
-            }
-        }
-
-        private static void ProcessingSeriesForMissingEntries(Collection collection)
-        {
-            foreach (var series in collection.Series)
-            {
-                Console.WriteLine($"Checking series \"{series.Title}\" for missing books");
-                foreach (var entry in series.Entries)
-                {
-                    if (entry.Book == null)
-                        entry.Book = collection.Books.FirstOrDefault(b => b.Tags["GoodreadsWorkId"] == entry.Tags["GoodreadsWorkId"]);
-
-                    if (entry.Book == null)
-                        Console.WriteLine($" - Found missing book for entry {entry.Tags["GoodreadsWorkId"]}");
-                    else
-                        Console.WriteLine($" - Book: {entry.Book.Title}");
-                }
-            }
-        }
-
-        private static void ProcessBooks(Collection collection, Stopwatch sw)
+        private static void ProcessBooks(Collection collection)
         {
             using (var client = new GoodreadsClient())
             {
@@ -89,6 +54,12 @@ namespace Sandbox
                         book.Tags.Add("GoodreadsWorkId", goodreads_book.Work.Id);
                         Console.WriteLine($"Added tag GoodreadsWorkId with value {goodreads_book.Work.Id}");
 
+                        if (!string.IsNullOrWhiteSpace(goodreads_book.Description))
+                        {
+                            book.Description = goodreads_book.Description;
+                            Console.WriteLine($"Added description to book");
+                        }
+
                         if (goodreads_book.SeriesWorks.Any())
                         {
                             book.Tags.Add("GoodreadsSeriesWorkId", goodreads_book.SeriesWorks.First().Id);
@@ -104,13 +75,11 @@ namespace Sandbox
                             Thread.Sleep(1000);
                         }
                     }
-
-                    Console.WriteLine($"Elapsed time: {sw.Elapsed}");
                 }
             }
         }
 
-        private static void FindSeries(Collection collection)
+        private static void ProcessSeries(Collection collection)
         {
             var series_ids = collection.Books.Where(b => b.Tags.ContainsKey("GoodreadsSeriesId"))
                                              .Select(b => b.Tags["GoodreadsSeriesId"])
@@ -135,7 +104,8 @@ namespace Sandbox
                         var (goodreads_series, cached_hit) = client.GetSeriesById(id);
                         Console.WriteLine($"Found \"{goodreads_series.Title.Trim()}\" - primary count {goodreads_series.PrimaryWorkCount}");
 
-                        collection.Series.Add(Mapper.Map(goodreads_series));
+                        series = Mapper.Map(goodreads_series);
+                        collection.Series.Add(series);
 
                         if (!cached_hit)
                         {
@@ -147,27 +117,73 @@ namespace Sandbox
             }
         }
 
-        private static void TestClient()
+        private static void ProcessMissingBooksInSeries(Collection collection)
         {
-            var goodreads_client = new GoodreadsClient();
+            var unfinished_series = collection.Series.Where(s => s.Entries.Any(e => e.MissingInCollection)).ToList();
+            var complete_series = collection.Series.Except(unfinished_series);
+            Console.WriteLine($"Found {unfinished_series.Count} series with missing entries out of {collection.Series.Count} total series in collection");
 
-            var book = goodreads_client.GetBookByISBN("0765397528");
-            Console.WriteLine(book);
-            Console.WriteLine();
+            Console.WriteLine("Unfinished series");
+            foreach (var series in unfinished_series)
+            {
+                Console.WriteLine($"Found unfinished series {series.Title}");
+                foreach (var entry in series.Entries)
+                {
+                    if (entry.MissingInCollection)
+                    {
+                        // Try to find the book in the collection
+                        var book = collection.Books.FirstOrDefault(b => b.Tags["GoodreadsWorkId"] == entry.Tags["GoodreadsWorkId"]);
+                        if (book != null)
+                        {
+                            // We found the book in the collection
+                            entry.Book = book;
+                            entry.MissingInCollection = false;
+                            Console.WriteLine($" - Book: {entry.Book.Title}");
+                        }
+                        else
+                        {
+                            // We did not find it in the collection, so look it up (if this has not already been done)
+                            if (entry.Book == null)
+                            {
+                                using (var client = new GoodreadsClient())
+                                {
+                                    var book_id = entry.Tags["GoodreadsBestBookId"];
+                                    var (goodreads_book, cached_hit) = client.GetBookById(book_id);
 
-            book = goodreads_client.GetBookByISBN("0765329107");
-            Console.WriteLine(book);
-            Console.WriteLine();
+                                    entry.Book = Mapper.Map(goodreads_book);
 
-            var series = goodreads_client.GetSeriesById("191900");
-            Console.WriteLine(series);
-            Console.WriteLine();
+                                    if (!cached_hit)
+                                    {
+                                        Console.WriteLine("Waiting for Goodreads");
+                                        Thread.Sleep(1000);
+                                    }
+                                }
+                            }
 
-            series = goodreads_client.GetSeriesByWorkId("53349516");
-            Console.WriteLine(series);
-            Console.WriteLine();
+                            Console.WriteLine($" - Book: {entry.Book.Title} [missing in collection]");
+                        }
 
-            goodreads_client.Dispose();
+                    }
+                    else
+                    {
+                        Console.WriteLine($" - Book: {entry.Book.Title}");
+                    }
+                }
+            }
+
+            Console.WriteLine("Complete series");
+            foreach (var series in complete_series)
+            {
+                Console.WriteLine($"Found completed series {series.Title}");
+
+                if (!series.Entries.Any())
+                    Console.WriteLine($"No entries found in series {series.Title} - [{series.Tags["GoodreadsSeriesId"]}]");
+
+                foreach (var entry in series.Entries)
+                {
+                    Console.WriteLine($" - Book: {entry.Book.Title}");
+                }
+            }
         }
     }
 }

@@ -37,6 +37,13 @@ namespace Core.Data
             set { this.RaiseAndSetIfChanged(ref _ISBN13, value); }
         }
 
+        private string _Description;
+        public string Description
+        {
+            get { return _Description; }
+            set { this.RaiseAndSetIfChanged(ref _Description, value); }
+        }
+
         private Dictionary<string, string> _Tags = new Dictionary<string, string>();
         public Dictionary<string, string> Tags
         {

@@ -34,8 +34,17 @@ namespace Sandbox
                 Tags = new Dictionary<string, string>
                 {
                     {"GoodreadsSeriesWorkId", goodreads_work.Id},
-                    {"GoodreadsWorkId", goodreads_work.Work.Id}
+                    {"GoodreadsWorkId", goodreads_work.Work.Id},
+                    {"GoodreadsBestBookId", goodreads_work.BestBook.Id}
                 }
+            };
+        }
+
+        public static Book Map(GoodreadsBook goodreads_book)
+        {
+            return new Book
+            {
+                Title = goodreads_book.Title
             };
         }
 

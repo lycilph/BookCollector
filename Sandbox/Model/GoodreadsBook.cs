@@ -8,8 +8,7 @@ namespace Sandbox.Model
     {
         public string Id { get; set; }
         public string Title { get; set; }
-        //public string Title { get; set; }
-        public string image_url { get; set; }
+        public string ImageUrl { get; set; }
         public string Description { get; set; }
         public GoodreadsWork Work { get; set; }
         public List<GoodreadsWork> SeriesWorks { get; set; }
@@ -20,7 +19,7 @@ namespace Sandbox.Model
             sb.AppendLine("Book:");
             sb.AppendLine($"Id: {Id}");
             sb.AppendLine($"Title: {Title}");
-            sb.AppendLine($"Image: {image_url}");
+            sb.AppendLine($"Image: {ImageUrl}");
             sb.AppendLine($"Description: {Description}");
             if (Work != null)
                 sb.Append(Work.ToString());
