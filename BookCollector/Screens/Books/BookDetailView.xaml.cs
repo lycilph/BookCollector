@@ -4,9 +4,9 @@ using System.Windows.Controls;
 
 namespace BookCollector.Screens.Books
 {
-    public partial class BookView
+    public partial class BookDetailView
     {
-        public BookView()
+        public BookDetailView()
         {
             InitializeComponent();
         }

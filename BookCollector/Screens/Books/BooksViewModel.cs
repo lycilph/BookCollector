@@ -21,7 +21,7 @@ namespace BookCollector.Screens.Books
 
         private IStateManager state_manager;
         private ISearchEngine<Book> search_engine;
-        private List<BookViewModel> books_view_models;
+        private List<BookDetailViewModel> books_view_models;
         private List<SearchResult<Book>> search_results;
 
         public ModuleType Type { get; } = ModuleType.Books;
@@ -62,7 +62,7 @@ namespace BookCollector.Screens.Books
 
         public override void OnActivated()
         {
-            books_view_models = state_manager.CurrentCollection.Books.Select(b => new BookViewModel(b)).ToList();
+            books_view_models = state_manager.CurrentCollection.Books.Select(b => new BookDetailViewModel(b)).ToList();
             Books = CollectionViewSource.GetDefaultView(books_view_models);
             Books.Filter = Filter;
 
@@ -89,7 +89,7 @@ namespace BookCollector.Screens.Books
 
         private bool Filter(object o)
         {
-            var vm = o as BookViewModel;
+            var vm = o as BookDetailViewModel;
             if (vm == null)
                 return false;
 

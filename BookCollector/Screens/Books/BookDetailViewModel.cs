@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BookCollector.Screens.Books
 {
-    public class BookViewModel : ItemViewModel<Book>
+    public class BookDetailViewModel : ItemViewModel<Book>
     {
         public string Title { get { return Obj.Title; } }
         public string Authors { get { return string.Join(",", Obj.Authors); } }
@@ -13,6 +13,6 @@ namespace BookCollector.Screens.Books
         public string Description { get { return Obj.Description; } }
         public Dictionary<string, string> Tags { get { return Obj.Tags; } }
 
-        public BookViewModel(Book obj) : base(obj) { }
+        public BookDetailViewModel(Book obj) : base(obj) { }
     }
 }
