@@ -1,4 +1,5 @@
 ﻿using Core.Infrastructure;
+using GoodreadsPlugin.Screens.Info;
 using GoodreadsPlugin.Screens.Import;
 using Ninject.Modules;
 using NLog;
@@ -15,6 +16,7 @@ namespace GoodreadsPlugin
 
             // Modules in this plugin
             Bind<IModule>().To<ImportViewModel>().InSingletonScope();
+            Bind<IModule>().To<InfoViewModel>().InSingletonScope();
         }
     }
 }

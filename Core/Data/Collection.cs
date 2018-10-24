@@ -60,6 +60,11 @@ namespace Core.Data
             Books.AddRange(books);
         }
 
+        public void Add(Series series)
+        {
+            Series.Add(series);
+        }
+
         public void Add(Note note)
         {
             Notes.Add(note);

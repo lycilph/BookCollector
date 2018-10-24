@@ -26,8 +26,8 @@ namespace GoodreadsPlugin.Screens.Import
             set { this.RaiseAndSetIfChanged(ref _Filename, value); }
         }
 
-        private ReactiveList<GoodreadsBook> _Books = new ReactiveList<GoodreadsBook>();
-        public ReactiveList<GoodreadsBook> Books
+        private ReactiveList<GoodreadsCSVBook> _Books = new ReactiveList<GoodreadsCSVBook>();
+        public ReactiveList<GoodreadsCSVBook> Books
         {
             get { return _Books; }
             set { this.RaiseAndSetIfChanged(ref _Books, value); }

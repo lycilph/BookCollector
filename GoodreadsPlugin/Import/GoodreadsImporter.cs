@@ -10,7 +10,7 @@ namespace GoodreadsPlugin.Import
 {
     public static class GoodreadsImporter
     {
-        public static List<GoodreadsBook> Import(string filename)
+        public static List<GoodreadsCSVBook> Import(string filename)
         {
             var configuration = new Configuration()
             {
@@ -20,14 +20,14 @@ namespace GoodreadsPlugin.Import
                 TrimOptions = TrimOptions.Trim
             };
 
-            var goodreads_books = new List<GoodreadsBook>();
+            var goodreads_books = new List<GoodreadsCSVBook>();
 
             try
             {
                 using (var sr = new StreamReader(filename))
                 using (var csv = new TrimmingCsvReader(sr, configuration))
                 {
-                    goodreads_books = csv.GetRecords<GoodreadsBook>().ToList();
+                    goodreads_books = csv.GetRecords<GoodreadsCSVBook>().ToList();
                 }
             }
             catch (Exception)
