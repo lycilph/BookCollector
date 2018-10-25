@@ -132,6 +132,7 @@
     <Compile Include="Utils\EnumerableExtensions.cs" />
     <Compile Include="Utils\JsonUtils.cs" />
     <Compile Include="Utils\MemoryTarget.cs" />
+    <Compile Include="Utils\ResourceExtensions.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
     <Compile Include="Infrastructure\AssemblySource.cs" />
     <Compile Include="Infrastructure\BootstrapperBase.cs" />

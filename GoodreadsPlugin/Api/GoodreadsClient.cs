@@ -11,21 +11,16 @@ namespace GoodreadsPlugin.Api
     public class GoodreadsClient : DisposableBase
     {
         private const string cache_filename = "cache.json";
-        private const string goodreads_api_secret_filename = "api_secret.txt";
+        private const string goodreads_api_secret_filename = "goodreads_api_secret.txt";
         private readonly string api_key;
         private readonly RestClient client = new RestClient(@"https://www.goodreads.com");
         private readonly ResponseCache cache;
 
         public GoodreadsClient()
         {
-            if (File.Exists(goodreads_api_secret_filename))
-            {
-                var encoded_api_key = File.ReadAllText(goodreads_api_secret_filename);
-                var encoded_bytes = Convert.FromBase64String(encoded_api_key);
-                api_key = Encoding.UTF8.GetString(encoded_bytes);
-            }
-            else
-                throw new InvalidOperationException($"Cannot find api secret {goodreads_api_secret_filename}");
+            var encoded_api_key = GetType().GetResource(goodreads_api_secret_filename);
+            var encoded_bytes = Convert.FromBase64String(encoded_api_key);
+            api_key = Encoding.UTF8.GetString(encoded_bytes);
 
             cache = new ResponseCache(cache_filename);
             cache.IsDirty = false;

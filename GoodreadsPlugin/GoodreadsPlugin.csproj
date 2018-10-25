@@ -165,10 +165,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\api_secret.txt">
-      <Link>api_secret.txt</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="..\goodreads_api_secret.txt">
+      <Link>goodreads_api_secret.txt</Link>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
