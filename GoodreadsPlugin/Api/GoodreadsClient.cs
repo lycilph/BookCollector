@@ -45,19 +45,19 @@ namespace GoodreadsPlugin.Api
             request.RequestFormat = DataFormat.Xml;
             var uri = client.BuildUri(request).ToString();
 
-            return ExecuteRequest<GoodreadsSeries>(request, uri);
+            return ExecuteRequest<GoodreadsSeries>(request, uri, TimeSpan.FromDays(7));
         }
 
-        private T ExecuteRequest<T>(IRestRequest request, string uri) where T : new()
+        private T ExecuteRequest<T>(IRestRequest request, string uri, TimeSpan? expiry_time = null) where T : new()
         {
-            if (cache.Contains(uri))
+            if (cache.IsCached(uri))
             {
                 return cache.Get<T>(uri);
             }
             else
             {
                 var response = client.Execute<T>(request);
-                cache.Add(uri, response.Content);
+                cache.Add(uri, response.Content, expiry_time);
                 Thread.Sleep(1000);
                 return response.Data;
             }

@@ -127,6 +127,7 @@
       <DependentUpon>EditableTextControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\BindingProxy.cs" />
+    <Compile Include="Utils\Comparer.cs" />
     <Compile Include="Utils\DirtyTrackingBase.cs" />
     <Compile Include="Utils\DisposableBase.cs" />
     <Compile Include="Utils\EnumerableExtensions.cs" />

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Panda.Utils;
 using RestSharp;
 using RestSharp.Deserializers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -12,8 +13,9 @@ namespace GoodreadsPlugin.Api
     public class ResponseCache : DirtyTrackingBase
     {
         private string filename;
+        private XmlDeserializer deserializer = new XmlDeserializer();
         [JsonProperty]
-        private Dictionary<string, string> cache = new Dictionary<string, string>();
+        private Dictionary<string, CacheEntry> cache = new Dictionary<string, CacheEntry>();
 
         public ResponseCache(string filename)
         {
@@ -25,7 +27,7 @@ namespace GoodreadsPlugin.Api
             this.filename = filename;
 
             if (File.Exists(filename))
-                cache = JsonUtils.ReadFromFile<Dictionary<string, string>>(filename);
+                cache = JsonUtils.ReadFromFile<Dictionary<string, CacheEntry>>(filename);
         }
 
         public void Save()
@@ -33,22 +35,33 @@ namespace GoodreadsPlugin.Api
             JsonUtils.WriteToFile(filename, cache);
         }
 
-        public bool Contains(string uri)
+        public bool IsCached(string uri)
         {
-            return cache.ContainsKey(uri);
+            // Check for expiry of the cached data
+            if (cache.TryGetValue(uri, out CacheEntry entry))
+            {
+                return !entry.Expiry.HasValue || DateTime.Now < entry.Expiry;
+            }
+            else
+                return false;
         }
 
         public T Get<T>(string uri)
         {
-            var content = cache[uri];
-            var rest_response = new RestResponse { Content = content };
-            var deserializer = new XmlDeserializer();
+            var entry = cache[uri];
+            var rest_response = new RestResponse { Content = entry.Content };
             return deserializer.Deserialize<T>(rest_response);
         }
 
-        public void Add(string uri, string content)
+        public void Add(string uri, string content, TimeSpan? expiry_time = null)
         {
-            cache.Add(uri, content);
+            var expiry = DateTime.Now + expiry_time;
+            var entry = new CacheEntry(content, expiry);
+
+            if (cache.ContainsKey(uri))
+                cache[uri] = entry;
+            else
+                cache.Add(uri, entry);
         }
     }
 }

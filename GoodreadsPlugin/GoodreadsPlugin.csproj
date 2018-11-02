@@ -102,7 +102,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\CacheEntry.cs" />
     <Compile Include="Api\GoodreadsClient.cs" />
+    <Compile Include="Api\GoodreadsController.cs" />
     <Compile Include="Api\ResponseCache.cs" />
     <Compile Include="Data\GoodreadsBook.cs" />
     <Compile Include="Data\GoodreadsCSVBook.cs" />

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
 
 namespace Core.Data
@@ -12,6 +13,14 @@ namespace Core.Data
         {
             get { return _Title; }
             set { this.RaiseAndSetIfChanged(ref _Title, value); }
+        }
+
+        // This is used to check for incomplete series
+        private DateTime _LastChecked;
+        public DateTime LastChecked
+        {
+            get { return _LastChecked; }
+            set { this.RaiseAndSetIfChanged(ref _LastChecked, value); }
         }
 
         private ReactiveList<SeriesEntry> _Entries = new ReactiveList<SeriesEntry>();

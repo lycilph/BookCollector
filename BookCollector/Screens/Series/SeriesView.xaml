@@ -24,8 +24,7 @@
             <Run Text="{Binding Series.Count, Mode=OneWay}"/>
         </TextBlock>
         
-        <DataGrid x:Name="series_list"
-                  Grid.Row="1"
+        <DataGrid Grid.Row="1"
                   Margin="0,5,0,0"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"

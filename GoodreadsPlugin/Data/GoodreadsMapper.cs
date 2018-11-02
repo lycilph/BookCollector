@@ -36,6 +36,7 @@ namespace GoodreadsPlugin.Data
             return new Series
             {
                 Title = goodreads_series.Title.Trim(),
+                LastChecked = DateTime.Now,
                 Entries = works.Where(w => w.Position >= 0)
                                .OrderBy(w => w.Position)
                                .ToReactiveList(),

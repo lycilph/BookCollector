@@ -21,7 +21,6 @@
             <TextBlock Text="Actions"/>
             <Button Margin="0,10,0,0" Content="Process Books" Command="{Binding ProcessBooksCommand}" IsEnabled="{Binding IsBusy, Converter={StaticResource invert_boolean_converter}}"/>
             <Button Margin="0,10,0,0" Content="Process Series" Command="{Binding ProcessSeriesCommand}" IsEnabled="{Binding IsBusy, Converter={StaticResource invert_boolean_converter}}"/>
-            <Button Margin="0,10,0,0" Content="Update Incomplete Series" Command="{Binding UpdateIncompleteSeriesCommand}" IsEnabled="{Binding IsBusy, Converter={StaticResource invert_boolean_converter}}"/>
             <Button Margin="0,10,0,0" Content="Stop" Command="{Binding StopCommand}" IsEnabled="{Binding IsBusy}"/>
         </StackPanel>
 

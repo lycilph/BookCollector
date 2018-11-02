@@ -1,6 +1,7 @@
-﻿using System;
+﻿using ReactiveUI;
+using System;
 using System.Collections.Generic;
-using ReactiveUI;
+using System.Linq;
 
 namespace Panda.Utils
 {
@@ -21,6 +22,12 @@ namespace Panda.Utils
                 if (item is IDisposable disposable)
                     disposable.Dispose();
             }
+        }
+
+        public static IEnumerable<T> Except<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> compare)
+        {
+            var comparer = new Comparer<T>(compare);
+            return first.Except(second, comparer);
         }
         
         public static ReactiveList<T> ToReactiveList<T>(this IEnumerable<T> source, bool enable_change_tracking = false)
