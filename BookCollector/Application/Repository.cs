@@ -108,10 +108,15 @@ namespace BookCollector.Application
             collection.IsDirty = false;
         }
 
-        public Collection CreateCollection(string collection_name = "")
+        public Collection CreateCollection(string filename)
         {
-            var collection = new Collection { Name = collection_name };
+            var collection = new Collection
+            {
+                Name = Path.GetFileNameWithoutExtension(filename),
+                Filename = filename
+            };
             SaveCollection(collection);
+
             return collection;
         }
 

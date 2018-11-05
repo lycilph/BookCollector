@@ -6,7 +6,6 @@ using Panda.Dialog;
 using Panda.Infrastructure;
 using Panda.Utils;
 using ReactiveUI;
-using System.IO;
 using System.Linq;
 
 namespace BookCollector.Screens.Collections
@@ -143,8 +142,7 @@ namespace BookCollector.Screens.Collections
             var dialog_result = dialog_manager.ShowSafeFileDialog("Create New Collection", Constants.CollectionExtension, Constants.CollectionDialogFilter);
             if (dialog_result.Result == true)
             {
-                var name = Path.GetFileNameWithoutExtension(dialog_result.Filename);
-                var collection = repository.CreateCollection(name);
+                var collection = repository.CreateCollection(dialog_result.Fullpath);
                 state_manager.CurrentCollection = collection;
                 MessageBus.Current.SendMessage(ApplicationMessage.NavigateToBooks);
             }
