@@ -18,22 +18,59 @@
             <TextBox IsReadOnly="True" Margin="0,0,5,0" Text="{Binding Filename}"/>
         </DockPanel>
 
-        <DataGrid Grid.Row="1"
-                  Margin="0,5,0,0"
-                  IsReadOnly="True"
-                  AutoGenerateColumns="False"
-                  ItemsSource="{Binding Books}">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="Duplicate" Binding="{Binding IsDuplicate}" />
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}"  Width="*"/>
-                <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
-                <DataGridTextColumn Header="AdditionalAuthors" Binding="{Binding AdditionalAuthors}"/>
-                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"/>
-                <DataGridTextColumn Header="ISBN13" Binding="{Binding ISBN13}"/>
-                <DataGridTextColumn Header="Bookshelves" Binding="{Binding Bookshelves}"/>
-                <DataGridTextColumn Header="ExclusiveShelf" Binding="{Binding ExclusiveShelf}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <Grid Grid.Row="1"
+              Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                      ItemsSource="{Binding Books}">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Duplicate" Binding="{Binding IsDuplicate}" />
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
+                    <DataGridTextColumn Header="AdditionalAuthors" Binding="{Binding AdditionalAuthors}"/>
+                    <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"/>
+                    <DataGridTextColumn Header="ISBN13" Binding="{Binding ISBN13}"/>
+                    <DataGridTextColumn Header="Bookshelves" Binding="{Binding Bookshelves}"/>
+                    <DataGridTextColumn Header="ExclusiveShelf" Binding="{Binding ExclusiveShelf}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <GridSplitter Grid.Column="1"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Stretch"
+                          Width="3"
+                          Margin="2,0"/>
+
+            <DockPanel Grid.Column="2">
+                <TextBlock DockPanel.Dock="Top"
+                           Text="Shelves"/>
+
+                <StackPanel DockPanel.Dock="Bottom"
+                            Margin="0,5,0,0">
+                    <Button Content="Select All"
+                            Command="{Binding SelectAllCommand}"/>
+                    <Button Margin="0,5,0,0"
+                            Content="Deselect All"
+                            Command="{Binding DeselectAllCommand}"/>
+                </StackPanel>
+
+                <DataGrid Margin="0,5,0,0"
+                          AutoGenerateColumns="False"
+                          ItemsSource="{Binding Shelves}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="*"/>
+                        <DataGridCheckBoxColumn Header="Import?" Binding="{Binding Selected}" Width="Auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Grid>
+
 
         <Button Grid.Row="2" Margin="0,5,0,0" Content="Import" Command="{Binding ImportBooksCommand}"/>
     </Grid>

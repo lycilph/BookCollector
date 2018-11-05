@@ -33,6 +33,13 @@ namespace GoodreadsPlugin.Screens.Import
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
         }
 
+        private ReactiveList<ShelfViewModel> _Shelves = new ReactiveList<ShelfViewModel>();
+        public ReactiveList<ShelfViewModel> Shelves
+        {
+            get { return _Shelves; }
+            set { this.RaiseAndSetIfChanged(ref _Shelves, value); }
+        }
+
         private ReactiveCommand _OpenFileCommand;
         public ReactiveCommand OpenFileCommand
         {
@@ -47,6 +54,20 @@ namespace GoodreadsPlugin.Screens.Import
             set { this.RaiseAndSetIfChanged(ref _ImportBooksCommand, value); }
         }
 
+        private ReactiveCommand _SelectAllCommand;
+        public ReactiveCommand SelectAllCommand
+        {
+            get { return _SelectAllCommand; }
+            set { this.RaiseAndSetIfChanged(ref _SelectAllCommand, value); }
+        }
+
+        private ReactiveCommand _DeselectAllCommand;
+        public ReactiveCommand DeselectAllCommand
+        {
+            get { return _DeselectAllCommand; }
+            set { this.RaiseAndSetIfChanged(ref _DeselectAllCommand, value); }
+        }
+
         public ImportViewModel(IStateManager state_manager)
         {
             DisplayName = "Goodreads Import";
@@ -56,6 +77,10 @@ namespace GoodreadsPlugin.Screens.Import
 
             var have_imported_books = this.WhenAny(x => x.Books, x => x.Value != null && x.Value.Any());
             ImportBooksCommand = ReactiveCommand.Create(ImportBooks, have_imported_books);
+
+            var have_shelves = this.WhenAny(x => x.Shelves, x => x.Value != null && x.Value.Any());
+            SelectAllCommand = ReactiveCommand.Create(() => Shelves.Apply(s => s.Selected = true), have_shelves);
+            DeselectAllCommand = ReactiveCommand.Create(() => Shelves.Apply(s => s.Selected = false), have_shelves);
         }
 
         public override void OnDeactivated()
@@ -74,12 +99,22 @@ namespace GoodreadsPlugin.Screens.Import
                 Books = GoodreadsImporter.Import(Filename).ToReactiveList();
                 // Check if books have already been imported (ie. is already in the collection)
                 Books.Apply(b => b.IsDuplicate = state_manager.CurrentCollection.IsBookInCollection(b.Title, b.ISBN, b.ISBN13));
+
+                Shelves = Books.Select(b => b.ExclusiveShelf)
+                               .Distinct()
+                               .OrderBy(s => s)
+                               .Select(s => new ShelfViewModel(s))
+                               .ToReactiveList();
             }
         }
 
         private void ImportBooks()
         {
-            var imported_books = GoodreadsMapper.Map(Books.Where(b => b.IsDuplicate == false));
+            var selected_shelves = Shelves.Where(s => s.Selected)
+                                          .Select(s => s.Name)
+                                          .ToList();
+            var books_on_selected_shelves = Books.Where(b => b.IsDuplicate == false && selected_shelves.Contains(b.ExclusiveShelf));
+            var imported_books = GoodreadsMapper.Map(books_on_selected_shelves);
             state_manager.CurrentCollection.Add(imported_books);
 
             Clear();
@@ -89,6 +124,7 @@ namespace GoodreadsPlugin.Screens.Import
         private void Clear()
         {
             Books = null;
+            Shelves = null;
             Filename = string.Empty;
         }
     }
