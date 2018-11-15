@@ -26,13 +26,28 @@ namespace BookCollector.Screens.Shell
 
         public void NavigateTo(Type module)
         {
-            var temp = modules.FirstOrDefault(m => module.IsAssignableFrom(m.GetType()));
-            CurrentModule = temp ?? throw new InvalidOperationException($"Couldn't find module {module}");
+            var module_to_navigate_to = modules.FirstOrDefault(m => module.IsAssignableFrom(m.GetType()));
+            if (module_to_navigate_to == null)
+                throw new InvalidOperationException($"Couldn't find module {module}");
+
+            SetCurrentModule(module_to_navigate_to);
         }
 
         protected override void OnViewLoaded(object view)
         {
             MessageBus.Current.SendMessage(ApplicationMessage.ShellLoaded);
+        }
+
+        protected override void OnViewUnloaded(object view)
+        {
+            CurrentModule?.Deactivate();
+        }
+
+        private void SetCurrentModule(IModule module)
+        {
+            CurrentModule?.Deactivate();
+            CurrentModule = module;
+            CurrentModule?.Activate();
         }
     }
 }

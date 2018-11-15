@@ -132,6 +132,8 @@
     <Compile Include="Utils\BindingProxy.cs" />
     <Compile Include="Utils\DirtyTrackingBase.cs" />
     <Compile Include="Utils\EnumerableExtensions.cs" />
+    <Compile Include="Utils\JsonUtils.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

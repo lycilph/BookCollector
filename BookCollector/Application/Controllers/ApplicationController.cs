@@ -13,10 +13,12 @@ namespace BookCollector.Application.Controllers
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
+        private IStateManager state_manager;
         private IShellViewModel shell;
 
-        public ApplicationController(IShellViewModel shell)
+        public ApplicationController(IStateManager state_manager, IShellViewModel shell)
         {
+            this.state_manager = state_manager;
             this.shell = shell;
         }
 
@@ -24,11 +26,13 @@ namespace BookCollector.Application.Controllers
         {
             logger.Trace("Initializing application controller");
             HookUpMessages();
+            state_manager.Initialize();
         }
 
         public void Exit()
         {
             logger.Trace("Exiting application controller");
+            state_manager.Exit();
         }
 
         private void HookUpMessages()

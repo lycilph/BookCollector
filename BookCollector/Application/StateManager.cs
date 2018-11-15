@@ -1,10 +1,23 @@
 ﻿using BookCollector.Data;
+using NLog;
 using ReactiveUI;
+using System.Collections.Generic;
 
 namespace BookCollector.Application
 {
     public class StateManager : ReactiveObject, IStateManager
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
+        private IRepository repository;
+
+        private Settings _Settings;
+        public Settings Settings
+        {
+            get { return _Settings; }
+            private set { this.RaiseAndSetIfChanged(ref _Settings, value); }
+        }
+
         private Collection _CurrentCollection;
         public Collection CurrentCollection
         {
@@ -12,9 +25,41 @@ namespace BookCollector.Application
             private set { this.RaiseAndSetIfChanged(ref _CurrentCollection, value); }
         }
 
+        public StateManager(IRepository repository)
+        {
+            this.repository = repository;
+        }
+
+        public void Initialize()
+        {
+            logger.Trace("Initializing state manager");
+
+            Settings = repository.LoadSettings();
+        }
+
+        public void Exit()
+        {
+            logger.Trace("Exiting state manager");
+
+            repository.SaveSettings(Settings);
+        }
+
         public void SetCurrentCollection(Collection collection)
         {
             CurrentCollection = collection;
+
+            if (collection != null)
+                Settings.AddOrUpdateRecentCollection(collection);
+        }
+
+        public List<RecentlyOpenedCollection> GetRecentCollections()
+        {
+            return Settings.RecentCollections;
+        }
+
+        public void RemoveFromRecentCollections(RecentlyOpenedCollection recent_collection)
+        {
+            Settings.RecentCollections.Remove(recent_collection);
         }
     }
 }

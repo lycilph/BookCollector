@@ -1,4 +1,6 @@
-﻿namespace BookCollector.Application
+﻿using Panda.Infrastructure;
+
+namespace BookCollector.Application
 {
-    public interface IModule { }
+    public interface IModule : IScreen { }
 }

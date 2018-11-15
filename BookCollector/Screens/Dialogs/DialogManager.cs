@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace BookCollector.Application
+namespace BookCollector.Screens.Dialogs
 {
     public static class DialogManager
     {
@@ -45,6 +45,19 @@ namespace BookCollector.Application
             var result = save_file_dialog.ShowDialog(GetWindow());
 
             return (result, save_file_dialog.FileName);
+        }
+
+        public static (bool?, string) ShowOpenFileDialog(string title, string extension, string filter)
+        {
+            var open_file_dialog = new OpenFileDialog
+            {
+                Title = title,
+                DefaultExt = extension,
+                Filter = filter
+            };
+            var result = open_file_dialog.ShowDialog(GetWindow());
+
+            return (result, open_file_dialog.FileName);
         }
 
         private static Window GetWindow()

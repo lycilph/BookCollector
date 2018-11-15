@@ -21,7 +21,7 @@
             <StackPanel Grid.Row="1"
                         Background="AliceBlue">
                 <TextBlock Text="Testing"
-                   Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
+                           Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
                 <Button Content="Back" Command="{Binding BackCommand}"/>
             </StackPanel>
         </Grid>

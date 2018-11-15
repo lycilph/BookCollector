@@ -1,11 +1,10 @@
 ﻿using BookCollector.Application;
 using BookCollector.Application.Messages;
-using BookCollector.Data;
+using BookCollector.Screens.Dialogs;
 using NLog;
 using Panda.Infrastructure;
 using Panda.Utils;
 using ReactiveUI;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
@@ -62,29 +61,75 @@ namespace BookCollector.Screens.Collections
             SelectCollectionCommand = ReactiveCommand.Create<RecentCollectionViewModel>(SelectCollection);
             RemoveCollectionCommand = ReactiveCommand.Create<RecentCollectionViewModel>(RemoveCollection);
             NewCollectionCommand = ReactiveCommand.Create(NewCollection);
-            OpenCollectionCommand = ReactiveCommand.Create(OpenCollectionAsync);
-
-            var rc = new List<RecentlyOpenedCollection>
-            {
-                new RecentlyOpenedCollection("ABC"),
-                new RecentlyOpenedCollection("DEF"),
-                new RecentlyOpenedCollection("GHI")
-            };
-
-            RecentCollections = rc.Select(r => new RecentCollectionViewModel(r) { Name = "123" })
-                                  .ToObservableCollection();
-            RecentCollections.First().Invalid = true;
+            OpenCollectionCommand = ReactiveCommand.Create(OpenCollection);
         }
 
-        private void SelectCollection(RecentCollectionViewModel recent_collection)
+        public override void OnActivated()
+        {
+            RecentCollections = state_manager.GetRecentCollections()
+                                             .OrderByDescending(c => c.TimeStamp)
+                                             .Select(c => new RecentCollectionViewModel(c))
+                                             .ToObservableCollection();
+
+            foreach (var c in RecentCollections)
+            {
+                var collection = repository.LoadCollection(c.Filename);
+                if (collection == null)
+                {
+                    c.Name = "[Invalid]";
+                    c.Invalid = true;
+                }
+                else
+                    c.Name = collection.Name;
+            }
+
+            // Save the CurrentCollection in case it is replaced
+            if (state_manager.CurrentCollection != null)
+                repository.SaveCollection(state_manager.CurrentCollection);
+        }
+
+        public override void OnDeactivated()
+        {
+            RecentCollections.DisposeAll();
+            RecentCollections = null;
+        }
+
+        private async void SelectCollection (RecentCollectionViewModel recent_collection)
         {
             logger.Trace($"Selected collection [{recent_collection.Name}]");
-            MessageBus.Current.SendMessage(NavigationMessage.Import);
+
+            if (recent_collection.Invalid)
+            {
+                var result = (bool) await DialogManager.ShowPromptDialogAsync("Invalid Collection", "Do you want to remove it from the list?");
+                if (result == true)
+                {
+                    state_manager.RemoveFromRecentCollections(recent_collection.Obj);
+                    RecentCollections.Remove(recent_collection);
+                }
+            }
+            else
+            {
+                var collection = repository.LoadCollection(recent_collection.Filename);
+                state_manager.SetCurrentCollection(collection);
+                MessageBus.Current.SendMessage(NavigationMessage.Books);
+            }
         }
 
-        private void RemoveCollection(RecentCollectionViewModel recent_collection)
+        private async void RemoveCollection(RecentCollectionViewModel recent_collection)
         {
             logger.Trace($"Removing collection [{recent_collection.Filename}]");
+
+            if (recent_collection.Invalid != true)
+            {
+                var result = (bool)await DialogManager.ShowPromptDialogAsync("Removing Collection", "Do you want to delete it from disk?");
+                if (result == true)
+                {
+                    repository.DeleteCollection(recent_collection.Filename);
+                }
+            }
+
+            state_manager.RemoveFromRecentCollections(recent_collection.Obj);
+            RecentCollections.Remove(recent_collection);
         }
 
         private void NewCollection()
@@ -100,17 +145,17 @@ namespace BookCollector.Screens.Collections
             }
         }
 
-        private async void OpenCollectionAsync()
+        private void OpenCollection()
         {
-            await DialogManager.ShowMessageDialogAsync("Test", "Testing");
+            var filter = $"Collection file (*{Constants.CollectionExtension})|*{Constants.CollectionExtension}";
+            var (result, filename) = DialogManager.ShowOpenFileDialog("Open Existing Collection", Constants.CollectionExtension, filter);
 
-            var result = await DialogManager.ShowPromptDialogAsync("Info", "Are you sure?");
-            var accept = (bool)result;
-
-            if (accept)
-                await DialogManager.ShowMessageDialogAsync("Reply", "You accepted");
-            else
-                await DialogManager.ShowMessageDialogAsync("Reply", "You declined");
+            if (result == true)
+            {
+                var collection = repository.LoadCollection(filename);
+                state_manager.SetCurrentCollection(collection);
+                MessageBus.Current.SendMessage(NavigationMessage.Books);
+            }
         }
     }
 }
