@@ -19,21 +19,19 @@ namespace Panda.Infrastructure
             }
 
             // Attach loaded event handler
-            RoutedEventHandler loaded = null;
-            loaded = (s, e) =>
+            void loaded(object s, RoutedEventArgs e)
             {
                 fe.Loaded -= loaded;
                 OnViewLoaded(view);
-            };
+            }
             fe.Loaded += loaded;
 
             // Attach unloaded event handler
-            RoutedEventHandler unloaded = null;
-            unloaded = (s, e) =>
+            void unloaded(object s, RoutedEventArgs e)
             {
                 fe.Unloaded -= unloaded;
                 OnViewUnloaded(view);
-            };
+            }
             fe.Unloaded += unloaded;
 
             if (view is Window win)

@@ -1,18 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollector", "BookCollector\BookCollector.csproj", "{76B0136B-6134-41DA-8C81-FA5F830E2B87}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4} = {4CC2637D-1F67-4131-BDFF-90A14DBF82C4}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCollector", "BookCollector\BookCollector.csproj", "{C666A3A6-7681-4070-AAF2-BE17DC8CF570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda", "Panda\Panda.csproj", "{2F5A59F3-5894-443E-8800-ADCE9FC94391}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{547E1766-FB9F-4ED7-B6B5-2574690F8590}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodreadsPlugin", "GoodreadsPlugin\GoodreadsPlugin.csproj", "{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panda", "Panda\Panda.csproj", "{1A7327AB-3EF4-47B8-8E1F-89CC36483BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,27 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76B0136B-6134-41DA-8C81-FA5F830E2B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76B0136B-6134-41DA-8C81-FA5F830E2B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76B0136B-6134-41DA-8C81-FA5F830E2B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76B0136B-6134-41DA-8C81-FA5F830E2B87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F5A59F3-5894-443E-8800-ADCE9FC94391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F5A59F3-5894-443E-8800-ADCE9FC94391}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F5A59F3-5894-443E-8800-ADCE9FC94391}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F5A59F3-5894-443E-8800-ADCE9FC94391}.Release|Any CPU.Build.0 = Release|Any CPU
-		{547E1766-FB9F-4ED7-B6B5-2574690F8590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{547E1766-FB9F-4ED7-B6B5-2574690F8590}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{547E1766-FB9F-4ED7-B6B5-2574690F8590}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{547E1766-FB9F-4ED7-B6B5-2574690F8590}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CC2637D-1F67-4131-BDFF-90A14DBF82C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C666A3A6-7681-4070-AAF2-BE17DC8CF570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C666A3A6-7681-4070-AAF2-BE17DC8CF570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C666A3A6-7681-4070-AAF2-BE17DC8CF570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C666A3A6-7681-4070-AAF2-BE17DC8CF570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7327AB-3EF4-47B8-8E1F-89CC36483BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7327AB-3EF4-47B8-8E1F-89CC36483BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7327AB-3EF4-47B8-8E1F-89CC36483BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7327AB-3EF4-47B8-8E1F-89CC36483BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {839CD81B-7F46-4594-85CF-EE6CAA6DA15B}
+		SolutionGuid = {2E87249D-E236-4647-A59F-34DABB98B7C4}
 	EndGlobalSection
 EndGlobal

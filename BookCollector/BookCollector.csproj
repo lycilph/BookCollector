@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76B0136B-6134-41DA-8C81-FA5F830E2B87}</ProjectGuid>
+    <ProjectGuid>{C666A3A6-7681-4070-AAF2-BE17DC8CF570}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BookCollector</RootNamespace>
     <AssemblyName>BookCollector</AssemblyName>
@@ -39,35 +39,49 @@
     <ApplicationIcon>Images\book_open_page_black.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicData, Version=6.6.1.2507, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicData.6.6.1.2507\lib\net46\DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignExtensions, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignExtensions.2.3.0\lib\net45\MaterialDesignExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.0.111.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.MahApps.163.0.0.111\lib\net45\MaterialDesignThemes.MahApps.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NHunspell, Version=1.2.5554.16953, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHunspell.1.2.5554.16953\lib\net\NHunspell.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.5.9\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="ReactiveUI, Version=8.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveUI.8.7.2\lib\net461\ReactiveUI.dll</HintPath>
+    <Reference Include="ReactiveUI, Version=9.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReactiveUI.9.2.2\lib\net461\ReactiveUI.dll</HintPath>
     </Reference>
-    <Reference Include="ReactiveUI.Events.WPF, Version=8.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveUI.Events.WPF.8.7.2\lib\net461\ReactiveUI.Events.WPF.dll</HintPath>
+    <Reference Include="ReactiveUI.WPF, Version=9.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReactiveUI.WPF.9.2.2\lib\net461\ReactiveUI.WPF.dll</HintPath>
     </Reference>
-    <Reference Include="ReactiveUI.WPF, Version=8.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveUI.WPF.8.7.2\lib\net461\ReactiveUI.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="Splat, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Splat.4.0.2\lib\net461\Splat.dll</HintPath>
+    <Reference Include="Splat, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.5.0.2\lib\net461\Splat.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -78,10 +92,37 @@
     </Reference>
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Reactive, Version=4.1.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Reactive.4.1.1\lib\net46\System.Reactive.dll</HintPath>
+      <HintPath>..\packages\System.Reactive.4.1.2\lib\net46\System.Reactive.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Reactive.Core, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Core.4.1.2\lib\net46\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Experimental, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Experimental.4.1.2\lib\net46\System.Reactive.Experimental.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Interfaces.4.1.2\lib\net46\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Linq.4.1.2\lib\net46\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.PlatformServices.4.1.2\lib\net46\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Providers, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Providers.4.1.2\lib\net46\System.Reactive.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Runtime.Remoting, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Runtime.Remoting.4.1.2\lib\net46\System.Reactive.Runtime.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Forms, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Forms.4.1.2\lib\net46\System.Reactive.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.4.1.2\lib\net46\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -92,10 +133,11 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -118,55 +160,47 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application\ApplicationController.cs" />
+    <Compile Include="Application\ApplicationNinjectModule.cs" />
+    <Compile Include="Application\Constants.cs" />
+    <Compile Include="Application\Controllers\IApplicationController.cs" />
+    <Compile Include="Application\DialogManager.cs" />
+    <Compile Include="Application\IModule.cs" />
+    <Compile Include="Application\IRepository.cs" />
+    <Compile Include="Application\IStateManager.cs" />
+    <Compile Include="Application\Messages\ApplicationMessage.cs" />
+    <Compile Include="Application\Messages\NavigationMessage.cs" />
     <Compile Include="Application\Repository.cs" />
     <Compile Include="Application\StateManager.cs" />
-    <Compile Include="Screens\Books\BooksView.xaml.cs">
-      <DependentUpon>BooksView.xaml</DependentUpon>
+    <Compile Include="Application\Controllers\ApplicationController.cs" />
+    <Compile Include="Data\Collection.cs" />
+    <Compile Include="Data\RecentlyOpenedCollection.cs" />
+    <Compile Include="Screens\Books\BooksModuleView.xaml.cs">
+      <DependentUpon>BooksModuleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Books\BooksViewModel.cs" />
-    <Compile Include="Screens\Books\BookDetailView.xaml.cs">
-      <DependentUpon>BookDetailView.xaml</DependentUpon>
+    <Compile Include="Screens\Books\BooksModuleViewModel.cs" />
+    <Compile Include="Screens\Books\IBooksModule.cs" />
+    <Compile Include="Screens\Collections\CollectionsModuleView.xaml.cs">
+      <DependentUpon>CollectionsModuleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Books\BookDetailViewModel.cs" />
-    <Compile Include="Screens\Collections\CollectionsView.xaml.cs">
-      <DependentUpon>CollectionsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Collections\CollectionsViewModel.cs" />
+    <Compile Include="Screens\Collections\CollectionsModuleViewModel.cs" />
+    <Compile Include="Screens\Collections\ICollectionsModule.cs" />
     <Compile Include="Screens\Collections\RecentCollectionView.xaml.cs">
       <DependentUpon>RecentCollectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Collections\RecentCollectionViewModel.cs" />
-    <Compile Include="Screens\Logs\LogsViewModel.cs" />
-    <Compile Include="Screens\Logs\LogsView.xaml.cs">
-      <DependentUpon>LogsView.xaml</DependentUpon>
+    <Compile Include="Screens\Dialogs\MessageDialogViewModel.cs" />
+    <Compile Include="Screens\Dialogs\MessageDialogView.xaml.cs">
+      <DependentUpon>MessageDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Modules\IModulesViewModel.cs" />
-    <Compile Include="Screens\Modules\ModuleGroupView.xaml.cs">
-      <DependentUpon>ModuleGroupView.xaml</DependentUpon>
+    <Compile Include="Screens\Dialogs\PromptDialogView.xaml.cs">
+      <DependentUpon>PromptDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Modules\ModuleGroupViewModel.cs" />
-    <Compile Include="Screens\Modules\ModulesView.xaml.cs">
-      <DependentUpon>ModulesView.xaml</DependentUpon>
+    <Compile Include="Screens\Dialogs\PromptDialogViewModel.cs" />
+    <Compile Include="Screens\Import\IImportModule.cs" />
+    <Compile Include="Screens\Import\ImportModuleView.xaml.cs">
+      <DependentUpon>ImportModuleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Modules\ModulesViewModel.cs" />
-    <Compile Include="Screens\Notes\NotesView.xaml.cs">
-      <DependentUpon>NotesView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Notes\NotesViewModel.cs" />
-    <Compile Include="Screens\Notes\NoteViewModel.cs" />
-    <Compile Include="Screens\Series\SeriesDetailView.xaml.cs">
-      <DependentUpon>SeriesDetailView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Series\SeriesDetailViewModel.cs" />
-    <Compile Include="Screens\Series\SeriesView.xaml.cs">
-      <DependentUpon>SeriesView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Series\SeriesViewModel.cs" />
-    <Compile Include="Screens\Settings\SettingsView.xaml.cs">
-      <DependentUpon>SettingsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Settings\SettingsViewModel.cs" />
+    <Compile Include="Screens\Import\ImportModuleViewModel.cs" />
     <Compile Include="Screens\Shell\IShellViewModel.cs" />
     <Compile Include="Screens\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -174,7 +208,6 @@
     <Compile Include="Screens\Shell\ShellViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Bootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -194,32 +227,14 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Images\remove from list.png" />
-    <Resource Include="Content\README_en_US.txt" />
-    <Content Include="Content\stopwords_en.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Images\clear-button.png" />
-    <None Include="Hunspellx64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Hunspellx86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Resource Include="Images\book_open_page_black.ico" />
     <Content Include="NLog.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\en_US.aff">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\en_US.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -229,28 +244,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\book_open_page_black.ico" />
+    <Folder Include="Screens\Common\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{547e1766-fb9f-4ed7-b6b5-2574690f8590}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Panda\Panda.csproj">
-      <Project>{2f5a59f3-5894-443e-8800-adce9fc94391}</Project>
+      <Project>{1a7327ab-3ef4-47b8-8e1f-89cc36483bbb}</Project>
       <Name>Panda</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Screens\Books\BooksView.xaml">
+    <Page Include="Resources\Defaults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Books\BookDetailView.xaml">
+    <Page Include="Screens\Books\BooksModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Collections\CollectionsView.xaml">
+    <Page Include="Screens\Collections\CollectionsModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -258,41 +269,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Logs\LogsView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Screens\Modules\ModuleGroupView.xaml">
+    <Page Include="Screens\Dialogs\MessageDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Modules\ModulesView.xaml">
+    <Page Include="Screens\Dialogs\PromptDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Notes\NotesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Series\SeriesDetailView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Series\SeriesView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Settings\SettingsView.xaml">
+    <Page Include="Screens\Import\ImportModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Shell\ShellView.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\Shelves\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

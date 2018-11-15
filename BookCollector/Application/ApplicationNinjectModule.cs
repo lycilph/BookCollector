@@ -1,18 +1,10 @@
-﻿using BookCollector.Screens.Books;
+﻿using BookCollector.Application.Controllers;
+using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
-using BookCollector.Screens.Logs;
-using BookCollector.Screens.Modules;
-using BookCollector.Screens.Notes;
-using BookCollector.Screens.Series;
-using BookCollector.Screens.Settings;
+using BookCollector.Screens.Import;
 using BookCollector.Screens.Shell;
-using Core.Application;
-using Core.Data;
-using Core.Infrastructure;
 using Ninject.Modules;
 using NLog;
-using Panda.Dialog;
-using Panda.Search;
 
 namespace BookCollector.Application
 {
@@ -24,22 +16,24 @@ namespace BookCollector.Application
         {
             logger.Trace("Initializing dependencies for application");
 
-            Bind<IApplicationController>().To<ApplicationController>().InSingletonScope();
-            Bind<IStateManager>().To<StateManager>().InSingletonScope();
-            Bind<IRepository>().To<Repository>().InSingletonScope();
-            Bind<IDialogManager>().To<DialogManager>().InSingletonScope();
+            BindAsSingleton<IApplicationController, ApplicationController>();
+            BindAsSingleton<IStateManager, StateManager>();
+            BindAsSingleton<IRepository, Repository>();
 
-            Bind<ISearchEngine<Book>>().To<SearchEngine<Book>>().InSingletonScope()
-                                                                .WithConstructorArgument("stopwords_filename", @".\Content\stopwords_en.txt");
+            BindAsSingleton<IShellViewModel, ShellViewModel>();
+            BindAsSingleton<ICollectionsModule, IModule, CollectionsModuleViewModel>();
+            BindAsSingleton<IBooksModule, IModule, BooksModuleViewModel>();
+            BindAsSingleton<IImportModule, IModule, ImportModuleViewModel>();
+        }
 
-            Bind<IShellViewModel>().To<ShellViewModel>().InSingletonScope();
-            Bind<IModulesViewModel>().To<ModulesViewModel>().InSingletonScope();
-            Bind<IModule>().To<BooksViewModel>().InSingletonScope();
-            Bind<IModule>().To<SeriesViewModel>().InSingletonScope();
-            Bind<IModule>().To<NotesViewModel>().InSingletonScope();
-            Bind<IModule>().To<CollectionsViewModel>().InSingletonScope();
-            Bind<IModule>().To<LogsViewModel>().InSingletonScope();
-            Bind<IModule>().To<SettingsViewModel>().InSingletonScope();
+        private void BindAsSingleton<TInterface, TImplementation>() where TImplementation : TInterface
+        {
+            Bind<TInterface>().To<TImplementation>().InSingletonScope();
+        }
+
+        private void BindAsSingleton<TInterface1, TInterface2, TImplementation>() where TImplementation : TInterface1, TInterface2
+        {
+            Bind<TInterface1, TInterface2>().To<TImplementation>().InSingletonScope();
         }
     }
 }

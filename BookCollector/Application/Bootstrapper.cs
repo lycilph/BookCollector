@@ -1,14 +1,10 @@
-﻿using BookCollector.Screens.Shell;
-using Core.Application;
+﻿using System;
+using System.Windows;
+using BookCollector.Application.Controllers;
+using BookCollector.Screens.Shell;
 using Ninject;
 using NLog;
 using Panda.Infrastructure;
-using Panda.Utils;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using System.Windows;
 
 namespace BookCollector.Application
 {
@@ -18,35 +14,12 @@ namespace BookCollector.Application
 
         public IKernel Kernel { get; private set; }
 
-        public override void InitializeLogging()
-        {
-            var memory_target = new MemoryTarget() { Layout = "${uppercase:${level}} [${logger:shortName=true}] ${message}" };
-
-            LogManager.Configuration.AddTarget("memory", memory_target);
-            LogManager.Configuration.AddRuleForAllLevels("memory");
-            LogManager.Configuration.Reload();
-        }
-
         protected override void Configure()
         {
             logger.Trace("Configuring BookCollector");
 
             Kernel = new StandardKernel();
             Kernel.Load(AssemblySource.Assemblies);
-        }
-
-        protected override List<Assembly> SelectAssemblies()
-        {
-            var assemblies = base.SelectAssemblies();
-
-            // Adding plugin assemblies to the list
-            logger.Trace("Adding plugin assemblies to AssemblySource");
-
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            Directory.EnumerateFiles(path, "*plugin.dll")
-                     .Apply(plugin => assemblies.Add(Assembly.LoadFile(plugin)));
-
-            return assemblies;
         }
 
         protected override object GetInstance(Type type)

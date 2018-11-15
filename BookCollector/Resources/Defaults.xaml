@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Thickness x:Key="screen_margin">16</Thickness>
+    <Thickness x:Key="collection_screen_margin">32</Thickness>
+
+    <Thickness x:Key="dialog_margin">16</Thickness>
+
+    <Thickness x:Key="normal_vertical_spacing">0,16,0,0</Thickness>
+    <Thickness x:Key="large_vertical_spacing">0,32,0,0</Thickness>
+
+    <Thickness x:Key="left_control_spacing">8,0,0,0</Thickness>
+
+    <sys:TimeSpan x:Key="screen_transition_duration">0:0:0.5</sys:TimeSpan>
+</ResourceDictionary>

@@ -1,7 +1,6 @@
-﻿using ReactiveUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace Panda.Utils
 {
@@ -23,16 +22,10 @@ namespace Panda.Utils
                     disposable.Dispose();
             }
         }
-
-        public static IEnumerable<T> Except<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> compare)
+                
+        public static ObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> source)
         {
-            var comparer = new Comparer<T>(compare);
-            return first.Except(second, comparer);
-        }
-        
-        public static ReactiveList<T> ToReactiveList<T>(this IEnumerable<T> source, bool enable_change_tracking = false)
-        {
-            return new ReactiveList<T>(source) { ChangeTrackingEnabled = enable_change_tracking };
+            return new ObservableCollection<T>(source);
         }
     }
 }

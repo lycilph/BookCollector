@@ -20,7 +20,7 @@ using System.Windows.Markup;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2f5a59f3-5894-443e-8800-adce9fc94391")]
+[assembly: Guid("1a7327ab-3ef4-47b8-8e1f-89cc36483bbb")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -36,7 +36,4 @@ using System.Windows.Markup;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: XmlnsDefinition("http://www.panda.com", "Panda.Infrastructure")]
-[assembly: XmlnsDefinition("http://www.panda.com", "Panda.Converters")]
 [assembly: XmlnsDefinition("http://www.panda.com", "Panda.Utils")]
-[assembly: XmlnsDefinition("http://www.panda.com", "Panda.UI")]
-[assembly: XmlnsDefinition("http://www.panda.com", "Panda.UI.AvalonEdit")]

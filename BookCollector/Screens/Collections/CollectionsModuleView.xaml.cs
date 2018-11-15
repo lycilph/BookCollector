@@ -1,8 +1,8 @@
 ﻿namespace BookCollector.Screens.Collections
 {
-    public partial class RecentCollectionView
+    public partial class CollectionsModuleView
     {
-        public RecentCollectionView()
+        public CollectionsModuleView()
         {
             InitializeComponent();
         }

@@ -1,9 +1,9 @@
-﻿using Core.Infrastructure;
+﻿using System;
 
 namespace BookCollector.Screens.Shell
 {
     public interface IShellViewModel
     {
-        void NavigateTo(ModuleType module);
+        void NavigateTo(Type module);
     }
 }

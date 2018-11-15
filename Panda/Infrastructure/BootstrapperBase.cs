@@ -75,8 +75,7 @@ namespace Panda.Infrastructure
             var view = ViewManager.CreateAndBindViewForModel(view_model);
 
             // Show window
-            var window = view as Window;
-            if (window == null)
+            if (!(view is Window window))
                 throw new InvalidOperationException($"View for {typeof(TViewModel).FullName} must be of type Window");
             window.Show();
         }

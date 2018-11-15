@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
+using ReactiveUI;
+using System;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Bson;
-using ReactiveUI;
 
-namespace Core.Utility
+namespace Panda.Utils
 {
     // http://www.ibiliskov.info/2011/07/isdirty-object-dirtiness/
     public class DirtyTrackingBase : ReactiveObject

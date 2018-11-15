@@ -1,4 +1,4 @@
-﻿using Core.Data;
+﻿using BookCollector.Data;
 using Panda.Infrastructure;
 using ReactiveUI;
 
@@ -22,6 +22,6 @@ namespace BookCollector.Screens.Collections
             set { this.RaiseAndSetIfChanged(ref _Invalid, value); }
         }
 
-        public RecentCollectionViewModel(RecentlyOpenedCollection obj) : base(obj) {}
+        public RecentCollectionViewModel(RecentlyOpenedCollection obj) : base(obj) { }
     }
 }
