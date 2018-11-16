@@ -57,6 +57,12 @@ namespace BookCollector.Application.Controllers
                 case ApplicationMessage.ShellLoaded:
                     shell.NavigateTo(typeof(ICollectionsModule));
                     break;
+                case ApplicationMessage.ShowCommands:
+                    shell.ShowCommands();
+                    break;
+                case ApplicationMessage.HideCommands:
+                    shell.HideCommands();
+                    break;
                 default:
                     throw new ArgumentException($"Unhandled application message {message}");
             }

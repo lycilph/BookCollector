@@ -6,10 +6,22 @@
 
     <Thickness x:Key="dialog_margin">16</Thickness>
 
+    <Thickness x:Key="part_margin">16</Thickness>
+
     <Thickness x:Key="normal_vertical_spacing">0,16,0,0</Thickness>
     <Thickness x:Key="large_vertical_spacing">0,32,0,0</Thickness>
 
     <Thickness x:Key="left_control_spacing">8,0,0,0</Thickness>
+    <Thickness x:Key="top_control_spacing">0,8,0,0</Thickness>
 
     <sys:TimeSpan x:Key="screen_transition_duration">0:0:0.5</sys:TimeSpan>
+
+    <Style x:Key="horizontal_splitter" 
+           TargetType="{x:Type GridSplitter}" 
+           BasedOn="{StaticResource {x:Type GridSplitter}}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Width" Value="3"/>
+        <Setter Property="Margin" Value="2,0"/>
+    </Style>
 </ResourceDictionary>

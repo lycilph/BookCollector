@@ -5,25 +5,58 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+             xmlns:panda="http://www.panda.com"
              mc:Ignorable="d" 
              d:DesignHeight="450" 
              d:DesignWidth="800">
     <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <md:DrawerHost IsLeftDrawerOpen="{Binding ApplicationNavigationPart.IsOpen}">
+            <md:DrawerHost.LeftDrawerContent>
+                <ContentControl panda:View.Bind="{Binding ApplicationNavigationPart}"/>
+            </md:DrawerHost.LeftDrawerContent>
+            
+            <DockPanel>
+                <ext:AppBar DockPanel.Dock="Top" 
+                            ShowNavigationDrawerButton="True"
+                            IsNavigationDrawerOpen="{Binding ApplicationNavigationPart.IsOpen, Mode=TwoWay}"
+                            Title="Books">
+                    <md:PopupBox DockPanel.Dock="Right" 
+                             PlacementMode="BottomAndAlignRightEdges" 
+                             StaysOpen="False">
+                        <ContentControl panda:View.Bind="{Binding ToolsNavigationPart}"/>
+                    </md:PopupBox>
+                </ext:AppBar>
 
-            <ext:AppBar Grid.Row="0"
-                        Title="Books"/>
+                <ContentControl DockPanel.Dock="Bottom" 
+                                panda:View.Bind="{Binding CollectionInformationPart}"/>
 
-            <StackPanel Grid.Row="1"
-                        Background="AliceBlue">
-                <TextBlock Text="Testing"
-                           Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
-                <Button Content="Back" Command="{Binding BackCommand}"/>
-            </StackPanel>
-        </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="3*" MinWidth="50"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="1*" MinWidth="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
+
+                        <TextBlock Background="Chartreuse"
+                                   Text="Shelves"/>
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="1"
+                               Background="BurlyWood"
+                               Text="Books List"/>
+
+                    <GridSplitter Grid.Column="2"
+                                  Style="{StaticResource horizontal_splitter}"/>
+
+                    <TextBlock Grid.Column="3"
+                               Background="LightCoral"
+                               Text="Books details"/>
+                </Grid>
+            </DockPanel>
+        </md:DrawerHost>
     </md:TransitioningContent>
 </UserControl>

@@ -163,6 +163,23 @@
     <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
+    <Compile Include="Screens\Common\ApplicationNavigationPartView.xaml.cs">
+      <DependentUpon>ApplicationNavigationPartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Common\ApplicationNavigationPartViewModel.cs" />
+    <Compile Include="Screens\Common\CollectionInformationPartView.xaml.cs">
+      <DependentUpon>CollectionInformationPartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Common\CollectionInformationPartViewModel.cs" />
+    <Compile Include="Screens\Common\CollectionModuleBase.cs" />
+    <Compile Include="Screens\Common\CollectionsNavigationPartView.xaml.cs">
+      <DependentUpon>CollectionsNavigationPartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Common\CollectionsNavigationPartViewModel.cs" />
+    <Compile Include="Screens\Common\ToolsNavigationPartView.xaml.cs">
+      <DependentUpon>ToolsNavigationPartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Common\ToolsNavigationPartViewModel.cs" />
     <Compile Include="Screens\Dialogs\DialogManager.cs" />
     <Compile Include="Application\IModule.cs" />
     <Compile Include="Application\IRepository.cs" />
@@ -202,6 +219,11 @@
       <DependentUpon>ImportModuleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Import\ImportModuleViewModel.cs" />
+    <Compile Include="Screens\Series\ISeriesModule.cs" />
+    <Compile Include="Screens\Series\SeriesModuleView.xaml.cs">
+      <DependentUpon>SeriesModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Series\SeriesModuleViewModel.cs" />
     <Compile Include="Screens\Shell\IShellViewModel.cs" />
     <Compile Include="Screens\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -244,9 +266,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Panda\Panda.csproj">
       <Project>{1a7327ab-3ef4-47b8-8e1f-89cc36483bbb}</Project>
@@ -270,6 +290,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Screens\Common\ApplicationNavigationPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Common\CollectionInformationPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Common\CollectionsNavigationPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Common\ToolsNavigationPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Screens\Dialogs\MessageDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -279,6 +315,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Import\ImportModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Series\SeriesModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

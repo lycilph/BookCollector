@@ -1,22 +1,23 @@
 ﻿using BookCollector.Application.Messages;
-using Panda.Infrastructure;
+using BookCollector.Screens.Common;
 using ReactiveUI;
-using System.Reactive;
 
 namespace BookCollector.Screens.Books
 {
-    public class BooksModuleViewModel : ScreenBase, IBooksModule
+    public class BooksModuleViewModel : CollectionModuleBase, IBooksModule
     {
-        private ReactiveCommand<Unit, Unit> _BackCommand;
-        public ReactiveCommand<Unit, Unit> BackCommand
+        public BooksModuleViewModel(ApplicationNavigationPartViewModel application_navigation_part, 
+                                    CollectionsNavigationPartViewModel collections_navigation_part, 
+                                    ToolsNavigationPartViewModel tools_navigation_part, 
+                                    CollectionInformationPartViewModel collection_information_part) 
+            : base(application_navigation_part, collections_navigation_part, tools_navigation_part, collection_information_part)
         {
-            get { return _BackCommand; }
-            set { this.RaiseAndSetIfChanged(ref _BackCommand, value); }
         }
 
-        public BooksModuleViewModel()
+        public override void OnActivated()
         {
-            BackCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Collections));
+            // Show windows commands
+            MessageBus.Current.SendMessage(ApplicationMessage.ShowCommands);
         }
     }
 }
