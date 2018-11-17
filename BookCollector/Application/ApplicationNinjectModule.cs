@@ -1,6 +1,7 @@
 ﻿using BookCollector.Application.Controllers;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
+using BookCollector.Screens.Common;
 using BookCollector.Screens.Import;
 using BookCollector.Screens.Series;
 using BookCollector.Screens.Shell;
@@ -26,6 +27,16 @@ namespace BookCollector.Application
             BindAsSingleton<IBooksModule, IModule, BooksModuleViewModel>();
             BindAsSingleton<ISeriesModule, IModule, SeriesModuleViewModel>();
             BindAsSingleton<IImportModule, IModule, ImportModuleViewModel>();
+
+            BindSelfAsSingleton<ApplicationNavigationPartViewModel>();
+            BindSelfAsSingleton<CollectionsNavigationPartViewModel>();
+            BindSelfAsSingleton<ToolsNavigationPartViewModel>();
+            BindSelfAsSingleton<CollectionInformationPartViewModel>();
+        }
+
+        private void BindSelfAsSingleton<TImplementation>()
+        {
+            Bind<TImplementation>().ToSelf().InSingletonScope();
         }
 
         private void BindAsSingleton<TInterface, TImplementation>() where TImplementation : TInterface

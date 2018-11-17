@@ -14,6 +14,6 @@
         <StatusBarItem DockPanel.Dock="Right" Width="100">Books: XXX</StatusBarItem>
         <Separator DockPanel.Dock="Right"/>
 
-        <StatusBarItem>Collection Name</StatusBarItem>
+        <StatusBarItem Content="{Binding Name}"/>
     </StatusBar>
 </UserControl>

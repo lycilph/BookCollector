@@ -176,6 +176,10 @@
       <DependentUpon>CollectionsNavigationPartView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Common\CollectionsNavigationPartViewModel.cs" />
+    <Compile Include="Screens\Controls\SearchFieldView.xaml.cs">
+      <DependentUpon>SearchFieldView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Controls\SearchFieldViewModel.cs" />
     <Compile Include="Screens\Common\ToolsNavigationPartView.xaml.cs">
       <DependentUpon>ToolsNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -299,6 +303,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Common\CollectionsNavigationPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Controls\SearchFieldView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,10 +1,11 @@
 ﻿using BookCollector.Application.Messages;
+using Panda.Infrastructure;
 using ReactiveUI;
 using System.Reactive;
 
 namespace BookCollector.Screens.Common
 {
-    public class CollectionsNavigationPartViewModel : ReactiveObject
+    public class CollectionsNavigationPartViewModel : ScreenBase
     {
         private ReactiveCommand<Unit, Unit> _ShowBooksCommand;
         public ReactiveCommand<Unit, Unit> ShowBooksCommand

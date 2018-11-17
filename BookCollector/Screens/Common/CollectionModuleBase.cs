@@ -43,5 +43,21 @@ namespace BookCollector.Screens.Common
             ToolsNavigationPart = tools_navigation_part;
             CollectionInformationPart = collection_information_part;
         }
+
+        public override void OnActivated()
+        {
+            ApplicationNavigationPart?.Activate();
+            CollectionInformationPart?.Activate();
+            ToolsNavigationPart?.Activate();
+            CollectionInformationPart?.Activate();
+        }
+
+        public override void OnDeactivated()
+        {
+            ApplicationNavigationPart?.Deactivate();
+            CollectionInformationPart?.Deactivate();
+            ToolsNavigationPart?.Deactivate();
+            CollectionInformationPart?.Deactivate();
+        }
     }
 }

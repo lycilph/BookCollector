@@ -20,9 +20,12 @@
                             ShowNavigationDrawerButton="True"
                             IsNavigationDrawerOpen="{Binding ApplicationNavigationPart.IsOpen, Mode=TwoWay}"
                             Title="Books">
+                    <ContentControl DockPanel.Dock="Right"
+                                    panda:View.Bind="{Binding SearchField}"/>
+
                     <md:PopupBox DockPanel.Dock="Right" 
-                             PlacementMode="BottomAndAlignRightEdges" 
-                             StaysOpen="False">
+                                 PlacementMode="BottomAndAlignRightEdges" 
+                                 StaysOpen="False">
                         <ContentControl panda:View.Bind="{Binding ToolsNavigationPart}"/>
                     </md:PopupBox>
                 </ext:AppBar>

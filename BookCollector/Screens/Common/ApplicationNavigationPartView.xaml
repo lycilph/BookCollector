@@ -18,12 +18,15 @@
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                    Margin="{StaticResource normal_vertical_spacing}"/>
         <Button Content="Books" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Series" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Notes" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
 
@@ -31,12 +34,15 @@
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                    Margin="{StaticResource normal_vertical_spacing}"/>
         <Button Content="Import" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Logs" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Tools" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
 
@@ -44,9 +50,11 @@
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                    Margin="{StaticResource normal_vertical_spacing}"/>
         <Button Content="Collections" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Settings" 
+                IsEnabled="False"
                 Margin="{StaticResource top_control_spacing}"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
     </StackPanel>

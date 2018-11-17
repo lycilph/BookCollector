@@ -1,8 +1,9 @@
-﻿using ReactiveUI;
+﻿using Panda.Infrastructure;
+using ReactiveUI;
 
 namespace BookCollector.Screens.Common
 {
-    public class ApplicationNavigationPartViewModel : ReactiveObject
+    public class ApplicationNavigationPartViewModel : ScreenBase
     {
         private bool _IsOpen;
         public bool IsOpen
