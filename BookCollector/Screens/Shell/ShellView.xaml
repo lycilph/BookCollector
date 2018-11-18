@@ -37,6 +37,9 @@
     </controls:MetroWindow.RightWindowCommands>
     
     <md:DialogHost>
-        <ContentControl panda:View.Bind="{Binding CurrentModule}"/>
+        <Grid>
+            <ContentControl panda:View.Bind="{Binding CurrentModule}"/>
+            <md:Snackbar MessageQueue="{Binding MessageQueue}"/>
+        </Grid>
     </md:DialogHost>
 </controls:MetroWindow>

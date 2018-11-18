@@ -166,6 +166,7 @@
     <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
+    <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Goodreads\Data\GoodreadsCSVBook.cs" />
     <Compile Include="Goodreads\GoodreadsImporter.cs" />

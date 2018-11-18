@@ -6,6 +6,7 @@ using BookCollector.Screens.Shell;
 using NLog;
 using ReactiveUI;
 using System;
+using System.Linq;
 
 namespace BookCollector.Application.Controllers
 {
@@ -46,6 +47,11 @@ namespace BookCollector.Application.Controllers
             MessageBus.Current
                       .Listen<NavigationMessage>()
                       .Subscribe(HandleNavigationMessage);
+
+            logger.Trace("Hooking up information messages");
+            MessageBus.Current
+                      .Listen<InformationMessage>()
+                      .Subscribe(HandleInformationMessages);
         }
 
         private void HandleApplicationMessage(ApplicationMessage message)
@@ -86,6 +92,16 @@ namespace BookCollector.Application.Controllers
                 default:
                     throw new ArgumentException($"Unhandled navigation message {message}");
             }
+        }
+
+        private void HandleInformationMessages(InformationMessage message)
+        {
+            logger.Trace($"Got an information message [{message.Content}]");
+
+            if (!string.IsNullOrWhiteSpace(message.ActionContent) && message.ActionHandler != null)
+                shell.ShowMessage(message.Content, message.ActionContent, message.ActionHandler);
+            else
+                shell.ShowMessage(message.Content);
         }
     }
 }

@@ -6,6 +6,9 @@ namespace BookCollector.Screens.Shell
     {
         void NavigateTo(Type module);
 
+        void ShowMessage(string content);
+        void ShowMessage(string content, string action_content, Action action_handler);
+
         void ShowCommands();
         void HideCommands();
     }

@@ -1,5 +1,6 @@
 ﻿using BookCollector.Application;
 using BookCollector.Application.Messages;
+using MaterialDesignThemes.Wpf;
 using Panda.Infrastructure;
 using ReactiveUI;
 using System;
@@ -18,6 +19,13 @@ namespace BookCollector.Screens.Shell
         {
             get { return _CurrentModule; }
             set { this.RaiseAndSetIfChanged(ref _CurrentModule, value); }
+        }
+
+        private ISnackbarMessageQueue _MessageQueue;
+        public ISnackbarMessageQueue MessageQueue
+        {
+            get { return _MessageQueue; }
+            set { this.RaiseAndSetIfChanged(ref _MessageQueue, value); }
         }
 
         private bool _ShowWindowsCommands;
@@ -45,6 +53,8 @@ namespace BookCollector.Screens.Shell
         {
             this.modules = modules;
 
+            MessageQueue = new SnackbarMessageQueue(TimeSpan.FromSeconds(1));
+
             ShowCollectionsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Collections));
         }
 
@@ -56,6 +66,16 @@ namespace BookCollector.Screens.Shell
 
             if (CurrentModule != module_to_navigate_to)
                 SetCurrentModule(module_to_navigate_to);
+        }
+
+        public void ShowMessage(string content)
+        {
+            MessageQueue.Enqueue(content);
+        }
+
+        public void ShowMessage(string content, string action_content, Action action_handler)
+        {
+            MessageQueue.Enqueue(content, action_content, action_handler);
         }
 
         public void ShowCommands()

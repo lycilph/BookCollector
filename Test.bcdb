@@ -61,6 +61,40 @@
         "Source": "Goodreads CSV",
         "GoodreadsBookId": "31518031"
       }
+    },
+    {
+      "$id": "8",
+      "Title": "Rogue Protocol (The Murderbot Diaries, #3)",
+      "Authors": [
+        "Martha Wells"
+      ],
+      "ISBN": "1250191785",
+      "ISBN13": "9781250191786",
+      "Description": null,
+      "Metadata": {
+        "$id": "9",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35519101"
+      }
+    },
+    {
+      "$id": "10",
+      "Title": "All Systems Red (The Murderbot Diaries, #1)",
+      "Authors": [
+        "Martha Wells"
+      ],
+      "ISBN": "0765397528",
+      "ISBN13": "9780765397522",
+      "Description": null,
+      "Metadata": {
+        "$id": "11",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "32758901"
+      }
     }
   ]
 }

@@ -152,10 +152,11 @@ namespace BookCollector.Screens.Import
                                           .Select(s => s.Name)
                                           .ToList();
             var books_on_selected_shelves = Books.Where(b => b.IsDuplicate == false && selected_shelves.Contains(b.ExclusiveShelf));
-            var imported_books = GoodreadsMapper.Map(books_on_selected_shelves);
+            var imported_books = GoodreadsMapper.Map(books_on_selected_shelves).ToList();
             state_manager.CurrentCollection.Add(imported_books);
 
             MessageBus.Current.SendMessage(NavigationMessage.Books);
+            MessageBus.Current.SendMessage(new InformationMessage($"{imported_books.Count} books were imported"));
         }
 
         private void Clear()
