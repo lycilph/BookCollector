@@ -172,6 +172,10 @@
     <Compile Include="Goodreads\GoodreadsImporter.cs" />
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
+    <Compile Include="Screens\Books\BookDetailView.xaml.cs">
+      <DependentUpon>BookDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Books\BookDetailViewModel.cs" />
     <Compile Include="Screens\Common\ApplicationNavigationPartView.xaml.cs">
       <DependentUpon>ApplicationNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -294,6 +298,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Resources\Defaults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Books\BookDetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

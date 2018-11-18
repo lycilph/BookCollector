@@ -95,6 +95,6225 @@
         "Source": "Goodreads CSV",
         "GoodreadsBookId": "31518031"
       }
+    },
+    {
+      "$id": "12",
+      "Title": "Robert Oppenheimer: A Life Inside the Center",
+      "Authors": [
+        "Ray Monk"
+      ],
+      "ISBN": "0385504071",
+      "ISBN13": "9780385504072",
+      "Description": null,
+      "Metadata": {
+        "$id": "13",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12041966"
+      }
+    },
+    {
+      "$id": "14",
+      "Title": "Revenant Gun (The Machineries of Empire, #3)",
+      "Authors": [
+        "Yoon Ha Lee"
+      ],
+      "ISBN": "1781086079",
+      "ISBN13": "9781781086070",
+      "Description": null,
+      "Metadata": {
+        "$id": "15",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "36373688"
+      }
+    },
+    {
+      "$id": "16",
+      "Title": "Raven Stratagem (The Machineries of Empire, #2)",
+      "Authors": [
+        "Yoon Ha Lee"
+      ],
+      "ISBN": "1781085374",
+      "ISBN13": "9781781085370",
+      "Description": null,
+      "Metadata": {
+        "$id": "17",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "32927239"
+      }
+    },
+    {
+      "$id": "18",
+      "Title": "The Five Ages of the Universe: Inside the Physics of Eternity",
+      "Authors": [
+        "Fred Adams",
+        "Greg Laughlin"
+      ],
+      "ISBN": "0684865769",
+      "ISBN13": "9780684865768",
+      "Description": null,
+      "Metadata": {
+        "$id": "19",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "401973"
+      }
+    },
+    {
+      "$id": "20",
+      "Title": "Salvation",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0399178767",
+      "ISBN13": "9780399178764",
+      "Description": null,
+      "Metadata": {
+        "$id": "21",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "37569244"
+      }
+    },
+    {
+      "$id": "22",
+      "Title": "Ninefox Gambit (The Machineries of Empire #1)",
+      "Authors": [
+        "Yoon Ha Lee"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "23",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "26118426"
+      }
+    },
+    {
+      "$id": "24",
+      "Title": "The Rapture of the Nerds",
+      "Authors": [
+        "Cory Doctorow",
+        "Charles Stross"
+      ],
+      "ISBN": "0765329107",
+      "ISBN13": "9780765329103",
+      "Description": null,
+      "Metadata": {
+        "$id": "25",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13538762"
+      }
+    },
+    {
+      "$id": "26",
+      "Title": "Terminal World",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575088508",
+      "ISBN13": "9780575088504",
+      "Description": null,
+      "Metadata": {
+        "$id": "27",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6237781"
+      }
+    },
+    {
+      "$id": "28",
+      "Title": "The Singularity Trap",
+      "Authors": [
+        "Dennis E. Taylor",
+        "Ray Porter"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "29",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35269854"
+      }
+    },
+    {
+      "$id": "30",
+      "Title": "A Gift of Time",
+      "Authors": [
+        "Jerry Merritt"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "31",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "32622432"
+      }
+    },
+    {
+      "$id": "32",
+      "Title": "Newton's Wake: A Space Opera",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "076534422X",
+      "ISBN13": "9780765344229",
+      "Description": null,
+      "Metadata": {
+        "$id": "33",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "185827"
+      }
+    },
+    {
+      "$id": "34",
+      "Title": "Infinity Engine (Transformation, #3)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "159780889X",
+      "ISBN13": "9781597808897",
+      "Description": null,
+      "Metadata": {
+        "$id": "35",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "31213232"
+      }
+    },
+    {
+      "$id": "36",
+      "Title": "Woken Furies (Takeshi Kovacs, #3)",
+      "Authors": [
+        "Richard K. Morgan"
+      ],
+      "ISBN": "0345479718",
+      "ISBN13": "9780345479716",
+      "Description": null,
+      "Metadata": {
+        "$id": "37",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "29397"
+      }
+    },
+    {
+      "$id": "38",
+      "Title": "Broken Angels (Takeshi Kovacs, #2)",
+      "Authors": [
+        "Richard K. Morgan"
+      ],
+      "ISBN": "0345457714",
+      "ISBN13": "9780345457714",
+      "Description": null,
+      "Metadata": {
+        "$id": "39",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "279561"
+      }
+    },
+    {
+      "$id": "40",
+      "Title": "Altered Carbon (Takeshi Kovacs, #1)",
+      "Authors": [
+        "Richard K. Morgan"
+      ],
+      "ISBN": "0345457692",
+      "ISBN13": "9780345457691",
+      "Description": null,
+      "Metadata": {
+        "$id": "41",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "40445"
+      }
+    },
+    {
+      "$id": "42",
+      "Title": "Lifeburst",
+      "Authors": [
+        "Jack Williamson"
+      ],
+      "ISBN": "0345329775",
+      "ISBN13": "9780345329776",
+      "Description": null,
+      "Metadata": {
+        "$id": "43",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "854962"
+      }
+    },
+    {
+      "$id": "44",
+      "Title": "Surely You're Joking, Mr. Feynman!",
+      "Authors": [
+        "Richard Feynman"
+      ],
+      "ISBN": "009917331X",
+      "ISBN13": "9780099173311",
+      "Description": null,
+      "Metadata": {
+        "$id": "45",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "17364"
+      }
+    },
+    {
+      "$id": "46",
+      "Title": "Elysium Fire (Prefect Dreyfus Emergency, #2)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "47",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35601772"
+      }
+    },
+    {
+      "$id": "48",
+      "Title": "The Garden of Rama (Rama, #3)",
+      "Authors": [
+        "Arthur C. Clarke",
+        "Gentry Lee"
+      ],
+      "ISBN": "1857230213",
+      "ISBN13": "9781857230215",
+      "Description": null,
+      "Metadata": {
+        "$id": "49",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "112518"
+      }
+    },
+    {
+      "$id": "50",
+      "Title": "Erebus (The Sleeping Gods #2)",
+      "Authors": [
+        "Ralph Kern"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "51",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "28445596"
+      }
+    },
+    {
+      "$id": "52",
+      "Title": "Endeavour (The Sleeping Gods, #1)",
+      "Authors": [
+        "Ralph Kern"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "53",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22701594"
+      }
+    },
+    {
+      "$id": "54",
+      "Title": "Beacon 23 (Beacon 23, #1-5)",
+      "Authors": [
+        "Hugh Howey"
+      ],
+      "ISBN": "1516865871",
+      "ISBN13": "9781516865871",
+      "Description": null,
+      "Metadata": {
+        "$id": "55",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "26771521"
+      }
+    },
+    {
+      "$id": "56",
+      "Title": "Ready Player One (Ready Player One, #1)",
+      "Authors": [
+        "Ernest Cline"
+      ],
+      "ISBN": "030788743X",
+      "ISBN13": "9780307887436",
+      "Description": null,
+      "Metadata": {
+        "$id": "57",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "9969571"
+      }
+    },
+    {
+      "$id": "58",
+      "Title": "Anomaly",
+      "Authors": [
+        "Peter Cawdron"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "59",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12972560"
+      }
+    },
+    {
+      "$id": "60",
+      "Title": "Artemis",
+      "Authors": [
+        "Andy Weir"
+      ],
+      "ISBN": "0553448129",
+      "ISBN13": "9780553448122",
+      "Description": null,
+      "Metadata": {
+        "$id": "61",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "34928122"
+      }
+    },
+    {
+      "$id": "62",
+      "Title": "After On: A Novel of Silicon Valley",
+      "Authors": [
+        "Rob Reid"
+      ],
+      "ISBN": "1524798053",
+      "ISBN13": "9781524798055",
+      "Description": null,
+      "Metadata": {
+        "$id": "63",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "34836326"
+      }
+    },
+    {
+      "$id": "64",
+      "Title": "Death's End (Remembrance of Earth’s Past #3)",
+      "Authors": [
+        "Liu Cixin",
+        "Ken Liu"
+      ],
+      "ISBN": "0765377101",
+      "ISBN13": "9780765377104",
+      "Description": null,
+      "Metadata": {
+        "$id": "65",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "25451264"
+      }
+    },
+    {
+      "$id": "66",
+      "Title": "The Dark Forest (Remembrance of Earth’s Past, #2)",
+      "Authors": [
+        "Liu Cixin",
+        "Joel Martinsen"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "67",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23168817"
+      }
+    },
+    {
+      "$id": "68",
+      "Title": "The Three-Body Problem (Remembrance of Earth’s Past #1)",
+      "Authors": [
+        "Liu Cixin",
+        "Ken Liu"
+      ],
+      "ISBN": "0765377063",
+      "ISBN13": "9780765377067",
+      "Description": null,
+      "Metadata": {
+        "$id": "69",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "20518872"
+      }
+    },
+    {
+      "$id": "70",
+      "Title": "The Chronoliths",
+      "Authors": [
+        "Robert Charles Wilson"
+      ],
+      "ISBN": "0812545249",
+      "ISBN13": "9780812545241",
+      "Description": null,
+      "Metadata": {
+        "$id": "71",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "116413"
+      }
+    },
+    {
+      "$id": "72",
+      "Title": "Way Station",
+      "Authors": [
+        "Clifford D. Simak"
+      ],
+      "ISBN": "0020248717",
+      "ISBN13": "9780020248712",
+      "Description": null,
+      "Metadata": {
+        "$id": "73",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "190999"
+      }
+    },
+    {
+      "$id": "74",
+      "Title": "Children of Time",
+      "Authors": [
+        "Adrian Tchaikovsky"
+      ],
+      "ISBN": "1447273281",
+      "ISBN13": "9781447273288",
+      "Description": null,
+      "Metadata": {
+        "$id": "75",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "25499718"
+      }
+    },
+    {
+      "$id": "76",
+      "Title": "We Are Legion (We Are Bob) (Bobiverse, #1)",
+      "Authors": [
+        "Dennis E. Taylor"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "77",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "32109569"
+      }
+    },
+    {
+      "$id": "78",
+      "Title": "All These Worlds (Bobiverse, #3)",
+      "Authors": [
+        "Dennis E. Taylor"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "79",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35506021"
+      }
+    },
+    {
+      "$id": "80",
+      "Title": "For We Are Many (Bobiverse, #2)",
+      "Authors": [
+        "Dennis E. Taylor",
+        "Ray Porter"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "81",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "33395557"
+      }
+    },
+    {
+      "$id": "82",
+      "Title": "A Meeting with Medusa",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "83",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23594693"
+      }
+    },
+    {
+      "$id": "84",
+      "Title": "Physically Based Rendering: From Theory to Implementation",
+      "Authors": [
+        "Matt Pharr"
+      ],
+      "ISBN": "0123750792",
+      "ISBN13": "9780123750792",
+      "Description": null,
+      "Metadata": {
+        "$id": "85",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8981752"
+      }
+    },
+    {
+      "$id": "86",
+      "Title": "Realistic Ray Tracing",
+      "Authors": [
+        "Peter Shirley",
+        "R. Keith Morley"
+      ],
+      "ISBN": "1568811985",
+      "ISBN13": "9781568811987",
+      "Description": null,
+      "Metadata": {
+        "$id": "87",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3258612"
+      }
+    },
+    {
+      "$id": "88",
+      "Title": "Revenger (Revenger, #1)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575090537",
+      "ISBN13": "9780575090538",
+      "Description": null,
+      "Metadata": {
+        "$id": "89",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "28962452"
+      }
+    },
+    {
+      "$id": "90",
+      "Title": "Gridlinked (Agent Cormac #1, Polity Universe #3)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0765349051",
+      "ISBN13": "9780765349057",
+      "Description": null,
+      "Metadata": {
+        "$id": "91",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "98046"
+      }
+    },
+    {
+      "$id": "92",
+      "Title": "Det gennemsnitlige menneske",
+      "Authors": [
+        "Morten Albæk",
+        "Stig Matthiesen"
+      ],
+      "ISBN": "",
+      "ISBN13": "9788702129434",
+      "Description": null,
+      "Metadata": {
+        "$id": "93",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18040879"
+      }
+    },
+    {
+      "$id": "94",
+      "Title": "Rama II (Rama, #2)",
+      "Authors": [
+        "Arthur C. Clarke",
+        "Gentry Lee"
+      ],
+      "ISBN": "2290032042",
+      "ISBN13": "9782290032046",
+      "Description": null,
+      "Metadata": {
+        "$id": "95",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "112520"
+      }
+    },
+    {
+      "$id": "96",
+      "Title": "The Wandering Earth",
+      "Authors": [
+        "Liu Cixin",
+        "Kim Fout",
+        "C.W. Verbena",
+        "Holger Nahm"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "97",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13554058"
+      }
+    },
+    {
+      "$id": "98",
+      "Title": "How Not to Be Wrong: The Power of Mathematical Thinking",
+      "Authors": [
+        "Jordan Ellenberg"
+      ],
+      "ISBN": "1594205221",
+      "ISBN13": "9781594205224",
+      "Description": null,
+      "Metadata": {
+        "$id": "99",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18693884"
+      }
+    },
+    {
+      "$id": "100",
+      "Title": "A Night Without Stars",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345547225",
+      "ISBN13": "9780345547224",
+      "Description": null,
+      "Metadata": {
+        "$id": "101",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "28439513"
+      }
+    },
+    {
+      "$id": "102",
+      "Title": "The Abyss Beyond Dreams",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345547195",
+      "ISBN13": "9780345547194",
+      "Description": null,
+      "Metadata": {
+        "$id": "103",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "20697413"
+      }
+    },
+    {
+      "$id": "104",
+      "Title": "City",
+      "Authors": [
+        "Clifford D. Simak"
+      ],
+      "ISBN": "188296828X",
+      "ISBN13": "9781882968282",
+      "Description": null,
+      "Metadata": {
+        "$id": "105",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "222093"
+      }
+    },
+    {
+      "$id": "106",
+      "Title": "Arkwright",
+      "Authors": [
+        "Allen M. Steele"
+      ],
+      "ISBN": "0765382156",
+      "ISBN13": "9780765382153",
+      "Description": null,
+      "Metadata": {
+        "$id": "107",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "25659450"
+      }
+    },
+    {
+      "$id": "108",
+      "Title": "Snow Crash",
+      "Authors": [
+        "Neal Stephenson"
+      ],
+      "ISBN": "0553380958",
+      "ISBN13": "9780553380958",
+      "Description": null,
+      "Metadata": {
+        "$id": "109",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "830"
+      }
+    },
+    {
+      "$id": "110",
+      "Title": "Titans",
+      "Authors": [
+        "Edward W. Robertson"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "111",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18520859"
+      }
+    },
+    {
+      "$id": "112",
+      "Title": "Building Harlequin's Moon",
+      "Authors": [
+        "Larry Niven",
+        "Brenda Cooper"
+      ],
+      "ISBN": "0765351293",
+      "ISBN13": "9780765351296",
+      "Description": null,
+      "Metadata": {
+        "$id": "113",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "49789"
+      }
+    },
+    {
+      "$id": "114",
+      "Title": "The Stone Man",
+      "Authors": [
+        "Luke Smitherd"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "115",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "20739796"
+      }
+    },
+    {
+      "$id": "116",
+      "Title": "Anvil of Stars (Forge of God, #2)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0446364037",
+      "ISBN13": "9780446364034",
+      "Description": null,
+      "Metadata": {
+        "$id": "117",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "464609"
+      }
+    },
+    {
+      "$id": "118",
+      "Title": "Rendezvous with Rama (Rama, #1)",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "1857231589",
+      "ISBN13": "9781857231588",
+      "Description": null,
+      "Metadata": {
+        "$id": "119",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "112537"
+      }
+    },
+    {
+      "$id": "120",
+      "Title": "The Forge of God (Forge of God, #1)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0765301075",
+      "ISBN13": "9780765301079",
+      "Description": null,
+      "Metadata": {
+        "$id": "121",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "64732"
+      }
+    },
+    {
+      "$id": "122",
+      "Title": "Excession (Culture, #5)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "0553575376",
+      "ISBN13": "9780553575378",
+      "Description": null,
+      "Metadata": {
+        "$id": "123",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12013"
+      }
+    },
+    {
+      "$id": "124",
+      "Title": "War Factory (Transformation #2)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "1597808342",
+      "ISBN13": "9781597808347",
+      "Description": null,
+      "Metadata": {
+        "$id": "125",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "25898503"
+      }
+    },
+    {
+      "$id": "126",
+      "Title": "Dark Intelligence (Transformation, #1)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "1597808245",
+      "ISBN13": "9781597808248",
+      "Description": null,
+      "Metadata": {
+        "$id": "127",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22859850"
+      }
+    },
+    {
+      "$id": "128",
+      "Title": "Ephialtes (Ephialtes Trilogy #1)",
+      "Authors": [
+        "Gavin E. Parker"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "129",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "28954329"
+      }
+    },
+    {
+      "$id": "130",
+      "Title": "Chaos Station (Chaos Station, #1)",
+      "Authors": [
+        "Jenn Burke",
+        "Kelly   Jensen"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "131",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23595481"
+      }
+    },
+    {
+      "$id": "132",
+      "Title": "Tech-Heaven (The Nanotech Succession, #0)",
+      "Authors": [
+        "Linda Nagata"
+      ],
+      "ISBN": "1937197018",
+      "ISBN13": "9781937197018",
+      "Description": null,
+      "Metadata": {
+        "$id": "133",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12842868"
+      }
+    },
+    {
+      "$id": "134",
+      "Title": "The Moon is a Harsh Mistress",
+      "Authors": [
+        "Robert A. Heinlein"
+      ],
+      "ISBN": "0340837942",
+      "ISBN13": "9780340837948",
+      "Description": null,
+      "Metadata": {
+        "$id": "135",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "16690"
+      }
+    },
+    {
+      "$id": "136",
+      "Title": "The Human Division (Old Man's War, #5)",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765333511",
+      "ISBN13": "9780765333513",
+      "Description": null,
+      "Metadata": {
+        "$id": "137",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "15698479"
+      }
+    },
+    {
+      "$id": "138",
+      "Title": "Zoe's Tale (Old Man's War, #4)",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765316986",
+      "ISBN13": "9780765316981",
+      "Description": null,
+      "Metadata": {
+        "$id": "139",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2102600"
+      }
+    },
+    {
+      "$id": "140",
+      "Title": "Fluency (Confluence, #1)",
+      "Authors": [
+        "Jennifer Foehner Wells"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "141",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22566044"
+      }
+    },
+    {
+      "$id": "142",
+      "Title": "The Last Colony (Old Man's War #3)",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765316978",
+      "ISBN13": "9780765316974",
+      "Description": null,
+      "Metadata": {
+        "$id": "143",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "88071"
+      }
+    },
+    {
+      "$id": "144",
+      "Title": "The Ghost Brigades (Old Man's War, #2)",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765354063",
+      "ISBN13": "9780765354068",
+      "Description": null,
+      "Metadata": {
+        "$id": "145",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "239399"
+      }
+    },
+    {
+      "$id": "146",
+      "Title": "Old Man's War (Old Man's War, #1)",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765348276",
+      "ISBN13": "9780765348272",
+      "Description": null,
+      "Metadata": {
+        "$id": "147",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "51964"
+      }
+    },
+    {
+      "$id": "148",
+      "Title": "Dagon and Other Macabre Tales (The H.P. Lovecraft Omnibus #2)",
+      "Authors": [
+        "H.P. Lovecraft",
+        "August Derleth"
+      ],
+      "ISBN": "0586063242",
+      "ISBN13": "9780586063248",
+      "Description": null,
+      "Metadata": {
+        "$id": "149",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "102576"
+      }
+    },
+    {
+      "$id": "150",
+      "Title": "Poseidon's Wake (Poseidon's Children, #3)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575090499",
+      "ISBN13": "9780575090491",
+      "Description": null,
+      "Metadata": {
+        "$id": "151",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21097454"
+      }
+    },
+    {
+      "$id": "152",
+      "Title": "Paranormality: Why We See What Isn't There",
+      "Authors": [
+        "Richard Wiseman"
+      ],
+      "ISBN": "0230752985",
+      "ISBN13": "9780230752986",
+      "Description": null,
+      "Metadata": {
+        "$id": "153",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8849505"
+      }
+    },
+    {
+      "$id": "154",
+      "Title": "On the Steel Breeze (Poseidon's Children, #2)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575090456",
+      "ISBN13": "9780575090453",
+      "Description": null,
+      "Metadata": {
+        "$id": "155",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "15999018"
+      }
+    },
+    {
+      "$id": "156",
+      "Title": "The Medusa Chronicles",
+      "Authors": [
+        "Stephen Baxter",
+        "Alastair Reynolds"
+      ],
+      "ISBN": "1473210186",
+      "ISBN13": "9781473210189",
+      "Description": null,
+      "Metadata": {
+        "$id": "157",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22738693"
+      }
+    },
+    {
+      "$id": "158",
+      "Title": "Blue Remembered Earth (Poseidon's Children, #1)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575088273",
+      "ISBN13": "9780575088276",
+      "Description": null,
+      "Metadata": {
+        "$id": "159",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "9424053"
+      }
+    },
+    {
+      "$id": "160",
+      "Title": "Stoner",
+      "Authors": [
+        "John  Williams",
+        "John McGahern"
+      ],
+      "ISBN": "1590171993",
+      "ISBN13": "9781590171998",
+      "Description": null,
+      "Metadata": {
+        "$id": "161",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "166997"
+      }
+    },
+    {
+      "$id": "162",
+      "Title": "The Sails Of Tau Ceti",
+      "Authors": [
+        "Michael McCollum"
+      ],
+      "ISBN": "192938114X",
+      "ISBN13": "9781929381142",
+      "Description": null,
+      "Metadata": {
+        "$id": "163",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1397301"
+      }
+    },
+    {
+      "$id": "164",
+      "Title": "The Gift",
+      "Authors": [
+        "Dave  Donovan"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "165",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "19127186"
+      }
+    },
+    {
+      "$id": "166",
+      "Title": "The Fold",
+      "Authors": [
+        "Peter Clines"
+      ],
+      "ISBN": "0553418297",
+      "ISBN13": "9780553418293",
+      "Description": null,
+      "Metadata": {
+        "$id": "167",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23164927"
+      }
+    },
+    {
+      "$id": "168",
+      "Title": "Aurora",
+      "Authors": [
+        "Kim Stanley Robinson"
+      ],
+      "ISBN": "0316098108",
+      "ISBN13": "9780316098106",
+      "Description": null,
+      "Metadata": {
+        "$id": "169",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23197269"
+      }
+    },
+    {
+      "$id": "170",
+      "Title": "Diamond Dogs, Turquoise Days",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575075163",
+      "ISBN13": "9780575075160",
+      "Description": null,
+      "Metadata": {
+        "$id": "171",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "893590"
+      }
+    },
+    {
+      "$id": "172",
+      "Title": "The Martian",
+      "Authors": [
+        "Andy Weir"
+      ],
+      "ISBN": "0804139024",
+      "ISBN13": "9780804139021",
+      "Description": null,
+      "Metadata": {
+        "$id": "173",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18007564"
+      }
+    },
+    {
+      "$id": "174",
+      "Title": "Ultima",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "0575116870",
+      "ISBN13": "9780575116870",
+      "Description": null,
+      "Metadata": {
+        "$id": "175",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "20632979"
+      }
+    },
+    {
+      "$id": "176",
+      "Title": "Måske kan jeg blive diktator",
+      "Authors": [
+        "Mikal Hem"
+      ],
+      "ISBN": "",
+      "ISBN13": "9788771292336",
+      "Description": null,
+      "Metadata": {
+        "$id": "177",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18782847"
+      }
+    },
+    {
+      "$id": "178",
+      "Title": "Proxima",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "0575116838",
+      "ISBN13": "9780575116832",
+      "Description": null,
+      "Metadata": {
+        "$id": "179",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "17983396"
+      }
+    },
+    {
+      "$id": "180",
+      "Title": "Birthright: The Book of Man  (Birthright #2)",
+      "Authors": [
+        "Mike Resnick"
+      ],
+      "ISBN": "1570900442",
+      "ISBN13": "9781570900440",
+      "Description": null,
+      "Metadata": {
+        "$id": "181",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "237171"
+      }
+    },
+    {
+      "$id": "182",
+      "Title": "Vortex (Spin, #3)",
+      "Authors": [
+        "Robert Charles Wilson"
+      ],
+      "ISBN": "0765323427",
+      "ISBN13": "9780765323422",
+      "Description": null,
+      "Metadata": {
+        "$id": "183",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "9359796"
+      }
+    },
+    {
+      "$id": "184",
+      "Title": "Axis (Spin, #2)",
+      "Authors": [
+        "Robert Charles Wilson"
+      ],
+      "ISBN": "0765309394",
+      "ISBN13": "9780765309396",
+      "Description": null,
+      "Metadata": {
+        "$id": "185",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "116410"
+      }
+    },
+    {
+      "$id": "186",
+      "Title": "The Collected Stories of Philip K. Dick, Volume 1: Beyond Lies the Wub",
+      "Authors": [
+        "Philip K. Dick",
+        "Roger Zelazny"
+      ],
+      "ISBN": "1857988795",
+      "ISBN13": "9781857988796",
+      "Description": null,
+      "Metadata": {
+        "$id": "187",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "346838"
+      }
+    },
+    {
+      "$id": "188",
+      "Title": "The Mammoth Book of Best Short SF Novels",
+      "Authors": [
+        "Gardner Dozois",
+        "Robert Silverberg",
+        "Walter Jon Williams",
+        "Joe Haldeman",
+        "James Patrick Kelly",
+        "Nancy Kress",
+        "Michael Swanwick",
+        "Frederik Pohl",
+        "Ursula K. Le Guin",
+        "Maureen F. McHugh",
+        "Greg Egan",
+        "Ian McDonald",
+        "Ian R. MacLeod",
+        "Alastair Reynolds"
+      ],
+      "ISBN": "184529923X",
+      "ISBN13": "9781845299231",
+      "Description": null,
+      "Metadata": {
+        "$id": "189",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7074186"
+      }
+    },
+    {
+      "$id": "190",
+      "Title": "The Snow Queen",
+      "Authors": [
+        "Hans Christian Andersen",
+        "Julia Whelan"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "191",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "23811731"
+      }
+    },
+    {
+      "$id": "192",
+      "Title": "Spin (Spin, #1)",
+      "Authors": [
+        "Robert Charles Wilson"
+      ],
+      "ISBN": "076534825X",
+      "ISBN13": "9780765348258",
+      "Description": null,
+      "Metadata": {
+        "$id": "193",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "910863"
+      }
+    },
+    {
+      "$id": "194",
+      "Title": "The World at the End of Time",
+      "Authors": [
+        "Frederik Pohl",
+        "William Dufris"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "195",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21975672"
+      }
+    },
+    {
+      "$id": "196",
+      "Title": "Blind Lake",
+      "Authors": [
+        "Robert Charles Wilson"
+      ],
+      "ISBN": "0765341603",
+      "ISBN13": "9780765341600",
+      "Description": null,
+      "Metadata": {
+        "$id": "197",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "116412"
+      }
+    },
+    {
+      "$id": "198",
+      "Title": "The Boy Who Would Live Forever: A Novel of Gateway (Heechee Saga, #6)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0765349353",
+      "ISBN13": "9780765349354",
+      "Description": null,
+      "Metadata": {
+        "$id": "199",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "148450"
+      }
+    },
+    {
+      "$id": "200",
+      "Title": "The Annals of the Heechee (Heechee Saga, #4)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0345325664",
+      "ISBN13": "9780345325662",
+      "Description": null,
+      "Metadata": {
+        "$id": "201",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77463"
+      }
+    },
+    {
+      "$id": "202",
+      "Title": "Heechee Rendezvous (Heechee Saga, #3)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0345300556",
+      "ISBN13": "9780345300553",
+      "Description": null,
+      "Metadata": {
+        "$id": "203",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77462"
+      }
+    },
+    {
+      "$id": "204",
+      "Title": "Beyond the Blue Event Horizon (Heechee Saga, #2)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0345446674",
+      "ISBN13": "9780345446671",
+      "Description": null,
+      "Metadata": {
+        "$id": "205",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "373399"
+      }
+    },
+    {
+      "$id": "206",
+      "Title": "Gateway (Heechee Saga, #1)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0345475836",
+      "ISBN13": "9780345475831",
+      "Description": null,
+      "Metadata": {
+        "$id": "207",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "218427"
+      }
+    },
+    {
+      "$id": "208",
+      "Title": "God Is Not Great: How Religion Poisons Everything",
+      "Authors": [
+        "Christopher Hitchens"
+      ],
+      "ISBN": "1843545748",
+      "ISBN13": "9781843545743",
+      "Description": null,
+      "Metadata": {
+        "$id": "209",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2428489"
+      }
+    },
+    {
+      "$id": "210",
+      "Title": "2312",
+      "Authors": [
+        "Kim Stanley Robinson"
+      ],
+      "ISBN": "0316098124",
+      "ISBN13": "9780316098120",
+      "Description": null,
+      "Metadata": {
+        "$id": "211",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "11830394"
+      }
+    },
+    {
+      "$id": "212",
+      "Title": "Alan Turing: The Enigma",
+      "Authors": [
+        "Andrew Hodges",
+        "Douglas R. Hofstadter"
+      ],
+      "ISBN": "0802775802",
+      "ISBN13": "9780802775801",
+      "Description": null,
+      "Metadata": {
+        "$id": "213",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "150731"
+      }
+    },
+    {
+      "$id": "214",
+      "Title": "Blue Mars (Mars Trilogy, #3)",
+      "Authors": [
+        "Kim Stanley Robinson"
+      ],
+      "ISBN": "0553573357",
+      "ISBN13": "9780553573350",
+      "Description": null,
+      "Metadata": {
+        "$id": "215",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77504"
+      }
+    },
+    {
+      "$id": "216",
+      "Title": "Jupiter War (Owner Trilogy, #3)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "1597804932",
+      "ISBN13": "9781597804936",
+      "Description": null,
+      "Metadata": {
+        "$id": "217",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "17239381"
+      }
+    },
+    {
+      "$id": "218",
+      "Title": "Angel Stations",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0330420178",
+      "ISBN13": "9780330420174",
+      "Description": null,
+      "Metadata": {
+        "$id": "219",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "357697"
+      }
+    },
+    {
+      "$id": "220",
+      "Title": "Watchmen",
+      "Authors": [
+        "Alan Moore",
+        "Dave Gibbons",
+        "John Higgins"
+      ],
+      "ISBN": "0930289234",
+      "ISBN13": "9780930289232",
+      "Description": null,
+      "Metadata": {
+        "$id": "221",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "472331"
+      }
+    },
+    {
+      "$id": "222",
+      "Title": "Zero Point (Owner Trilogy, #2)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0230750702",
+      "ISBN13": "9780230750708",
+      "Description": null,
+      "Metadata": {
+        "$id": "223",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "15775601"
+      }
+    },
+    {
+      "$id": "224",
+      "Title": "The Departure (Owner Trilogy, #1)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0230708730",
+      "ISBN13": "9780230708730",
+      "Description": null,
+      "Metadata": {
+        "$id": "225",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "10648878"
+      }
+    },
+    {
+      "$id": "226",
+      "Title": "Far Futures",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0312863799",
+      "ISBN13": "9780312863791",
+      "Description": null,
+      "Metadata": {
+        "$id": "227",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "453966"
+      }
+    },
+    {
+      "$id": "228",
+      "Title": "The Logic of Failure: Recognizing and Avoiding Error in Complex Situations",
+      "Authors": [
+        "Dietrich Dörner",
+        "Robert Kimber",
+        "Rita Kimber"
+      ],
+      "ISBN": "0201479486",
+      "ISBN13": "9780201479485",
+      "Description": null,
+      "Metadata": {
+        "$id": "229",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "393898"
+      }
+    },
+    {
+      "$id": "230",
+      "Title": "Orbus (Spatterjay, #3)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0230708722",
+      "ISBN13": "9780230708723",
+      "Description": null,
+      "Metadata": {
+        "$id": "231",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6462796"
+      }
+    },
+    {
+      "$id": "232",
+      "Title": "War Dogs (War Dogs, #1)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0316072834",
+      "ISBN13": "9780316072830",
+      "Description": null,
+      "Metadata": {
+        "$id": "233",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "20706230"
+      }
+    },
+    {
+      "$id": "234",
+      "Title": "The Voyage of the Sable Keech (Spatterjay, #2)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0330411608",
+      "ISBN13": "9780330411608",
+      "Description": null,
+      "Metadata": {
+        "$id": "235",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "511229"
+      }
+    },
+    {
+      "$id": "236",
+      "Title": "Crossover (Cassandra Kresnov, #1)",
+      "Authors": [
+        "Joel Shepherd"
+      ],
+      "ISBN": "1591024439",
+      "ISBN13": "9781591024439",
+      "Description": null,
+      "Metadata": {
+        "$id": "237",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "378724"
+      }
+    },
+    {
+      "$id": "238",
+      "Title": "The Skinner (Spatterjay, #1)",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0765350483",
+      "ISBN13": "9780765350480",
+      "Description": null,
+      "Metadata": {
+        "$id": "239",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "240297"
+      }
+    },
+    {
+      "$id": "240",
+      "Title": "Marauder",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0230748902",
+      "ISBN13": "9780230748903",
+      "Description": null,
+      "Metadata": {
+        "$id": "241",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18339206"
+      }
+    },
+    {
+      "$id": "242",
+      "Title": "Den Femte Revolution: Fortællinger Fra Hjernens Tidsalder",
+      "Authors": [
+        "Lone Frank"
+      ],
+      "ISBN": "870205986X",
+      "ISBN13": "9788702059861",
+      "Description": null,
+      "Metadata": {
+        "$id": "243",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12908630"
+      }
+    },
+    {
+      "$id": "244",
+      "Title": "25 Big Ideas: The Science That's Changing Our World",
+      "Authors": [
+        "Robert Matthews"
+      ],
+      "ISBN": "1567319947",
+      "ISBN13": "9781567319941",
+      "Description": null,
+      "Metadata": {
+        "$id": "245",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12491769"
+      }
+    },
+    {
+      "$id": "246",
+      "Title": "Dr. Zukaroffs Testamente",
+      "Authors": [
+        "Peter Lund Madsen"
+      ],
+      "ISBN": "870206393X",
+      "ISBN13": "9788702063936",
+      "Description": null,
+      "Metadata": {
+        "$id": "247",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "16114166"
+      }
+    },
+    {
+      "$id": "248",
+      "Title": "The Prefect (Prefect Dreyfus Emergency, #1)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575077166",
+      "ISBN13": "9780575077164",
+      "Description": null,
+      "Metadata": {
+        "$id": "249",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "89195"
+      }
+    },
+    {
+      "$id": "250",
+      "Title": "The Hydrogen Sonata (Culture #10)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "0356501507",
+      "ISBN13": "9780356501505",
+      "Description": null,
+      "Metadata": {
+        "$id": "251",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13497991"
+      }
+    },
+    {
+      "$id": "252",
+      "Title": "The Thousand Emperors",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0230748783",
+      "ISBN13": "9780230748781",
+      "Description": null,
+      "Metadata": {
+        "$id": "253",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "14762236"
+      }
+    },
+    {
+      "$id": "254",
+      "Title": "Death from the Skies!: The Science Behind the End of the World",
+      "Authors": [
+        "Philip Plait"
+      ],
+      "ISBN": "",
+      "ISBN13": "9780143116042",
+      "Description": null,
+      "Metadata": {
+        "$id": "255",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6423600"
+      }
+    },
+    {
+      "$id": "256",
+      "Title": "Final Days",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0230748775",
+      "ISBN13": "9780230748774",
+      "Description": null,
+      "Metadata": {
+        "$id": "257",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "11302083"
+      }
+    },
+    {
+      "$id": "258",
+      "Title": "Century Rain",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0441013074",
+      "ISBN13": "9780441013074",
+      "Description": null,
+      "Metadata": {
+        "$id": "259",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "89192"
+      }
+    },
+    {
+      "$id": "260",
+      "Title": "Legacy (The Way, #3)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0812524810",
+      "ISBN13": "9780812524819",
+      "Description": null,
+      "Metadata": {
+        "$id": "261",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "377265"
+      }
+    },
+    {
+      "$id": "262",
+      "Title": "Star Quest",
+      "Authors": [
+        "Stuart J. Byrne"
+      ],
+      "ISBN": "",
+      "ISBN13": "2940000098028",
+      "Description": null,
+      "Metadata": {
+        "$id": "263",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7141599"
+      }
+    },
+    {
+      "$id": "264",
+      "Title": "The Peace War (Across Realtime, #1)",
+      "Authors": [
+        "Vernor Vinge"
+      ],
+      "ISBN": "0765308835",
+      "ISBN13": "9780765308832",
+      "Description": null,
+      "Metadata": {
+        "$id": "265",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "167845"
+      }
+    },
+    {
+      "$id": "266",
+      "Title": "Diaspora",
+      "Authors": [
+        "Greg Egan"
+      ],
+      "ISBN": "3453161815",
+      "ISBN13": "9783453161818",
+      "Description": null,
+      "Metadata": {
+        "$id": "267",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "156785"
+      }
+    },
+    {
+      "$id": "268",
+      "Title": "Great North Road",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "034552666X",
+      "ISBN13": "9780345526663",
+      "Description": null,
+      "Metadata": {
+        "$id": "269",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13573419"
+      }
+    },
+    {
+      "$id": "270",
+      "Title": "Empire of Light (The Shoal Sequence, #3)",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0230706819",
+      "ISBN13": "9780230706811",
+      "Description": null,
+      "Metadata": {
+        "$id": "271",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8578027"
+      }
+    },
+    {
+      "$id": "272",
+      "Title": "Earth Strike (Star Carrier, #1)",
+      "Authors": [
+        "Ian Douglas"
+      ],
+      "ISBN": "0061840254",
+      "ISBN13": "9780061840258",
+      "Description": null,
+      "Metadata": {
+        "$id": "273",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7234921"
+      }
+    },
+    {
+      "$id": "274",
+      "Title": "Forever Free (The Forever War, #3)",
+      "Authors": [
+        "Joe Haldeman"
+      ],
+      "ISBN": "1857989317",
+      "ISBN13": "9781857989311",
+      "Description": null,
+      "Metadata": {
+        "$id": "275",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21620"
+      }
+    },
+    {
+      "$id": "276",
+      "Title": "Transition",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "0316071986",
+      "ISBN13": "9780316071987",
+      "Description": null,
+      "Metadata": {
+        "$id": "277",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6436659"
+      }
+    },
+    {
+      "$id": "278",
+      "Title": "The Technician",
+      "Authors": [
+        "Neal Asher"
+      ],
+      "ISBN": "0230708749",
+      "ISBN13": "9780230708747",
+      "Description": null,
+      "Metadata": {
+        "$id": "279",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7704959"
+      }
+    },
+    {
+      "$id": "280",
+      "Title": "Stealing Light (The Shoal Sequence, #1)",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0330445960",
+      "ISBN13": "9780330445962",
+      "Description": null,
+      "Metadata": {
+        "$id": "281",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3607898"
+      }
+    },
+    {
+      "$id": "282",
+      "Title": "Nova War (The Shoal Sequence, #2)",
+      "Authors": [
+        "Gary Gibson"
+      ],
+      "ISBN": "0230706800",
+      "ISBN13": "9780230706804",
+      "Description": null,
+      "Metadata": {
+        "$id": "283",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6635349"
+      }
+    },
+    {
+      "$id": "284",
+      "Title": "Strider's Universe (Strider Chronicles)",
+      "Authors": [
+        "Paul   Barnett",
+        "John Grant"
+      ],
+      "ISBN": "1857236017",
+      "ISBN13": "9781857236019",
+      "Description": null,
+      "Metadata": {
+        "$id": "285",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2037640"
+      }
+    },
+    {
+      "$id": "286",
+      "Title": "Night's Pawn",
+      "Authors": [
+        "Tom Dowd"
+      ],
+      "ISBN": "0140233490",
+      "ISBN13": "9780140233490",
+      "Description": null,
+      "Metadata": {
+        "$id": "287",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "758275"
+      }
+    },
+    {
+      "$id": "288",
+      "Title": "Paradox (The Nulapeiron Sequence #1)",
+      "Authors": [
+        "John Meaney"
+      ],
+      "ISBN": "1591024978",
+      "ISBN13": "9781591024972",
+      "Description": null,
+      "Metadata": {
+        "$id": "289",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "818449"
+      }
+    },
+    {
+      "$id": "290",
+      "Title": "The Instrumentality of Mankind (Instrumentality of Mankind)",
+      "Authors": [
+        "Cordwainer Smith"
+      ],
+      "ISBN": "0345277163",
+      "ISBN13": "9780345277169",
+      "Description": null,
+      "Metadata": {
+        "$id": "291",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "969131"
+      }
+    },
+    {
+      "$id": "292",
+      "Title": "The Prague Cemetery",
+      "Authors": [
+        "Umberto Eco",
+        "Richard Dixon"
+      ],
+      "ISBN": "0547577532",
+      "ISBN13": "9780547577531",
+      "Description": null,
+      "Metadata": {
+        "$id": "293",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "10314376"
+      }
+    },
+    {
+      "$id": "294",
+      "Title": "Redemption Ark",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "044101173X",
+      "ISBN13": "9780441011735",
+      "Description": null,
+      "Metadata": {
+        "$id": "295",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "89190"
+      }
+    },
+    {
+      "$id": "296",
+      "Title": "The Seeds of Earth (Humanity's Fire, #1)",
+      "Authors": [
+        "Michael Cobley"
+      ],
+      "ISBN": "1841496324",
+      "ISBN13": "9781841496320",
+      "Description": null,
+      "Metadata": {
+        "$id": "297",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4332905"
+      }
+    },
+    {
+      "$id": "298",
+      "Title": "Blade Runner (Do Androids Dream of Electric Sheep?)",
+      "Authors": [
+        "Philip K. Dick"
+      ],
+      "ISBN": "0345350472",
+      "ISBN13": "9780345350473",
+      "Description": null,
+      "Metadata": {
+        "$id": "299",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "516036"
+      }
+    },
+    {
+      "$id": "300",
+      "Title": "Existence",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0765303612",
+      "ISBN13": "9780765303615",
+      "Description": null,
+      "Metadata": {
+        "$id": "301",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13039884"
+      }
+    },
+    {
+      "$id": "302",
+      "Title": "Leviathan Wakes (The Expanse, #1)",
+      "Authors": [
+        "James S.A. Corey"
+      ],
+      "ISBN": "1841499889",
+      "ISBN13": "9781841499888",
+      "Description": null,
+      "Metadata": {
+        "$id": "303",
+        "Bookshelves": "wishlist",
+        "ExclusiveShelf": "wishlist",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8855321"
+      }
+    },
+    {
+      "$id": "304",
+      "Title": "Pushing Ice",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0441014011",
+      "ISBN13": "9780441014019",
+      "Description": null,
+      "Metadata": {
+        "$id": "305",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "89186"
+      }
+    },
+    {
+      "$id": "306",
+      "Title": "Redshirts",
+      "Authors": [
+        "John Scalzi"
+      ],
+      "ISBN": "0765316994",
+      "ISBN13": "9780765316998",
+      "Description": null,
+      "Metadata": {
+        "$id": "307",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "13055592"
+      }
+    },
+    {
+      "$id": "308",
+      "Title": "Mit smukke genom - Historier fra genetikkens overdrev",
+      "Authors": [
+        "Lone Frank"
+      ],
+      "ISBN": "",
+      "ISBN13": "9788702081152",
+      "Description": null,
+      "Metadata": {
+        "$id": "309",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "10435465"
+      }
+    },
+    {
+      "$id": "310",
+      "Title": "Olympos (Ilium, #2)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0380817934",
+      "ISBN13": "9780380817931",
+      "Description": null,
+      "Metadata": {
+        "$id": "311",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3972"
+      }
+    },
+    {
+      "$id": "312",
+      "Title": "Ilium (Ilium, #1)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0380817926",
+      "ISBN13": "9780380817924",
+      "Description": null,
+      "Metadata": {
+        "$id": "313",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3973"
+      }
+    },
+    {
+      "$id": "314",
+      "Title": "Incandescence",
+      "Authors": [
+        "Greg Egan"
+      ],
+      "ISBN": "0575081627",
+      "ISBN13": "9780575081628",
+      "Description": null,
+      "Metadata": {
+        "$id": "315",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2425528"
+      }
+    },
+    {
+      "$id": "316",
+      "Title": "The Filter Bubble: What the Internet is Hiding From You",
+      "Authors": [
+        "Eli Pariser"
+      ],
+      "ISBN": "1594203008",
+      "ISBN13": "9781594203008",
+      "Description": null,
+      "Metadata": {
+        "$id": "317",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "10596103"
+      }
+    },
+    {
+      "$id": "318",
+      "Title": "Babel-17",
+      "Authors": [
+        "Samuel R. Delany"
+      ],
+      "ISBN": "1857988051",
+      "ISBN13": "9781857988055",
+      "Description": null,
+      "Metadata": {
+        "$id": "319",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "602452"
+      }
+    },
+    {
+      "$id": "320",
+      "Title": "Divisions: The Second Half Of The Fall Revolution (The Fall Revolution, #3, #4)",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "076532119X",
+      "ISBN13": "9780765321190",
+      "Description": null,
+      "Metadata": {
+        "$id": "321",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "5589558"
+      }
+    },
+    {
+      "$id": "322",
+      "Title": "Fractions: The First Half of The Fall Revolution",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "0765320681",
+      "ISBN13": "9780765320681",
+      "Description": null,
+      "Metadata": {
+        "$id": "323",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4592766"
+      }
+    },
+    {
+      "$id": "324",
+      "Title": "The Coming",
+      "Authors": [
+        "Joe Haldeman"
+      ],
+      "ISBN": "0441008763",
+      "ISBN13": "9780441008766",
+      "Description": null,
+      "Metadata": {
+        "$id": "325",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21615"
+      }
+    },
+    {
+      "$id": "326",
+      "Title": "The Prince",
+      "Authors": [
+        "Niccolò Machiavelli",
+        "Peter Bondanella"
+      ],
+      "ISBN": "019280426X",
+      "ISBN13": "9780192804266",
+      "Description": null,
+      "Metadata": {
+        "$id": "327",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "99326"
+      }
+    },
+    {
+      "$id": "328",
+      "Title": "Reasons and Persons",
+      "Authors": [
+        "Derek Parfit"
+      ],
+      "ISBN": "019824908X",
+      "ISBN13": "9780198249085",
+      "Description": null,
+      "Metadata": {
+        "$id": "329",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "327051"
+      }
+    },
+    {
+      "$id": "330",
+      "Title": "King of Infinite Space: Donald Coxeter, The Man Who Saved Geometry",
+      "Authors": [
+        "Siobhan Roberts"
+      ],
+      "ISBN": "1846680077",
+      "ISBN13": "9781846680076",
+      "Description": null,
+      "Metadata": {
+        "$id": "331",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4797729"
+      }
+    },
+    {
+      "$id": "332",
+      "Title": "The Ringworld Engineers (Ringworld, #2)",
+      "Authors": [
+        "Larry Niven"
+      ],
+      "ISBN": "1857231112",
+      "ISBN13": "9781857231113",
+      "Description": null,
+      "Metadata": {
+        "$id": "333",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "835051"
+      }
+    },
+    {
+      "$id": "334",
+      "Title": "Strider's Galaxy (Strider Chronicles)",
+      "Authors": [
+        "Paul   Barnett",
+        "John Grant"
+      ],
+      "ISBN": "0099791218",
+      "ISBN13": "9780099791218",
+      "Description": null,
+      "Metadata": {
+        "$id": "335",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1576739"
+      }
+    },
+    {
+      "$id": "336",
+      "Title": "Ringworld (Ringworld #1)",
+      "Authors": [
+        "Larry Niven"
+      ],
+      "ISBN": "0345333926",
+      "ISBN13": "9780345333926",
+      "Description": null,
+      "Metadata": {
+        "$id": "337",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "398274"
+      }
+    },
+    {
+      "$id": "338",
+      "Title": "Red Mars (Mars Trilogy, #1)",
+      "Authors": [
+        "Kim Stanley Robinson"
+      ],
+      "ISBN": "0586213899",
+      "ISBN13": "9780586213896",
+      "Description": null,
+      "Metadata": {
+        "$id": "339",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "211308"
+      }
+    },
+    {
+      "$id": "340",
+      "Title": "The Ringworld Throne",
+      "Authors": [
+        "Larry Niven"
+      ],
+      "ISBN": "1857234707",
+      "ISBN13": "9781857234701",
+      "Description": null,
+      "Metadata": {
+        "$id": "341",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "929273"
+      }
+    },
+    {
+      "$id": "342",
+      "Title": "Hegira",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "1857989023",
+      "ISBN13": "9781857989021",
+      "Description": null,
+      "Metadata": {
+        "$id": "343",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3616159"
+      }
+    },
+    {
+      "$id": "344",
+      "Title": "Solaris",
+      "Authors": [
+        "Stanisław Lem",
+        "Joanna Kilmartin",
+        "Steve Cox"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "345",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "95558"
+      }
+    },
+    {
+      "$id": "346",
+      "Title": "The Nano Flower (Greg Mandel, #3)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0812577698",
+      "ISBN13": "9780812577693",
+      "Description": null,
+      "Metadata": {
+        "$id": "347",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45256"
+      }
+    },
+    {
+      "$id": "348",
+      "Title": "The Evolutionary Void",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345496574",
+      "ISBN13": "9780345496577",
+      "Description": null,
+      "Metadata": {
+        "$id": "349",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7438179"
+      }
+    },
+    {
+      "$id": "350",
+      "Title": "The Temporal Void",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "1405088834",
+      "ISBN13": "9781405088831",
+      "Description": null,
+      "Metadata": {
+        "$id": "351",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3437328"
+      }
+    },
+    {
+      "$id": "352",
+      "Title": "The Neutronium Alchemist (Night's Dawn, #2)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0330351435",
+      "ISBN13": "9780330351430",
+      "Description": null,
+      "Metadata": {
+        "$id": "353",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "479561"
+      }
+    },
+    {
+      "$id": "354",
+      "Title": "The Dreaming Void",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345496531",
+      "ISBN13": "9780345496539",
+      "Description": null,
+      "Metadata": {
+        "$id": "355",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "866136"
+      }
+    },
+    {
+      "$id": "356",
+      "Title": "The Brothers Karamazov",
+      "Authors": [
+        "Fyodor Dostoyevsky",
+        "Richard Pevear",
+        "Larissa Volokhonsky"
+      ],
+      "ISBN": "0374528373",
+      "ISBN13": "9780374528379",
+      "Description": null,
+      "Metadata": {
+        "$id": "357",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4934"
+      }
+    },
+    {
+      "$id": "358",
+      "Title": "The City and the Stars",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "1857987632",
+      "ISBN13": "9781857987638",
+      "Description": null,
+      "Metadata": {
+        "$id": "359",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "250024"
+      }
+    },
+    {
+      "$id": "360",
+      "Title": "Last and First Men",
+      "Authors": [
+        "Olaf Stapledon"
+      ],
+      "ISBN": "185798806X",
+      "ISBN13": "9781857988062",
+      "Description": null,
+      "Metadata": {
+        "$id": "361",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "564324"
+      }
+    },
+    {
+      "$id": "362",
+      "Title": "The Child Garden",
+      "Authors": [
+        "Geoff Ryman"
+      ],
+      "ISBN": "0575076909",
+      "ISBN13": "9780575076907",
+      "Description": null,
+      "Metadata": {
+        "$id": "363",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "258096"
+      }
+    },
+    {
+      "$id": "364",
+      "Title": "Spin State (Spin Trilogy, #1)",
+      "Authors": [
+        "Chris Moriarty"
+      ],
+      "ISBN": "0553586246",
+      "ISBN13": "9780553586244",
+      "Description": null,
+      "Metadata": {
+        "$id": "365",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "48623"
+      }
+    },
+    {
+      "$id": "366",
+      "Title": "Great Sky River (Galactic Center, #3)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0446611557",
+      "ISBN13": "9780446611558",
+      "Description": null,
+      "Metadata": {
+        "$id": "367",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "453975"
+      }
+    },
+    {
+      "$id": "368",
+      "Title": "Furious Gulf (Galactic Center, #5)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0446611530",
+      "ISBN13": "9780446611534",
+      "Description": null,
+      "Metadata": {
+        "$id": "369",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1067143"
+      }
+    },
+    {
+      "$id": "370",
+      "Title": "Tides of Light (Galactic Center, #4)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0446611549",
+      "ISBN13": "9780446611541",
+      "Description": null,
+      "Metadata": {
+        "$id": "371",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "453967"
+      }
+    },
+    {
+      "$id": "372",
+      "Title": "In the Ocean of Night (Galactic Center, #1)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "044661159X",
+      "ISBN13": "9780446611596",
+      "Description": null,
+      "Metadata": {
+        "$id": "373",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "453960"
+      }
+    },
+    {
+      "$id": "374",
+      "Title": "Across the Sea of Suns (Galactic Center, #2)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0446611565",
+      "ISBN13": "9780446611565",
+      "Description": null,
+      "Metadata": {
+        "$id": "375",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "382329"
+      }
+    },
+    {
+      "$id": "376",
+      "Title": "The Time Machine",
+      "Authors": [
+        "H.G. Wells"
+      ],
+      "ISBN": "0441009190",
+      "ISBN13": "9780441009190",
+      "Description": null,
+      "Metadata": {
+        "$id": "377",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3988707"
+      }
+    },
+    {
+      "$id": "378",
+      "Title": "The Sentinel",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0586212043",
+      "ISBN13": "9780586212042",
+      "Description": null,
+      "Metadata": {
+        "$id": "379",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1437410"
+      }
+    },
+    {
+      "$id": "380",
+      "Title": "Green Mars (Mars Trilogy, #2)",
+      "Authors": [
+        "Kim Stanley Robinson"
+      ],
+      "ISBN": "0586213902",
+      "ISBN13": "9780586213902",
+      "Description": null,
+      "Metadata": {
+        "$id": "381",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "959374"
+      }
+    },
+    {
+      "$id": "382",
+      "Title": "Forever Peace (The Forever War, #2)",
+      "Authors": [
+        "Joe Haldeman"
+      ],
+      "ISBN": "0441005667",
+      "ISBN13": "9780441005666",
+      "Description": null,
+      "Metadata": {
+        "$id": "383",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21618"
+      }
+    },
+    {
+      "$id": "384",
+      "Title": "Axiomatic",
+      "Authors": [
+        "Greg Egan"
+      ],
+      "ISBN": "0752816500",
+      "ISBN13": "9780752816500",
+      "Description": null,
+      "Metadata": {
+        "$id": "385",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1281516"
+      }
+    },
+    {
+      "$id": "386",
+      "Title": "Teranesia",
+      "Authors": [
+        "Greg Egan"
+      ],
+      "ISBN": "1857988647",
+      "ISBN13": "9781857988642",
+      "Description": null,
+      "Metadata": {
+        "$id": "387",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1118413"
+      }
+    },
+    {
+      "$id": "388",
+      "Title": "Manifold: Time (Manifold, #1)",
+      "Authors": [
+        "Stephen Baxter",
+        "Chris Schluep"
+      ],
+      "ISBN": "034543076X",
+      "ISBN13": "9780345430762",
+      "Description": null,
+      "Metadata": {
+        "$id": "389",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "63742"
+      }
+    },
+    {
+      "$id": "390",
+      "Title": "Manifold: Space (Manifold, #2)",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "0345430786",
+      "ISBN13": "9780345430786",
+      "Description": null,
+      "Metadata": {
+        "$id": "391",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "63818"
+      }
+    },
+    {
+      "$id": "392",
+      "Title": "The Gap Into Ruin: This Day All Gods Die (Gap, #5)",
+      "Authors": [
+        "Stephen R. Donaldson"
+      ],
+      "ISBN": "0553071807",
+      "ISBN13": "9780553071801",
+      "Description": null,
+      "Metadata": {
+        "$id": "393",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "537148"
+      }
+    },
+    {
+      "$id": "394",
+      "Title": "The Forever War (The Forever War, #1)",
+      "Authors": [
+        "Joe Haldeman"
+      ],
+      "ISBN": "0060510862",
+      "ISBN13": "9780060510862",
+      "Description": null,
+      "Metadata": {
+        "$id": "395",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "21611"
+      }
+    },
+    {
+      "$id": "396",
+      "Title": "Cenotaxis",
+      "Authors": [
+        "Sean Williams"
+      ],
+      "ISBN": "1932265260",
+      "ISBN13": "9781932265262",
+      "Description": null,
+      "Metadata": {
+        "$id": "397",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3419554"
+      }
+    },
+    {
+      "$id": "398",
+      "Title": "The Grand Conjunction (Astropolis, #3)",
+      "Authors": [
+        "Sean Williams"
+      ],
+      "ISBN": "0441017134",
+      "ISBN13": "9780441017133",
+      "Description": null,
+      "Metadata": {
+        "$id": "399",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "5863582"
+      }
+    },
+    {
+      "$id": "400",
+      "Title": "Earth Ascendant (Astropolis, #2)",
+      "Authors": [
+        "Sean Williams"
+      ],
+      "ISBN": "0441015859",
+      "ISBN13": "9780441015856",
+      "Description": null,
+      "Metadata": {
+        "$id": "401",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3246970"
+      }
+    },
+    {
+      "$id": "402",
+      "Title": "Saturn Returns (Astropolis, #1)",
+      "Authors": [
+        "Sean Williams"
+      ],
+      "ISBN": "1841495190",
+      "ISBN13": "9781841495194",
+      "Description": null,
+      "Metadata": {
+        "$id": "403",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "5829169"
+      }
+    },
+    {
+      "$id": "404",
+      "Title": "The Fellowship of the Ring (The Lord of the Rings, #1)",
+      "Authors": [
+        "J.R.R. Tolkien"
+      ],
+      "ISBN": "0261102354",
+      "ISBN13": "9780261102354",
+      "Description": null,
+      "Metadata": {
+        "$id": "405",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "727798"
+      }
+    },
+    {
+      "$id": "406",
+      "Title": "The Two Towers (The Lord of the Rings, #2)",
+      "Authors": [
+        "J.R.R. Tolkien"
+      ],
+      "ISBN": "0261102362",
+      "ISBN13": "9780261102361",
+      "Description": null,
+      "Metadata": {
+        "$id": "407",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "727800"
+      }
+    },
+    {
+      "$id": "408",
+      "Title": "The Return of the King (The Lord of the Rings, #3)",
+      "Authors": [
+        "J.R.R. Tolkien"
+      ],
+      "ISBN": "0261102370",
+      "ISBN13": "9780261102378",
+      "Description": null,
+      "Metadata": {
+        "$id": "409",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "727810"
+      }
+    },
+    {
+      "$id": "410",
+      "Title": "The Family: The Secret Fundamentalism at the Heart of American Power",
+      "Authors": [
+        "Jeff Sharlet"
+      ],
+      "ISBN": "0060560053",
+      "ISBN13": "9780060560058",
+      "Description": null,
+      "Metadata": {
+        "$id": "411",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "6524798"
+      }
+    },
+    {
+      "$id": "412",
+      "Title": "House of Suns",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575099127",
+      "ISBN13": "9780575099128",
+      "Description": null,
+      "Metadata": {
+        "$id": "413",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1126719"
+      }
+    },
+    {
+      "$id": "414",
+      "Title": "To Ride Pegasus",
+      "Authors": [
+        "Anne McCaffrey"
+      ],
+      "ISBN": "0345336038",
+      "ISBN13": "9780345336033",
+      "Description": null,
+      "Metadata": {
+        "$id": "415",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "904417"
+      }
+    },
+    {
+      "$id": "416",
+      "Title": "Pegasus in Flight",
+      "Authors": [
+        "Anne McCaffrey"
+      ],
+      "ISBN": "0345368975",
+      "ISBN13": "9780345368973",
+      "Description": null,
+      "Metadata": {
+        "$id": "417",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "904413"
+      }
+    },
+    {
+      "$id": "418",
+      "Title": "Pegasus in Space (The Talent, #3)",
+      "Authors": [
+        "Anne McCaffrey"
+      ],
+      "ISBN": "0345434676",
+      "ISBN13": "9780345434678",
+      "Description": null,
+      "Metadata": {
+        "$id": "419",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "61931"
+      }
+    },
+    {
+      "$id": "420",
+      "Title": "The End of Faith: Religion, Terror, and the Future of Reason",
+      "Authors": [
+        "Sam Harris"
+      ],
+      "ISBN": "0743268091",
+      "ISBN13": "9780743268097",
+      "Description": null,
+      "Metadata": {
+        "$id": "421",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1608040"
+      }
+    },
+    {
+      "$id": "422",
+      "Title": "Prey",
+      "Authors": [
+        "Michael Crichton"
+      ],
+      "ISBN": "0007154534",
+      "ISBN13": "9780007154531",
+      "Description": null,
+      "Metadata": {
+        "$id": "423",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "848004"
+      }
+    },
+    {
+      "$id": "424",
+      "Title": "3001: The Final Odyssey (Space Odyssey, #4)",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0345438205",
+      "ISBN13": "9780345438201",
+      "Description": null,
+      "Metadata": {
+        "$id": "425",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "63432"
+      }
+    },
+    {
+      "$id": "426",
+      "Title": "2061: Odyssey Three (Space Odyssey, #3)",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0586203192",
+      "ISBN13": "9780586203194",
+      "Description": null,
+      "Metadata": {
+        "$id": "427",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35816"
+      }
+    },
+    {
+      "$id": "428",
+      "Title": "2010: Odyssey Two (Space Odyssey, #2)",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0345413970",
+      "ISBN13": "9780345413970",
+      "Description": null,
+      "Metadata": {
+        "$id": "429",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "70539"
+      }
+    },
+    {
+      "$id": "430",
+      "Title": "2001: A Space Odyssey (Space Odyssey, #1)",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0451457994",
+      "ISBN13": "9780451457998",
+      "Description": null,
+      "Metadata": {
+        "$id": "431",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "70535"
+      }
+    },
+    {
+      "$id": "432",
+      "Title": "Necronomicon: The Best Weird Tales",
+      "Authors": [
+        "H.P. Lovecraft",
+        "Les Edwards",
+        "Stephen Jones"
+      ],
+      "ISBN": "0575081562",
+      "ISBN13": "9780575081567",
+      "Description": null,
+      "Metadata": {
+        "$id": "433",
+        "Bookshelves": "to-read",
+        "ExclusiveShelf": "to-read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1335019"
+      }
+    },
+    {
+      "$id": "434",
+      "Title": "The Divine Comedy",
+      "Authors": [
+        "Dante Alighieri",
+        "C.H. Sisson",
+        "David H. Higgins"
+      ],
+      "ISBN": "0192835025",
+      "ISBN13": "9780192835024",
+      "Description": null,
+      "Metadata": {
+        "$id": "435",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "32811"
+      }
+    },
+    {
+      "$id": "436",
+      "Title": "The Complete Tales and Poems",
+      "Authors": [
+        "Edgar Allan Poe"
+      ],
+      "ISBN": "0140103848",
+      "ISBN13": "9780140103847",
+      "Description": null,
+      "Metadata": {
+        "$id": "437",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "471204"
+      }
+    },
+    {
+      "$id": "438",
+      "Title": "The Satanic Verses",
+      "Authors": [
+        "Salman Rushdie"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "439",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "14837"
+      }
+    },
+    {
+      "$id": "440",
+      "Title": "Sea of Silver Light (Otherland, #4)",
+      "Authors": [
+        "Tad Williams"
+      ],
+      "ISBN": "185723992X",
+      "ISBN13": "9781857239928",
+      "Description": null,
+      "Metadata": {
+        "$id": "441",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3310446"
+      }
+    },
+    {
+      "$id": "442",
+      "Title": "House Corrino (Prelude to Dune, #3)",
+      "Authors": [
+        "Brian Herbert",
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0340771151",
+      "ISBN13": "9780340771150",
+      "Description": null,
+      "Metadata": {
+        "$id": "443",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1495450"
+      }
+    },
+    {
+      "$id": "444",
+      "Title": "House Harkonnen (Prelude to Dune, #2)",
+      "Authors": [
+        "Brian Herbert",
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0340769084",
+      "ISBN13": "9780340769089",
+      "Description": null,
+      "Metadata": {
+        "$id": "445",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1039212"
+      }
+    },
+    {
+      "$id": "446",
+      "Title": "The Hitchhiker's Guide To The Galaxy (Hitchhiker's Guide, #1-4)",
+      "Authors": [
+        "Douglas Adams"
+      ],
+      "ISBN": "0434009202",
+      "ISBN13": "9780434009206",
+      "Description": null,
+      "Metadata": {
+        "$id": "447",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "81643"
+      }
+    },
+    {
+      "$id": "448",
+      "Title": "Hunters Of Dune (Dune Chronicles, #7)",
+      "Authors": [
+        "Brian Herbert",
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0340837489",
+      "ISBN13": "9780340837481",
+      "Description": null,
+      "Metadata": {
+        "$id": "449",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "661"
+      }
+    },
+    {
+      "$id": "450",
+      "Title": "Filosoffen Niels Bohr",
+      "Authors": [
+        "David Favrholdt"
+      ],
+      "ISBN": "",
+      "ISBN13": "9788775142163",
+      "Description": null,
+      "Metadata": {
+        "$id": "451",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "11389860"
+      }
+    },
+    {
+      "$id": "452",
+      "Title": "House Atreides (Prelude to Dune, #1)",
+      "Authors": [
+        "Brian Herbert",
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0340751754",
+      "ISBN13": "9780340751756",
+      "Description": null,
+      "Metadata": {
+        "$id": "453",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "725675"
+      }
+    },
+    {
+      "$id": "454",
+      "Title": "The State of the Art (Culture, #4)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "1597800740",
+      "ISBN13": "9781597800747",
+      "Description": null,
+      "Metadata": {
+        "$id": "455",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "129131"
+      }
+    },
+    {
+      "$id": "456",
+      "Title": "The Ultimate Hitchhiker's Guide (Hitchhiker's Guide to the Galaxy #1-5)",
+      "Authors": [
+        "Douglas Adams"
+      ],
+      "ISBN": "0517149257",
+      "ISBN13": "9780517149256",
+      "Description": null,
+      "Metadata": {
+        "$id": "457",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "18"
+      }
+    },
+    {
+      "$id": "458",
+      "Title": "The Original Illustrated Sherlock Holmes (Sherlock Holmes, #3-6)",
+      "Authors": [
+        "Arthur Conan Doyle"
+      ],
+      "ISBN": "0890090572",
+      "ISBN13": "9780890090572",
+      "Description": null,
+      "Metadata": {
+        "$id": "459",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "964621"
+      }
+    },
+    {
+      "$id": "460",
+      "Title": "The Da Vinci Code (Robert Langdon, #2)",
+      "Authors": [
+        "Dan Brown"
+      ],
+      "ISBN": "0593054253",
+      "ISBN13": "9780593054253",
+      "Description": null,
+      "Metadata": {
+        "$id": "461",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "305871"
+      }
+    },
+    {
+      "$id": "462",
+      "Title": "Cube: The Ultimate Guide to the World's Best-Selling Puzzle: Secrets, Stories, Solutions",
+      "Authors": [
+        "Jerry Slocum",
+        "David Singmaster",
+        "Dieter Gebhardt"
+      ],
+      "ISBN": "157912805X",
+      "ISBN13": "9781579128050",
+      "Description": null,
+      "Metadata": {
+        "$id": "463",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4361864"
+      }
+    },
+    {
+      "$id": "464",
+      "Title": "The Road To Mars",
+      "Authors": [
+        "Eric Idle"
+      ],
+      "ISBN": "0752224190",
+      "ISBN13": "9780752224190",
+      "Description": null,
+      "Metadata": {
+        "$id": "465",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2436574"
+      }
+    },
+    {
+      "$id": "466",
+      "Title": "Greetings, Carbon-Based Bipeds!",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "000224697X",
+      "ISBN13": "9780002246972",
+      "Description": null,
+      "Metadata": {
+        "$id": "467",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "149100"
+      }
+    },
+    {
+      "$id": "468",
+      "Title": "Sandworms Of Dune (Dune Chronicles, #8)",
+      "Authors": [
+        "Brian Herbert",
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0340837519",
+      "ISBN13": "9780340837511",
+      "Description": null,
+      "Metadata": {
+        "$id": "469",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "839259"
+      }
+    },
+    {
+      "$id": "470",
+      "Title": "Mountain of Black Glass (Otherland, #3)",
+      "Authors": [
+        "Tad Williams"
+      ],
+      "ISBN": "1857237471",
+      "ISBN13": "9781857237474",
+      "Description": null,
+      "Metadata": {
+        "$id": "471",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1036777"
+      }
+    },
+    {
+      "$id": "472",
+      "Title": "The Naked God (Night's Dawn, #3)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0333725034",
+      "ISBN13": "9780333725030",
+      "Description": null,
+      "Metadata": {
+        "$id": "473",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45260"
+      }
+    },
+    {
+      "$id": "474",
+      "Title": "Fallen Dragon",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0330480065",
+      "ISBN13": "9780330480062",
+      "Description": null,
+      "Metadata": {
+        "$id": "475",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45258"
+      }
+    },
+    {
+      "$id": "476",
+      "Title": "A Second Chance at Eden",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0330351826",
+      "ISBN13": "9780330351829",
+      "Description": null,
+      "Metadata": {
+        "$id": "477",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45257"
+      }
+    },
+    {
+      "$id": "478",
+      "Title": "Judas Unchained",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345461665",
+      "ISBN13": "9780345461667",
+      "Description": null,
+      "Metadata": {
+        "$id": "479",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45244"
+      }
+    },
+    {
+      "$id": "480",
+      "Title": "Misspent Youth",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0330480227",
+      "ISBN13": "9780330480222",
+      "Description": null,
+      "Metadata": {
+        "$id": "481",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45248"
+      }
+    },
+    {
+      "$id": "482",
+      "Title": "Pandora's Star",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0345461622",
+      "ISBN13": "9780345461629",
+      "Description": null,
+      "Metadata": {
+        "$id": "483",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45252"
+      }
+    },
+    {
+      "$id": "484",
+      "Title": "The Reality Dysfunction (Night's Dawn, #1)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0330340328",
+      "ISBN13": "9780330340328",
+      "Description": null,
+      "Metadata": {
+        "$id": "485",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45245"
+      }
+    },
+    {
+      "$id": "486",
+      "Title": "A Quantum Murder (Greg Mandel, #2)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0812555244",
+      "ISBN13": "9780812555240",
+      "Description": null,
+      "Metadata": {
+        "$id": "487",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45250"
+      }
+    },
+    {
+      "$id": "488",
+      "Title": "Mindstar Rising (Greg Mandel, #1)",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0812590562",
+      "ISBN13": "9780812590562",
+      "Description": null,
+      "Metadata": {
+        "$id": "489",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "45253"
+      }
+    },
+    {
+      "$id": "490",
+      "Title": "This Alien Shore",
+      "Authors": [
+        "C.S. Friedman"
+      ],
+      "ISBN": "0886777992",
+      "ISBN13": "9780886777999",
+      "Description": null,
+      "Metadata": {
+        "$id": "491",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "36162"
+      }
+    },
+    {
+      "$id": "492",
+      "Title": "The God Delusion",
+      "Authors": [
+        "Richard Dawkins"
+      ],
+      "ISBN": "0552774294",
+      "ISBN13": "9780552774291",
+      "Description": null,
+      "Metadata": {
+        "$id": "493",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1929068"
+      }
+    },
+    {
+      "$id": "494",
+      "Title": "A Scanner Darkly",
+      "Authors": [
+        "Philip K. Dick"
+      ],
+      "ISBN": "057507681X",
+      "ISBN13": "9780575076815",
+      "Description": null,
+      "Metadata": {
+        "$id": "495",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "14817"
+      }
+    },
+    {
+      "$id": "496",
+      "Title": "Sphere",
+      "Authors": [
+        "Michael Crichton"
+      ],
+      "ISBN": "0345418972",
+      "ISBN13": "9780345418975",
+      "Description": null,
+      "Metadata": {
+        "$id": "497",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "455373"
+      }
+    },
+    {
+      "$id": "498",
+      "Title": "Children of the Mind (Ender's Saga, #4)",
+      "Authors": [
+        "Orson Scott Card"
+      ],
+      "ISBN": "0812522397",
+      "ISBN13": "9780812522396",
+      "Description": null,
+      "Metadata": {
+        "$id": "499",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "539810"
+      }
+    },
+    {
+      "$id": "500",
+      "Title": "Xenocide (Ender's Saga, #3)",
+      "Authors": [
+        "Orson Scott Card"
+      ],
+      "ISBN": "0812509250",
+      "ISBN13": "9780812509250",
+      "Description": null,
+      "Metadata": {
+        "$id": "501",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "579727"
+      }
+    },
+    {
+      "$id": "502",
+      "Title": "Speaker for the Dead (Ender's Saga, #2)",
+      "Authors": [
+        "Orson Scott Card",
+        "John Bruce Harris"
+      ],
+      "ISBN": "0812550757",
+      "ISBN13": "9780812550757",
+      "Description": null,
+      "Metadata": {
+        "$id": "503",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7967"
+      }
+    },
+    {
+      "$id": "504",
+      "Title": "Ender's Game (Ender's Saga, #1)",
+      "Authors": [
+        "Orson Scott Card"
+      ],
+      "ISBN": "0812550706",
+      "ISBN13": "9780812550702",
+      "Description": null,
+      "Metadata": {
+        "$id": "505",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "375802"
+      }
+    },
+    {
+      "$id": "506",
+      "Title": "Otherness",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553295284",
+      "ISBN13": "9780553295283",
+      "Description": null,
+      "Metadata": {
+        "$id": "507",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "76791"
+      }
+    },
+    {
+      "$id": "508",
+      "Title": "Kiln People",
+      "Authors": [
+        "David Brin",
+        "Beth Meacham"
+      ],
+      "ISBN": "0765342618",
+      "ISBN13": "9780765342614",
+      "Description": null,
+      "Metadata": {
+        "$id": "509",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "96478"
+      }
+    },
+    {
+      "$id": "510",
+      "Title": "Heaven's Reach (Uplift Storm Trilogy, #3)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553574736",
+      "ISBN13": "9780553574739",
+      "Description": null,
+      "Metadata": {
+        "$id": "511",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "101890"
+      }
+    },
+    {
+      "$id": "512",
+      "Title": "Infinity's Shore (Uplift Storm Trilogy, #2)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553577778",
+      "ISBN13": "9780553577778",
+      "Description": null,
+      "Metadata": {
+        "$id": "513",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "96475"
+      }
+    },
+    {
+      "$id": "514",
+      "Title": "Brightness Reef (Uplift Storm Trilogy, #1)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553573306",
+      "ISBN13": "9780553573305",
+      "Description": null,
+      "Metadata": {
+        "$id": "515",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "25059"
+      }
+    },
+    {
+      "$id": "516",
+      "Title": "Startide Rising (The Uplift Saga, #2)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "055327418X",
+      "ISBN13": "9780553274189",
+      "Description": null,
+      "Metadata": {
+        "$id": "517",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "234501"
+      }
+    },
+    {
+      "$id": "518",
+      "Title": "The Uplift War (The Uplift Saga, #3)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553279718",
+      "ISBN13": "9780553279719",
+      "Description": null,
+      "Metadata": {
+        "$id": "519",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "234489"
+      }
+    },
+    {
+      "$id": "520",
+      "Title": "Sundiver (The Uplift Saga, #1)",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "0553269828",
+      "ISBN13": "9780553269826",
+      "Description": null,
+      "Metadata": {
+        "$id": "521",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "96472"
+      }
+    },
+    {
+      "$id": "522",
+      "Title": "Eternity (The Way, #2)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0446601888",
+      "ISBN13": "9780446601887",
+      "Description": null,
+      "Metadata": {
+        "$id": "523",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "116121"
+      }
+    },
+    {
+      "$id": "524",
+      "Title": "Eon (The Way, #1)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0812520475",
+      "ISBN13": "9780812520477",
+      "Description": null,
+      "Metadata": {
+        "$id": "525",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "840278"
+      }
+    },
+    {
+      "$id": "526",
+      "Title": "Look to Windward (Culture, #7)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "0743421922",
+      "ISBN13": "9780743421928",
+      "Description": null,
+      "Metadata": {
+        "$id": "527",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12016"
+      }
+    },
+    {
+      "$id": "528",
+      "Title": "The Algebraist",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "1597800449",
+      "ISBN13": "9781597800440",
+      "Description": null,
+      "Metadata": {
+        "$id": "529",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12009"
+      }
+    },
+    {
+      "$id": "530",
+      "Title": "The Player of Games (Culture, #2)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "1857231465",
+      "ISBN13": "9781857231465",
+      "Description": null,
+      "Metadata": {
+        "$id": "531",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12012"
+      }
+    },
+    {
+      "$id": "532",
+      "Title": "Consider Phlebas",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "1857231384",
+      "ISBN13": "9781857231380",
+      "Description": null,
+      "Metadata": {
+        "$id": "533",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8935689"
+      }
+    },
+    {
+      "$id": "534",
+      "Title": "Use of Weapons (Culture, #3)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "185723135X",
+      "ISBN13": "9781857231359",
+      "Description": null,
+      "Metadata": {
+        "$id": "535",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "12007"
+      }
+    },
+    {
+      "$id": "536",
+      "Title": "Divergence (AI Trilogy #3)",
+      "Authors": [
+        "Tony Ballantyne"
+      ],
+      "ISBN": "055358930X",
+      "ISBN13": "9780553589306",
+      "Description": null,
+      "Metadata": {
+        "$id": "537",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1040672"
+      }
+    },
+    {
+      "$id": "538",
+      "Title": "Capacity (AI Trilogy #2)",
+      "Authors": [
+        "Tony Ballantyne"
+      ],
+      "ISBN": "0553589296",
+      "ISBN13": "9780553589290",
+      "Description": null,
+      "Metadata": {
+        "$id": "539",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "889111"
+      }
+    },
+    {
+      "$id": "540",
+      "Title": "Recursion",
+      "Authors": [
+        "Tony Ballantyne"
+      ],
+      "ISBN": "0330426990",
+      "ISBN13": "9780330426992",
+      "Description": null,
+      "Metadata": {
+        "$id": "541",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3422104"
+      }
+    },
+    {
+      "$id": "542",
+      "Title": "The Ashes of Worlds (The Saga of Seven Suns, #7)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0316007579",
+      "ISBN13": "9780316007573",
+      "Description": null,
+      "Metadata": {
+        "$id": "543",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2310896"
+      }
+    },
+    {
+      "$id": "544",
+      "Title": "Metal Swarm (The Saga of Seven Suns, #6)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0743275438",
+      "ISBN13": "9780743275439",
+      "Description": null,
+      "Metadata": {
+        "$id": "545",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "932065"
+      }
+    },
+    {
+      "$id": "546",
+      "Title": "Hidden Empire (The Saga of Seven Suns, #1)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0446610577",
+      "ISBN13": "9780446610575",
+      "Description": null,
+      "Metadata": {
+        "$id": "547",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "898232"
+      }
+    },
+    {
+      "$id": "548",
+      "Title": "Horizon Storms (The Saga of Seven Suns, #3)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0446610593",
+      "ISBN13": "9780446610599",
+      "Description": null,
+      "Metadata": {
+        "$id": "549",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "265288"
+      }
+    },
+    {
+      "$id": "550",
+      "Title": "A Forest of Stars (The Saga of Seven Suns, #2)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0446528714",
+      "ISBN13": "9780446528719",
+      "Description": null,
+      "Metadata": {
+        "$id": "551",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "265287"
+      }
+    },
+    {
+      "$id": "552",
+      "Title": "Scattered Suns (The Saga of Seven Suns, #4)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0446615242",
+      "ISBN13": "9780446615242",
+      "Description": null,
+      "Metadata": {
+        "$id": "553",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "103103"
+      }
+    },
+    {
+      "$id": "554",
+      "Title": "Of Fire and Night (The Saga of Seven Suns, #5)",
+      "Authors": [
+        "Kevin J. Anderson"
+      ],
+      "ISBN": "0446577189",
+      "ISBN13": "9780446577182",
+      "Description": null,
+      "Metadata": {
+        "$id": "555",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "103101"
+      }
+    },
+    {
+      "$id": "556",
+      "Title": "Eisenhorn (Eisenhorn, #1-3)",
+      "Authors": [
+        "Dan Abnett"
+      ],
+      "ISBN": "1844161560",
+      "ISBN13": "9781844161560",
+      "Description": null,
+      "Metadata": {
+        "$id": "557",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "752461"
+      }
+    },
+    {
+      "$id": "558",
+      "Title": "Surface Detail (Culture #9)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "0316123404",
+      "ISBN13": "9780316123402",
+      "Description": null,
+      "Metadata": {
+        "$id": "559",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "7937744"
+      }
+    },
+    {
+      "$id": "560",
+      "Title": "Matter (Culture, #8)",
+      "Authors": [
+        "Iain M. Banks"
+      ],
+      "ISBN": "1841494186",
+      "ISBN13": "9781841494180",
+      "Description": null,
+      "Metadata": {
+        "$id": "561",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "886066"
+      }
+    },
+    {
+      "$id": "562",
+      "Title": "Starship Troopers",
+      "Authors": [
+        "Robert A. Heinlein"
+      ],
+      "ISBN": "0441783589",
+      "ISBN13": "9780441783588",
+      "Description": null,
+      "Metadata": {
+        "$id": "563",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "17214"
+      }
+    },
+    {
+      "$id": "564",
+      "Title": "Gateways: A Feast of Great New Science Fiction Honoring Grand Master Frederik Pohl",
+      "Authors": [
+        "Elizabeth A. Hull"
+      ],
+      "ISBN": "0765326620",
+      "ISBN13": "9780765326621",
+      "Description": null,
+      "Metadata": {
+        "$id": "565",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "8139064"
+      }
+    },
+    {
+      "$id": "566",
+      "Title": "Marrow",
+      "Authors": [
+        "Robert Reed"
+      ],
+      "ISBN": "1841490784",
+      "ISBN13": "9781841490786",
+      "Description": null,
+      "Metadata": {
+        "$id": "567",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1026744"
+      }
+    },
+    {
+      "$id": "568",
+      "Title": "Contact",
+      "Authors": [
+        "Carl Sagan"
+      ],
+      "ISBN": "1857235800",
+      "ISBN13": "9781857235807",
+      "Description": null,
+      "Metadata": {
+        "$id": "569",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "96656"
+      }
+    },
+    {
+      "$id": "570",
+      "Title": "Endymion (Hyperion Cantos, #3)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0553572946",
+      "ISBN13": "9780553572940",
+      "Description": null,
+      "Metadata": {
+        "$id": "571",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3977"
+      }
+    },
+    {
+      "$id": "572",
+      "Title": "The Rise of Endymion (Hyperion Cantos, #4)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0553572989",
+      "ISBN13": "9780553572988",
+      "Description": null,
+      "Metadata": {
+        "$id": "573",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "11289"
+      }
+    },
+    {
+      "$id": "574",
+      "Title": "The Fall of Hyperion (Hyperion Cantos, #2)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0553288202",
+      "ISBN13": "9780553288209",
+      "Description": null,
+      "Metadata": {
+        "$id": "575",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77565"
+      }
+    },
+    {
+      "$id": "576",
+      "Title": "Hyperion (Hyperion Cantos, #1)",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0553283685",
+      "ISBN13": "9780553283686",
+      "Description": null,
+      "Metadata": {
+        "$id": "577",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77566"
+      }
+    },
+    {
+      "$id": "578",
+      "Title": "Schismatrix Plus",
+      "Authors": [
+        "Bruce Sterling"
+      ],
+      "ISBN": "0441003702",
+      "ISBN13": "9780441003709",
+      "Description": null,
+      "Metadata": {
+        "$id": "579",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "161296"
+      }
+    },
+    {
+      "$id": "580",
+      "Title": "Iron Sunrise (Eschaton, #2)",
+      "Authors": [
+        "Charles Stross"
+      ],
+      "ISBN": "1841493368",
+      "ISBN13": "9781841493367",
+      "Description": null,
+      "Metadata": {
+        "$id": "581",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "101864"
+      }
+    },
+    {
+      "$id": "582",
+      "Title": "Singularity Sky (Eschaton, #1)",
+      "Authors": [
+        "Charles Stross"
+      ],
+      "ISBN": "0441011799",
+      "ISBN13": "9780441011797",
+      "Description": null,
+      "Metadata": {
+        "$id": "583",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "938171"
+      }
+    },
+    {
+      "$id": "584",
+      "Title": "Stardoc (Stardoc, #1)",
+      "Authors": [
+        "S.L. Viehl"
+      ],
+      "ISBN": "0451457730",
+      "ISBN13": "9780451457738",
+      "Description": null,
+      "Metadata": {
+        "$id": "585",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "664642"
+      }
+    },
+    {
+      "$id": "586",
+      "Title": "The Companions (Dragonlance: Meetings Sextet, #6)",
+      "Authors": [
+        "Tina Daniell"
+      ],
+      "ISBN": "156076340X",
+      "ISBN13": "9781560763406",
+      "Description": null,
+      "Metadata": {
+        "$id": "587",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "92882"
+      }
+    },
+    {
+      "$id": "588",
+      "Title": "Steel and Stone (Dragonlance: Meetings Sextet, #5)",
+      "Authors": [
+        "Ellen Porath"
+      ],
+      "ISBN": "1560763396",
+      "ISBN13": "9781560763390",
+      "Description": null,
+      "Metadata": {
+        "$id": "589",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "92905"
+      }
+    },
+    {
+      "$id": "590",
+      "Title": "The Oath and the Measure (Dragonlance: Meetings Sextet, #4)",
+      "Authors": [
+        "Michael   Williams"
+      ],
+      "ISBN": "1560763361",
+      "ISBN13": "9781560763369",
+      "Description": null,
+      "Metadata": {
+        "$id": "591",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "108889"
+      }
+    },
+    {
+      "$id": "592",
+      "Title": "Wanderlust (Dragonlance: Meetings Sextet, #2)",
+      "Authors": [
+        "Mary L. Kirchoff",
+        "Steve Winter"
+      ],
+      "ISBN": "1560761156",
+      "ISBN13": "9781560761150",
+      "Description": null,
+      "Metadata": {
+        "$id": "593",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "534499"
+      }
+    },
+    {
+      "$id": "594",
+      "Title": "Kindred Spirits (Dragonlance: Meetings Sextet, #1)",
+      "Authors": [
+        "Mark Anthony",
+        "Ellen Porath",
+        "Mary L. Kirchoff",
+        "Steve Winter",
+        "Tina Daniell",
+        "Michael   Williams",
+        "Tina Daniel"
+      ],
+      "ISBN": "1560760699",
+      "ISBN13": "9781560760696",
+      "Description": null,
+      "Metadata": {
+        "$id": "595",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "668830"
+      }
+    },
+    {
+      "$id": "596",
+      "Title": "Dark Heart (Dragonlance: Meetings Sextet, #3)",
+      "Authors": [
+        "Tina Daniell"
+      ],
+      "ISBN": "1560761164",
+      "ISBN13": "9781560761167",
+      "Description": null,
+      "Metadata": {
+        "$id": "597",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "92908"
+      }
+    },
+    {
+      "$id": "598",
+      "Title": "Bagombo Snuff Box",
+      "Authors": [
+        "Kurt Vonnegut"
+      ],
+      "ISBN": "0099282968",
+      "ISBN13": "9780099282969",
+      "Description": null,
+      "Metadata": {
+        "$id": "599",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "4984"
+      }
+    },
+    {
+      "$id": "600",
+      "Title": "Quarantine (Subjective Cosmology #1)",
+      "Authors": [
+        "Greg Egan"
+      ],
+      "ISBN": "0061054232",
+      "ISBN13": "9780061054235",
+      "Description": null,
+      "Metadata": {
+        "$id": "601",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "156775"
+      }
+    },
+    {
+      "$id": "602",
+      "Title": "Cities in Flight (Cities in Flight, #1-4)",
+      "Authors": [
+        "James Blish"
+      ],
+      "ISBN": "1857988116",
+      "ISBN13": "9781857988116",
+      "Description": null,
+      "Metadata": {
+        "$id": "603",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "756978"
+      }
+    },
+    {
+      "$id": "604",
+      "Title": "River of Blue Fire (Otherland, #2)",
+      "Authors": [
+        "Tad Williams"
+      ],
+      "ISBN": "0886778441",
+      "ISBN13": "9780886778446",
+      "Description": null,
+      "Metadata": {
+        "$id": "605",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "10084"
+      }
+    },
+    {
+      "$id": "606",
+      "Title": "Absolution Gap (Revelation Space, #3)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575075570",
+      "ISBN13": "9780575075573",
+      "Description": null,
+      "Metadata": {
+        "$id": "607",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1006561"
+      }
+    },
+    {
+      "$id": "608",
+      "Title": "The Cassini Division (The Fall Revolution, #3)",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "1857237307",
+      "ISBN13": "9781857237306",
+      "Description": null,
+      "Metadata": {
+        "$id": "609",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1117943"
+      }
+    },
+    {
+      "$id": "610",
+      "Title": "Changeling",
+      "Authors": [
+        "Christopher Kubasik"
+      ],
+      "ISBN": "0451451635",
+      "ISBN13": "9780451451637",
+      "Description": null,
+      "Metadata": {
+        "$id": "611",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1131195"
+      }
+    },
+    {
+      "$id": "612",
+      "Title": "Freedom's Landing (Catteni, #1)",
+      "Authors": [
+        "Anne McCaffrey"
+      ],
+      "ISBN": "0441003389",
+      "ISBN13": "9780441003389",
+      "Description": null,
+      "Metadata": {
+        "$id": "613",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "61928"
+      }
+    },
+    {
+      "$id": "614",
+      "Title": "Slant (Queen of Angels, #4)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0812524829",
+      "ISBN13": "9780812524826",
+      "Description": null,
+      "Metadata": {
+        "$id": "615",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "172742"
+      }
+    },
+    {
+      "$id": "616",
+      "Title": "Never Trust an Elf (Shadowrun, #6)",
+      "Authors": [
+        "Robert N. Charrette"
+      ],
+      "ISBN": "0451451783",
+      "ISBN13": "9780451451781",
+      "Description": null,
+      "Metadata": {
+        "$id": "617",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "351452"
+      }
+    },
+    {
+      "$id": "618",
+      "Title": "Night's Pawn (Shadowrun, #10)",
+      "Authors": [
+        "Tom Dowd"
+      ],
+      "ISBN": "0451452380",
+      "ISBN13": "9780451452382",
+      "Description": null,
+      "Metadata": {
+        "$id": "619",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "3071927"
+      }
+    },
+    {
+      "$id": "620",
+      "Title": "Starfarers",
+      "Authors": [
+        "Poul Anderson"
+      ],
+      "ISBN": "0812545990",
+      "ISBN13": "9780812545999",
+      "Description": null,
+      "Metadata": {
+        "$id": "621",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "445653"
+      }
+    },
+    {
+      "$id": "622",
+      "Title": "Aliens vs. Predator: Prey (Aliens Vs. Predator, # 1)",
+      "Authors": [
+        "Steve Perry",
+        "Stephani Perry"
+      ],
+      "ISBN": "0553565559",
+      "ISBN13": "9780553565553",
+      "Description": null,
+      "Metadata": {
+        "$id": "623",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "123586"
+      }
+    },
+    {
+      "$id": "624",
+      "Title": "Dark Light (Engines Of Light, #2)",
+      "Authors": [
+        "Ken MacLeod",
+        "Patrick Nielsen Hayden"
+      ],
+      "ISBN": "0765344963",
+      "ISBN13": "9780765344960",
+      "Description": null,
+      "Metadata": {
+        "$id": "625",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "312091"
+      }
+    },
+    {
+      "$id": "626",
+      "Title": "Sailing Bright Eternity (Galactic Center, #6)",
+      "Authors": [
+        "Gregory Benford"
+      ],
+      "ISBN": "0446611522",
+      "ISBN13": "9780446611527",
+      "Description": null,
+      "Metadata": {
+        "$id": "627",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "453961"
+      }
+    },
+    {
+      "$id": "628",
+      "Title": "Deepdrive",
+      "Authors": [
+        "Alexander Jablokov"
+      ],
+      "ISBN": "0380797151",
+      "ISBN13": "9780380797158",
+      "Description": null,
+      "Metadata": {
+        "$id": "629",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1659751"
+      }
+    },
+    {
+      "$id": "630",
+      "Title": "The Gripping Hand",
+      "Authors": [
+        "Larry Niven",
+        "Jerry Pournelle"
+      ],
+      "ISBN": "0671795740",
+      "ISBN13": "9780671795740",
+      "Description": null,
+      "Metadata": {
+        "$id": "631",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "218453"
+      }
+    },
+    {
+      "$id": "632",
+      "Title": "City of Golden Shadow (Otherland, #1)",
+      "Authors": [
+        "Tad Williams"
+      ],
+      "ISBN": "0886777631",
+      "ISBN13": "9780886777630",
+      "Description": null,
+      "Metadata": {
+        "$id": "633",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "28695"
+      }
+    },
+    {
+      "$id": "634",
+      "Title": "Footfall",
+      "Authors": [
+        "Larry Niven",
+        "Jerry Pournelle"
+      ],
+      "ISBN": "1857230973",
+      "ISBN13": "9781857230970",
+      "Description": null,
+      "Metadata": {
+        "$id": "635",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1911350"
+      }
+    },
+    {
+      "$id": "636",
+      "Title": "The Collected Stories of Philip K. Dick, Volume 4: Minority Report",
+      "Authors": [
+        "Philip K. Dick",
+        "James Tiptree Jr."
+      ],
+      "ISBN": "1857989473",
+      "ISBN13": "9781857989472",
+      "Description": null,
+      "Metadata": {
+        "$id": "637",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "226470"
+      }
+    },
+    {
+      "$id": "638",
+      "Title": "Gateway",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "1857988183",
+      "ISBN13": "9781857988185",
+      "Description": null,
+      "Metadata": {
+        "$id": "639",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "609481"
+      }
+    },
+    {
+      "$id": "640",
+      "Title": "Fine Prey",
+      "Authors": [
+        "Scott Westerfeld"
+      ],
+      "ISBN": "0451456971",
+      "ISBN13": "9780451456977",
+      "Description": null,
+      "Metadata": {
+        "$id": "641",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "186105"
+      }
+    },
+    {
+      "$id": "642",
+      "Title": "The Last Command (Star Wars: The Thrawn Trilogy, #3)",
+      "Authors": [
+        "Timothy Zahn"
+      ],
+      "ISBN": "0553564927",
+      "ISBN13": "9780553564921",
+      "Description": null,
+      "Metadata": {
+        "$id": "643",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "216422"
+      }
+    },
+    {
+      "$id": "644",
+      "Title": "Star Wars: Dark Force Rising (Star Wars: The Thrawn Trilogy, #2)",
+      "Authors": [
+        "Timothy Zahn"
+      ],
+      "ISBN": "0553404423",
+      "ISBN13": "9780553404425",
+      "Description": null,
+      "Metadata": {
+        "$id": "645",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1172975"
+      }
+    },
+    {
+      "$id": "646",
+      "Title": "Star Wars: Heir to the Empire (Star Wars: The Thrawn Trilogy, #1)",
+      "Authors": [
+        "Timothy Zahn"
+      ],
+      "ISBN": "0553404717",
+      "ISBN13": "9780553404715",
+      "Description": null,
+      "Metadata": {
+        "$id": "647",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "216444"
+      }
+    },
+    {
+      "$id": "648",
+      "Title": "The Far Shore of Time (Eschaton Sequence, #3)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0812577833",
+      "ISBN13": "9780812577839",
+      "Description": null,
+      "Metadata": {
+        "$id": "649",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "367217"
+      }
+    },
+    {
+      "$id": "650",
+      "Title": "The Collapsium (The Queendom of Sol #1)",
+      "Authors": [
+        "Wil McCarthy"
+      ],
+      "ISBN": "055358443X",
+      "ISBN13": "9780553584431",
+      "Description": null,
+      "Metadata": {
+        "$id": "651",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1361835"
+      }
+    },
+    {
+      "$id": "652",
+      "Title": "In Conquest Born (In Conquest Born, #1)",
+      "Authors": [
+        "Celia S. Friedman",
+        "C.S. Friedman"
+      ],
+      "ISBN": "0886771986",
+      "ISBN13": "9780886771980",
+      "Description": null,
+      "Metadata": {
+        "$id": "653",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1197010"
+      }
+    },
+    {
+      "$id": "654",
+      "Title": "Penumbra",
+      "Authors": [
+        "Eric Brown"
+      ],
+      "ISBN": "1857985923",
+      "ISBN13": "9781857985924",
+      "Description": null,
+      "Metadata": {
+        "$id": "655",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2364168"
+      }
+    },
+    {
+      "$id": "656",
+      "Title": "Cosmonaut Keep (Engines Of Light, #1)",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "0765340739",
+      "ISBN13": "9780765340733",
+      "Description": null,
+      "Metadata": {
+        "$id": "657",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "185824"
+      }
+    },
+    {
+      "$id": "658",
+      "Title": "The Mote in God's Eye (Moties, #1)",
+      "Authors": [
+        "Larry Niven",
+        "Jerry Pournelle"
+      ],
+      "ISBN": "0671741926",
+      "ISBN13": "9780671741921",
+      "Description": null,
+      "Metadata": {
+        "$id": "659",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "268638"
+      }
+    },
+    {
+      "$id": "660",
+      "Title": "Engine City (Engines Of Light, #3)",
+      "Authors": [
+        "Ken MacLeod"
+      ],
+      "ISBN": "0765344211",
+      "ISBN13": "9780765344212",
+      "Description": null,
+      "Metadata": {
+        "$id": "661",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "185823"
+      }
+    },
+    {
+      "$id": "662",
+      "Title": "Aliens: Genocide (Aliens)",
+      "Authors": [
+        "David Bischoff"
+      ],
+      "ISBN": "0553563718",
+      "ISBN13": "9780553563719",
+      "Description": null,
+      "Metadata": {
+        "$id": "663",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2186184"
+      }
+    },
+    {
+      "$id": "664",
+      "Title": "The Other End of Time",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0812535197",
+      "ISBN13": "9780812535198",
+      "Description": null,
+      "Metadata": {
+        "$id": "665",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "611402"
+      }
+    },
+    {
+      "$id": "666",
+      "Title": "The Siege of Eternity (Eschaton Sequence, #2)",
+      "Authors": [
+        "Frederik Pohl"
+      ],
+      "ISBN": "0812577663",
+      "ISBN13": "9780812577662",
+      "Description": null,
+      "Metadata": {
+        "$id": "667",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "449426"
+      }
+    },
+    {
+      "$id": "668",
+      "Title": "The Foreigners (Gollancz Sf S.)",
+      "Authors": [
+        "James Lovegrove"
+      ],
+      "ISBN": "1857987918",
+      "ISBN13": "9781857987911",
+      "Description": null,
+      "Metadata": {
+        "$id": "669",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "362806"
+      }
+    },
+    {
+      "$id": "670",
+      "Title": "Blindsight (Firefall, #1)",
+      "Authors": [
+        "Peter Watts"
+      ],
+      "ISBN": "0765312182",
+      "ISBN13": "9780765312181",
+      "Description": null,
+      "Metadata": {
+        "$id": "671",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "48484"
+      }
+    },
+    {
+      "$id": "672",
+      "Title": "Accelerando",
+      "Authors": [
+        "Charles Stross"
+      ],
+      "ISBN": "0441014151",
+      "ISBN13": "9780441014156",
+      "Description": null,
+      "Metadata": {
+        "$id": "673",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "17863"
+      }
+    },
+    {
+      "$id": "674",
+      "Title": "2XS (Shadowrun, #4)",
+      "Authors": [
+        "Nigel Findley",
+        "Christian Jentzsch",
+        "John Zeleznick",
+        "Mirjam Wehner",
+        "Joel Biske"
+      ],
+      "ISBN": "3453062116",
+      "ISBN13": "9783453062115",
+      "Description": null,
+      "Metadata": {
+        "$id": "675",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "515658"
+      }
+    },
+    {
+      "$id": "676",
+      "Title": "Shadowplay (Shadowrun, #9)",
+      "Authors": [
+        "Nigel Findley"
+      ],
+      "ISBN": "0451452283",
+      "ISBN13": "9780451452283",
+      "Description": null,
+      "Metadata": {
+        "$id": "677",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "611269"
+      }
+    },
+    {
+      "$id": "678",
+      "Title": "Iris",
+      "Authors": [
+        "William Barton",
+        "Michael Capobianco"
+      ],
+      "ISBN": "0380730383",
+      "ISBN13": "9780380730384",
+      "Description": null,
+      "Metadata": {
+        "$id": "679",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "675516"
+      }
+    },
+    {
+      "$id": "680",
+      "Title": "Genesis",
+      "Authors": [
+        "Poul Anderson"
+      ],
+      "ISBN": "0812580281",
+      "ISBN13": "9780812580280",
+      "Description": null,
+      "Metadata": {
+        "$id": "681",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1460961"
+      }
+    },
+    {
+      "$id": "682",
+      "Title": "Time Future",
+      "Authors": [
+        "Maxine McArthur"
+      ],
+      "ISBN": "0446609633",
+      "ISBN13": "9780446609630",
+      "Description": null,
+      "Metadata": {
+        "$id": "683",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2037249"
+      }
+    },
+    {
+      "$id": "684",
+      "Title": "Flux (Xeelee Sequence, #3)",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "0006476201",
+      "ISBN13": "9780006476207",
+      "Description": null,
+      "Metadata": {
+        "$id": "685",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "100681"
+      }
+    },
+    {
+      "$id": "686",
+      "Title": "Moonseed (NASA Trilogy, #3)",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "006105903X",
+      "ISBN13": "9780061059032",
+      "Description": null,
+      "Metadata": {
+        "$id": "687",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "63775"
+      }
+    },
+    {
+      "$id": "688",
+      "Title": "The Gap Into Vision: Forbidden Knowledge (Gap, #2)",
+      "Authors": [
+        "Stephen R. Donaldson"
+      ],
+      "ISBN": "0553297600",
+      "ISBN13": "9780553297607",
+      "Description": null,
+      "Metadata": {
+        "$id": "689",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22874"
+      }
+    },
+    {
+      "$id": "690",
+      "Title": "The Gap Into Conflict: The Real Story (Gap, #1)",
+      "Authors": [
+        "Stephen R. Donaldson"
+      ],
+      "ISBN": "0553295098",
+      "ISBN13": "9780553295092",
+      "Description": null,
+      "Metadata": {
+        "$id": "691",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "427353"
+      }
+    },
+    {
+      "$id": "692",
+      "Title": "A Brief History of Time: From the Big Bang to Black Holes",
+      "Authors": [
+        "Stephen Hawking"
+      ],
+      "ISBN": "0553173251",
+      "ISBN13": "9780553173253",
+      "Description": null,
+      "Metadata": {
+        "$id": "693",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1036307"
+      }
+    },
+    {
+      "$id": "694",
+      "Title": "The Gap Into Madness: Chaos and Order (Gap, #4)",
+      "Authors": [
+        "Stephen R. Donaldson"
+      ],
+      "ISBN": "0553572539",
+      "ISBN13": "9780553572537",
+      "Description": null,
+      "Metadata": {
+        "$id": "695",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "177270"
+      }
+    },
+    {
+      "$id": "696",
+      "Title": "Timelike Infinity (Xeelee Sequence, #2)",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "000647618X",
+      "ISBN13": "9780006476184",
+      "Description": null,
+      "Metadata": {
+        "$id": "697",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "66795"
+      }
+    },
+    {
+      "$id": "698",
+      "Title": "The Gap Into Power: A Dark and Hungry God Arises (Gap, #3)",
+      "Authors": [
+        "Stephen R. Donaldson"
+      ],
+      "ISBN": "0553562606",
+      "ISBN13": "9780553562606",
+      "Description": null,
+      "Metadata": {
+        "$id": "699",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "22877"
+      }
+    },
+    {
+      "$id": "700",
+      "Title": "Earth",
+      "Authors": [
+        "David Brin"
+      ],
+      "ISBN": "055329024X",
+      "ISBN13": "9780553290240",
+      "Description": null,
+      "Metadata": {
+        "$id": "701",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "96471"
+      }
+    },
+    {
+      "$id": "702",
+      "Title": "The Forge of God (Forge of God, #1)",
+      "Authors": [
+        "Greg Bear"
+      ],
+      "ISBN": "0812524330",
+      "ISBN13": "9780812524338",
+      "Description": null,
+      "Metadata": {
+        "$id": "703",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "2433635"
+      }
+    },
+    {
+      "$id": "704",
+      "Title": "The Songs Of Distant Earth",
+      "Authors": [
+        "Arthur C. Clarke"
+      ],
+      "ISBN": "0586066233",
+      "ISBN13": "9780586066232",
+      "Description": null,
+      "Metadata": {
+        "$id": "705",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "991990"
+      }
+    },
+    {
+      "$id": "706",
+      "Title": "Prayers to Broken Stones",
+      "Authors": [
+        "Dan Simmons"
+      ],
+      "ISBN": "0553296655",
+      "ISBN13": "9780553296655",
+      "Description": null,
+      "Metadata": {
+        "$id": "707",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1417035"
+      }
+    },
+    {
+      "$id": "708",
+      "Title": "Ring (Xeelee Sequence, #4)",
+      "Authors": [
+        "Stephen Baxter"
+      ],
+      "ISBN": "0061056944",
+      "ISBN13": "9780061056949",
+      "Description": null,
+      "Metadata": {
+        "$id": "709",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "66788"
+      }
+    },
+    {
+      "$id": "710",
+      "Title": "Rama Revealed (Rama, #4)",
+      "Authors": [
+        "Arthur C. Clarke",
+        "Gentry Lee"
+      ],
+      "ISBN": "1857232526",
+      "ISBN13": "9781857232523",
+      "Description": null,
+      "Metadata": {
+        "$id": "711",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "112517"
+      }
+    },
+    {
+      "$id": "712",
+      "Title": "The Confederation Handbook",
+      "Authors": [
+        "Peter F. Hamilton"
+      ],
+      "ISBN": "0446610275",
+      "ISBN13": "9780446610278",
+      "Description": null,
+      "Metadata": {
+        "$id": "713",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "126413"
+      }
+    },
+    {
+      "$id": "714",
+      "Title": "Chapterhouse: Dune (Dune Chronicles #6)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0441102670",
+      "ISBN13": "9780441102679",
+      "Description": null,
+      "Metadata": {
+        "$id": "715",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "105"
+      }
+    },
+    {
+      "$id": "716",
+      "Title": "Heretics of Dune (Dune Chronicles #5)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0441328008",
+      "ISBN13": "9780441328000",
+      "Description": null,
+      "Metadata": {
+        "$id": "717",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "117"
+      }
+    },
+    {
+      "$id": "718",
+      "Title": "God Emperor of Dune (Dune Chronicles #4)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0575075066",
+      "ISBN13": "9780575075061",
+      "Description": null,
+      "Metadata": {
+        "$id": "719",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "42432"
+      }
+    },
+    {
+      "$id": "720",
+      "Title": "Children of Dune (Dune Chronicles #3)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0441104029",
+      "ISBN13": "9780441104024",
+      "Description": null,
+      "Metadata": {
+        "$id": "721",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "112"
+      }
+    },
+    {
+      "$id": "722",
+      "Title": "Dune Messiah (Dune Chronicles #2)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0441172695",
+      "ISBN13": "9780441172696",
+      "Description": null,
+      "Metadata": {
+        "$id": "723",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "106"
+      }
+    },
+    {
+      "$id": "724",
+      "Title": "A Deepness in the Sky (Zones of Thought, #2)",
+      "Authors": [
+        "Vernor Vinge"
+      ],
+      "ISBN": "0812536355",
+      "ISBN13": "9780812536355",
+      "Description": null,
+      "Metadata": {
+        "$id": "725",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "226004"
+      }
+    },
+    {
+      "$id": "726",
+      "Title": "A Fire Upon the Deep (Zones of Thought, #1)",
+      "Authors": [
+        "Vernor Vinge"
+      ],
+      "ISBN": "0812515285",
+      "ISBN13": "9780812515282",
+      "Description": null,
+      "Metadata": {
+        "$id": "727",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "77711"
+      }
+    },
+    {
+      "$id": "728",
+      "Title": "Revelation Space (Revelation Space, #1)",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0441009425",
+      "ISBN13": "9780441009428",
+      "Description": null,
+      "Metadata": {
+        "$id": "729",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "89187"
+      }
+    },
+    {
+      "$id": "730",
+      "Title": "Dune (Dune Chronicles, #1)",
+      "Authors": [
+        "Frank Herbert"
+      ],
+      "ISBN": "0340839937",
+      "ISBN13": "9780340839935",
+      "Description": null,
+      "Metadata": {
+        "$id": "731",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "234225"
+      }
+    },
+    {
+      "$id": "732",
+      "Title": "Chasm City",
+      "Authors": [
+        "Alastair Reynolds"
+      ],
+      "ISBN": "0575073659",
+      "ISBN13": "9780575073654",
+      "Description": null,
+      "Metadata": {
+        "$id": "733",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "1006560"
+      }
     }
   ]
 }

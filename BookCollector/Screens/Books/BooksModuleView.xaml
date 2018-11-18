@@ -50,16 +50,25 @@
                                    Text="Shelves"/>
                     </StackPanel>
 
-                    <TextBlock Grid.Column="1"
-                               Background="BurlyWood"
-                               Text="Books List"/>
+                    <DataGrid x:Name="books_list"
+                              Grid.Column="1"
+                              AutoGenerateColumns="False"
+                              HorizontalScrollBarVisibility="Auto"
+                              IsReadOnly="True"
+                              ItemsSource="{Binding Books}"
+                              IsSynchronizedWithCurrentItem="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="2*"/>
+                            <DataGridTextColumn Header="Authors" Binding="{Binding Authors}" Width="2*"/>
+                            <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
                     <GridSplitter Grid.Column="2"
                                   Style="{StaticResource horizontal_splitter}"/>
 
-                    <TextBlock Grid.Column="3"
-                               Background="LightCoral"
-                               Text="Books details"/>
+                    <ContentControl Grid.Column="3"
+                                    panda:View.Bind="{Binding ElementName=books_list, Path=SelectedItem}"/>
                 </Grid>
             </DockPanel>
         </md:DrawerHost>
