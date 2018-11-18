@@ -1,12 +1,15 @@
-﻿using BookCollector.Application.Messages;
+﻿using BookCollector.Application;
+using BookCollector.Application.Messages;
 using BookCollector.Screens.Common;
-using BookCollector.Screens.Controls;
 using ReactiveUI;
+using System.Linq;
 
 namespace BookCollector.Screens.Books
 {
     public class BooksModuleViewModel : CollectionModuleBase, IBooksModule
     {
+        private IStateManager state_manager;
+
         private SearchFieldViewModel _SearchField;
         public SearchFieldViewModel SearchField
         {
@@ -18,9 +21,11 @@ namespace BookCollector.Screens.Books
                                     CollectionsNavigationPartViewModel collections_navigation_part, 
                                     ToolsNavigationPartViewModel tools_navigation_part, 
                                     CollectionInformationPartViewModel collection_information_part,
-                                    SearchFieldViewModel search_field) 
+                                    IStateManager state_manager, 
+                                    SearchFieldViewModel search_field)
             : base(application_navigation_part, collections_navigation_part, tools_navigation_part, collection_information_part)
         {
+            this.state_manager = state_manager;
             SearchField = search_field;
         }
 
@@ -30,6 +35,10 @@ namespace BookCollector.Screens.Books
 
             // Show windows commands
             MessageBus.Current.SendMessage(ApplicationMessage.ShowCommands);
+
+            // Show message if there are no books in the collection
+            if (!state_manager.CurrentCollection.Books.Any())
+                MessageBus.Current.SendMessage(new InformationMessage("No books in collection, import here", "Go", () => MessageBus.Current.SendMessage(NavigationMessage.Import)));
         }
     }
 }

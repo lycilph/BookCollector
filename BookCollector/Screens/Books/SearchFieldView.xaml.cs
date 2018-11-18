@@ -1,4 +1,4 @@
-﻿namespace BookCollector.Screens.Controls
+﻿namespace BookCollector.Screens.Books
 {
     public partial class SearchFieldView
     {

@@ -2,6 +2,7 @@
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Import;
+using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using NLog;
 using ReactiveUI;
@@ -61,7 +62,10 @@ namespace BookCollector.Application.Controllers
             switch (message)
             {
                 case ApplicationMessage.ShellLoaded:
-                    shell.NavigateTo(typeof(ICollectionsModule));
+                    if (state_manager.CurrentCollection == null)
+                        shell.NavigateTo(typeof(ICollectionsModule));
+                    else
+                        shell.NavigateTo(typeof(IBooksModule));
                     break;
                 case ApplicationMessage.ShowCommands:
                     shell.ShowCommands();
@@ -88,6 +92,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case NavigationMessage.Books:
                     shell.NavigateTo(typeof(IBooksModule));
+                    break;
+                case NavigationMessage.Settings:
+                    shell.NavigateTo(typeof(ISettingsModule));
                     break;
                 default:
                     throw new ArgumentException($"Unhandled navigation message {message}");

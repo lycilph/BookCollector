@@ -46,16 +46,16 @@
                 Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
 
-        <TextBlock Text="Misc"
+        <TextBlock Text="Application"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                    Margin="0,16,0,0"/>
         <Button Content="Collections" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowCollectionsCommand}"/>
         <Button Content="Settings" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowSettingsCommand}"/>
     </StackPanel>
 </UserControl>

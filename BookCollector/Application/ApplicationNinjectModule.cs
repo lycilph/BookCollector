@@ -4,6 +4,7 @@ using BookCollector.Screens.Collections;
 using BookCollector.Screens.Common;
 using BookCollector.Screens.Import;
 using BookCollector.Screens.Series;
+using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using Ninject.Modules;
 using NLog;
@@ -24,6 +25,7 @@ namespace BookCollector.Application
 
             BindAsSingleton<IShellViewModel, ShellViewModel>();
             BindAsSingleton<ICollectionsModule, IModule, CollectionsModuleViewModel>();
+            BindAsSingleton<ISettingsModule, IModule, SettingsModuleViewModel>();
             BindAsSingleton<IBooksModule, IModule, BooksModuleViewModel>();
             BindAsSingleton<ISeriesModule, IModule, SeriesModuleViewModel>();
             BindAsSingleton<IImportModule, IModule, ImportModuleViewModel>();

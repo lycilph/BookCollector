@@ -35,6 +35,12 @@ namespace BookCollector.Application
             logger.Trace("Initializing state manager");
 
             Settings = repository.LoadSettings();
+
+            if (Settings.LoadMostRecentCollectionOnStart)
+            {
+                var recent_collection = Settings.GetMostRecentCollection();
+                CurrentCollection = repository.LoadCollection(recent_collection.Filename);
+            }
         }
 
         public void Exit()
@@ -60,7 +66,7 @@ namespace BookCollector.Application
 
         public void RemoveFromRecentCollections(RecentlyOpenedCollection recent_collection)
         {
-            Settings.RecentCollections.Remove(recent_collection);
+            Settings.RemoveFromRecentCollections(recent_collection);
         }
     }
 }

@@ -185,10 +185,10 @@
       <DependentUpon>CollectionsNavigationPartView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Common\CollectionsNavigationPartViewModel.cs" />
-    <Compile Include="Screens\Controls\SearchFieldView.xaml.cs">
+    <Compile Include="Screens\Books\SearchFieldView.xaml.cs">
       <DependentUpon>SearchFieldView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Controls\SearchFieldViewModel.cs" />
+    <Compile Include="Screens\Books\SearchFieldViewModel.cs" />
     <Compile Include="Screens\Common\ToolsNavigationPartView.xaml.cs">
       <DependentUpon>ToolsNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -238,6 +238,11 @@
       <DependentUpon>SeriesModuleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Series\SeriesModuleViewModel.cs" />
+    <Compile Include="Screens\Settings\ISettingsModule.cs" />
+    <Compile Include="Screens\Settings\SettingsModuleView.xaml.cs">
+      <DependentUpon>SettingsModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Settings\SettingsModuleViewModel.cs" />
     <Compile Include="Screens\Shell\IShellViewModel.cs" />
     <Compile Include="Screens\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -316,7 +321,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Controls\SearchFieldView.xaml">
+    <Page Include="Screens\Books\SearchFieldView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -337,6 +342,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Series\SeriesModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Settings\SettingsModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

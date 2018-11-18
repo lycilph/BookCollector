@@ -56,6 +56,7 @@ namespace BookCollector.Screens.Shell
             MessageQueue = new SnackbarMessageQueue(TimeSpan.FromSeconds(1));
 
             ShowCollectionsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Collections));
+            ShowSettingsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Settings));
         }
 
         public void NavigateTo(Type module)

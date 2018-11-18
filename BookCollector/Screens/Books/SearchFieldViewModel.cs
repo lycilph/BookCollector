@@ -1,7 +1,7 @@
 ﻿using ReactiveUI;
 using System.Reactive;
 
-namespace BookCollector.Screens.Controls
+namespace BookCollector.Screens.Books
 {
     public class SearchFieldViewModel : ReactiveObject
     {

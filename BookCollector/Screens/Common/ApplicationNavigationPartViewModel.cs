@@ -28,6 +28,20 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _ShowImportCommand, value); }
         }
 
+        private ReactiveCommand<Unit, Unit> _ShowCollectionsCommand;
+        public ReactiveCommand<Unit, Unit> ShowCollectionsCommand
+        {
+            get { return _ShowCollectionsCommand; }
+            set { this.RaiseAndSetIfChanged(ref _ShowCollectionsCommand, value); }
+        }
+
+        private ReactiveCommand<Unit, Unit> _ShowSettingsCommand;
+        public ReactiveCommand<Unit, Unit> ShowSettingsCommand
+        {
+            get { return _ShowSettingsCommand; }
+            set { this.RaiseAndSetIfChanged(ref _ShowSettingsCommand, value); }
+        }
+
         public ApplicationNavigationPartViewModel()
         {
             ShowBooksCommand = ReactiveCommand.Create(() =>
@@ -40,6 +54,18 @@ namespace BookCollector.Screens.Common
             {
                 IsOpen = false;
                 MessageBus.Current.SendMessage(NavigationMessage.Import);
+            });
+
+            ShowCollectionsCommand = ReactiveCommand.Create(() =>
+            {
+                IsOpen = false;
+                MessageBus.Current.SendMessage(NavigationMessage.Collections);
+            });
+
+            ShowSettingsCommand = ReactiveCommand.Create(() =>
+            {
+                IsOpen = false;
+                MessageBus.Current.SendMessage(NavigationMessage.Settings);
             });
         }
     }

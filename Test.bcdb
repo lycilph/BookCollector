@@ -4,6 +4,23 @@
   "Books": [
     {
       "$id": "2",
+      "Title": "Rogue Protocol (The Murderbot Diaries, #3)",
+      "Authors": [
+        "Martha Wells"
+      ],
+      "ISBN": "1250191785",
+      "ISBN13": "9781250191786",
+      "Description": null,
+      "Metadata": {
+        "$id": "3",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "35519101"
+      }
+    },
+    {
+      "$id": "4",
       "Title": "The X-Files: Cold Cases (X-Files, #1)",
       "Authors": [
         "Joe Harris",
@@ -21,7 +38,7 @@
       "ISBN13": "",
       "Description": null,
       "Metadata": {
-        "$id": "3",
+        "$id": "5",
         "Bookshelves": "",
         "ExclusiveShelf": "read",
         "Source": "Goodreads CSV",
@@ -29,7 +46,7 @@
       }
     },
     {
-      "$id": "4",
+      "$id": "6",
       "Title": "Artificial Condition (The Murderbot Diaries, #2)",
       "Authors": [
         "Martha Wells"
@@ -38,7 +55,7 @@
       "ISBN13": "9781250186928",
       "Description": null,
       "Metadata": {
-        "$id": "5",
+        "$id": "7",
         "Bookshelves": "",
         "ExclusiveShelf": "read",
         "Source": "Goodreads CSV",
@@ -46,41 +63,7 @@
       }
     },
     {
-      "$id": "6",
-      "Title": "The Search For Earth's Twin",
-      "Authors": [
-        "Stuart Clark"
-      ],
-      "ISBN": "",
-      "ISBN13": "",
-      "Description": null,
-      "Metadata": {
-        "$id": "7",
-        "Bookshelves": "currently-reading",
-        "ExclusiveShelf": "currently-reading",
-        "Source": "Goodreads CSV",
-        "GoodreadsBookId": "31518031"
-      }
-    },
-    {
       "$id": "8",
-      "Title": "Rogue Protocol (The Murderbot Diaries, #3)",
-      "Authors": [
-        "Martha Wells"
-      ],
-      "ISBN": "1250191785",
-      "ISBN13": "9781250191786",
-      "Description": null,
-      "Metadata": {
-        "$id": "9",
-        "Bookshelves": "",
-        "ExclusiveShelf": "read",
-        "Source": "Goodreads CSV",
-        "GoodreadsBookId": "35519101"
-      }
-    },
-    {
-      "$id": "10",
       "Title": "All Systems Red (The Murderbot Diaries, #1)",
       "Authors": [
         "Martha Wells"
@@ -89,11 +72,28 @@
       "ISBN13": "9780765397522",
       "Description": null,
       "Metadata": {
-        "$id": "11",
+        "$id": "9",
         "Bookshelves": "",
         "ExclusiveShelf": "read",
         "Source": "Goodreads CSV",
         "GoodreadsBookId": "32758901"
+      }
+    },
+    {
+      "$id": "10",
+      "Title": "The Search For Earth's Twin",
+      "Authors": [
+        "Stuart Clark"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "11",
+        "Bookshelves": "currently-reading",
+        "ExclusiveShelf": "currently-reading",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "31518031"
       }
     }
   ]
