@@ -9,7 +9,7 @@
              d:DesignHeight="450" 
              d:DesignWidth="800"
              MinWidth="200">
-    <Grid Margin="{StaticResource dialog_margin}">
+    <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -21,14 +21,14 @@
                    Text="{Binding Title}"/>
 
         <TextBlock Grid.Row="1"
-                   Margin="{StaticResource normal_vertical_spacing}"
+                   Margin="0,16,0,0"
                    Style="{StaticResource MaterialDesignBody1TextBlock}"
                    Text="{Binding Message}"/>
 
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
-                    Margin="{StaticResource normal_vertical_spacing}">
+                    Margin="0,16,0,0">
             <Button IsDefault="True"
                     HorizontalAlignment="Center"
                     Style="{DynamicResource MaterialDesignFlatButton}"
@@ -38,7 +38,7 @@
                     <sys:Boolean>True</sys:Boolean>
                 </Button.CommandParameter>
             </Button>
-            <Button Margin="{StaticResource left_control_spacing}"
+            <Button Margin="8,0,0,0"
                     IsCancel="True"
                     HorizontalAlignment="Center"
                     Style="{DynamicResource MaterialDesignFlatButton}"

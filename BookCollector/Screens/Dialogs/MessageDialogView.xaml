@@ -8,7 +8,7 @@
              d:DesignHeight="450" 
              d:DesignWidth="800"
              MinWidth="200">
-    <Grid Margin="{StaticResource dialog_margin}">
+    <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
@@ -20,12 +20,12 @@
                    Text="{Binding Title}"/>
 
         <TextBlock Grid.Row="1"
-                   Margin="{StaticResource normal_vertical_spacing}"
+                   Margin="0,16,0,0"
                    Style="{StaticResource MaterialDesignBody1TextBlock}"
                    Text="{Binding Message}"/>
 
         <Button Grid.Row="2"
-                Margin="{StaticResource normal_vertical_spacing}"
+                Margin="0,16,0,0"
                 IsDefault="True"
                 IsCancel="True"
                 HorizontalAlignment="Center"

@@ -23,13 +23,14 @@
                         Title="Collections"/>
 
             <StackPanel Grid.Row="1"
-                        Margin="{StaticResource collection_screen_margin}">
+                        Margin="32">
                 <TextBlock Text="Recent"
                            Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
 
-                <ListBox Margin="{StaticResource large_vertical_spacing}"
+                <ListBox Margin="32"
                          ItemsSource="{Binding RecentCollections}"
-                         HorizontalContentAlignment="Stretch">
+                         HorizontalContentAlignment="Stretch"
+                         Background="Transparent">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ContentControl panda:View.Bind="{Binding}"
@@ -57,7 +58,7 @@
             </StackPanel>
 
             <md:PopupBox Grid.Row="1"
-                         Margin="{StaticResource collection_screen_margin}"
+                         Margin="32"
                          HorizontalAlignment="Right"
                          VerticalAlignment="Bottom"
                          Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"

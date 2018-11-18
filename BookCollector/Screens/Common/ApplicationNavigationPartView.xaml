@@ -6,56 +6,56 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel MinWidth="212"
-                Margin="{StaticResource part_margin}">
+                Margin="16">
         <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
                       HorizontalAlignment="Right" 
-                      Margin="{StaticResource part_margin}"
+                      Margin="16"
                       IsChecked="{Binding IsOpen, Mode=TwoWay}" />
         <TextBlock Text="Navigation"
                    Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
 
         <TextBlock Text="Collection"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                   Margin="{StaticResource normal_vertical_spacing}"/>
+                   Margin="0,16,0,0"/>
         <Button Content="Books" 
-                IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Margin="0,8,0,0"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowBooksCommand}"/>
         <Button Content="Series" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Notes" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
 
         <TextBlock Text="Tools"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                   Margin="{StaticResource normal_vertical_spacing}"/>
+                   Margin="0,16,0,0"/>
         <Button Content="Import" 
-                IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Margin="0,8,0,0"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowImportCommand}"/>
         <Button Content="Logs" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Tools" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
 
         <TextBlock Text="Misc"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"
-                   Margin="{StaticResource normal_vertical_spacing}"/>
+                   Margin="0,16,0,0"/>
         <Button Content="Collections" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Settings" 
                 IsEnabled="False"
-                Margin="{StaticResource top_control_spacing}"
+                Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
     </StackPanel>
 </UserControl>

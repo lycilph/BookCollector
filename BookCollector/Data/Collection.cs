@@ -1,7 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using DynamicData;
+using Newtonsoft.Json;
 using Panda.Utils;
 using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace BookCollector.Data
 {
@@ -22,6 +27,32 @@ namespace BookCollector.Data
         {
             get { return _Name; }
             set { this.RaiseAndSetIfChanged(ref _Name, value); }
+        }
+
+        private ObservableCollection<Book> _Books = new ObservableCollection<Book>();
+        public ObservableCollection<Book> Books
+        {
+            get { return _Books; }
+            set { this.RaiseAndSetIfChanged(ref _Books, value); }
+        }
+
+        public bool IsBookInCollection(string title, string isbn, string isbn13)
+        {
+            return Books.Any(b => // Check if title exists in collection
+                                  string.Equals(b.Title, title, StringComparison.InvariantCultureIgnoreCase) ||
+                                  // Check if isbn are not empty and exists in collection
+                                  (!string.IsNullOrWhiteSpace(isbn) &&
+                                   !string.IsNullOrWhiteSpace(b.ISBN) &&
+                                   string.Equals(b.ISBN, isbn, StringComparison.InvariantCultureIgnoreCase)) ||
+                                  // Check if isbn13 are not empty and exists in collection
+                                  (!string.IsNullOrWhiteSpace(isbn13) &&
+                                   !string.IsNullOrWhiteSpace(b.ISBN13) &&
+                                   string.Equals(b.ISBN13, isbn13, StringComparison.InvariantCultureIgnoreCase)));
+        }
+
+        public void Add(IEnumerable<Book> books)
+        {
+            Books.AddRange(books);
         }
     }
 }

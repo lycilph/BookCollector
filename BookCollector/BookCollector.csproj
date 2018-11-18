@@ -42,8 +42,11 @@
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
-    <Reference Include="DynamicData, Version=6.6.1.2507, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DynamicData.6.6.1.2507\lib\net46\DynamicData.dll</HintPath>
+    <Reference Include="CsvHelper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.9.1.0\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicData, Version=6.7.0.2529, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicData.6.7.0.2529\lib\net46\DynamicData.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
@@ -163,6 +166,11 @@
     <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
+    <Compile Include="Data\Book.cs" />
+    <Compile Include="Goodreads\Data\GoodreadsCSVBook.cs" />
+    <Compile Include="Goodreads\GoodreadsImporter.cs" />
+    <Compile Include="Goodreads\GoodreadsMapper.cs" />
+    <Compile Include="Goodreads\TrimmingCsvReader.cs" />
     <Compile Include="Screens\Common\ApplicationNavigationPartView.xaml.cs">
       <DependentUpon>ApplicationNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -223,6 +231,7 @@
       <DependentUpon>ImportModuleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Import\ImportModuleViewModel.cs" />
+    <Compile Include="Screens\Import\ShelfViewModel.cs" />
     <Compile Include="Screens\Series\ISeriesModule.cs" />
     <Compile Include="Screens\Series\SeriesModuleView.xaml.cs">
       <DependentUpon>SeriesModuleView.xaml</DependentUpon>

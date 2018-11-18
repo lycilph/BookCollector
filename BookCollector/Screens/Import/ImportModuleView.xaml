@@ -5,25 +5,127 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+             xmlns:panda="http://www.panda.com"
              mc:Ignorable="d" 
              d:DesignHeight="450" 
              d:DesignWidth="800">
     <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <md:DrawerHost IsLeftDrawerOpen="{Binding ApplicationNavigationPart.IsOpen}">
+            <md:DrawerHost.LeftDrawerContent>
+                <ContentControl panda:View.Bind="{Binding ApplicationNavigationPart}"/>
+            </md:DrawerHost.LeftDrawerContent>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-            <ext:AppBar Grid.Row="0"
-                        Title="Import"/>
+                <ext:AppBar Grid.Row="0"
+                            ShowNavigationDrawerButton="True"
+                            IsNavigationDrawerOpen="{Binding ApplicationNavigationPart.IsOpen, Mode=TwoWay}"
+                            Title="Import">
+                    <md:PopupBox DockPanel.Dock="Right" 
+                                 PlacementMode="BottomAndAlignRightEdges" 
+                                 StaysOpen="False">
+                        <ContentControl panda:View.Bind="{Binding ToolsNavigationPart}"/>
+                    </md:PopupBox>
+                </ext:AppBar>
 
-            <StackPanel Grid.Row="1"
-                        Background="AliceBlue">
-                <TextBlock Text="Testing"
-                           Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
-                <Button Content="Back" Command="{Binding BackCommand}"/>
-            </StackPanel>
-        </Grid>
+                <Grid Grid.Row="1"
+                      Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" MinWidth="50"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="1*" MinWidth="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <DockPanel Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="3"
+                               Margin="0,0,0,8">
+                        <Button DockPanel.Dock="Right"
+                                Margin="8,0,0,0"
+                                Command="{Binding OpenFileCommand}">
+                            <md:PackIcon Kind="FolderOpen"/>
+                        </Button>
+
+                        <TextBox IsReadOnly="True"
+                                 ToolTip="{Binding FullFilename}"
+                                 Text="{Binding Filename}"
+                                 md:HintAssist.Hint="Select a file to import"/>
+                    </DockPanel>
+
+                    <DockPanel Grid.Row="1"
+                               Grid.Column="0"
+                               Margin="0,0,16,0">
+                        <Button DockPanel.Dock="Bottom"
+                                Margin="0,8,0,0"
+                                HorizontalAlignment="Center"
+                                Command="{Binding ImportBooksCommand}"
+                                Content="Import"/>
+
+                        <DataGrid IsReadOnly="True"
+                                  AutoGenerateColumns="False"
+                                  ItemsSource="{Binding Books}">
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn Header="Duplicate" Binding="{Binding IsDuplicate}" />
+                                <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
+                                <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
+                                <DataGridTextColumn Header="Additional Authors" Binding="{Binding AdditionalAuthors}"/>
+                                <DataGridTextColumn Header="Shelf" Binding="{Binding ExclusiveShelf}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+
+                    <GridSplitter Grid.Row="1"
+                                  Grid.Column="1"
+                                  Style="{StaticResource horizontal_splitter}"/>
+
+                    <DockPanel Grid.Row="1"
+                               Grid.Column="2"
+                               Margin="16,0,0,0">
+                        <TextBlock DockPanel.Dock="Top"
+                                   Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                                   Text="Shelves"/>
+
+                        <md:PopupBox DockPanel.Dock="Bottom"
+                                     Margin="16"
+                                     HorizontalAlignment="Right"
+                                     Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                     PlacementMode="TopAndAlignCentres"
+                                     PopupMode="MouseOver"
+                                     ToolTipService.Placement="Left"
+                                     ToolTip="Shelf Actions">
+                            <StackPanel>
+                                <Button ToolTip="Select all"
+                                        Command="{Binding SelectAllShelvesCommand}">
+                                    <md:PackIcon Kind="CheckboxMultipleMarkedOutline"/>
+                                </Button>
+                                <Button ToolTip="Deselect all"
+                                        Command="{Binding DeselectAllShelvesCommand}">
+                                    <md:PackIcon Kind="CheckboxMultipleBlankOutline"/>
+                                </Button>
+                            </StackPanel>
+                        </md:PopupBox>
+
+                        <DataGrid Margin="0,8,0,0"
+                                  AutoGenerateColumns="False"
+                                  ItemsSource="{Binding Shelves}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="*"/>
+                                <DataGridCheckBoxColumn Header="Import?" Binding="{Binding Selected}" Width="Auto"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </Grid>
+            </Grid>
+        </md:DrawerHost>
     </md:TransitioningContent>
 </UserControl>

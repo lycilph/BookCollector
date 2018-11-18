@@ -41,6 +41,7 @@ namespace BookCollector.Application
         {
             logger.Trace("Exiting state manager");
 
+            repository.SaveCollection(CurrentCollection);
             repository.SaveSettings(Settings);
         }
 

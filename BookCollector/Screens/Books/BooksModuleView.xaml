@@ -33,7 +33,8 @@
                 <ContentControl DockPanel.Dock="Bottom" 
                                 panda:View.Bind="{Binding CollectionInformationPart}"/>
 
-                <Grid>
+                <!-- Main content area -->
+                <Grid Margin="16">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="3*" MinWidth="50"/>
@@ -41,7 +42,8 @@
                         <ColumnDefinition Width="1*" MinWidth="50"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="0">
+                    <StackPanel Grid.Column="0"
+                                Margin="0,0,16,0">
                         <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
 
                         <TextBlock Background="Chartreuse"
