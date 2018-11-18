@@ -12,6 +12,7 @@ namespace BookCollector.Screens.Shell
 {
     public class ShellViewModel : ViewAwareScreenBase, IShellViewModel
     {
+        private IStateManager state_manager;
         private IEnumerable<IModule> modules;
 
         private IModule _CurrentModule;
@@ -49,11 +50,10 @@ namespace BookCollector.Screens.Shell
             set { this.RaiseAndSetIfChanged(ref _ShowSettingsCommand, value); }
         }
 
-        public ShellViewModel(IEnumerable<IModule> modules)
+        public ShellViewModel(IStateManager state_manager, IEnumerable<IModule> modules)
         {
+            this.state_manager = state_manager;
             this.modules = modules;
-
-            MessageQueue = new SnackbarMessageQueue(TimeSpan.FromSeconds(1));
 
             ShowCollectionsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Collections));
             ShowSettingsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Settings));
@@ -81,8 +81,16 @@ namespace BookCollector.Screens.Shell
             MessageQueue.Enqueue(content, action_content, action_handler);
         }
 
+        public void UpdateSnackbarQueue()
+        {
+            var duration = TimeSpan.FromSeconds(state_manager.Settings.SnackbarMessageDuration);
+            MessageQueue = new SnackbarMessageQueue(duration);
+        }
+
         protected override void OnViewLoaded(object view)
         {
+            UpdateSnackbarQueue();
+
             MessageBus.Current.SendMessage(ApplicationMessage.ShellLoaded);
         }
 

@@ -1,4 +1,4 @@
 ﻿namespace BookCollector.Application.Messages
 {
-    public enum ApplicationMessage { ShellLoaded }
+    public enum ApplicationMessage { ShellLoaded, SnackbarMessageDurationUpdated }
 }

@@ -46,7 +46,23 @@
                                       IsChecked="{Binding LoadOnStart}"/>
 
                     </StackPanel>
-                    
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0">
+                        <TextBlock Text="Message duration"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Margin="8,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Width="25"
+                                   Text="{Binding SnackbarMessageDuration}"/>
+                        <Slider Margin="8,0,0,0" 
+                                Width="250"
+                                Minimum="1"
+                                Maximum="10"
+                                Value="{Binding SnackbarMessageDuration}"
+                                Style="{StaticResource MaterialDesignDiscreteSlider}"/>
+                    </StackPanel>
+
                     <Separator Margin="0,8,0,0" HorizontalAlignment="Stretch"/>
                 </StackPanel>
             </Grid>

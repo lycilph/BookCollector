@@ -9,6 +9,7 @@ namespace BookCollector.Data
     public class Settings
     {
         public bool LoadMostRecentCollectionOnStart { get; set; } = false;
+        public int SnackbarMessageDuration { get; set; } = 2;
 
         public List<RecentlyOpenedCollection> RecentCollections { get; set; } = new List<RecentlyOpenedCollection>();
 

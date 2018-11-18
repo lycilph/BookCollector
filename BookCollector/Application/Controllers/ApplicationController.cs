@@ -67,6 +67,9 @@ namespace BookCollector.Application.Controllers
                     else
                         shell.NavigateTo(typeof(IBooksModule));
                     break;
+                case ApplicationMessage.SnackbarMessageDurationUpdated:
+                    shell.UpdateSnackbarQueue();
+                    break;
                 default:
                     throw new ArgumentException($"Unhandled application message {message}");
             }

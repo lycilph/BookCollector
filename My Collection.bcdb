@@ -1,0 +1,66 @@
+{
+  "$id": "1",
+  "Name": "My Collection",
+  "Books": [
+    {
+      "$id": "2",
+      "Title": "The X-Files: Cold Cases (X-Files, #1)",
+      "Authors": [
+        "Joe Harris",
+        "Chris Carter",
+        "Chris Maggs",
+        "David Duchovny",
+        "Gillian Anderson",
+        "Mitch Pileggi",
+        "Willliam B. Davis",
+        "Tom Braidwood",
+        "Dean Haglund",
+        "Bruce Harwood"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "3",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "34840759"
+      }
+    },
+    {
+      "$id": "4",
+      "Title": "Artificial Condition (The Murderbot Diaries, #2)",
+      "Authors": [
+        "Martha Wells"
+      ],
+      "ISBN": "1250186927",
+      "ISBN13": "9781250186928",
+      "Description": null,
+      "Metadata": {
+        "$id": "5",
+        "Bookshelves": "",
+        "ExclusiveShelf": "read",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "36223860"
+      }
+    },
+    {
+      "$id": "6",
+      "Title": "The Search For Earth's Twin",
+      "Authors": [
+        "Stuart Clark"
+      ],
+      "ISBN": "",
+      "ISBN13": "",
+      "Description": null,
+      "Metadata": {
+        "$id": "7",
+        "Bookshelves": "currently-reading",
+        "ExclusiveShelf": "currently-reading",
+        "Source": "Goodreads CSV",
+        "GoodreadsBookId": "31518031"
+      }
+    }
+  ]
+}

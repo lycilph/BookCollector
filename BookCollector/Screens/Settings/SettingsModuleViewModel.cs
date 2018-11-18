@@ -1,4 +1,5 @@
 ﻿using BookCollector.Application;
+using BookCollector.Application.Messages;
 using BookCollector.Screens.Common;
 using Panda.Infrastructure;
 using ReactiveUI;
@@ -8,11 +9,18 @@ namespace BookCollector.Screens.Settings
     public class SettingsModuleViewModel : ScreenBase, ISettingsModule
     {
         private IStateManager state_manager;
+        private int current_snackbar_message_duration;
 
         public bool LoadOnStart
         {
             get { return state_manager.Settings.LoadMostRecentCollectionOnStart; }
             set { state_manager.Settings.LoadMostRecentCollectionOnStart = value; }
+        }
+
+        public int SnackbarMessageDuration
+        {
+            get { return state_manager.Settings.SnackbarMessageDuration; }
+            set { state_manager.Settings.SnackbarMessageDuration = value; }
         }
 
         private ApplicationNavigationPartViewModel _ApplicationNavigationPart;
@@ -36,6 +44,18 @@ namespace BookCollector.Screens.Settings
             this.state_manager = state_manager;
             ApplicationNavigationPart = application_navigation_part;
             ToolsNavigationPart = tools_navigation_part;
+        }
+
+        public override void OnActivated()
+        {
+            current_snackbar_message_duration = state_manager.Settings.SnackbarMessageDuration;
+        }
+
+        public override void OnDeactivated()
+        {
+            // Send message if duration has changed
+            if (current_snackbar_message_duration != state_manager.Settings.SnackbarMessageDuration)
+                MessageBus.Current.SendMessage(ApplicationMessage.SnackbarMessageDurationUpdated);
         }
     }
 }
