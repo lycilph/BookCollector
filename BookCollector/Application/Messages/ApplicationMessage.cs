@@ -1,4 +1,4 @@
 ﻿namespace BookCollector.Application.Messages
 {
-    public enum ApplicationMessage { ShellLoaded, ShowCommands, HideCommands }
+    public enum ApplicationMessage { ShellLoaded }
 }

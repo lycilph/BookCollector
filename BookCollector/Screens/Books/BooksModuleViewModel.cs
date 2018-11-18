@@ -33,9 +33,6 @@ namespace BookCollector.Screens.Books
         {
             base.OnActivated(); // CollectionModuleBase handles activation or parts
 
-            // Show windows commands
-            MessageBus.Current.SendMessage(ApplicationMessage.ShowCommands);
-
             // Show message if there are no books in the collection
             if (!state_manager.CurrentCollection.Books.Any())
                 MessageBus.Current.SendMessage(new InformationMessage("No books in collection, import here", "Go", () => MessageBus.Current.SendMessage(NavigationMessage.Import)));

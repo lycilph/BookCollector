@@ -66,9 +66,6 @@ namespace BookCollector.Screens.Collections
 
         public override void OnActivated()
         {
-            // Hide windows commands
-            MessageBus.Current.SendMessage(ApplicationMessage.HideCommands);
-
             RecentCollections = state_manager.GetRecentCollections()
                                              .OrderByDescending(c => c.TimeStamp)
                                              .Select(c => new RecentCollectionViewModel(c))

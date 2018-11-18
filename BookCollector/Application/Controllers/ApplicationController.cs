@@ -63,15 +63,9 @@ namespace BookCollector.Application.Controllers
             {
                 case ApplicationMessage.ShellLoaded:
                     if (state_manager.CurrentCollection == null)
-                        shell.NavigateTo(typeof(ICollectionsModule));
+                        shell.NavigateTo(typeof(ICollectionsModule), show_windows_commands: false);
                     else
                         shell.NavigateTo(typeof(IBooksModule));
-                    break;
-                case ApplicationMessage.ShowCommands:
-                    shell.ShowCommands();
-                    break;
-                case ApplicationMessage.HideCommands:
-                    shell.HideCommands();
                     break;
                 default:
                     throw new ArgumentException($"Unhandled application message {message}");
@@ -85,7 +79,7 @@ namespace BookCollector.Application.Controllers
             switch (message)
             {
                 case NavigationMessage.Collections:
-                    shell.NavigateTo(typeof(ICollectionsModule));
+                    shell.NavigateTo(typeof(ICollectionsModule), show_windows_commands: false);
                     break;
                 case NavigationMessage.Import:
                     shell.NavigateTo(typeof(IImportModule));

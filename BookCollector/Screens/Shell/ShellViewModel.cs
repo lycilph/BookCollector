@@ -59,7 +59,7 @@ namespace BookCollector.Screens.Shell
             ShowSettingsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Settings));
         }
 
-        public void NavigateTo(Type module)
+        public void NavigateTo(Type module, bool show_windows_commands = true)
         {
             var module_to_navigate_to = modules.FirstOrDefault(m => module.IsAssignableFrom(m.GetType()));
             if (module_to_navigate_to == null)
@@ -67,6 +67,8 @@ namespace BookCollector.Screens.Shell
 
             if (CurrentModule != module_to_navigate_to)
                 SetCurrentModule(module_to_navigate_to);
+
+            ShowWindowsCommands = show_windows_commands;
         }
 
         public void ShowMessage(string content)
@@ -77,16 +79,6 @@ namespace BookCollector.Screens.Shell
         public void ShowMessage(string content, string action_content, Action action_handler)
         {
             MessageQueue.Enqueue(content, action_content, action_handler);
-        }
-
-        public void ShowCommands()
-        {
-            ShowWindowsCommands = true;
-        }
-
-        public void HideCommands()
-        {
-            ShowWindowsCommands = false;
         }
 
         protected override void OnViewLoaded(object view)
