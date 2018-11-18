@@ -16,12 +16,22 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _Name, value); }
         }
 
+        private string _Books;
+        public string Books
+        {
+            get { return _Books; }
+            set { this.RaiseAndSetIfChanged(ref _Books, value); }
+        }
+
         public CollectionInformationPartViewModel(IStateManager state_manager)
         {
             this.state_manager = state_manager;
+        }
 
-            this.WhenAnyValue(x => x.state_manager.CurrentCollection)
-                .Subscribe(x => Name = $"Collection: {x.Name}");
+        public override void OnActivated()
+        {
+            Name = $"Collections: {state_manager.CurrentCollection.Name}";
+            Books = $"Books: {state_manager.CurrentCollection.Books.Count}";
         }
     }
 }

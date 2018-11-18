@@ -9,9 +9,13 @@
     <StatusBar DockPanel.Dock="Bottom">
         <StatusBarItem DockPanel.Dock="Right" Width="100">Notes: ZZZ</StatusBarItem>
         <Separator DockPanel.Dock="Right"/>
+        
         <StatusBarItem DockPanel.Dock="Right" Width="100">Series: YYY</StatusBarItem>
         <Separator DockPanel.Dock="Right"/>
-        <StatusBarItem DockPanel.Dock="Right" Width="100">Books: XXX</StatusBarItem>
+
+        <StatusBarItem DockPanel.Dock="Right" 
+                       Width="100"
+                       Content="{Binding Books}"/>
         <Separator DockPanel.Dock="Right"/>
 
         <StatusBarItem Content="{Binding Name}"/>
