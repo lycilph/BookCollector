@@ -39,6 +39,13 @@ namespace BookCollector.Screens.Collections
             set { this.RaiseAndSetIfChanged(ref _RemoveCollectionCommand, value); }
         }
 
+        private ReactiveCommand<RecentCollectionViewModel, Unit> _RenameCollectionCommand;
+        public ReactiveCommand<RecentCollectionViewModel, Unit> RenameCollectionCommand
+        {
+            get { return _RenameCollectionCommand; }
+            set { this.RaiseAndSetIfChanged(ref _RenameCollectionCommand, value); }
+        }
+
         private ReactiveCommand<Unit, Unit> _NewCollectionCommand;
         public ReactiveCommand<Unit, Unit> NewCollectionCommand
         {
@@ -60,6 +67,7 @@ namespace BookCollector.Screens.Collections
 
             SelectCollectionCommand = ReactiveCommand.Create<RecentCollectionViewModel>(SelectCollection);
             RemoveCollectionCommand = ReactiveCommand.Create<RecentCollectionViewModel>(RemoveCollection);
+            RenameCollectionCommand = ReactiveCommand.Create<RecentCollectionViewModel>(RenameCollection);
             NewCollectionCommand = ReactiveCommand.Create(NewCollection);
             OpenCollectionCommand = ReactiveCommand.Create(OpenCollection);
         }
@@ -96,7 +104,7 @@ namespace BookCollector.Screens.Collections
 
         private async void SelectCollection (RecentCollectionViewModel recent_collection)
         {
-            logger.Trace($"Selected collection [{recent_collection.Name}]");
+            logger.Trace($"Selected collection [{recent_collection.Name} - {recent_collection.Name}]");
 
             if (recent_collection.Invalid)
             {
@@ -117,7 +125,7 @@ namespace BookCollector.Screens.Collections
 
         private async void RemoveCollection(RecentCollectionViewModel recent_collection)
         {
-            logger.Trace($"Removing collection [{recent_collection.Filename}]");
+            logger.Trace($"Removing collection [{recent_collection.Name} - {recent_collection.Filename}]");
 
             if (recent_collection.Invalid != true)
             {
@@ -130,6 +138,37 @@ namespace BookCollector.Screens.Collections
 
             state_manager.RemoveFromRecentCollections(recent_collection.Obj);
             RecentCollections.Remove(recent_collection);
+        }
+
+        private async void RenameCollection(RecentCollectionViewModel recent_collection)
+        {
+            logger.Trace($"Renaming collection [{recent_collection.Name} - {recent_collection.Filename}]");
+
+            if (recent_collection.Invalid)
+            {
+                logger.Trace("Collection is invalid, so cannot rename it");
+                return;
+            }
+
+            var vm = new InputDialogViewModel
+            {
+                Title = "Renaming Collection",
+                Message = "Enter new name for collection",
+                Hint = recent_collection.Name
+            };
+            var result = (bool)await DialogManager.ShowInputDialogAsync(vm);
+
+            if (result == true)
+            {
+                var collection = repository.LoadCollection(recent_collection.Filename);
+                if (collection != null)
+                {
+                    recent_collection.Name = vm.Input;
+                    collection.Name = vm.Input;
+
+                    repository.SaveCollection(collection);
+                }
+            }
         }
 
         private void NewCollection()

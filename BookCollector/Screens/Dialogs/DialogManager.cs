@@ -1,5 +1,4 @@
-﻿using BookCollector.Screens.Dialogs;
-using MaterialDesignThemes.Wpf;
+﻿using MaterialDesignThemes.Wpf;
 using Microsoft.Win32;
 using Panda.Infrastructure;
 using System;
@@ -31,6 +30,12 @@ namespace BookCollector.Screens.Dialogs
             };
             var v = ViewManager.CreateAndBindViewForModel(vm);
 
+            return DialogHost.Show(v);
+        }
+
+        public static Task<object> ShowInputDialogAsync(InputDialogViewModel vm)
+        {
+            var v = ViewManager.CreateAndBindViewForModel(vm);
             return DialogHost.Show(v);
         }
 

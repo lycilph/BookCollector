@@ -5,11 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:conv="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
              xmlns:panda="http://www.panda.com"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <panda:BindingProxy x:Key="proxy" Data="{Binding}"/>
+        <conv:NotConverter x:Key="not_converter"/>
     </UserControl.Resources>
 
     <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
@@ -47,6 +49,14 @@
                                                   CommandParameter="{Binding}">
                                             <MenuItem.Icon>
                                                 <Image Source="/Images/remove from list.png"/>
+                                            </MenuItem.Icon>
+                                        </MenuItem>
+                                        <MenuItem Header="Rename collection"
+                                                  IsEnabled="{Binding Invalid, Converter={StaticResource not_converter}}"
+                                                  Command="{Binding Data.RenameCollectionCommand, Source={StaticResource proxy}}"
+                                                  CommandParameter="{Binding}">
+                                            <MenuItem.Icon>
+                                                <md:PackIcon Kind="RenameBox"/>
                                             </MenuItem.Icon>
                                         </MenuItem>
                                     </ContextMenu>
