@@ -36,7 +36,7 @@ namespace BookCollector.Application
 
             Settings = repository.LoadSettings();
 
-            if (Settings.LoadMostRecentCollectionOnStart)
+            if (Settings.LoadMostRecentCollectionOnStart && Settings.HasRecentCollections)
             {
                 var recent_collection = Settings.GetMostRecentCollection();
                 CurrentCollection = repository.LoadCollection(recent_collection.Filename);

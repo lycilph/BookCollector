@@ -7,7 +7,6 @@ using BookCollector.Screens.Shell;
 using NLog;
 using ReactiveUI;
 using System;
-using System.Linq;
 
 namespace BookCollector.Application.Controllers
 {
