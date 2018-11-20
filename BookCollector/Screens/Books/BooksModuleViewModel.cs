@@ -1,19 +1,28 @@
 ﻿using BookCollector.Application;
 using BookCollector.Application.Messages;
+using BookCollector.Data;
 using BookCollector.Screens.Common;
+using NLog;
+using Panda.Search;
 using Panda.Utils;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Windows.Data;
 
 namespace BookCollector.Screens.Books
 {
     public class BooksModuleViewModel : CollectionModuleBase, IBooksModule
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
         private IStateManager state_manager;
+        private ISearchEngine<Book> search_engine;
         private List<BookDetailViewModel> books_view_models;
+        private List<SearchResult<Book>> search_results;
 
         private SearchFieldViewModel _SearchField;
         public SearchFieldViewModel SearchField
@@ -33,12 +42,18 @@ namespace BookCollector.Screens.Books
                                     CollectionsNavigationPartViewModel collections_navigation_part, 
                                     ToolsNavigationPartViewModel tools_navigation_part, 
                                     CollectionInformationPartViewModel collection_information_part,
-                                    IStateManager state_manager, 
+                                    IStateManager state_manager,
+                                    ISearchEngine<Book> search_engine,
                                     SearchFieldViewModel search_field)
             : base(application_navigation_part, collections_navigation_part, tools_navigation_part, collection_information_part)
         {
             this.state_manager = state_manager;
+            this.search_engine = search_engine;
             SearchField = search_field;
+
+            this.WhenAnyValue(x => x.SearchField.Text)
+                .Throttle(TimeSpan.FromMilliseconds(250), RxApp.MainThreadScheduler)
+                .Subscribe(Search);
         }
 
         public override void OnActivated()
@@ -51,6 +66,7 @@ namespace BookCollector.Screens.Books
 
             books_view_models = state_manager.CurrentCollection.Books.Select(b => new BookDetailViewModel(b)).ToList();
             Books = CollectionViewSource.GetDefaultView(books_view_models);
+            Books.Filter = Filter;
         }
 
         public override void OnDeactivated()
@@ -60,6 +76,29 @@ namespace BookCollector.Screens.Books
             Books = null;
             books_view_models.DisposeAll();
             books_view_models = null;
+            search_results = null;
+            SearchField.Clear();
+        }
+
+        private void Search(string query)
+        {
+            logger.Trace($"Searching for {query}");
+            search_results = search_engine.Search(query);
+
+            Books?.Refresh();
+            Books?.MoveCurrentToFirst();
+        }
+
+        private bool Filter(object o)
+        {
+            var vm = o as BookDetailViewModel;
+            if (vm == null)
+                return false;
+
+            if (search_results != null)
+                return search_results.Any(res => res.Item == vm.Obj);
+            else
+                return true;
         }
     }
 }

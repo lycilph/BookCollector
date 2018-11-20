@@ -22,7 +22,14 @@
                        TextWrapping="Wrap"/>
             <TextBlock Margin="0,8,0,0" 
                        Text="Metadata"/>
-            <DataGrid ItemsSource="{Binding Tags}"/>
+            <DataGrid ItemsSource="{Binding Metadata}"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Tag" Binding="{Binding Key}" Width="*"/>
+                    <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

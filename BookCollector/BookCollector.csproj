@@ -278,6 +278,7 @@
     </EmbeddedResource>
     <Resource Include="Images\remove from list.png" />
     <Resource Include="Images\book_open_page_black.ico" />
+    <EmbeddedResource Include="Content\stopwords_en.txt" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

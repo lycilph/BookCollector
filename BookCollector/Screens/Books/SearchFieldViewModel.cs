@@ -21,7 +21,12 @@ namespace BookCollector.Screens.Books
 
         public SearchFieldViewModel()
         {
-            ClearCommand = ReactiveCommand.Create(() => { Text = string.Empty; });
+            ClearCommand = ReactiveCommand.Create(Clear);
+        }
+
+        public void Clear()
+        {
+            Text = string.Empty;
         }
     }
 }

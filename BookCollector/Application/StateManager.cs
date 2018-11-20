@@ -1,7 +1,11 @@
-﻿using BookCollector.Data;
+﻿using BookCollector.Application.Messages;
+using BookCollector.Data;
 using NLog;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
+using System.Reactive;
+using System.Reactive.Linq;
 
 namespace BookCollector.Application
 {
@@ -28,6 +32,15 @@ namespace BookCollector.Application
         public StateManager(IRepository repository)
         {
             this.repository = repository;
+
+            // This is used when reindexing the collection for the search engine
+            var collection_changed = this.WhenAnyValue(x => x.CurrentCollection);
+            var books_changed = this.WhenAnyObservable(x => x.CurrentCollection.Books.SomethingChanged);
+            var obs = Observable.Merge(collection_changed.Select(_ => Unit.Default),
+                                       books_changed.Select(_ => Unit.Default))
+                                .Select(_ => ApplicationMessage.CollectionChanged)
+                                .Throttle(TimeSpan.FromMilliseconds(500));
+            MessageBus.Current.RegisterMessageSource(obs);
         }
 
         public void Initialize()
@@ -39,7 +52,8 @@ namespace BookCollector.Application
             if (Settings.LoadMostRecentCollectionOnStart && Settings.HasRecentCollections)
             {
                 var recent_collection = Settings.GetMostRecentCollection();
-                CurrentCollection = repository.LoadCollection(recent_collection.Filename);
+                var collection = repository.LoadCollection(recent_collection.Filename);
+                SetCurrentCollection(collection);
             }
         }
 

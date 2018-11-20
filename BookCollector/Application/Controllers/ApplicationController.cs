@@ -1,10 +1,13 @@
 ﻿using BookCollector.Application.Messages;
+using BookCollector.Data;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Import;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using NLog;
+using Panda.Search;
+using Panda.Utils;
 using ReactiveUI;
 using System;
 
@@ -14,19 +17,24 @@ namespace BookCollector.Application.Controllers
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
+        private const string stopwords_filename = "stopwords_en.txt";
+
         private IStateManager state_manager;
         private IShellViewModel shell;
+        private ISearchEngine<Book> search_engine;
 
-        public ApplicationController(IStateManager state_manager, IShellViewModel shell)
+        public ApplicationController(IStateManager state_manager, IShellViewModel shell, ISearchEngine<Book> search_engine)
         {
             this.state_manager = state_manager;
             this.shell = shell;
+            this.search_engine = search_engine;
         }
 
         public void Initialize()
         {
             logger.Trace("Initializing application controller");
             HookUpMessages();
+            InitializeSearchEngine();
             state_manager.Initialize();
         }
 
@@ -54,6 +62,13 @@ namespace BookCollector.Application.Controllers
                       .Subscribe(HandleInformationMessages);
         }
 
+        private void InitializeSearchEngine()
+        {
+            logger.Trace("Initializing search engine");
+            var stopwords = ResourceExtensions.GetResource(stopwords_filename);
+            search_engine.Initialize(stopwords);
+        }
+
         private void HandleApplicationMessage(ApplicationMessage message)
         {
             logger.Trace($"Got an application message [{message}]");
@@ -68,6 +83,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case ApplicationMessage.SnackbarMessageDurationUpdated:
                     shell.UpdateSnackbarQueue();
+                    break;
+                case ApplicationMessage.CollectionChanged:
+                    IndexCollection();
                     break;
                 default:
                     throw new ArgumentException($"Unhandled application message {message}");
@@ -105,6 +123,12 @@ namespace BookCollector.Application.Controllers
                 shell.ShowMessage(message.Content, message.ActionContent, message.ActionHandler);
             else
                 shell.ShowMessage(message.Content);
+        }
+
+        public void IndexCollection()
+        {
+            var books = state_manager.CurrentCollection.Books;
+            search_engine.Index(books, b => string.Join(", ", b.Title, b.Description, string.Join(", ", b.Authors)));
         }
     }
 }

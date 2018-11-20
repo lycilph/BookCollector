@@ -24,7 +24,7 @@
                      BorderThickness="0"
                      MinWidth="250"
                      VerticalAlignment="Center"
-                     Text="{Binding Text}"/>
+                     Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"/>
         </DockPanel>
     </md:ColorZone>
 </UserControl>

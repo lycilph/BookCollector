@@ -1,4 +1,5 @@
 ﻿using BookCollector.Application.Controllers;
+using BookCollector.Data;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Common;
@@ -8,6 +9,7 @@ using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using Ninject.Modules;
 using NLog;
+using Panda.Search;
 
 namespace BookCollector.Application
 {
@@ -22,6 +24,7 @@ namespace BookCollector.Application
             BindAsSingleton<IApplicationController, ApplicationController>();
             BindAsSingleton<IStateManager, StateManager>();
             BindAsSingleton<IRepository, Repository>();
+            BindAsSingleton<ISearchEngine<Book>, SearchEngine<Book>>();
 
             BindAsSingleton<IShellViewModel, ShellViewModel>();
             BindAsSingleton<ICollectionsModule, IModule, CollectionsModuleViewModel>();

@@ -1,10 +1,8 @@
-﻿using DynamicData;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Panda.Utils;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 
@@ -29,8 +27,8 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Name, value); }
         }
 
-        private ObservableCollection<Book> _Books = new ObservableCollection<Book>();
-        public ObservableCollection<Book> Books
+        private ObservableCollectionEx<Book> _Books = new ObservableCollectionEx<Book>();
+        public ObservableCollectionEx<Book> Books
         {
             get { return _Books; }
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
