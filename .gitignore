@@ -263,5 +263,6 @@ __pycache__/
 # Disregard api secrets
 api_secret.txt
 
-# Disregard collection files
+# Disregard data
 *.bcdb
+*.csv
