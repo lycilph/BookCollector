@@ -104,7 +104,7 @@ namespace BookCollector.Screens.Collections
 
         private async void SelectCollection (RecentCollectionViewModel recent_collection)
         {
-            logger.Trace($"Selected collection [{recent_collection.Name} - {recent_collection.Name}]");
+            logger.Trace($"Selected collection [{recent_collection.Name} - {recent_collection.Filename}]");
 
             if (recent_collection.Invalid)
             {

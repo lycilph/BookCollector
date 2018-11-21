@@ -39,7 +39,7 @@ namespace BookCollector.Application
             var obs = Observable.Merge(collection_changed.Select(_ => Unit.Default),
                                        books_changed.Select(_ => Unit.Default))
                                 .Select(_ => ApplicationMessage.CollectionChanged)
-                                .Throttle(TimeSpan.FromMilliseconds(500));
+                                .Sample(TimeSpan.FromMilliseconds(500));
             MessageBus.Current.RegisterMessageSource(obs);
         }
 
