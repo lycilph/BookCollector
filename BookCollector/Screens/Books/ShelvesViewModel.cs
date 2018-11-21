@@ -1,6 +1,5 @@
 ﻿using BookCollector.Application;
-using BookCollector.Data;
-using BookCollector.Screens.Dialogs;
+using BookCollector.Dialogs;
 using Panda.Infrastructure;
 using Panda.Utils;
 using ReactiveUI;

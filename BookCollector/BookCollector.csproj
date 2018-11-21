@@ -212,7 +212,7 @@
       <DependentUpon>ToolsNavigationPartView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Common\ToolsNavigationPartViewModel.cs" />
-    <Compile Include="Screens\Dialogs\DialogManager.cs" />
+    <Compile Include="Dialogs\DialogManager.cs" />
     <Compile Include="Application\IModule.cs" />
     <Compile Include="Application\IRepository.cs" />
     <Compile Include="Application\IStateManager.cs" />
@@ -238,18 +238,18 @@
       <DependentUpon>RecentCollectionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Collections\RecentCollectionViewModel.cs" />
-    <Compile Include="Screens\Dialogs\InputDialogView.xaml.cs">
+    <Compile Include="Dialogs\InputDialogView.xaml.cs">
       <DependentUpon>InputDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Dialogs\InputDialogViewModel.cs" />
-    <Compile Include="Screens\Dialogs\MessageDialogViewModel.cs" />
-    <Compile Include="Screens\Dialogs\MessageDialogView.xaml.cs">
+    <Compile Include="Dialogs\InputDialogViewModel.cs" />
+    <Compile Include="Dialogs\MessageDialogViewModel.cs" />
+    <Compile Include="Dialogs\MessageDialogView.xaml.cs">
       <DependentUpon>MessageDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Dialogs\PromptDialogView.xaml.cs">
+    <Compile Include="Dialogs\PromptDialogView.xaml.cs">
       <DependentUpon>PromptDialogView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Dialogs\PromptDialogViewModel.cs" />
+    <Compile Include="Dialogs\PromptDialogViewModel.cs" />
     <Compile Include="Screens\Import\IImportModule.cs" />
     <Compile Include="Screens\Import\ImportModuleView.xaml.cs">
       <DependentUpon>ImportModuleView.xaml</DependentUpon>
@@ -365,15 +365,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Dialogs\InputDialogView.xaml">
+    <Page Include="Dialogs\InputDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Dialogs\MessageDialogView.xaml">
+    <Page Include="Dialogs\MessageDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Dialogs\PromptDialogView.xaml">
+    <Page Include="Dialogs\PromptDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

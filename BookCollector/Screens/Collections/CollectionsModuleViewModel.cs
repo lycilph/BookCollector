@@ -1,6 +1,6 @@
 ﻿using BookCollector.Application;
 using BookCollector.Application.Messages;
-using BookCollector.Screens.Dialogs;
+using BookCollector.Dialogs;
 using NLog;
 using Panda.Infrastructure;
 using Panda.Utils;

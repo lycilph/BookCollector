@@ -3,7 +3,7 @@ using BookCollector.Application.Messages;
 using BookCollector.Goodreads;
 using BookCollector.Goodreads.Data;
 using BookCollector.Screens.Common;
-using BookCollector.Screens.Dialogs;
+using BookCollector.Dialogs;
 using Panda.Infrastructure;
 using Panda.Utils;
 using ReactiveUI;

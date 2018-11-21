@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace BookCollector.Screens.Dialogs
+namespace BookCollector.Dialogs
 {
     public class InputDialogViewModel : ReactiveObject
     {

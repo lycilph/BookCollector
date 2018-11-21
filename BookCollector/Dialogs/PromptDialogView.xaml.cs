@@ -1,4 +1,4 @@
-﻿namespace BookCollector.Screens.Dialogs
+﻿namespace BookCollector.Dialogs
 {
     public partial class PromptDialogView
     {

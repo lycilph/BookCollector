@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace BookCollector.Screens.Dialogs
+namespace BookCollector.Dialogs
 {
     public static class DialogManager
     {

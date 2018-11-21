@@ -1,8 +1,8 @@
 ﻿using ReactiveUI;
 
-namespace BookCollector.Screens.Dialogs
+namespace BookCollector.Dialogs
 {
-    public class MessageDialogViewModel : ReactiveObject
+    public class PromptDialogViewModel : ReactiveObject
     {
         private string _Title;
         public string Title
