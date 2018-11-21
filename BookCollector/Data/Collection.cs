@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace BookCollector.Data
 {
-    [DebuggerDisplay("Name = {Name}")]
+    [DebuggerDisplay("Name = {Name}, Books = {Books.Count}")]
     [JsonObject(MemberSerialization.OptOut)]
     public class Collection : DirtyTrackingBase
     {
@@ -34,6 +34,20 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
         }
 
+        private ObservableCollectionEx<Shelf> _Shelves = new ObservableCollectionEx<Shelf>();
+        public ObservableCollectionEx<Shelf> Shelves
+        {
+            get { return _Shelves; }
+            set { this.RaiseAndSetIfChanged(ref _Shelves, value); }
+        }
+
+        private ObservableCollectionEx<Tag> _Tags = new ObservableCollectionEx<Tag>();
+        public ObservableCollectionEx<Tag> Tags
+        {
+            get { return _Tags; }
+            set { this.RaiseAndSetIfChanged(ref _Tags, value); }
+        }
+
         public bool IsBookInCollection(string title, string isbn, string isbn13)
         {
             return Books.Any(b => // Check if title exists in collection
@@ -51,6 +65,13 @@ namespace BookCollector.Data
         public void Add(IEnumerable<Book> books)
         {
             Books.AddRange(books);
+        }
+
+        public Shelf AddShelf(string name)
+        {
+            var shelf = new Shelf { Name = name };
+            Shelves.Add(shelf);
+            return shelf;
         }
     }
 }

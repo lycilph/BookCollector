@@ -68,6 +68,9 @@ namespace Panda.Utils
             }
         }
 
+        public ObservableCollectionEx() { }
+        public ObservableCollectionEx(IEnumerable<T> items) : base(items) { }
+
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             Unsubscribe(e.OldItems);

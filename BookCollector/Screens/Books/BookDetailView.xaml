@@ -14,14 +14,25 @@
                        ToolTip="{Binding Title}"/>
             <TextBlock Style="{StaticResource MaterialDesignSubheadingTextBlock}"
                        Text="{Binding Authors}"/>
+
             <TextBlock Margin="0,8,0,0" 
                        Text="{Binding ISBN}"/>
             <TextBlock Text="{Binding ISBN13}"/>
+
+            <DockPanel Margin="0,8,0,0">
+                <TextBlock DockPanel.Dock="Left" 
+                           VerticalAlignment="Center"
+                           Text="Shelf: "/>
+                <ComboBox Margin="8,0,0,0"/>
+            </DockPanel>
+            
             <TextBlock Margin="0,8,0,0"
                        Text="{Binding Description}"
                        TextWrapping="Wrap"/>
+            
             <TextBlock Margin="0,8,0,0" 
                        Text="Metadata"/>
+            
             <DataGrid ItemsSource="{Binding Metadata}"
                       IsReadOnly="True"
                       AutoGenerateColumns="False">

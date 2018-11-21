@@ -44,6 +44,20 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Description, value); }
         }
 
+        private Shelf _Shelf;
+        public Shelf Shelf
+        {
+            get { return _Shelf; }
+            set { this.RaiseAndSetIfChanged(ref _Shelf, value); }
+        }
+
+        private HashSet<Tag> _Tags = new HashSet<Tag>();
+        public HashSet<Tag> Tags
+        {
+            get { return _Tags; }
+            set { this.RaiseAndSetIfChanged(ref _Tags, value); }
+        }
+
         private Dictionary<string, string> _Metadata = new Dictionary<string, string>();
         public Dictionary<string, string> Metadata
         {

@@ -127,6 +127,12 @@ namespace BookCollector.Application.Controllers
 
         public void IndexCollection()
         {
+            if (state_manager.CurrentCollection == null)
+            {
+                logger.Trace("Nothing to index, skipping");
+                return;
+            }
+
             var books = state_manager.CurrentCollection.Books;
             search_engine.Index(books, b => string.Join(", ", b.Title, b.Description, string.Join(", ", b.Authors)));
         }

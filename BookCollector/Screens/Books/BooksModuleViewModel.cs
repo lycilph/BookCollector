@@ -31,6 +31,20 @@ namespace BookCollector.Screens.Books
             set { this.RaiseAndSetIfChanged(ref _SearchField, value); }
         }
 
+        private ShelvesViewModel _Shelves;
+        public ShelvesViewModel Shelves
+        {
+            get { return _Shelves; }
+            set { this.RaiseAndSetIfChanged(ref _Shelves, value); }
+        }
+
+        private TagsViewModel _Tags;
+        public TagsViewModel Tags
+        {
+            get { return _Tags; }
+            set { this.RaiseAndSetIfChanged(ref _Tags, value); }
+        }
+
         private ICollectionView _Books;
         public ICollectionView Books
         {
@@ -44,12 +58,16 @@ namespace BookCollector.Screens.Books
                                     CollectionInformationPartViewModel collection_information_part,
                                     IStateManager state_manager,
                                     ISearchEngine<Book> search_engine,
-                                    SearchFieldViewModel search_field)
+                                    SearchFieldViewModel search_field,
+                                    ShelvesViewModel shelves,
+                                    TagsViewModel tags)
             : base(application_navigation_part, collections_navigation_part, tools_navigation_part, collection_information_part)
         {
             this.state_manager = state_manager;
             this.search_engine = search_engine;
             SearchField = search_field;
+            Shelves = shelves;
+            Tags = tags;
 
             this.WhenAnyValue(x => x.SearchField.Text)
                 .Throttle(TimeSpan.FromMilliseconds(250), RxApp.MainThreadScheduler)
@@ -59,6 +77,8 @@ namespace BookCollector.Screens.Books
         public override void OnActivated()
         {
             base.OnActivated(); // CollectionModuleBase handles activation of parts
+            Shelves.Activate();
+            Tags.Activate();
 
             // Show message if there are no books in the collection
             if (!state_manager.CurrentCollection.Books.Any())
@@ -67,11 +87,17 @@ namespace BookCollector.Screens.Books
             books_view_models = state_manager.CurrentCollection.Books.Select(b => new BookDetailViewModel(b)).ToList();
             Books = CollectionViewSource.GetDefaultView(books_view_models);
             Books.Filter = Filter;
+
+            Books.Events()
+                 .WhenAnyObservable(x => x.CurrentChanged)
+                 .Subscribe(_ => logger.Trace($"Current book changed to: {((BookDetailViewModel)Books.CurrentItem).Title}"));
         }
 
         public override void OnDeactivated()
         {
             base.OnDeactivated(); // CollectionModuleBase handles deactivation of parts
+            Shelves.Deactivate();
+            Tags.Deactivate();
 
             Books = null;
             books_view_models.DisposeAll();
@@ -82,8 +108,13 @@ namespace BookCollector.Screens.Books
 
         private void Search(string query)
         {
-            logger.Trace($"Searching for {query}");
-            search_results = search_engine.Search(query);
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                logger.Trace($"Searching for {query}");
+                search_results = search_engine.Search(query);
+            }
+            else
+                search_results = null;
 
             Books?.Refresh();
             Books?.MoveCurrentToFirst();

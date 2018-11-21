@@ -1,7 +1,6 @@
 ﻿using BookCollector.Application;
 using Panda.Infrastructure;
 using ReactiveUI;
-using System;
 
 namespace BookCollector.Screens.Common
 {
@@ -30,7 +29,7 @@ namespace BookCollector.Screens.Common
 
         public override void OnActivated()
         {
-            Name = $"Collections: {state_manager.CurrentCollection.Name}";
+            Name = $"Collection: {state_manager.CurrentCollection.Name}";
             Books = $"Books: {state_manager.CurrentCollection.Books.Count}";
         }
     }

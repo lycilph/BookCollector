@@ -42,13 +42,18 @@
                         <ColumnDefinition Width="1*" MinWidth="50"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="0"
-                                Margin="0,0,16,0">
-                        <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
+                    <Grid Grid.Column="0"
+                          Margin="0,0,16,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
 
-                        <TextBlock Background="Chartreuse"
-                                   Text="Shelves"/>
-                    </StackPanel>
+                        <ContentControl Grid.Row="0" panda:View.Bind="{Binding CollectionNavigationPart}"/>
+                        <ContentControl Grid.Row="1" panda:View.Bind="{Binding Shelves}"/>
+                        <ContentControl Grid.Row="2" panda:View.Bind="{Binding Tags}"/>
+                    </Grid>
 
                     <DataGrid x:Name="books_list"
                               Grid.Column="1"
@@ -67,8 +72,7 @@
                     <GridSplitter Grid.Column="2"
                                   Style="{StaticResource horizontal_splitter}"/>
 
-                    <ContentControl Grid.Column="3"
-                                    panda:View.Bind="{Binding ElementName=books_list, Path=SelectedItem}"/>
+                    <ContentControl Grid.Column="3" panda:View.Bind="{Binding ElementName=books_list, Path=SelectedItem}"/>
                 </Grid>
             </DockPanel>
         </md:DrawerHost>
