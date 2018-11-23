@@ -17,10 +17,22 @@ namespace BookCollector.Data
         }
 
         private List<Book> _Books = new List<Book>();
+        [JsonIgnore] // Have to ignore this, since it causes circular references in the Json
         public List<Book> Books
         {
             get { return _Books; }
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
+        }
+
+        public void Add(Book book)
+        {
+            if (!Books.Contains(book))
+                Books.Add(book);
+        }
+
+        public void Remove(Book book)
+        {
+            Books.Remove(book);
         }
     }
 }

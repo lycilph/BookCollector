@@ -79,6 +79,7 @@ namespace BookCollector.Screens.Books
         {
             base.OnActivated();  // CollectionModuleBase handles activation of common parts
             Shelves.Activate();
+            BookDetails.Activate();
 
             // Show message if there are no books in the collection
             if (!state_manager.CurrentCollection.Books.Any())
@@ -95,13 +96,16 @@ namespace BookCollector.Screens.Books
             current_book_disposable = Books.Events()
                                            .WhenAnyObservable(x => x.CurrentChanged)
                                            .Select(_ => Books.CurrentItem as BookViewModel)
-                                           .Subscribe(vm => BookDetails.CurrentBook = vm.Obj);
+                                           .Subscribe(vm => BookDetails.CurrentBook = vm?.Obj);
+
+            Books.Refresh();
         }
 
         public override void OnDeactivated()
         {
             base.OnDeactivated(); // CollectionModuleBase handles deactivation of common parts
             Shelves.Deactivate();
+            BookDetails.Deactivate();
 
             current_book_disposable.Dispose();
             current_book_disposable = null;

@@ -3,6 +3,7 @@ using NLog;
 using Panda.Utils;
 using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace BookCollector.Application
@@ -56,6 +57,7 @@ namespace BookCollector.Application
                 logger.Trace($"Loading collection {filename}");
 
                 collection = JsonUtils.ReadFromFile<Collection>(filename);
+                UpdateShelves(collection);
                 collection.Filename = filename;
                 collection.IsDirty = false;
             }
@@ -127,6 +129,12 @@ namespace BookCollector.Application
 
             logger.Trace($"Deleting collection {filename}");
             File.Delete(filename);
+        }
+
+        private void UpdateShelves(Collection collection)
+        {
+            foreach (var shelf in collection.Shelves)
+                shelf.Books = collection.Books.Where(b => b.Shelf == shelf).ToList();
         }
     }
 }
