@@ -7,14 +7,14 @@
              xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
              xmlns:panda="http://www.panda.com"
              mc:Ignorable="d" 
-             d:DesignHeight="450" 
+             d:DesignHeight="450"
              d:DesignWidth="800">
     <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
         <md:DrawerHost IsLeftDrawerOpen="{Binding ApplicationNavigationPart.IsOpen}">
             <md:DrawerHost.LeftDrawerContent>
                 <ContentControl panda:View.Bind="{Binding ApplicationNavigationPart}"/>
             </md:DrawerHost.LeftDrawerContent>
-            
+
             <DockPanel>
                 <ext:AppBar DockPanel.Dock="Top" 
                             ShowNavigationDrawerButton="True"
@@ -52,11 +52,10 @@
 
                         <ContentControl Grid.Row="0" panda:View.Bind="{Binding CollectionNavigationPart}"/>
                         <ContentControl Grid.Row="1" panda:View.Bind="{Binding Shelves}"/>
-                        <ContentControl Grid.Row="2" panda:View.Bind="{Binding Tags}"/>
+                        <!--<ContentControl Grid.Row="2" panda:View.Bind="{Binding Tags}"/>-->
                     </Grid>
-
-                    <DataGrid x:Name="books_list"
-                              Grid.Column="1"
+                    
+                    <DataGrid Grid.Column="1"
                               AutoGenerateColumns="False"
                               HorizontalScrollBarVisibility="Auto"
                               IsReadOnly="True"
@@ -68,11 +67,11 @@
                             <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
+                    
                     <GridSplitter Grid.Column="2"
                                   Style="{StaticResource horizontal_splitter}"/>
 
-                    <ContentControl Grid.Column="3" panda:View.Bind="{Binding ElementName=books_list, Path=SelectedItem}"/>
+                    <ContentControl Grid.Column="3" panda:View.Bind="{Binding BookDetails}"/>
                 </Grid>
             </DockPanel>
         </md:DrawerHost>

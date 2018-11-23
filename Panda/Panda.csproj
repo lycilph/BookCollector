@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\StringEmptyToEnabledConverter.cs" />
+    <Compile Include="Converters\StringJoinConverter.cs" />
     <Compile Include="Infrastructure\AssemblySource.cs" />
     <Compile Include="Infrastructure\BootstrapperBase.cs" />
     <Compile Include="Infrastructure\IScreen.cs" />

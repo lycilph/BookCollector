@@ -1,8 +1,8 @@
 ﻿namespace BookCollector.Screens.Books
 {
-    public partial class TagsView
+    public partial class BookDetailsView
     {
-        public TagsView()
+        public BookDetailsView()
         {
             InitializeComponent();
         }

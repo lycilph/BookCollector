@@ -28,13 +28,10 @@ namespace Panda.Infrastructure
             if (disposed)
                 return;
 
-            if (disposing)
+            if (disposing && observables != null)
             {
-                if (observables != null)
-                {
-                    observables.Dispose();
-                    observables = null;
-                }
+                observables.Dispose();
+                observables = null;
             }
 
             disposed = true;

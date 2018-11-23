@@ -48,7 +48,7 @@
                                                   Command="{Binding Data.RemoveCollectionCommand, Source={StaticResource proxy}}"
                                                   CommandParameter="{Binding}">
                                             <MenuItem.Icon>
-                                                <Image Source="/Images/remove from list.png"/>
+                                                <md:PackIcon Kind="PlaylistRemove"/>
                                             </MenuItem.Icon>
                                         </MenuItem>
                                         <MenuItem Header="Rename collection"

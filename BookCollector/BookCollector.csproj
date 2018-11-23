@@ -178,19 +178,25 @@
     <Compile Include="Goodreads\GoodreadsImporter.cs" />
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
-    <Compile Include="Screens\Books\BookDetailView.xaml.cs">
-      <DependentUpon>BookDetailView.xaml</DependentUpon>
+    <Compile Include="Screens\Books\BookDetailsView.xaml.cs">
+      <DependentUpon>BookDetailsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Books\BookDetailViewModel.cs" />
+    <Compile Include="Screens\Books\BookDetailsViewModel.cs" />
+    <Compile Include="Screens\Books\BooksModuleView.xaml.cs">
+      <DependentUpon>BooksModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Books\BooksModuleViewModel.cs" />
+    <Compile Include="Screens\Books\BookViewModel.cs" />
+    <Compile Include="Screens\Books\IBooksModule.cs" />
+    <Compile Include="Screens\Books\SearchFieldView.xaml.cs">
+      <DependentUpon>SearchFieldView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Books\SearchFieldViewModel.cs" />
     <Compile Include="Screens\Books\ShelfViewModel.cs" />
     <Compile Include="Screens\Books\ShelvesView.xaml.cs">
       <DependentUpon>ShelvesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Books\ShelvesViewModel.cs" />
-    <Compile Include="Screens\Books\TagsView.xaml.cs">
-      <DependentUpon>TagsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Books\TagsViewModel.cs" />
     <Compile Include="Screens\Common\ApplicationNavigationPartView.xaml.cs">
       <DependentUpon>ApplicationNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -204,10 +210,6 @@
       <DependentUpon>CollectionsNavigationPartView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Common\CollectionsNavigationPartViewModel.cs" />
-    <Compile Include="Screens\Books\SearchFieldView.xaml.cs">
-      <DependentUpon>SearchFieldView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Books\SearchFieldViewModel.cs" />
     <Compile Include="Screens\Common\ToolsNavigationPartView.xaml.cs">
       <DependentUpon>ToolsNavigationPartView.xaml</DependentUpon>
     </Compile>
@@ -224,11 +226,6 @@
     <Compile Include="Data\Collection.cs" />
     <Compile Include="Data\RecentlyOpenedCollection.cs" />
     <Compile Include="Data\Settings.cs" />
-    <Compile Include="Screens\Books\BooksModuleView.xaml.cs">
-      <DependentUpon>BooksModuleView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Books\BooksModuleViewModel.cs" />
-    <Compile Include="Screens\Books\IBooksModule.cs" />
     <Compile Include="Screens\Collections\CollectionsModuleView.xaml.cs">
       <DependentUpon>CollectionsModuleView.xaml</DependentUpon>
     </Compile>
@@ -291,7 +288,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Images\remove from list.png" />
     <Resource Include="Images\book_open_page_black.ico" />
     <EmbeddedResource Include="Content\stopwords_en.txt" />
     <Content Include="NLog.config">
@@ -321,7 +317,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Books\BookDetailView.xaml">
+    <Page Include="Screens\Books\BookDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -329,13 +325,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Screens\Books\ShelvesView.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Screens\Books\SearchFieldView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="Screens\Books\TagsView.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Screens\Books\ShelvesView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Screens\Collections\CollectionsModuleView.xaml">
       <SubType>Designer</SubType>
@@ -354,10 +350,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Common\CollectionsNavigationPartView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Screens\Books\SearchFieldView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
