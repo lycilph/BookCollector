@@ -31,18 +31,11 @@
 
                 <ListBox Margin="32"
                          ItemsSource="{Binding RecentCollections}"
-                         HorizontalContentAlignment="Stretch"
-                         Background="Transparent">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <ContentControl panda:View.Bind="{Binding}"
-                                            Background="Transparent">
-                                <ContentControl.InputBindings>
-                                    <MouseBinding Gesture="LeftClick" 
-                                                  Command="{Binding Data.SelectCollectionCommand, Source={StaticResource proxy}}"
-                                                  CommandParameter="{Binding}"/>
-                                </ContentControl.InputBindings>
-                                <ContentControl.ContextMenu>
+                         HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+                            <Setter Property="ContextMenu">
+                                <Setter.Value>
                                     <ContextMenu>
                                         <MenuItem Header="Remove from list" 
                                                   Command="{Binding Data.RemoveCollectionCommand, Source={StaticResource proxy}}"
@@ -60,7 +53,19 @@
                                             </MenuItem.Icon>
                                         </MenuItem>
                                     </ContextMenu>
-                                </ContentControl.ContextMenu>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <ContentControl panda:View.Bind="{Binding}"
+                                            Background="Transparent">
+                                <ContentControl.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" 
+                                                  Command="{Binding Data.SelectCollectionCommand, Source={StaticResource proxy}}"
+                                                  CommandParameter="{Binding}"/>
+                                </ContentControl.InputBindings>
                             </ContentControl>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
