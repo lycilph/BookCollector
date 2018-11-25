@@ -1,5 +1,6 @@
 ﻿using BookCollector.Data;
 using Panda.Infrastructure;
+using Panda.Utils;
 using ReactiveUI;
 
 namespace BookCollector.Screens.Books
@@ -7,7 +8,7 @@ namespace BookCollector.Screens.Books
     public class ShelfViewModel : ItemViewModel<Shelf>
     {
         public string Name { get { return Obj.Name; } }
-
+        public ObservableCollectionEx<Book> Books { get { return Obj.Books; } }
         public bool IsDefault { get { return Obj.IsDefault; } }
 
         private bool _Selected = true;

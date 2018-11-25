@@ -140,7 +140,7 @@ namespace BookCollector.Application
         private void UpdateShelves(Collection collection)
         {
             foreach (var shelf in collection.Shelves)
-                shelf.Books = collection.Books.Where(b => b.Shelf == shelf).ToList();
+                shelf.Books = collection.Books.Where(b => b.Shelf == shelf).ToObservableCollectionEx();
         }
     }
 }

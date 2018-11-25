@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Panda.Utils;
 using ReactiveUI;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,9 +24,9 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _IsDefault, value); }
         }
 
-        private List<Book> _Books = new List<Book>();
+        private ObservableCollectionEx<Book> _Books = new ObservableCollectionEx<Book>();
         [JsonIgnore] // Have to ignore this, since it causes circular references in the Json
-        public List<Book> Books
+        public ObservableCollectionEx<Book> Books
         {
             get { return _Books; }
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
