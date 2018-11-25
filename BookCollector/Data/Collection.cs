@@ -73,5 +73,19 @@ namespace BookCollector.Data
             Shelves.Add(shelf);
             return shelf;
         }
+
+        public void RemoveShelf(Shelf shelf)
+        {
+            var default_shelf = GetDefaultshelf();
+            var books_to_move = shelf.Books.ToList();
+
+            books_to_move.Apply(b => b.Shelf = default_shelf);
+            Shelves.Remove(shelf);
+        }
+
+        public Shelf GetDefaultshelf()
+        {
+            return Shelves.First(s => s.IsDefault);
+        }
     }
 }

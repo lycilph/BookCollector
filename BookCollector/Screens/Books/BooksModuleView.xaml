@@ -51,7 +51,7 @@
                         </Grid.RowDefinitions>
 
                         <ContentControl Grid.Row="0" panda:View.Bind="{Binding CollectionNavigationPart}"/>
-                        <ContentControl Grid.Row="1" panda:View.Bind="{Binding Shelves}"/>
+                        <ContentControl Grid.Row="1" panda:View.Bind="{Binding ShelvesList}"/>
                         <!--<ContentControl Grid.Row="2" panda:View.Bind="{Binding Tags}"/>-->
                     </Grid>
                     

@@ -4,9 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:panda="http://www.panda.com"
+             xmlns:conv="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800">
+    <UserControl.Resources>
+        <panda:BindingProxy x:Key="proxy" Data="{Binding}"/>
+        <panda:BoolToFontStyleConverter x:Key="font_style_converter"/>
+        <conv:NotConverter x:Key="not_converter"/>
+    </UserControl.Resources>
+    
     <DockPanel MinWidth="150"
                Margin="16">
         <DockPanel DockPanel.Dock="Top">
@@ -24,12 +32,39 @@
 
         <ListBox ItemsSource="{Binding Shelves}"
                  SelectionMode="Multiple"
-                 DisplayMemberPath="Name">
+                 PreviewMouseRightButtonDown="DisregardMouseRightButtonDown">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}">
                     <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                    <Setter Property="ContextMenu">
+                        <Setter.Value>
+                            <ContextMenu>
+                                <MenuItem Header="Rename Shelf"
+                                          Command="{Binding Source={StaticResource proxy}, Path=Data.RenameShelfCommand}"
+                                          CommandParameter="{Binding}">
+                                    <MenuItem.Icon>
+                                        <md:PackIcon Kind="RenameBox"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="Delete Shelf"
+                                          IsEnabled="{Binding IsDefault, Converter={StaticResource not_converter}}"
+                                          Command="{Binding Source={StaticResource proxy}, Path=Data.DeleteShelfCommand}"
+                                          CommandParameter="{Binding}">
+                                    <MenuItem.Icon>
+                                        <md:PackIcon Kind="PlaylistRemove"/>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </ContextMenu>
+                        </Setter.Value>
+                    </Setter>
                 </Style>
             </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl panda:View.Bind="{Binding}"
+                                    FontStyle="{Binding IsDefault, Converter={StaticResource font_style_converter}}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </DockPanel>
 </UserControl>

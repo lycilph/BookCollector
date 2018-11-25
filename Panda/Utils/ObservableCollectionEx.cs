@@ -68,9 +68,6 @@ namespace Panda.Utils
             }
         }
 
-        public ObservableCollectionEx() { }
-        public ObservableCollectionEx(IEnumerable<T> items) : base(items) { }
-
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             Unsubscribe(e.OldItems);
@@ -85,7 +82,7 @@ namespace Panda.Utils
                     foreach (NotifyCollectionChangedEventHandler handler in delegates)
                     {
                         // If the subscriber is a DispatcherObject and different thread
-                        if (handler.Target is DispatcherObject dispatcher_object && 
+                        if (handler.Target is DispatcherObject dispatcher_object &&
                             dispatcher_object.CheckAccess() == false)
                         {
                             // Invoke handler in the target dispatcher's thread

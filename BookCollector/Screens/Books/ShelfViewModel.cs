@@ -8,6 +8,8 @@ namespace BookCollector.Screens.Books
     {
         public string Name { get { return Obj.Name; } }
 
+        public bool IsDefault { get { return Obj.IsDefault; } }
+
         private bool _Selected = true;
         public bool Selected
         {

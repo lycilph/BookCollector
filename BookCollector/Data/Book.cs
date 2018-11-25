@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -48,7 +49,11 @@ namespace BookCollector.Data
         public Shelf Shelf
         {
             get { return _Shelf; }
-            set { this.RaiseAndSetIfChanged(ref _Shelf, value); }
+            set
+            {
+                UpdateShelf(_Shelf, value);
+                this.RaiseAndSetIfChanged(ref _Shelf, value);
+            }
         }
 
         private HashSet<Tag> _Tags = new HashSet<Tag>();
@@ -63,6 +68,15 @@ namespace BookCollector.Data
         {
             get { return _Metadata; }
             set { this.RaiseAndSetIfChanged(ref _Metadata, value); }
+        }
+
+        private void UpdateShelf(Shelf old_shelf, Shelf new_shelf)
+        {
+            if (new_shelf != old_shelf)
+            {
+                old_shelf?.Remove(this);
+                new_shelf.Add(this);
+            }
         }
     }
 }

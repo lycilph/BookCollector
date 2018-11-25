@@ -119,6 +119,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\BoolToFontStyleConverter.cs" />
     <Compile Include="Converters\StringEmptyToEnabledConverter.cs" />
     <Compile Include="Converters\StringJoinConverter.cs" />
     <Compile Include="Infrastructure\AssemblySource.cs" />

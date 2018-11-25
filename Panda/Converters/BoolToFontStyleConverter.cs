@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 namespace Panda.Converters
 {
-    public class StringJoinConverter : IValueConverter
+    public class BoolToFontStyleConverter : IValueConverter
     {
-        public string Separator { get; set; } = ",";
+        public FontStyle TrueStyle { get; set; } = FontStyles.Italic;
+        public FontStyle FalseStyle { get; set; } = FontStyles.Normal;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is IEnumerable<string> strs))
-                throw new ArgumentException("Value must be of type IEnumerable<string>");
-
-            return string.Join(Separator, strs);
+            if ((bool)value)
+                return TrueStyle;
+            else
+                return FalseStyle;
+                
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

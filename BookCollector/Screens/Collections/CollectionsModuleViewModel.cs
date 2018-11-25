@@ -102,7 +102,7 @@ namespace BookCollector.Screens.Collections
             RecentCollections = null;
         }
 
-        private async void SelectCollection (RecentCollectionViewModel recent_collection)
+        private async void SelectCollection(RecentCollectionViewModel recent_collection)
         {
             logger.Trace($"Selected collection [{recent_collection.Name} - {recent_collection.Filename}]");
 
@@ -127,10 +127,10 @@ namespace BookCollector.Screens.Collections
         {
             logger.Trace($"Removing collection [{recent_collection.Name} - {recent_collection.Filename}]");
 
-            if (recent_collection.Invalid != true)
+            if (!recent_collection.Invalid)
             {
                 var result = (bool)await DialogManager.ShowPromptDialogAsync("Removing Collection", "Do you want to delete it from disk?");
-                if (result == true)
+                if (result)
                 {
                     repository.DeleteCollection(recent_collection.Filename);
                 }
@@ -158,7 +158,7 @@ namespace BookCollector.Screens.Collections
             };
             var result = (bool)await DialogManager.ShowInputDialogAsync(vm);
 
-            if (result == true)
+            if (result)
             {
                 var collection = repository.LoadCollection(recent_collection.Filename);
                 if (collection != null)

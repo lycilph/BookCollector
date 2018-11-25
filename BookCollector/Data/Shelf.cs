@@ -16,6 +16,13 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Name, value); }
         }
 
+        private bool _IsDefault = false;
+        public bool IsDefault
+        {
+            get { return _IsDefault; }
+            set { this.RaiseAndSetIfChanged(ref _IsDefault, value); }
+        }
+
         private List<Book> _Books = new List<Book>();
         [JsonIgnore] // Have to ignore this, since it causes circular references in the Json
         public List<Book> Books

@@ -24,6 +24,7 @@ namespace BookCollector.Screens.Books
         private List<SearchResult<Book>> search_results;
         private List<BookViewModel> book_view_models;
         private IDisposable current_book_disposable;
+        private List<ShelfViewModel> selected_shelves;
 
         private SearchFieldViewModel _SearchField;
         public SearchFieldViewModel SearchField
@@ -32,11 +33,11 @@ namespace BookCollector.Screens.Books
             set { this.RaiseAndSetIfChanged(ref _SearchField, value); }
         }
 
-        private ShelvesViewModel _Shelves;
-        public ShelvesViewModel Shelves
+        private ShelvesViewModel _ShelvesList;
+        public ShelvesViewModel ShelvesList
         {
-            get { return _Shelves; }
-            set { this.RaiseAndSetIfChanged(ref _Shelves, value); }
+            get { return _ShelvesList; }
+            set { this.RaiseAndSetIfChanged(ref _ShelvesList, value); }
         }
 
         private BookDetailsViewModel _BookDetails;
@@ -61,25 +62,30 @@ namespace BookCollector.Screens.Books
                                     ISearchEngine<Book> search_engine,
                                     SearchFieldViewModel search_field,
                                     BookDetailsViewModel book_details,
-                                    ShelvesViewModel shelves)
+                                    ShelvesViewModel shelves_list)
             : base(application_navigation_part, collections_navigation_part, tools_navigation_part, collection_information_part)
         {
             this.state_manager = state_manager;
             this.search_engine = search_engine;
             SearchField = search_field;
             BookDetails = book_details;
-            Shelves = shelves;
+            ShelvesList = shelves_list;
 
             this.WhenAnyValue(x => x.SearchField.Text)
                 .Throttle(TimeSpan.FromMilliseconds(250), RxApp.MainThreadScheduler)
                 .Subscribe(Search);
+
+            (this).WhenAnyObservable(x => x.ShelvesList.Shelves.SomethingChanged)
+                .Subscribe(_ => UpdateSelectedShelves());
         }
 
         public override void OnActivated()
         {
             base.OnActivated();  // CollectionModuleBase handles activation of common parts
-            Shelves.Activate();
+            ShelvesList.Activate();
             BookDetails.Activate();
+
+            UpdateSelectedShelves();
 
             // Show message if there are no books in the collection
             if (!state_manager.CurrentCollection.Books.Any())
@@ -98,21 +104,31 @@ namespace BookCollector.Screens.Books
                                            .Select(_ => Books.CurrentItem as BookViewModel)
                                            .Subscribe(vm => BookDetails.CurrentBook = vm?.Obj);
 
+
+            // This is needed to update the book details
             Books.Refresh();
         }
 
         public override void OnDeactivated()
         {
             base.OnDeactivated(); // CollectionModuleBase handles deactivation of common parts
-            Shelves.Deactivate();
+            ShelvesList.Deactivate();
             BookDetails.Deactivate();
 
+            selected_shelves = null;
             current_book_disposable.Dispose();
             current_book_disposable = null;
             SearchField.Clear(); // This will also clear the search_results
             Books = null;
             book_view_models.DisposeAll();
             book_view_models = null;
+        }
+
+        private void UpdateSelectedShelves()
+        {
+            selected_shelves = ShelvesList.Shelves.Where(s => s.Selected).ToList();
+            Books?.Refresh();
+            Books?.MoveCurrentToFirst();
         }
 
         private void Search(string query)
@@ -133,6 +149,9 @@ namespace BookCollector.Screens.Books
         {
             var vm = o as BookViewModel;
             if (vm == null)
+                return false;
+
+            if (!selected_shelves.Any(s => s.Obj == vm.Obj.Shelf))
                 return false;
 
             if (search_results != null)

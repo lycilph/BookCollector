@@ -153,6 +153,15 @@ namespace BookCollector.Screens.Import
                                           .ToList();
             var books_on_selected_shelves = Books.Where(b => b.IsDuplicate == false && selected_shelves.Contains(b.ExclusiveShelf));
             var imported_books = GoodreadsMapper.Map(books_on_selected_shelves).ToList();
+
+            // Temporary - until shelf matching is implemented
+            var default_shelf = state_manager.CurrentCollection.GetDefaultshelf();
+            imported_books.Apply(b =>
+            {
+                b.Shelf = default_shelf;
+                default_shelf.Add(b);
+            });
+
             state_manager.CurrentCollection.Add(imported_books);
 
             MessageBus.Current.SendMessage(NavigationMessage.Books);

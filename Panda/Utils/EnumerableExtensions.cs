@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 
 namespace Panda.Utils
 {
@@ -31,7 +32,9 @@ namespace Panda.Utils
 
         public static ObservableCollectionEx<T> ToObservableCollectionEx<T>(this IEnumerable<T> source) where T : INotifyPropertyChanged
         {
-            return new ObservableCollectionEx<T>(source);
+            var collection = new ObservableCollectionEx<T>();
+            collection.AddRange(source.ToList()); // Not entirely sure why the ToList is needed here, BUT IT IS!
+            return collection;
         }
     }
 }

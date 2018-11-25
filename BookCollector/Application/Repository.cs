@@ -115,6 +115,12 @@ namespace BookCollector.Application
                 Name = Path.GetFileNameWithoutExtension(filename),
                 Filename = filename
             };
+            var default_shelf = new Shelf
+            {
+                Name = "Default",
+                IsDefault = true
+            };
+            collection.Shelves.Add(default_shelf);
             SaveCollection(collection);
             return collection;
         }
