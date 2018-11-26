@@ -258,6 +258,11 @@
     </Compile>
     <Compile Include="Screens\Import\ImportModuleViewModel.cs" />
     <Compile Include="Screens\Import\ShelfViewModel.cs" />
+    <Compile Include="Screens\Logs\ILogsModule.cs" />
+    <Compile Include="Screens\Logs\LogsModuleView.xaml.cs">
+      <DependentUpon>LogsModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Logs\LogsModuleViewModel.cs" />
     <Compile Include="Screens\Series\ISeriesModule.cs" />
     <Compile Include="Screens\Series\SeriesModuleView.xaml.cs">
       <DependentUpon>SeriesModuleView.xaml</DependentUpon>
@@ -379,6 +384,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Import\ImportModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Logs\LogsModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -109,6 +109,7 @@
     </Reference>
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -119,6 +120,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\ScrollOnNewItemBehavior.cs" />
     <Compile Include="Converters\BoolToFontStyleConverter.cs" />
     <Compile Include="Converters\StringEmptyToEnabledConverter.cs" />
     <Compile Include="Converters\StringJoinConverter.cs" />
@@ -143,6 +145,7 @@
     <Compile Include="Utils\DirtyTrackingBase.cs" />
     <Compile Include="Utils\EnumerableExtensions.cs" />
     <Compile Include="Utils\JsonUtils.cs" />
+    <Compile Include="Utils\MemoryTarget.cs" />
     <Compile Include="Utils\ObservableCollectionEx.cs" />
     <Compile Include="Utils\ResourceExtensions.cs" />
     <Compile Include="Utils\StringExtensions.cs" />

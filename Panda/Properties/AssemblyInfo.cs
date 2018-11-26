@@ -38,3 +38,4 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition("http://www.panda.com", "Panda.Infrastructure")]
 [assembly: XmlnsDefinition("http://www.panda.com", "Panda.Utils")]
 [assembly: XmlnsDefinition("http://www.panda.com", "Panda.Converters")]
+[assembly: XmlnsDefinition("http://www.panda.com", "Panda.Behaviors")]

@@ -5,6 +5,7 @@ using BookCollector.Screens.Shell;
 using Ninject;
 using NLog;
 using Panda.Infrastructure;
+using Panda.Utils;
 
 namespace BookCollector.Application
 {
@@ -13,6 +14,15 @@ namespace BookCollector.Application
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         public IKernel Kernel { get; private set; }
+
+        public override void InitializeLogging()
+        {
+            var memory_target = new MemoryTarget() { Layout = "${uppercase:${level}} [${logger:shortName=true}] ${message}" };
+
+            LogManager.Configuration.AddTarget("memory", memory_target);
+            LogManager.Configuration.AddRuleForAllLevels("memory");
+            LogManager.Configuration.Reload();
+        }
 
         protected override void Configure()
         {

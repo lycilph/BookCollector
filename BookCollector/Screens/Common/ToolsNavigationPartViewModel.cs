@@ -14,9 +14,17 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _ShowImportCommand, value); }
         }
 
+        private ReactiveCommand<Unit, Unit> _ShowLogsCommand;
+        public ReactiveCommand<Unit, Unit> ShowLogsCommand
+        {
+            get { return _ShowLogsCommand; }
+            set { this.RaiseAndSetIfChanged(ref _ShowLogsCommand, value); }
+        }
+
         public ToolsNavigationPartViewModel()
         {
             ShowImportCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Import));
+            ShowLogsCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Logs));
         }
     }
 }

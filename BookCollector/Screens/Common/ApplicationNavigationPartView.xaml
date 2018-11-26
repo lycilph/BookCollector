@@ -38,9 +38,9 @@
                 Style="{StaticResource MaterialDesignFlatButton}"
                 Command="{Binding ShowImportCommand}"/>
         <Button Content="Logs" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowLogsCommand}"/>
         <Button Content="Tools" 
                 IsEnabled="False"
                 Margin="0,8,0,0"

@@ -2,5 +2,5 @@
 
 namespace BookCollector.Application.Messages
 {
-    public enum NavigationMessage { Collections, Settings, Books, Import }
+    public enum NavigationMessage { Collections, Settings, Books, Import, Logs }
 }

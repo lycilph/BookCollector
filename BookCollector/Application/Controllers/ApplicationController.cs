@@ -3,6 +3,7 @@ using BookCollector.Data;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Import;
+using BookCollector.Screens.Logs;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using NLog;
@@ -103,6 +104,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case NavigationMessage.Import:
                     shell.NavigateTo(typeof(IImportModule));
+                    break;
+                case NavigationMessage.Logs:
+                    shell.NavigateTo(typeof(ILogsModule));
                     break;
                 case NavigationMessage.Books:
                     shell.NavigateTo(typeof(IBooksModule));
