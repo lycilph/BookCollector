@@ -10,6 +10,9 @@ namespace BookCollector.Data
     {
         public bool LoadMostRecentCollectionOnStart { get; set; } = false;
         public int SnackbarMessageDuration { get; set; } = 2;
+        public bool EnableShelfMatching { get; set; } = true;
+        public bool CreateUnmatchedShelves { get; set; } = true;
+        public int MaxEditDistanceForShelfMatching { get; set; } = 3;
 
         public bool HasRecentCollections { get { return RecentCollections.Any(); } }
         public List<RecentlyOpenedCollection> RecentCollections { get; set; } = new List<RecentlyOpenedCollection>();

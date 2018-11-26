@@ -20,7 +20,37 @@ namespace BookCollector.Screens.Settings
         public int SnackbarMessageDuration
         {
             get { return state_manager.Settings.SnackbarMessageDuration; }
-            set { state_manager.Settings.SnackbarMessageDuration = value; }
+            set
+            {
+                state_manager.Settings.SnackbarMessageDuration = value;
+                this.RaisePropertyChanged();
+            }
+        }
+
+        public bool EnableShelfMatching
+        {
+            get { return state_manager.Settings.EnableShelfMatching; }
+            set
+            {
+                state_manager.Settings.EnableShelfMatching = value;
+                this.RaisePropertyChanged();
+            }
+        }
+
+        public bool CreateUnmatchedShelves
+        {
+            get { return state_manager.Settings.CreateUnmatchedShelves; }
+            set { state_manager.Settings.CreateUnmatchedShelves = value; }
+        }
+
+        public int MaxEditDistance
+        {
+            get { return state_manager.Settings.MaxEditDistanceForShelfMatching; }
+            set
+            {
+                state_manager.Settings.MaxEditDistanceForShelfMatching = value;
+                this.RaisePropertyChanged();
+            }
         }
 
         private ApplicationNavigationPartViewModel _ApplicationNavigationPart;

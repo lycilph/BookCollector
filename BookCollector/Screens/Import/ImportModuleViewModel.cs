@@ -12,12 +12,14 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reactive;
+using BookCollector.Application.Controllers;
 
 namespace BookCollector.Screens.Import
 {
     public class ImportModuleViewModel : ScreenBase, IImportModule
     {
         private IStateManager state_manager;
+        private IImportController import_controller;
 
         private string _FullFilename;
         public string FullFilename
@@ -90,10 +92,12 @@ namespace BookCollector.Screens.Import
         }
 
         public ImportModuleViewModel(IStateManager state_manager,
+                                     IImportController import_controller,
                                      ApplicationNavigationPartViewModel application_navigation_part,
                                      ToolsNavigationPartViewModel tools_navigation_part)
         {
             this.state_manager = state_manager;
+            this.import_controller = import_controller;
             ApplicationNavigationPart = application_navigation_part;
             ToolsNavigationPart = tools_navigation_part;
 
@@ -151,21 +155,13 @@ namespace BookCollector.Screens.Import
             var selected_shelves = Shelves.Where(s => s.Selected)
                                           .Select(s => s.Name)
                                           .ToList();
-            var books_on_selected_shelves = Books.Where(b => b.IsDuplicate == false && selected_shelves.Contains(b.ExclusiveShelf));
-            var imported_books = GoodreadsMapper.Map(books_on_selected_shelves).ToList();
+            var books_on_selected_shelves = Books.Where(b => !b.IsDuplicate && selected_shelves.Contains(b.ExclusiveShelf));
+            var books_to_import = GoodreadsMapper.Map(books_on_selected_shelves).ToList();
 
-            // Temporary - until shelf matching is implemented
-            var default_shelf = state_manager.CurrentCollection.GetDefaultshelf();
-            imported_books.Apply(b =>
-            {
-                b.Shelf = default_shelf;
-                default_shelf.Add(b);
-            });
-
-            state_manager.CurrentCollection.Add(imported_books);
+            import_controller.Import(books_to_import);
 
             MessageBus.Current.SendMessage(NavigationMessage.Books);
-            MessageBus.Current.SendMessage(new InformationMessage($"{imported_books.Count} books were imported"));
+            MessageBus.Current.SendMessage(new InformationMessage($"{books_to_import.Count} books were imported"));
         }
 
         private void Clear()

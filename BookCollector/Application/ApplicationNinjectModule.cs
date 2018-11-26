@@ -22,6 +22,7 @@ namespace BookCollector.Application
             logger.Trace("Initializing dependencies for application");
 
             BindAsSingleton<IApplicationController, ApplicationController>();
+            BindAsSingleton<IImportController, ImportController>();
             BindAsSingleton<IStateManager, StateManager>();
             BindAsSingleton<IRepository, Repository>();
             BindAsSingleton<ISearchEngine<Book>, SearchEngine<Book>>();

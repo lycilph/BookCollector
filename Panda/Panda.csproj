@@ -146,6 +146,7 @@
     <Compile Include="Utils\ObservableCollectionEx.cs" />
     <Compile Include="Utils\ResourceExtensions.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Utils\StringMetrics.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

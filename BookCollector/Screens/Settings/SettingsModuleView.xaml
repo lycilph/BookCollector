@@ -38,7 +38,7 @@
                                Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
 
                     <StackPanel Orientation="Horizontal"
-                                Margin="0,16,0,0">
+                                Margin="0,8,0,0">
                         <TextBlock Text="Load collection on start"/>
 
                         <ToggleButton Margin="8,0,0,0" 
@@ -59,11 +59,50 @@
                                 Width="250"
                                 Minimum="1"
                                 Maximum="10"
-                                Value="{Binding SnackbarMessageDuration}"
-                                Style="{StaticResource MaterialDesignDiscreteSlider}"/>
+                                Value="{Binding SnackbarMessageDuration}"/>
                     </StackPanel>
 
                     <Separator Margin="0,8,0,0" HorizontalAlignment="Stretch"/>
+
+                    <TextBlock Text="Import"
+                               Margin="0,8,0,0"
+                               Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0">
+                        <TextBlock Text="Enable shelves matching on import"/>
+
+                        <ToggleButton Margin="8,0,0,0" 
+                                      ToolTip="Enable shelves matching on import"
+                                      IsChecked="{Binding EnableShelfMatching}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0"
+                                IsEnabled="{Binding EnableShelfMatching}">
+                        <TextBlock Text="Add shelf if no match found"/>
+
+                        <ToggleButton Margin="8,0,0,0" 
+                                      ToolTip="Add shelf if no match found"
+                                      IsChecked="{Binding CreateUnmatchedShelves}"/>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0"
+                                IsEnabled="{Binding EnableShelfMatching}">
+                        <TextBlock Text="Max edit distance"
+                                   ToolTip="Maximum levenshtein edit distance for a match"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Margin="8,0,0,0"
+                                   VerticalAlignment="Center"
+                                   Width="25"
+                                   Text="{Binding MaxEditDistance}"/>
+                        <Slider Margin="8,0,0,0" 
+                                Width="250"
+                                Minimum="1"
+                                Maximum="10"
+                                Value="{Binding MaxEditDistance}"/>
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </md:DrawerHost>

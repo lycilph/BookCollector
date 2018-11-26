@@ -170,6 +170,8 @@
     <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
+    <Compile Include="Application\Controllers\IImportController.cs" />
+    <Compile Include="Application\Controllers\ImportController.cs" />
     <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Data\Shelf.cs" />

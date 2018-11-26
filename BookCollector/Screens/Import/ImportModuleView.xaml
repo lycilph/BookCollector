@@ -76,10 +76,10 @@
                                   ItemsSource="{Binding Books}">
                             <DataGrid.Columns>
                                 <DataGridCheckBoxColumn Header="Duplicate" Binding="{Binding IsDuplicate}" />
+                                <DataGridTextColumn Header="Shelf" Binding="{Binding ExclusiveShelf}"/>
                                 <DataGridTextColumn Header="Title" Binding="{Binding Title}"/>
                                 <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
                                 <DataGridTextColumn Header="Additional Authors" Binding="{Binding AdditionalAuthors}"/>
-                                <DataGridTextColumn Header="Shelf" Binding="{Binding ExclusiveShelf}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </DockPanel>
