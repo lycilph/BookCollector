@@ -26,9 +26,9 @@
                 Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"/>
         <Button Content="Notes" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowNotesCommand}"/>
 
         <TextBlock Text="Tools"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"

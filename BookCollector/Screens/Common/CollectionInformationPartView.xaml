@@ -7,7 +7,9 @@
              d:DesignHeight="450" 
              d:DesignWidth="800">
     <StatusBar>
-        <StatusBarItem DockPanel.Dock="Right" Width="100">Notes: ZZZ</StatusBarItem>
+        <StatusBarItem DockPanel.Dock="Right" 
+                       Width="100"
+                       Content="{Binding Notes}"/>
         <Separator DockPanel.Dock="Right"/>
         
         <StatusBarItem DockPanel.Dock="Right" Width="100">Series: YYY</StatusBarItem>

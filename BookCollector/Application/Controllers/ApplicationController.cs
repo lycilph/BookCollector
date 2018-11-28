@@ -4,13 +4,17 @@ using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
 using BookCollector.Screens.Import;
 using BookCollector.Screens.Logs;
+using BookCollector.Screens.Notes;
+using BookCollector.Screens.Notes.AvalonEdit;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
+using NHunspell;
 using NLog;
 using Panda.Search;
 using Panda.Utils;
 using ReactiveUI;
 using System;
+using System.Text;
 
 namespace BookCollector.Application.Controllers
 {
@@ -19,6 +23,8 @@ namespace BookCollector.Application.Controllers
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         private const string stopwords_filename = "stopwords_en.txt";
+        private const string aff_filename = "en_US.aff";
+        private const string dic_filename = "en_US.dic";
 
         private IStateManager state_manager;
         private IShellViewModel shell;
@@ -36,6 +42,7 @@ namespace BookCollector.Application.Controllers
             logger.Trace("Initializing application controller");
             HookUpMessages();
             InitializeSearchEngine();
+            InitializeSpellChecker();
             state_manager.Initialize();
         }
 
@@ -68,6 +75,16 @@ namespace BookCollector.Application.Controllers
             logger.Trace("Initializing search engine");
             var stopwords = ResourceExtensions.GetResource(stopwords_filename);
             search_engine.Initialize(stopwords);
+        }
+
+        private void InitializeSpellChecker()
+        {
+            logger.Trace("Initializing spell checker");
+            var en_aff = ResourceExtensions.GetResource(aff_filename);
+            var en_aff_data = Encoding.ASCII.GetBytes(en_aff);
+            var en_dic = ResourceExtensions.GetResource(dic_filename);
+            var en_dic_data = Encoding.ASCII.GetBytes(en_dic);
+            SpellChecker.Default.HunspellInstance = new Hunspell(en_aff_data, en_dic_data);
         }
 
         private void HandleApplicationMessage(ApplicationMessage message)
@@ -110,6 +127,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case NavigationMessage.Books:
                     shell.NavigateTo(typeof(IBooksModule));
+                    break;
+                case NavigationMessage.Notes:
+                    shell.NavigateTo(typeof(INotesModule));
                     break;
                 case NavigationMessage.Settings:
                     shell.NavigateTo(typeof(ISettingsModule));

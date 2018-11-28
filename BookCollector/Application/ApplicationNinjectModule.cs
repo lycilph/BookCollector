@@ -5,6 +5,7 @@ using BookCollector.Screens.Collections;
 using BookCollector.Screens.Common;
 using BookCollector.Screens.Import;
 using BookCollector.Screens.Logs;
+using BookCollector.Screens.Notes;
 using BookCollector.Screens.Series;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
@@ -32,6 +33,7 @@ namespace BookCollector.Application
             BindAsSingleton<ICollectionsModule, IModule, CollectionsModuleViewModel>();
             BindAsSingleton<ISettingsModule, IModule, SettingsModuleViewModel>();
             BindAsSingleton<IBooksModule, IModule, BooksModuleViewModel>();
+            BindAsSingleton<INotesModule, IModule, NotesModuleViewModel>();
             BindAsSingleton<ISeriesModule, IModule, SeriesModuleViewModel>();
             BindAsSingleton<IImportModule, IModule, ImportModuleViewModel>();
             BindAsSingleton<ILogsModule, IModule, LogsModuleViewModel>();

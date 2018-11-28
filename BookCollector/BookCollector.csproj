@@ -48,6 +48,9 @@
     <Reference Include="DynamicData, Version=6.7.0.2529, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicData.6.7.0.2529\lib\net46\DynamicData.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -65,6 +68,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHunspell, Version=1.2.5554.16953, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHunspell.1.2.5554.16953\lib\net\NHunspell.dll</HintPath>
     </Reference>
     <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
@@ -174,6 +180,7 @@
     <Compile Include="Application\Controllers\ImportController.cs" />
     <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Data\Book.cs" />
+    <Compile Include="Data\Note.cs" />
     <Compile Include="Data\Shelf.cs" />
     <Compile Include="Data\Tag.cs" />
     <Compile Include="Goodreads\Data\GoodreadsCSVBook.cs" />
@@ -263,6 +270,20 @@
       <DependentUpon>LogsModuleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Logs\LogsModuleViewModel.cs" />
+    <Compile Include="Screens\Notes\AvalonEdit\SpellChecker.cs" />
+    <Compile Include="Screens\Notes\AvalonEdit\SpellCheckerBehavior.cs" />
+    <Compile Include="Screens\Notes\AvalonEdit\SpellCheckerColorizer.cs" />
+    <Compile Include="Screens\Notes\AvalonEdit\TextProxyBehavior.cs" />
+    <Compile Include="Screens\Notes\INotesModule.cs" />
+    <Compile Include="Screens\Notes\NotesModuleView.xaml.cs">
+      <DependentUpon>NotesModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Notes\NotesModuleViewModel.cs" />
+    <Compile Include="Screens\Notes\NotesView.xaml.cs">
+      <DependentUpon>NotesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Notes\NotesViewModel.cs" />
+    <Compile Include="Screens\Notes\NoteViewModel.cs" />
     <Compile Include="Screens\Series\ISeriesModule.cs" />
     <Compile Include="Screens\Series\SeriesModuleView.xaml.cs">
       <DependentUpon>SeriesModuleView.xaml</DependentUpon>
@@ -300,6 +321,15 @@
     </EmbeddedResource>
     <Resource Include="Images\book_open_page_black.ico" />
     <EmbeddedResource Include="Content\stopwords_en.txt" />
+    <EmbeddedResource Include="Content\en_US.aff" />
+    <EmbeddedResource Include="Content\en_US.dic" />
+    <None Include="Hunspellx64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Hunspellx86.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\README_en_US.txt" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -388,6 +418,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Logs\LogsModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Notes\NotesModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Notes\NotesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

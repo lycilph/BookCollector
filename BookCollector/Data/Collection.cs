@@ -34,6 +34,13 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
         }
 
+        private ObservableCollectionEx<Note> _Notes = new ObservableCollectionEx<Note>();
+        public ObservableCollectionEx<Note> Notes
+        {
+            get { return _Notes; }
+            set { this.RaiseAndSetIfChanged(ref _Notes, value); }
+        }
+
         private ObservableCollectionEx<Shelf> _Shelves = new ObservableCollectionEx<Shelf>();
         public ObservableCollectionEx<Shelf> Shelves
         {
@@ -86,6 +93,18 @@ namespace BookCollector.Data
         public Shelf GetDefaultshelf()
         {
             return Shelves.First(s => s.IsDefault);
+        }
+
+        public Note AddNote(string name)
+        {
+            var note = new Note { Name = name };
+            Notes.Add(note);
+            return note;
+        }
+
+        public void RemoveNote(Note note)
+        {
+            Notes.Remove(note);
         }
     }
 }

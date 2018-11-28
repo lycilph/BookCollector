@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="BookCollector.Screens.Notes.NotesModuleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+             xmlns:panda="http://www.panda.com"
+             xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:edit="clr-namespace:BookCollector.Screens.Notes.AvalonEdit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" 
+             d:DesignWidth="800">
+    <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
+        <md:DrawerHost IsLeftDrawerOpen="{Binding ApplicationNavigationPart.IsOpen}">
+            <md:DrawerHost.LeftDrawerContent>
+                <ContentControl panda:View.Bind="{Binding ApplicationNavigationPart}"/>
+            </md:DrawerHost.LeftDrawerContent>
+
+            <DockPanel>
+                <ext:AppBar DockPanel.Dock="Top" 
+                            ShowNavigationDrawerButton="True"
+                            IsNavigationDrawerOpen="{Binding ApplicationNavigationPart.IsOpen, Mode=TwoWay}"
+                            Title="Notes">
+                    <md:PopupBox DockPanel.Dock="Right" 
+                                 PlacementMode="BottomAndAlignRightEdges" 
+                                 StaysOpen="False">
+                        <ContentControl panda:View.Bind="{Binding ToolsNavigationPart}"/>
+                    </md:PopupBox>
+                </ext:AppBar>
+
+                <ContentControl DockPanel.Dock="Bottom" 
+                                panda:View.Bind="{Binding CollectionInformationPart}"/>
+
+                <!-- Main content area -->
+                <DockPanel Margin="16">
+                    <StackPanel DockPanel.Dock="Left"
+                                Margin="0,0,16,0">
+                        <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
+                        <ContentControl panda:View.Bind="{Binding NotesList}"/>
+                    </StackPanel>
+
+                    <avalonedit:TextEditor Padding="8"
+                                           BorderBrush="{DynamicResource MaterialDesignLightForeground}"
+                                           BorderThickness="1"
+                                           IsEnabled="{Binding CanEdit}">
+                        <i:Interaction.Behaviors>
+                            <edit:TextProxyBehavior Text="{Binding NotesList.SelectedNote.Text}"/>
+                            <edit:SpellCheckerBehavior/>
+                        </i:Interaction.Behaviors>
+                    </avalonedit:TextEditor>
+                </DockPanel>
+            </DockPanel>
+        </md:DrawerHost>
+    </md:TransitioningContent>
+</UserControl>
