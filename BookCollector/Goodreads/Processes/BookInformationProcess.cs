@@ -1,4 +1,4 @@
-﻿using System;
+﻿   using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,9 +24,9 @@ namespace BookCollector.Goodreads.Processes
         public void Execute(CancellationToken token)
         {
             var id = book.Metadata["GoodreadsBookId"];
-            var goodreads_book = client.GetBookById(id);
+            var goodreads_book = client.GetBookById(id, token);
 
-            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), CancellationToken.None, TaskCreationOptions.None, scheduler);
+            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), token, TaskCreationOptions.None, scheduler);
         }
 
         private void UpdateBook(Book book, GoodreadsBook goodreads_book)

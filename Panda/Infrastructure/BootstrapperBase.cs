@@ -60,11 +60,11 @@ namespace Panda.Infrastructure
 
         protected virtual void OnExit(object sender, ExitEventArgs e) { }
 
-        protected virtual object GetInstance(Type service)
+        protected virtual object GetInstance(Type type)
         {
             logger.Trace("Fallback GetInstance - consider overriding this!");
 
-            return Activator.CreateInstance(service);
+            return Activator.CreateInstance(type);
         }
 
         protected void DisplayRootViewFor<TViewModel>()

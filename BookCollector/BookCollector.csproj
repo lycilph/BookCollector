@@ -177,14 +177,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application\ApplicationNinjectModule.cs" />
-    <Compile Include="Application\Controllers\GoodreadsController.cs" />
+    <Compile Include="Application\ApplicationNinjectModule.cs">
+      <DependentUpon>IModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Controllers\GoodreadsController.cs">
+      <DependentUpon>IGoodreadsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application\Controllers\IGoodreadsController.cs" />
-    <Compile Include="Application\Processor\BackgroundProcessor.cs" />
+    <Compile Include="Application\Processor\BackgroundProcessor.cs">
+      <DependentUpon>IBackgroundProcessor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
     <Compile Include="Application\Controllers\IImportController.cs" />
-    <Compile Include="Application\Controllers\ImportController.cs" />
+    <Compile Include="Application\Controllers\ImportController.cs">
+      <DependentUpon>IImportController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Application\Processor\IBackgroundProcessor.cs" />
     <Compile Include="Application\Processor\IProcess.cs" />
@@ -248,9 +256,15 @@
     <Compile Include="Application\IStateManager.cs" />
     <Compile Include="Application\Messages\ApplicationMessage.cs" />
     <Compile Include="Application\Messages\NavigationMessage.cs" />
-    <Compile Include="Application\Repository.cs" />
-    <Compile Include="Application\StateManager.cs" />
-    <Compile Include="Application\Controllers\ApplicationController.cs" />
+    <Compile Include="Application\Repository.cs">
+      <DependentUpon>IRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\StateManager.cs">
+      <DependentUpon>IStateManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Controllers\ApplicationController.cs">
+      <DependentUpon>IApplicationController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Collection.cs" />
     <Compile Include="Data\RecentlyOpenedCollection.cs" />
     <Compile Include="Data\Settings.cs" />
@@ -314,7 +328,9 @@
     <Compile Include="Screens\Shell\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Shell\ShellViewModel.cs" />
+    <Compile Include="Screens\Shell\ShellViewModel.cs">
+      <DependentUpon>IShellViewModel.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\Bootstrapper.cs" />

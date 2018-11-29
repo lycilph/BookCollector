@@ -4,6 +4,7 @@ using RestSharp;
 using System;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace BookCollector.Goodreads
 {
@@ -29,7 +30,7 @@ namespace BookCollector.Goodreads
                 cache.Save();
         }
 
-        public GoodreadsBook GetBookById(string id)
+        public GoodreadsBook GetBookById(string id, CancellationToken token)
         {
             var request = new RestRequest($"book/show/{id}")
                 .AddQueryParameter("format", "xml")
@@ -37,10 +38,10 @@ namespace BookCollector.Goodreads
             request.RequestFormat = DataFormat.Xml;
             var uri = client.BuildUri(request).ToString();
 
-            return ExecuteRequest<GoodreadsBook>(request, uri);
+            return ExecuteRequest<GoodreadsBook>(request, uri, token);
         }
 
-        private T ExecuteRequest<T>(IRestRequest request, string uri, TimeSpan? expiry_time = null) where T : new()
+        private T ExecuteRequest<T>(IRestRequest request, string uri, CancellationToken token, TimeSpan? expiry_time = null) where T : new()
         {
             if (cache.IsCached(uri))
             {
@@ -50,7 +51,7 @@ namespace BookCollector.Goodreads
             {
                 var response = client.Execute<T>(request);
                 cache.Add(uri, response.Content, expiry_time);
-                Thread.Sleep(1000);
+                Task.Delay(10000, token).ContinueWith(_ => { }).Wait(); // The ContinueWith eats the TaskCancelledException
                 return response.Data;
             }
         }
