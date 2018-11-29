@@ -1,6 +1,6 @@
 ﻿using BookCollector.Data;
+using Panda.Collections;
 using Panda.Infrastructure;
-using Panda.Utils;
 using ReactiveUI;
 
 namespace BookCollector.Screens.Books

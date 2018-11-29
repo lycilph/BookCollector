@@ -1,5 +1,6 @@
 ﻿using BookCollector.Data;
 using BookCollector.Goodreads.Data;
+using Panda.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace BookCollector.Goodreads
                 Authors = authors,
                 ISBN = goodreads_csv_book.ISBN,
                 ISBN13 = goodreads_csv_book.ISBN13,
-                Metadata = new Dictionary<string, string>
+                Metadata = new ObservableDictionary<string, string>
                 {
                     {"Bookshelves", goodreads_csv_book.Bookshelves},
                     {"ExclusiveShelf", goodreads_csv_book.ExclusiveShelf},

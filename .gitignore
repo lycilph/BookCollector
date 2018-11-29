@@ -261,7 +261,7 @@ __pycache__/
 *.pyc
 
 # Disregard api secrets
-api_secret.txt
+*api_secret.txt
 
 # Disregard data
 *.bcdb

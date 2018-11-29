@@ -5,24 +5,49 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ext="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:panda="http://www.panda.com"
              mc:Ignorable="d" 
              d:DesignHeight="450"
              d:DesignWidth="800">
     <md:TransitioningContent OpeningEffect="{md:TransitionEffect FadeIn, Duration={StaticResource screen_transition_duration}}">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <md:DrawerHost IsLeftDrawerOpen="{Binding ApplicationNavigationPart.IsOpen}">
+            <md:DrawerHost.LeftDrawerContent>
+                <ContentControl panda:View.Bind="{Binding ApplicationNavigationPart}"/>
+            </md:DrawerHost.LeftDrawerContent>
 
-            <ext:AppBar Grid.Row="0"
-                        Title="Series"/>
+            <DockPanel>
+                <ext:AppBar DockPanel.Dock="Top" 
+                            ShowNavigationDrawerButton="True"
+                            IsNavigationDrawerOpen="{Binding ApplicationNavigationPart.IsOpen, Mode=TwoWay}"
+                            Title="Notes">
+                    <md:PopupBox DockPanel.Dock="Right" 
+                                 PlacementMode="BottomAndAlignRightEdges" 
+                                 StaysOpen="False">
+                        <ContentControl panda:View.Bind="{Binding ToolsNavigationPart}"/>
+                    </md:PopupBox>
+                </ext:AppBar>
 
-            <StackPanel Grid.Row="1">
-                <TextBlock Text="Testing"
-                           Style="{StaticResource MaterialDesignDisplay3TextBlock}"/>
-                <Button Content="Back" Command="{Binding BackCommand}"/>
-            </StackPanel>
-        </Grid>
+                <ContentControl DockPanel.Dock="Bottom" 
+                                panda:View.Bind="{Binding CollectionInformationPart}"/>
+
+                <!-- Main content area -->
+                <DockPanel Margin="16">
+                    <StackPanel DockPanel.Dock="Left"
+                                Margin="0,0,16,0">
+                        <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
+                    </StackPanel>
+
+                    <!-- TEMP/DEBUG -->
+                    <StackPanel>
+                        <Button Content="Add Book process"
+                                Command="{Binding AddCommand}"/>
+                        <TextBlock>
+                            <Run Text="Items in queue: "/>
+                            <Run Text="{Binding Count}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </DockPanel>
+            </DockPanel>
+        </md:DrawerHost>
     </md:TransitioningContent>
 </UserControl>

@@ -1,6 +1,7 @@
 ﻿using BookCollector.Application;
 using BookCollector.Dialogs;
 using NLog;
+using Panda.Collections;
 using Panda.Infrastructure;
 using Panda.Utils;
 using ReactiveUI;

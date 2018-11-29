@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Panda.Utils;
+using Panda.Collections;
 using ReactiveUI;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace BookCollector.Data

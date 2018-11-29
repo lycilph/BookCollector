@@ -88,6 +88,9 @@
     <Reference Include="ReactiveUI.WPF, Version=9.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReactiveUI.WPF.9.2.2\lib\net461\ReactiveUI.WPF.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Splat, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Splat.5.0.2\lib\net461\Splat.dll</HintPath>
     </Reference>
@@ -146,6 +149,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -174,18 +178,30 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Application\ApplicationNinjectModule.cs" />
+    <Compile Include="Application\Controllers\GoodreadsController.cs" />
+    <Compile Include="Application\Controllers\IGoodreadsController.cs" />
+    <Compile Include="Application\Processor\BackgroundProcessor.cs" />
     <Compile Include="Application\Constants.cs" />
     <Compile Include="Application\Controllers\IApplicationController.cs" />
     <Compile Include="Application\Controllers\IImportController.cs" />
     <Compile Include="Application\Controllers\ImportController.cs" />
     <Compile Include="Application\Messages\InformationMessage.cs" />
+    <Compile Include="Application\Processor\IBackgroundProcessor.cs" />
+    <Compile Include="Application\Processor\IProcess.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Data\Note.cs" />
     <Compile Include="Data\Shelf.cs" />
     <Compile Include="Data\Tag.cs" />
+    <Compile Include="Goodreads\CacheEntry.cs" />
+    <Compile Include="Goodreads\Data\GoodreadsBook.cs" />
     <Compile Include="Goodreads\Data\GoodreadsCSVBook.cs" />
+    <Compile Include="Goodreads\Data\GoodreadsSeries.cs" />
+    <Compile Include="Goodreads\Data\GoodreadsWork.cs" />
+    <Compile Include="Goodreads\GoodreadsClient.cs" />
     <Compile Include="Goodreads\GoodreadsImporter.cs" />
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
+    <Compile Include="Goodreads\Processes\BookInformationProcess.cs" />
+    <Compile Include="Goodreads\ResponseCache.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
     <Compile Include="Screens\Books\BookDetailsView.xaml.cs">
       <DependentUpon>BookDetailsView.xaml</DependentUpon>
@@ -330,6 +346,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Content\README_en_US.txt" />
+    <EmbeddedResource Include="Content\goodreads_api_secret.txt" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,4 +1,5 @@
 ﻿using BookCollector.Application.Controllers;
+using BookCollector.Application.Processor;
 using BookCollector.Data;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
@@ -25,9 +26,11 @@ namespace BookCollector.Application
 
             BindAsSingleton<IApplicationController, ApplicationController>();
             BindAsSingleton<IImportController, ImportController>();
+            BindAsSingleton<IGoodreadsController, GoodreadsController>();
             BindAsSingleton<IStateManager, StateManager>();
             BindAsSingleton<IRepository, Repository>();
             BindAsSingleton<ISearchEngine<Book>, SearchEngine<Book>>();
+            BindAsSingleton<IBackgroundProcessor, BackgroundProcessor>();
 
             BindAsSingleton<IShellViewModel, ShellViewModel>();
             BindAsSingleton<ICollectionsModule, IModule, CollectionsModuleViewModel>();

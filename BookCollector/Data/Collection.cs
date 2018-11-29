@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Panda.Collections;
 using Panda.Utils;
 using ReactiveUI;
 using System;

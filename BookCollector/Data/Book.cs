@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using Panda.Collections;
 using ReactiveUI;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -63,8 +63,8 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Tags, value); }
         }
 
-        private Dictionary<string, string> _Metadata = new Dictionary<string, string>();
-        public Dictionary<string, string> Metadata
+        private ObservableDictionary<string, string> _Metadata = new ObservableDictionary<string, string>();
+        public ObservableDictionary<string, string> Metadata
         {
             get { return _Metadata; }
             set { this.RaiseAndSetIfChanged(ref _Metadata, value); }

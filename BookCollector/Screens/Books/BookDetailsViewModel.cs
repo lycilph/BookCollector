@@ -1,7 +1,7 @@
 ﻿using BookCollector.Application;
 using BookCollector.Data;
+using Panda.Collections;
 using Panda.Infrastructure;
-using Panda.Utils;
 using ReactiveUI;
 
 namespace BookCollector.Screens.Books
@@ -9,6 +9,8 @@ namespace BookCollector.Screens.Books
     public class BookDetailsViewModel : ScreenBase
     {
         private IStateManager state_manager;
+
+        private object obj = new object();
 
         private Book _CurrentBook;
         public Book CurrentBook

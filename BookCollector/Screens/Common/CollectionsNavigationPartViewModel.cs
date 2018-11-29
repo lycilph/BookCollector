@@ -14,6 +14,13 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _ShowBooksCommand, value); }
         }
 
+        private ReactiveCommand<Unit, Unit> _ShowSeriesCommand;
+        public ReactiveCommand<Unit, Unit> ShowSeriesCommand
+        {
+            get { return _ShowSeriesCommand; }
+            set { this.RaiseAndSetIfChanged(ref _ShowSeriesCommand, value); }
+        }
+
         private ReactiveCommand<Unit, Unit> _ShowNotesCommand;
         public ReactiveCommand<Unit, Unit> ShowNotesCommand
         {
@@ -24,6 +31,7 @@ namespace BookCollector.Screens.Common
         public CollectionsNavigationPartViewModel()
         {
             ShowBooksCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Books));
+            ShowSeriesCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Series));
             ShowNotesCommand = ReactiveCommand.Create(() => MessageBus.Current.SendMessage(NavigationMessage.Notes));
         }
     }

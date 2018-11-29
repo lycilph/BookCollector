@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\ScrollOnNewItemBehavior.cs" />
+    <Compile Include="Collections\ObservableDictionary.cs" />
     <Compile Include="Converters\BoolToFontStyleConverter.cs" />
     <Compile Include="Converters\StringEmptyToEnabledConverter.cs" />
     <Compile Include="Converters\StringJoinConverter.cs" />
@@ -143,10 +144,11 @@
     <Compile Include="Search\StopWordHandler.cs" />
     <Compile Include="Utils\BindingProxy.cs" />
     <Compile Include="Utils\DirtyTrackingBase.cs" />
+    <Compile Include="Utils\DisposableBase.cs" />
     <Compile Include="Utils\EnumerableExtensions.cs" />
     <Compile Include="Utils\JsonUtils.cs" />
     <Compile Include="Utils\MemoryTarget.cs" />
-    <Compile Include="Utils\ObservableCollectionEx.cs" />
+    <Compile Include="Collections\ObservableCollectionEx.cs" />
     <Compile Include="Utils\ResourceExtensions.cs" />
     <Compile Include="Utils\StringExtensions.cs" />
     <Compile Include="Utils\StringMetrics.cs" />

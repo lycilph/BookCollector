@@ -1,4 +1,5 @@
 ﻿using BookCollector.Application.Messages;
+using BookCollector.Application.Processor;
 using BookCollector.Data;
 using BookCollector.Screens.Books;
 using BookCollector.Screens.Collections;
@@ -6,6 +7,7 @@ using BookCollector.Screens.Import;
 using BookCollector.Screens.Logs;
 using BookCollector.Screens.Notes;
 using BookCollector.Screens.Notes.AvalonEdit;
+using BookCollector.Screens.Series;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
 using NHunspell;
@@ -29,12 +31,20 @@ namespace BookCollector.Application.Controllers
         private IStateManager state_manager;
         private IShellViewModel shell;
         private ISearchEngine<Book> search_engine;
+        private IBackgroundProcessor background_processor;
+        private IGoodreadsController goodreads_controller;
 
-        public ApplicationController(IStateManager state_manager, IShellViewModel shell, ISearchEngine<Book> search_engine)
+        public ApplicationController(IStateManager state_manager, 
+                                     IShellViewModel shell, 
+                                     ISearchEngine<Book> search_engine, 
+                                     IBackgroundProcessor background_processor, 
+                                     IGoodreadsController goodreads_controller)
         {
             this.state_manager = state_manager;
             this.shell = shell;
             this.search_engine = search_engine;
+            this.background_processor = background_processor;
+            this.goodreads_controller = goodreads_controller;
         }
 
         public void Initialize()
@@ -44,11 +54,15 @@ namespace BookCollector.Application.Controllers
             InitializeSearchEngine();
             InitializeSpellChecker();
             state_manager.Initialize();
+            goodreads_controller.Initialize();
+            background_processor.Start();
         }
 
         public void Exit()
         {
             logger.Trace("Exiting application controller");
+            background_processor.Stop();
+            goodreads_controller.Exit();
             state_manager.Exit();
         }
 
@@ -127,6 +141,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case NavigationMessage.Books:
                     shell.NavigateTo(typeof(IBooksModule));
+                    break;
+                case NavigationMessage.Series:
+                    shell.NavigateTo(typeof(ISeriesModule));
                     break;
                 case NavigationMessage.Notes:
                     shell.NavigateTo(typeof(INotesModule));

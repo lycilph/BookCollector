@@ -22,9 +22,9 @@
                 Style="{StaticResource MaterialDesignFlatButton}"
                 Command="{Binding ShowBooksCommand}"/>
         <Button Content="Series" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowSeriesCommand}"/>
         <Button Content="Notes" 
                 Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"

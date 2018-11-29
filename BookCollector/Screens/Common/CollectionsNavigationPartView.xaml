@@ -16,7 +16,7 @@
                 Content="Books"/>
         <Button Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"
-                IsEnabled="False"
+                Command="{Binding ShowSeriesCommand}"
                 Content="Series"/>
         <Button Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"

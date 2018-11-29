@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Reactive.Linq;
 using System.Windows.Threading;
 
-namespace Panda.Utils
+namespace Panda.Collections
 {
     // https://stackoverflow.com/questions/269073/observablecollection-that-also-monitors-changes-on-the-elements-in-collection
     // https://github.com/kblc/Helpers/blob/master/Helpers.WPF/ObservableCollectionEx.cs

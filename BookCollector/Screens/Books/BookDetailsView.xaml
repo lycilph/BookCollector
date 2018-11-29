@@ -41,7 +41,8 @@
                        TextWrapping="Wrap"/>
 
             <Expander Header="Metadata"
-                      Margin="0,8,0,0">
+                      Margin="0,8,0,0"
+                      IsExpanded="True">
                 <DataGrid ItemsSource="{Binding CurrentBook.Metadata}"
                           IsReadOnly="True"
                           AutoGenerateColumns="False">
