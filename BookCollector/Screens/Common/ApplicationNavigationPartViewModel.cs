@@ -49,6 +49,13 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _ShowLogsCommand, value); }
         }
 
+        private ReactiveCommand<Unit, Unit> _ShowToolsCommand;
+        public ReactiveCommand<Unit, Unit> ShowToolsCommand
+        {
+            get { return _ShowToolsCommand; }
+            set { this.RaiseAndSetIfChanged(ref _ShowToolsCommand, value); }
+        }
+
         private ReactiveCommand<Unit, Unit> _ShowCollectionsCommand;
         public ReactiveCommand<Unit, Unit> ShowCollectionsCommand
         {
@@ -93,6 +100,12 @@ namespace BookCollector.Screens.Common
             {
                 IsOpen = false;
                 MessageBus.Current.SendMessage(NavigationMessage.Logs);
+            });
+
+            ShowToolsCommand = ReactiveCommand.Create(() =>
+            {
+                IsOpen = false;
+                MessageBus.Current.SendMessage(NavigationMessage.Tools);
             });
 
             ShowCollectionsCommand = ReactiveCommand.Create(() =>

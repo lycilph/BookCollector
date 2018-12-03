@@ -10,6 +10,7 @@ using BookCollector.Screens.Notes;
 using BookCollector.Screens.Series;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
+using BookCollector.Screens.Tools;
 using Ninject.Modules;
 using NLog;
 using Panda.Search;
@@ -40,6 +41,7 @@ namespace BookCollector.Application
             BindAsSingleton<ISeriesModule, IModule, SeriesModuleViewModel>();
             BindAsSingleton<IImportModule, IModule, ImportModuleViewModel>();
             BindAsSingleton<ILogsModule, IModule, LogsModuleViewModel>();
+            BindAsSingleton<IToolsModule, IModule, ToolsModuleViewModel>();
 
             BindSelfAsSingleton<ApplicationNavigationPartViewModel>();
             BindSelfAsSingleton<CollectionsNavigationPartViewModel>();

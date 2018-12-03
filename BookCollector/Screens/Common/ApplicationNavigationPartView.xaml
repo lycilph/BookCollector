@@ -42,9 +42,9 @@
                 Style="{StaticResource MaterialDesignFlatButton}"
                 Command="{Binding ShowLogsCommand}"/>
         <Button Content="Tools" 
-                IsEnabled="False"
                 Margin="0,8,0,0"
-                Style="{StaticResource MaterialDesignFlatButton}"/>
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Command="{Binding ShowToolsCommand}"/>
 
         <TextBlock Text="Application"
                    Style="{StaticResource MaterialDesignSubheadingTextBlock}"

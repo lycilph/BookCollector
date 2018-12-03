@@ -177,9 +177,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application\ApplicationNinjectModule.cs">
-      <DependentUpon>IModule.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Application\ApplicationNinjectModule.cs" />
     <Compile Include="Application\Controllers\GoodreadsController.cs">
       <DependentUpon>IGoodreadsController.cs</DependentUpon>
     </Compile>
@@ -333,6 +331,11 @@
     <Compile Include="Screens\Shell\ShellViewModel.cs">
       <DependentUpon>IShellViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Tools\IToolsModule.cs" />
+    <Compile Include="Screens\Tools\ToolsModuleView.xaml.cs">
+      <DependentUpon>ToolsModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Tools\ToolsModuleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\Bootstrapper.cs" />
@@ -473,6 +476,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Shell\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Tools\ToolsModuleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

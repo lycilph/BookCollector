@@ -10,6 +10,7 @@ using BookCollector.Screens.Notes.AvalonEdit;
 using BookCollector.Screens.Series;
 using BookCollector.Screens.Settings;
 using BookCollector.Screens.Shell;
+using BookCollector.Screens.Tools;
 using NHunspell;
 using NLog;
 using Panda.Search;
@@ -138,6 +139,9 @@ namespace BookCollector.Application.Controllers
                     break;
                 case NavigationMessage.Logs:
                     shell.NavigateTo(typeof(ILogsModule));
+                    break;
+                case NavigationMessage.Tools:
+                    shell.NavigateTo(typeof(IToolsModule));
                     break;
                 case NavigationMessage.Books:
                     shell.NavigateTo(typeof(IBooksModule));

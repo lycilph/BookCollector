@@ -20,7 +20,7 @@
                 Content="Logs"/>
         <Button Margin="0,8,0,0"
                 Style="{StaticResource MaterialDesignFlatButton}"
-                IsEnabled="False"
+                Command="{Binding ShowToolsCommand}"
                 Content="Tools"/>
     </StackPanel>
 </UserControl>
