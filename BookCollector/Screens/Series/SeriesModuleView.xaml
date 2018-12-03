@@ -45,6 +45,8 @@
                             <Run Text="Items in queue: "/>
                             <Run Text="{Binding Count}"/>
                         </TextBlock>
+                        <Button Content="Clear queue"
+                                Command="{Binding ClearQueue}"/>
                     </StackPanel>
                 </DockPanel>
             </DockPanel>

@@ -131,7 +131,7 @@ namespace BookCollector.Application.Controllers
             switch (message)
             {
                 case NavigationMessage.Collections:
-                    shell.NavigateTo(typeof(ICollectionsModule), show_windows_commands: false);
+                    NavigateToCollectionsModule();
                     break;
                 case NavigationMessage.Import:
                     shell.NavigateTo(typeof(IImportModule));
@@ -166,7 +166,17 @@ namespace BookCollector.Application.Controllers
                 shell.ShowMessage(message.Content);
         }
 
-        public void IndexCollection()
+        private void NavigateToCollectionsModule()
+        {
+            // Make sure this is cleared in case current collection is replaced
+            background_processor.Clear();
+            // Save the CurrentCollection in case it is replaced
+            state_manager.SaveCurrentCollection();
+            // Do the actual navigation to the collections module
+            shell.NavigateTo(typeof(ICollectionsModule), show_windows_commands: false);
+        }
+
+        private void IndexCollection()
         {
             if (state_manager.CurrentCollection == null)
             {

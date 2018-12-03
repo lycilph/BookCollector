@@ -23,6 +23,10 @@ namespace BookCollector.Goodreads.Processes
 
         public void Execute(CancellationToken token)
         {
+            // Check if this has already been processed
+            if (book.Metadata.ContainsKey("GoodreadsWorkId"))
+                return;
+
             var id = book.Metadata["GoodreadsBookId"];
             var goodreads_book = client.GetBookById(id, token);
 

@@ -196,6 +196,7 @@
     <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Application\Processor\IBackgroundProcessor.cs" />
     <Compile Include="Application\Processor\IProcess.cs" />
+    <Compile Include="Application\Processor\TypeCountPair.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Data\Note.cs" />
     <Compile Include="Data\Shelf.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Goodreads\GoodreadsImporter.cs" />
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
     <Compile Include="Goodreads\Processes\BookInformationProcess.cs" />
+    <Compile Include="Goodreads\Processes\DummyProcess.cs" />
     <Compile Include="Goodreads\ResponseCache.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
     <Compile Include="Screens\Books\BookDetailsView.xaml.cs">

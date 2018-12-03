@@ -1,11 +1,14 @@
-﻿namespace BookCollector.Application.Processor
+﻿using System.Collections.Generic;
+
+namespace BookCollector.Application.Processor
 {
     public interface IBackgroundProcessor
     {
-        int Count { get; }
+        List<TypeCountPair> Status { get; }
 
         void Start();
         void Stop();
         void Add(IProcess process);
+        void Clear();
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 namespace BookCollector.Data
 {
     [JsonObject(MemberSerialization.OptOut)]
-    public class Settings
+    public class Settings // This is NOT based on DirtyTrackingBase since it will always be dirty if a collection is opened (the timestamp changes every time)
     {
         public bool LoadMostRecentCollectionOnStart { get; set; } = false;
         public int SnackbarMessageDuration { get; set; } = 2;

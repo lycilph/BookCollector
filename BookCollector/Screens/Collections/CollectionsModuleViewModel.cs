@@ -90,10 +90,6 @@ namespace BookCollector.Screens.Collections
                 else
                     c.Name = collection.Name;
             }
-
-            // Save the CurrentCollection in case it is replaced
-            if (state_manager.CurrentCollection != null)
-                repository.SaveCollection(state_manager.CurrentCollection);
         }
 
         public override void OnDeactivated()
@@ -109,7 +105,7 @@ namespace BookCollector.Screens.Collections
             if (recent_collection.Invalid)
             {
                 var result = (bool) await DialogManager.ShowPromptDialogAsync("Invalid Collection", "Do you want to remove it from the list?");
-                if (result == true)
+                if (result)
                 {
                     state_manager.RemoveFromRecentCollections(recent_collection.Obj);
                     RecentCollections.Remove(recent_collection);

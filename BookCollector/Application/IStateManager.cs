@@ -12,6 +12,7 @@ namespace BookCollector.Application
         void Exit();
 
         void SetCurrentCollection(Collection collection);
+        void SaveCurrentCollection();
 
         List<RecentlyOpenedCollection> GetRecentCollections();
         void RemoveFromRecentCollections(RecentlyOpenedCollection recent_collection);

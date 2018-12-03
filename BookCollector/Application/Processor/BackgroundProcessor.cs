@@ -1,20 +1,28 @@
 ﻿using NLog;
+using ReactiveUI;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace BookCollector.Application.Processor
 {
-    public class BackgroundProcessor : IBackgroundProcessor
+    public class BackgroundProcessor : ReactiveObject, IBackgroundProcessor
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        private BlockingCollection<IProcess> queue = new BlockingCollection<IProcess>();
+        private BlockingCollection<IProcess> collection = new BlockingCollection<IProcess>();
         private CancellationTokenSource cts;
         private Task processing_task;
 
-        public int Count { get { return queue.Count; } }
+        private List<TypeCountPair> _Status;
+        public List<TypeCountPair> Status
+        {
+            get { return _Status; }
+            set { this.RaiseAndSetIfChanged(ref _Status, value); }
+        }
 
         public void Start()
         {
@@ -25,18 +33,21 @@ namespace BookCollector.Application.Processor
 
             processing_task = Task.Run(() =>
             {
-                while (!queue.IsCompleted && !token.IsCancellationRequested)
+                while (!collection.IsCompleted && !token.IsCancellationRequested)
                 {
                     try
                     {
-                        var process = queue.Take(token);
-                        process.Execute(token);
+                        if (collection.TryTake(out IProcess item, 250, token))
+                            item.Execute(token);
                     }
                     catch (OperationCanceledException e)
                     {
                         logger.Trace($"Got an OperationCanceledException [{e.Message}]");
                     }
-                    
+
+                    Status = collection.GroupBy(i => i.GetType())
+                                  .Select(g => new TypeCountPair(g.Key, g.Count()))
+                                  .ToList();
                 }
             }, token);
         }
@@ -51,7 +62,17 @@ namespace BookCollector.Application.Processor
 
         public void Add(IProcess process)
         {
-            queue.Add(process);
+            collection.Add(process);
+        }
+
+        public void Clear()
+        {
+            logger.Trace("Clearing background queue");
+
+            Task.Run(() =>
+            {
+                while (collection.TryTake(out IProcess _)) { }
+            });
         }
     }
 }

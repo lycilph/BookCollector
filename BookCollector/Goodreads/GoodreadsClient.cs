@@ -10,6 +10,7 @@ namespace BookCollector.Goodreads
 {
     public class GoodreadsClient : DisposableBase
     {
+        private const int goodreads_min_delay = 1000;
         private readonly string api_key;
         private readonly RestClient client = new RestClient(@"https://www.goodreads.com");
         private readonly ResponseCache cache;
@@ -51,7 +52,7 @@ namespace BookCollector.Goodreads
             {
                 var response = client.Execute<T>(request);
                 cache.Add(uri, response.Content, expiry_time);
-                Task.Delay(10000, token).ContinueWith(_ => { }).Wait(); // The ContinueWith eats the TaskCancelledException
+                Task.Delay(goodreads_min_delay, token).ContinueWith(_ => { }).Wait(); // The ContinueWith eats the TaskCancelledException
                 return response.Data;
             }
         }

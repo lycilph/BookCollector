@@ -1,12 +1,16 @@
 ﻿using BookCollector.Application;
 using BookCollector.Application.Controllers;
 using BookCollector.Application.Processor;
+using BookCollector.Dialogs;
+using BookCollector.Goodreads.Processes;
 using BookCollector.Screens.Common;
+using MaterialDesignThemes.Wpf;
 using ReactiveUI;
 using System;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 
 namespace BookCollector.Screens.Series
 {
@@ -21,6 +25,13 @@ namespace BookCollector.Screens.Series
         {
             get { return _AddCommand; }
             set { this.RaiseAndSetIfChanged(ref _AddCommand, value); }
+        }
+
+        private ReactiveCommand<Unit, Unit> _ClearQueue;
+        public ReactiveCommand<Unit, Unit> ClearQueue
+        {
+            get { return _ClearQueue; }
+            set { this.RaiseAndSetIfChanged(ref _ClearQueue, value); }
         }
 
         private int _Count;
@@ -44,15 +55,25 @@ namespace BookCollector.Screens.Series
             this.background_processor = background_processor;
 
             AddCommand = ReactiveCommand.Create(Add);
+            ClearQueue = ReactiveCommand.Create(Clear);
 
-            Observable.Interval(TimeSpan.FromMilliseconds(500))
-                      .Subscribe(_ => Count = background_processor.Count);
+            this.WhenAnyValue(x => x.background_processor.Status)
+                .Where(s => s != null)
+                .Select(s => s.FirstOrDefault(p => p.Type == typeof(DummyProcess)))
+                .Subscribe(p => Count = (p == null ? 0 : p.Count));
         }
 
         private void Add()
         {
-            foreach (var book in state_manager.CurrentCollection.Books.Where(b => !b.Metadata.ContainsKey("GoodreadsWorkId")).Take(10))
-                goodreads_controller.LookupBookInformation(book);
+            //foreach (var book in state_manager.CurrentCollection.Books.Where(b => !b.Metadata.ContainsKey("GoodreadsWorkId")).Take(10))
+            //    goodreads_controller.LookupBookInformation(book);
+            for (int i = 0; i < 100; i++)
+                goodreads_controller.AddDummy();
+        }
+
+        private void Clear()
+        {
+            background_processor.Clear();
         }
     }
 }

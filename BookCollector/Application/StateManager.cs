@@ -73,6 +73,12 @@ namespace BookCollector.Application
                 Settings.AddOrUpdateRecentCollection(collection);
         }
 
+        public void SaveCurrentCollection()
+        {
+            if (CurrentCollection != null)
+                repository.SaveCollection(CurrentCollection);
+        }
+
         public List<RecentlyOpenedCollection> GetRecentCollections()
         {
             return Settings.RecentCollections;
