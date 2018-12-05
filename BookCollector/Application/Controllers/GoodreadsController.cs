@@ -40,7 +40,6 @@ namespace BookCollector.Application.Controllers
             logger.Trace("Initializing goodreads controller");
             client = new GoodreadsClient(cache_filename, api_secret_filename);
 
-
             var obs1 = this.WhenAnyValue(x => x.state_manager.CurrentCollection).Select(_ => Unit.Default);
             var obs2 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Books.CollectionChangedEx).Select(_ => Unit.Default);
             Observable.Merge(obs1, obs2)
@@ -64,7 +63,7 @@ namespace BookCollector.Application.Controllers
         {
             state_manager.CurrentCollection.Books
                 .Where(b => !b.Metadata.ContainsKey("GoodreadsWorkId"))
-                .Apply(b => LookupBookInformation(b));
+                .Apply(LookupBookInformation);
         }
 
         private void LookupBookInformation(Book book)

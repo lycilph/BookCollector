@@ -1,4 +1,4 @@
-﻿   using System;
+﻿using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,14 +12,14 @@ namespace BookCollector.Goodreads.Processes
     {
         private readonly GoodreadsClient client;
         private readonly Book book;
-        private readonly IProgress<string> progress;
+        private readonly IProgress<string> log;
         private readonly TaskScheduler scheduler;
 
-        public BookInformationProcess(GoodreadsClient client, Book book, IProgress<string> progress, TaskScheduler scheduler)
+        public BookInformationProcess(GoodreadsClient client, Book book, IProgress<string> log, TaskScheduler scheduler)
         {
             this.client = client;
             this.book = book;
-            this.progress = progress;
+            this.log = log;
             this.scheduler = scheduler;
         }
 
@@ -29,12 +29,12 @@ namespace BookCollector.Goodreads.Processes
             if (book.Metadata.ContainsKey("GoodreadsWorkId"))
                 return;
 
-            progress.Report($"Processing {book.Title}");
+            log.Report($"Processing {book.Title}");
 
             var id = book.Metadata["GoodreadsBookId"];
             var goodreads_book = client.GetBookById(id, token);
 
-            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), token, TaskCreationOptions.None, scheduler);
+            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), token, TaskCreationOptions.DenyChildAttach, scheduler);
         }
 
         private void UpdateBook(Book book, GoodreadsBook goodreads_book)

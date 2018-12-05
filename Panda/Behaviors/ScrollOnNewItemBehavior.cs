@@ -40,7 +40,10 @@ namespace Panda.Behaviors
         {
             if (e.Action == NotifyCollectionChangedAction.Add)
             {
-                Scroll();
+                if (Dispatcher.CheckAccess() == false)
+                    Dispatcher.Invoke(Scroll);
+                else
+                    Scroll();
             }
         }
 
@@ -52,10 +55,10 @@ namespace Panda.Behaviors
 
             var item = AssociatedObject.Items[count - 1];
 
-            if (!(AssociatedObject.ItemContainerGenerator.ContainerFromItem(item) is FrameworkElement frameworkElement))
+            if (!(AssociatedObject.ItemContainerGenerator.ContainerFromItem(item) is FrameworkElement framework_element))
                 return;
 
-            frameworkElement.BringIntoView();
+            framework_element.BringIntoView();
         }
     }
 }
