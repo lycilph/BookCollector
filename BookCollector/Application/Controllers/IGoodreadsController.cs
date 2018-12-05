@@ -6,8 +6,5 @@ namespace BookCollector.Application.Controllers
     {
         void Exit();
         void Initialize();
-
-        void LookupBookInformation(Book book);
-        void AddDummy();
     }
 }

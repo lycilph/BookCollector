@@ -12,12 +12,14 @@ namespace BookCollector.Goodreads.Processes
     {
         private readonly GoodreadsClient client;
         private readonly Book book;
+        private readonly IProgress<string> progress;
         private readonly TaskScheduler scheduler;
 
-        public BookInformationProcess(GoodreadsClient client, Book book, TaskScheduler scheduler)
+        public BookInformationProcess(GoodreadsClient client, Book book, IProgress<string> progress, TaskScheduler scheduler)
         {
             this.client = client;
             this.book = book;
+            this.progress = progress;
             this.scheduler = scheduler;
         }
 
@@ -26,6 +28,8 @@ namespace BookCollector.Goodreads.Processes
             // Check if this has already been processed
             if (book.Metadata.ContainsKey("GoodreadsWorkId"))
                 return;
+
+            progress.Report($"Processing {book.Title}");
 
             var id = book.Metadata["GoodreadsBookId"];
             var goodreads_book = client.GetBookById(id, token);

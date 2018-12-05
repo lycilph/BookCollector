@@ -32,10 +32,49 @@
                     </md:PopupBox>
                 </ext:AppBar>
 
-                <DockPanel Grid.Row="1"
-                           Margin="32">
-                    <ContentControl/>
-                </DockPanel>
+                <StackPanel Grid.Row="1"
+                            Margin="32">
+                    <TextBlock Text="Background Processing"
+                               Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+                    <TextBlock Margin="8,8,0,0">
+                        <Run Text="Book Information Processes: "/>
+                        <Run Text="{Binding BookInformationProcessCount}"/>
+                    </TextBlock>
+
+                    <TextBlock Margin="8,8,0,0">
+                        <Run Text="Series Information Processes: "/>
+                        <Run Text="xxx"/>
+                    </TextBlock>
+
+                    <TextBlock Margin="8,8,0,0">
+                        <Run Text="Image Download Processes: "/>
+                        <Run Text="xxx"/>
+                    </TextBlock>
+                    
+                    <TextBlock Text="Series Tools"
+                               Margin="0,8,0,0"
+                               Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+                    <Button Content="Save Unfinished Series Report as a Note"
+                            Margin="0,8,0,0"
+                            IsEnabled="False"
+                            HorizontalAlignment="Left"/>
+
+                    <TextBlock Text="Miscellaneous Tools"
+                               Margin="0,8,0,0"
+                               Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
+
+                    <Button Content="Bulk move series to a shelf"
+                            Margin="0,8,0,0"
+                            IsEnabled="False"
+                            HorizontalAlignment="Left"/>
+
+                    <Button Content="Clear collection"
+                            Margin="0,8,0,0"
+                            IsEnabled="False"
+                            HorizontalAlignment="Left"/>
+                </StackPanel>
             </Grid>
         </md:DrawerHost>
     </md:TransitioningContent>

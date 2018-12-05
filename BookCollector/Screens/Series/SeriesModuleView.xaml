@@ -37,17 +37,7 @@
                         <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
                     </StackPanel>
 
-                    <!-- TEMP/DEBUG -->
-                    <StackPanel>
-                        <Button Content="Add Book process"
-                                Command="{Binding AddCommand}"/>
-                        <TextBlock>
-                            <Run Text="Items in queue: "/>
-                            <Run Text="{Binding Count}"/>
-                        </TextBlock>
-                        <Button Content="Clear queue"
-                                Command="{Binding ClearQueue}"/>
-                    </StackPanel>
+                    <ContentControl/>
                 </DockPanel>
             </DockPanel>
         </md:DrawerHost>

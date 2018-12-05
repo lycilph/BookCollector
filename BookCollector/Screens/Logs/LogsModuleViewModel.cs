@@ -5,6 +5,7 @@ using Panda.Utils;
 using ReactiveUI;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Data;
 
 namespace BookCollector.Screens.Logs
 {
