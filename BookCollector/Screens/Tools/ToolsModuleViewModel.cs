@@ -1,5 +1,5 @@
 ﻿using BookCollector.Application.Processor;
-using BookCollector.Goodreads.Processes;
+using BookCollector.Goodreads.Items;
 using BookCollector.Screens.Common;
 using Panda.Infrastructure;
 using ReactiveUI;
@@ -34,6 +34,13 @@ namespace BookCollector.Screens.Tools
             set { this.RaiseAndSetIfChanged(ref _BookInformationProcessCount, value); }
         }
 
+        private int _SeriesInformationProcessCount;
+        public int SeriesInformationProcessCount
+        {
+            get { return _SeriesInformationProcessCount; }
+            set { this.RaiseAndSetIfChanged(ref _SeriesInformationProcessCount, value); }
+        }
+
         public ToolsModuleViewModel(ApplicationNavigationPartViewModel application_navigation_part,
                                     ToolsNavigationPartViewModel tools_navigation_part,
                                     IBackgroundProcessor background_processor)
@@ -44,8 +51,14 @@ namespace BookCollector.Screens.Tools
 
             this.WhenAnyValue(x => x.background_processor.Status)
                 .Where(s => s != null)
-                .Select(s => s.FirstOrDefault(p => p.Type == typeof(BookInformationProcess)))
+                .Select(s => s.FirstOrDefault(p => p.Type == typeof(BookInformationItem)))
                 .Subscribe(p => BookInformationProcessCount = (p == null ? 0 : p.Count));
+
+
+            this.WhenAnyValue(x => x.background_processor.Status)
+                .Where(s => s != null)
+                .Select(s => s.FirstOrDefault(p => p.Type == typeof(SeriesInformationItem)))
+                .Subscribe(p => SeriesInformationProcessCount = (p == null ? 0 : p.Count));
         }
     }
 }

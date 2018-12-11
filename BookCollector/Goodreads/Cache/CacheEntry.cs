@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BookCollector.Goodreads
+namespace BookCollector.Goodreads.Cache
 {
     public class CacheEntry
     {

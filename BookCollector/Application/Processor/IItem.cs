@@ -2,7 +2,7 @@
 
 namespace BookCollector.Application.Processor
 {
-    public interface IProcess
+    public interface IItem
     {
         void Execute(CancellationToken token);
     }

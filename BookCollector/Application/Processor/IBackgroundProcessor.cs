@@ -8,7 +8,7 @@ namespace BookCollector.Application.Processor
 
         void Start();
         void Stop();
-        void Add(IProcess process);
+        void Add(IItem item);
         void Clear();
     }
 }

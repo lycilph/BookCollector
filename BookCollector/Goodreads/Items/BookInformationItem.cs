@@ -6,16 +6,16 @@ using BookCollector.Application.Processor;
 using BookCollector.Data;
 using BookCollector.Goodreads.Data;
 
-namespace BookCollector.Goodreads.Processes
+namespace BookCollector.Goodreads.Items
 {
-    public class BookInformationProcess : IProcess
+    public class BookInformationItem : IItem
     {
         private readonly GoodreadsClient client;
         private readonly Book book;
         private readonly IProgress<string> log;
         private readonly TaskScheduler scheduler;
 
-        public BookInformationProcess(GoodreadsClient client, Book book, IProgress<string> log, TaskScheduler scheduler)
+        public BookInformationItem(GoodreadsClient client, Book book, IProgress<string> log, TaskScheduler scheduler)
         {
             this.client = client;
             this.book = book;

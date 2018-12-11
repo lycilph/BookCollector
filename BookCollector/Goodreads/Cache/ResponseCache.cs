@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace BookCollector.Goodreads
+namespace BookCollector.Goodreads.Cache
 {
     [JsonObject(MemberSerialization.OptOut)]
     public class ResponseCache : DirtyTrackingBase

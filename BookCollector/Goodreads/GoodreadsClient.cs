@@ -1,4 +1,5 @@
-﻿using BookCollector.Goodreads.Data;
+﻿using BookCollector.Goodreads.Cache;
+using BookCollector.Goodreads.Data;
 using Panda.Utils;
 using RestSharp;
 using System;
@@ -10,7 +11,7 @@ namespace BookCollector.Goodreads
 {
     public class GoodreadsClient : DisposableBase
     {
-        private const int goodreads_min_delay = 1000;
+        private const int goodreads_min_delay = 1000; //This is a requirement from Goodreads
         private readonly string api_key;
         private readonly RestClient client = new RestClient(@"https://www.goodreads.com");
         private readonly ResponseCache cache;
@@ -40,6 +41,17 @@ namespace BookCollector.Goodreads
             var uri = client.BuildUri(request).ToString();
 
             return ExecuteRequest<GoodreadsBook>(request, uri, token);
+        }
+
+        public GoodreadsSeries GetSeriesById(string id, CancellationToken token)
+        {
+            var request = new RestRequest($"series/{id}")
+                .AddQueryParameter("format", "xml")
+                .AddQueryParameter("key", api_key);
+            request.RequestFormat = DataFormat.Xml;
+            var uri = client.BuildUri(request).ToString();
+
+            return ExecuteRequest<GoodreadsSeries>(request, uri, token, TimeSpan.FromDays(7));
         }
 
         private T ExecuteRequest<T>(IRestRequest request, string uri, CancellationToken token, TimeSpan? expiry_time = null) where T : new()

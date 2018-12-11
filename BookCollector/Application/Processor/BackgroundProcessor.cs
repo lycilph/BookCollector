@@ -13,7 +13,7 @@ namespace BookCollector.Application.Processor
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
-        private BlockingCollection<IProcess> collection = new BlockingCollection<IProcess>();
+        private BlockingCollection<IItem> collection = new BlockingCollection<IItem>();
         private CancellationTokenSource cts;
         private Task processing_task;
 
@@ -37,7 +37,7 @@ namespace BookCollector.Application.Processor
                 {
                     try
                     {
-                        if (collection.TryTake(out IProcess item, 250, token))
+                        if (collection.TryTake(out IItem item, 250, token))
                             item.Execute(token);
                     }
                     catch (OperationCanceledException e)
@@ -60,9 +60,9 @@ namespace BookCollector.Application.Processor
             processing_task.Wait();
         }
 
-        public void Add(IProcess process)
+        public void Add(IItem item)
         {
-            collection.Add(process);
+            collection.Add(item);
         }
 
         public void Clear()
@@ -71,7 +71,7 @@ namespace BookCollector.Application.Processor
 
             Task.Run(() =>
             {
-                while (collection.TryTake(out IProcess _)) { }
+                while (collection.TryTake(out IItem _)) { }
             });
         }
     }

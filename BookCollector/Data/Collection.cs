@@ -35,6 +35,13 @@ namespace BookCollector.Data
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
         }
 
+        private ObservableCollectionEx<Series> _Series = new ObservableCollectionEx<Series>();
+        public ObservableCollectionEx<Series> Series
+        {
+            get { return _Series; }
+            set { this.RaiseAndSetIfChanged(ref _Series, value); }
+        }
+
         private ObservableCollectionEx<Note> _Notes = new ObservableCollectionEx<Note>();
         public ObservableCollectionEx<Note> Notes
         {
@@ -73,6 +80,11 @@ namespace BookCollector.Data
         public void Add(IEnumerable<Book> books)
         {
             Books.AddRange(books);
+        }
+
+        public void Add(Series series)
+        {
+            Series.Add(series);
         }
 
         public Shelf AddShelf(string name)

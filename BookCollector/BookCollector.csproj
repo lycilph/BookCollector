@@ -193,13 +193,15 @@
     </Compile>
     <Compile Include="Application\Messages\InformationMessage.cs" />
     <Compile Include="Application\Processor\IBackgroundProcessor.cs" />
-    <Compile Include="Application\Processor\IProcess.cs" />
+    <Compile Include="Application\Processor\IItem.cs" />
     <Compile Include="Application\Processor\TypeCountPair.cs" />
     <Compile Include="Data\Book.cs" />
     <Compile Include="Data\Note.cs" />
+    <Compile Include="Data\Series.cs" />
+    <Compile Include="Data\SeriesEntry.cs" />
     <Compile Include="Data\Shelf.cs" />
     <Compile Include="Data\Tag.cs" />
-    <Compile Include="Goodreads\CacheEntry.cs" />
+    <Compile Include="Goodreads\Cache\CacheEntry.cs" />
     <Compile Include="Goodreads\Data\GoodreadsBook.cs" />
     <Compile Include="Goodreads\Data\GoodreadsCSVBook.cs" />
     <Compile Include="Goodreads\Data\GoodreadsSeries.cs" />
@@ -207,9 +209,10 @@
     <Compile Include="Goodreads\GoodreadsClient.cs" />
     <Compile Include="Goodreads\GoodreadsImporter.cs" />
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
-    <Compile Include="Goodreads\Processes\BookInformationProcess.cs" />
-    <Compile Include="Goodreads\Processes\SeriesInformationProcess.cs" />
-    <Compile Include="Goodreads\ResponseCache.cs" />
+    <Compile Include="Goodreads\Items\BookInformationItem.cs" />
+    <Compile Include="Goodreads\Items\CheckCollectionItem.cs" />
+    <Compile Include="Goodreads\Items\SeriesInformationItem.cs" />
+    <Compile Include="Goodreads\Cache\ResponseCache.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
     <Compile Include="Screens\Books\BookDetailsView.xaml.cs">
       <DependentUpon>BookDetailsView.xaml</DependentUpon>

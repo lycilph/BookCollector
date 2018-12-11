@@ -1,6 +1,7 @@
 ﻿using BookCollector.Data;
 using BookCollector.Goodreads.Data;
 using Panda.Collections;
+using Panda.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,9 +32,47 @@ namespace BookCollector.Goodreads
             };
         }
 
+        public static Series Map(GoodreadsSeries goodreads_series)
+        {
+            var works = Map(goodreads_series.SeriesWorks);
+            return new Series
+            {
+                Title = goodreads_series.Title.Trim(),
+                LastChecked = DateTime.Now,
+                Entries = works.Where(w => w.Position >= 0)
+                               .OrderBy(w => w.Position)
+                               .ToObservableCollectionEx(),
+                Metadata = new ObservableDictionary<string, string>
+                {
+                    {"GoodreadsSeriesId", goodreads_series.Id}
+                }
+            };
+        }
+
+        public static SeriesEntry Map(GoodreadsWork goodreads_work)
+        {
+            bool result = int.TryParse(goodreads_work.UserPosition, out int position);
+
+            return new SeriesEntry
+            {
+                Position = result ? position : -1,
+                Metadata = new ObservableDictionary<string, string>
+                {
+                    {"GoodreadsSeriesWorkId", goodreads_work.Id},
+                    {"GoodreadsWorkId", goodreads_work.Work.Id},
+                    {"GoodreadsBestBookId", goodreads_work.BestBook.Id}
+                }
+            };
+        }
+
         public static IEnumerable<Book> Map(IEnumerable<GoodreadsCSVBook> goodreads_books)
         {
             return goodreads_books.Select(b => Map(b));
+        }
+
+        public static IEnumerable<SeriesEntry> Map(IEnumerable<GoodreadsWork> goodreads_works)
+        {
+            return goodreads_works.Select(w => Map(w));
         }
     }
 }

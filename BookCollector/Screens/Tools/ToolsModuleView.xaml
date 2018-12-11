@@ -44,7 +44,7 @@
 
                     <TextBlock Margin="8,8,0,0">
                         <Run Text="Series Information Processes: "/>
-                        <Run Text="xxx"/>
+                        <Run Text="{Binding SeriesInformationProcessCount}"/>
                     </TextBlock>
 
                     <TextBlock Margin="8,8,0,0">
@@ -66,6 +66,11 @@
                                Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
 
                     <Button Content="Bulk move series to a shelf"
+                            Margin="0,8,0,0"
+                            IsEnabled="False"
+                            HorizontalAlignment="Left"/>
+
+                    <Button Content="Clear Goodreads Cache"
                             Margin="0,8,0,0"
                             IsEnabled="False"
                             HorizontalAlignment="Left"/>
