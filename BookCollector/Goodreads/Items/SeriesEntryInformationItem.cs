@@ -26,6 +26,8 @@ namespace BookCollector.Goodreads.Items
 
         public void Execute(CancellationToken token)
         {
+            Thread.Sleep(1000);
+
             var book = collection.Books.FirstOrDefault(b => b.Metadata["GoodreadsWorkId"] == entry.Metadata["GoodreadsWorkId"]);
             var found_in_collection = true;
 

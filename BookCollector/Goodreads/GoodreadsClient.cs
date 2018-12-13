@@ -58,6 +58,9 @@ namespace BookCollector.Goodreads
         {
             if (cache.IsCached(uri))
             {
+                // DEBUG
+                Task.Delay(goodreads_min_delay, token).ContinueWith(_ => { }).Wait();
+
                 return cache.Get<T>(uri);
             }
             else

@@ -7,7 +7,7 @@ namespace Panda.Infrastructure
     public class ItemViewModel<T> : ReactiveObject, IDisposable
     {
         private bool disposed = false; // To detect redundant calls
-        private CompositeDisposable observables;
+        protected CompositeDisposable observables;
 
         public T Obj { get; protected set; }
 
