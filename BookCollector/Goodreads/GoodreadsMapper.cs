@@ -38,7 +38,6 @@ namespace BookCollector.Goodreads
             return new Series
             {
                 Title = goodreads_series.Title.Trim(),
-                LastChecked = DateTime.Now,
                 Entries = works.Where(w => w.Position >= 0)
                                .OrderBy(w => w.Position)
                                .ToObservableCollectionEx(),
@@ -62,6 +61,15 @@ namespace BookCollector.Goodreads
                     {"GoodreadsWorkId", goodreads_work.Work.Id},
                     {"GoodreadsBestBookId", goodreads_work.BestBook.Id}
                 }
+            };
+        }
+
+        // This is used for series entries, which are NOT already in the collection
+        public static Book Map(GoodreadsBook goodreads_book)
+        {
+            return new Book
+            {
+                Title = goodreads_book.Title
             };
         }
 

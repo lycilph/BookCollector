@@ -27,18 +27,25 @@ namespace BookCollector.Screens.Tools
             set { this.RaiseAndSetIfChanged(ref _ToolsNavigationPart, value); }
         }
 
-        private int _BookInformationProcessCount;
-        public int BookInformationProcessCount
+        private int _BookInformationCount;
+        public int BookInformationCount
         {
-            get { return _BookInformationProcessCount; }
-            set { this.RaiseAndSetIfChanged(ref _BookInformationProcessCount, value); }
+            get { return _BookInformationCount; }
+            set { this.RaiseAndSetIfChanged(ref _BookInformationCount, value); }
         }
 
-        private int _SeriesInformationProcessCount;
-        public int SeriesInformationProcessCount
+        private int _SeriesInformationCount;
+        public int SeriesInformationCount
         {
-            get { return _SeriesInformationProcessCount; }
-            set { this.RaiseAndSetIfChanged(ref _SeriesInformationProcessCount, value); }
+            get { return _SeriesInformationCount; }
+            set { this.RaiseAndSetIfChanged(ref _SeriesInformationCount, value); }
+        }
+
+        private int _EntriesInformationCount;
+        public int EntriesInformationCount
+        {
+            get { return _EntriesInformationCount; }
+            set { this.RaiseAndSetIfChanged(ref _EntriesInformationCount, value); }
         }
 
         public ToolsModuleViewModel(ApplicationNavigationPartViewModel application_navigation_part,
@@ -52,13 +59,17 @@ namespace BookCollector.Screens.Tools
             this.WhenAnyValue(x => x.background_processor.Status)
                 .Where(s => s != null)
                 .Select(s => s.FirstOrDefault(p => p.Type == typeof(BookInformationItem)))
-                .Subscribe(p => BookInformationProcessCount = (p == null ? 0 : p.Count));
-
+                .Subscribe(p => BookInformationCount = (p == null ? 0 : p.Count));
 
             this.WhenAnyValue(x => x.background_processor.Status)
                 .Where(s => s != null)
                 .Select(s => s.FirstOrDefault(p => p.Type == typeof(SeriesInformationItem)))
-                .Subscribe(p => SeriesInformationProcessCount = (p == null ? 0 : p.Count));
+                .Subscribe(p => SeriesInformationCount = (p == null ? 0 : p.Count));
+
+            this.WhenAnyValue(x => x.background_processor.Status)
+                .Where(s => s != null)
+                .Select(s => s.FirstOrDefault(p => p.Type == typeof(SeriesEntryInformationItem)))
+                .Subscribe(p => EntriesInformationCount = (p == null ? 0 : p.Count));
         }
     }
 }

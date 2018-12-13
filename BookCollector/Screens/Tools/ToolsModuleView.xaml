@@ -39,12 +39,17 @@
 
                     <TextBlock Margin="8,8,0,0">
                         <Run Text="Book Information Processes: "/>
-                        <Run Text="{Binding BookInformationProcessCount}"/>
+                        <Run Text="{Binding BookInformationCount}"/>
                     </TextBlock>
 
                     <TextBlock Margin="8,8,0,0">
                         <Run Text="Series Information Processes: "/>
-                        <Run Text="{Binding SeriesInformationProcessCount}"/>
+                        <Run Text="{Binding SeriesInformationCount}"/>
+                    </TextBlock>
+
+                    <TextBlock Margin="8,8,0,0">
+                        <Run Text="Series Entries Information Processes: "/>
+                        <Run Text="{Binding EntriesInformationCount}"/>
                     </TextBlock>
 
                     <TextBlock Margin="8,8,0,0">
@@ -65,7 +70,7 @@
                                Margin="0,8,0,0"
                                Style="{StaticResource MaterialDesignHeadlineTextBlock}"/>
 
-                    <Button Content="Bulk move series to a shelf"
+                    <Button Content="Bulk move books to a shelf"
                             Margin="0,8,0,0"
                             IsEnabled="False"
                             HorizontalAlignment="Left"/>

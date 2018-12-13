@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Panda.Collections;
 using ReactiveUI;
+using System;
 
 namespace BookCollector.Data
 {
@@ -19,6 +20,14 @@ namespace BookCollector.Data
         {
             get { return _Position; }
             set { this.RaiseAndSetIfChanged(ref _Position, value); }
+        }
+
+        // This is used to check for incomplete series
+        private DateTime _LastChecked;
+        public DateTime LastChecked
+        {
+            get { return _LastChecked; }
+            set { this.RaiseAndSetIfChanged(ref _LastChecked, value); }
         }
 
         private bool _MissingInCollection = true;

@@ -11,8 +11,10 @@
                        Width="100"
                        Content="{Binding Notes}"/>
         <Separator DockPanel.Dock="Right"/>
-        
-        <StatusBarItem DockPanel.Dock="Right" Width="100">Series: YYY</StatusBarItem>
+
+        <StatusBarItem DockPanel.Dock="Right"
+                       Width="100"
+                       Content="{Binding Series}"/>
         <Separator DockPanel.Dock="Right"/>
 
         <StatusBarItem DockPanel.Dock="Right" 

@@ -34,7 +34,8 @@ namespace BookCollector.Goodreads.Items
             var id = book.Metadata["GoodreadsBookId"];
             var goodreads_book = client.GetBookById(id, token);
 
-            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), token, TaskCreationOptions.DenyChildAttach, scheduler);
+            Task.Factory.StartNew(() => UpdateBook(book, goodreads_book), token, TaskCreationOptions.DenyChildAttach, scheduler)
+                        .Wait(token);
         }
 
         private void UpdateBook(Book book, GoodreadsBook goodreads_book)

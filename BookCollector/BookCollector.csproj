@@ -211,6 +211,7 @@
     <Compile Include="Goodreads\GoodreadsMapper.cs" />
     <Compile Include="Goodreads\Items\BookInformationItem.cs" />
     <Compile Include="Goodreads\Items\CheckCollectionItem.cs" />
+    <Compile Include="Goodreads\Items\SeriesEntryInformationItem.cs" />
     <Compile Include="Goodreads\Items\SeriesInformationItem.cs" />
     <Compile Include="Goodreads\Cache\ResponseCache.cs" />
     <Compile Include="Goodreads\TrimmingCsvReader.cs" />
@@ -318,10 +319,15 @@
     <Compile Include="Screens\Notes\NotesViewModel.cs" />
     <Compile Include="Screens\Notes\NoteViewModel.cs" />
     <Compile Include="Screens\Series\ISeriesModule.cs" />
+    <Compile Include="Screens\Series\SeriesEntryViewModel.cs" />
     <Compile Include="Screens\Series\SeriesModuleView.xaml.cs">
       <DependentUpon>SeriesModuleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\Series\SeriesModuleViewModel.cs" />
+    <Compile Include="Screens\Series\SeriesView.xaml.cs">
+      <DependentUpon>SeriesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Series\SeriesViewModel.cs" />
     <Compile Include="Screens\Settings\ISettingsModule.cs" />
     <Compile Include="Screens\Settings\SettingsModuleView.xaml.cs">
       <DependentUpon>SettingsModuleView.xaml</DependentUpon>
@@ -471,6 +477,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\Series\SeriesModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\Series\SeriesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

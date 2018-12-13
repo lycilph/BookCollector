@@ -25,6 +25,13 @@ namespace BookCollector.Screens.Common
             set { this.RaiseAndSetIfChanged(ref _Books, value); }
         }
 
+        private string _Series;
+        public string Series
+        {
+            get { return _Series; }
+            set { this.RaiseAndSetIfChanged(ref _Series, value); }
+        }
+
         private string _Notes;
         public string Notes
         {
@@ -40,12 +47,17 @@ namespace BookCollector.Screens.Common
                 .Subscribe(x => Name = $"Collection: {x}");
 
             var obs1 = this.WhenAnyValue(x => x.state_manager.CurrentCollection).Select(_ => Unit.Default);
+
             var obs2 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Books.CollectionChangedEx).Select(_ => Unit.Default);
             Observable.Merge(obs1, obs2)
                       .Subscribe(_ => Books = $"Books: {state_manager.CurrentCollection.Books.Count}");
 
-            var obs3 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Notes.CollectionChangedEx).Select(_ => Unit.Default);
+            var obs3 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Series.CollectionChangedEx).Select(_ => Unit.Default);
             Observable.Merge(obs1, obs3)
+                      .Subscribe(_ => Series = $"Series: {state_manager.CurrentCollection.Series.Count}");
+
+            var obs4 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Notes.CollectionChangedEx).Select(_ => Unit.Default);
+            Observable.Merge(obs1, obs4)
                       .Subscribe(_ => Notes = $"Notes: {state_manager.CurrentCollection.Notes.Count}");
         }
     }

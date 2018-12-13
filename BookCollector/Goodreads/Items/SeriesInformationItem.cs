@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using BookCollector.Application.Processor;
@@ -25,12 +26,18 @@ namespace BookCollector.Goodreads.Items
 
         public void Execute(CancellationToken token)
         {
+            // Check if this has already been processed
+            if (collection.Series.Any(s => s.Metadata["GoodreadsSeriesId"] == id))
+                return;
+
             var goodreads_series = client.GetSeriesById(id, token);
             var series = GoodreadsMapper.Map(goodreads_series);
+            series.LastChecked = DateTime.Now;
 
             log.Report($"Processing {series.Title}");
 
-            Task.Factory.StartNew(() => collection.Add(series), token, TaskCreationOptions.DenyChildAttach, scheduler);
+            Task.Factory.StartNew(() => collection.Add(series), token, TaskCreationOptions.DenyChildAttach, scheduler)
+                        .Wait(token);
         }
     }
 }

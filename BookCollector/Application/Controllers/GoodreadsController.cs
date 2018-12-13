@@ -41,9 +41,11 @@ namespace BookCollector.Application.Controllers
             client = new GoodreadsClient(cache_filename, api_secret_filename);
 
             // Check if the collection was changed
-            var obs1 = this.WhenAnyValue(x => x.state_manager.CurrentCollection).Select(_ => Unit.Default);
+            var obs1 = this.WhenAnyValue(x => x.state_manager.CurrentCollection)
+                           .Select(_ => Unit.Default);
             // Check if the number of books was changed
-            var obs2 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Books.CollectionChangedEx).Select(_ => Unit.Default);
+            var obs2 = this.WhenAnyObservable(x => x.state_manager.CurrentCollection.Books.CollectionChangedEx)
+                           .Select(_ => Unit.Default);
             // Check the collection for stuff to process
             Observable.Merge(obs1, obs2)
                       .Where(_ => state_manager.CurrentCollection != null)
@@ -65,10 +67,12 @@ namespace BookCollector.Application.Controllers
             var check_series = CheckSeries();
 
             // Check for series that needs to be updated
+
             // Check for series entries that needs to be updated
+            var check_entries = CheckSeriesEntries();
 
             // See if collection needs to check again
-            if (check_books || check_series)
+            if (check_books || check_series || check_entries)
                 background_processor.Add(new CheckCollectionItem(CheckCollection));
         }
 
@@ -93,12 +97,22 @@ namespace BookCollector.Application.Controllers
                                                  .Distinct();
             var known_series_ids = collection.Series.Select(s => s.Metadata["GoodreadsSeriesId"]);
             var ids_to_check = all_series_ids.Except(known_series_ids)
-                                                .ToList();
+                                             .ToList();
 
             foreach (var id in ids_to_check)
                 background_processor.Add(new SeriesInformationItem(client, id, collection, progress, scheduler));
 
             return ids_to_check.Any();
+        }
+
+        private bool CheckSeriesEntries()
+        {
+            var entries_to_check = state_manager.CurrentCollection.Series.SelectMany(s => s.Entries.Where(e => e.MissingInCollection && e.LastChecked.AddDays(7) <= DateTime.Now)).ToList();
+
+            foreach (var entry in entries_to_check)
+                background_processor.Add(new SeriesEntryInformationItem(client, entry, state_manager.CurrentCollection, progress, scheduler));
+
+            return entries_to_check.Any();
         }
     }
 }

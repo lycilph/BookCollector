@@ -37,7 +37,31 @@
                         <ContentControl panda:View.Bind="{Binding CollectionNavigationPart}"/>
                     </StackPanel>
 
-                    <ContentControl/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid Grid.Row="0"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  ItemsSource="{Binding Series}"
+                                  SelectedItem="{Binding SelectedSeries}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="2*"/>
+                                <DataGridTextColumn Header="Books in Series" Binding="{Binding EntriesCount}" Width="*"/>
+                                <DataGridCheckBoxColumn Header="Incomplete" Binding="{Binding Incomplete, Mode=OneWay}" Width="Auto"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <GridSplitter Grid.Column="1"
+                                      Style="{StaticResource horizontal_splitter}"/>
+
+                        <ContentControl Grid.Column="2"
+                                        panda:View.Bind="{Binding SelectedSeries}"/>
+                    </Grid>
                 </DockPanel>
             </DockPanel>
         </md:DrawerHost>

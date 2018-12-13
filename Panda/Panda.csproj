@@ -123,6 +123,7 @@
     <Compile Include="Behaviors\ScrollOnNewItemBehavior.cs" />
     <Compile Include="Collections\ObservableDictionary.cs" />
     <Compile Include="Converters\BoolToFontStyleConverter.cs" />
+    <Compile Include="Converters\InvertBooleanConverter.cs" />
     <Compile Include="Converters\StringEmptyToEnabledConverter.cs" />
     <Compile Include="Converters\StringJoinConverter.cs" />
     <Compile Include="Infrastructure\AssemblySource.cs" />
