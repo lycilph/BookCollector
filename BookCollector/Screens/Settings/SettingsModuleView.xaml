@@ -62,6 +62,42 @@
                                 Value="{Binding SnackbarMessageDuration}"/>
                     </StackPanel>
 
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0">
+                        <TextBlock Text="Primary"
+                                   VerticalAlignment="Center"
+                                   Width="75"/>
+                        <ComboBox IsEditable="False"
+                                  ItemsSource="{Binding PrimaryColors}"
+                                  SelectedItem="{Binding SelectedPrimaryColor}"
+                                  DisplayMemberPath="Name"
+                                  md:HintAssist.Hint="Select"
+                                  md:HintAssist.HintOpacity=".56"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0">
+                        <TextBlock Text="Accent" 
+                                   VerticalAlignment="Center"
+                                   Width="75"/>
+                        <ComboBox IsEditable="False"
+                                  ItemsSource="{Binding AccentColors}"
+                                  SelectedItem="{Binding SelectedAccentColor}"
+                                  DisplayMemberPath="Name"
+                                  md:HintAssist.Hint="Select"
+                                  md:HintAssist.HintOpacity=".56"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,8,0,0">
+                        <TextBlock Text="Light"
+                                   VerticalAlignment="Center"/>
+                        <ToggleButton IsChecked="{Binding IsThemeDark}"
+                                      Margin="6,0,4,0"/>
+                        <TextBlock Text="Dark"
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+
                     <Separator Margin="0,8,0,0" HorizontalAlignment="Stretch"/>
 
                     <TextBlock Text="Import"

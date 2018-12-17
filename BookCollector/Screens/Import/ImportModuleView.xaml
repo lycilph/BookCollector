@@ -98,7 +98,7 @@
                         <md:PopupBox DockPanel.Dock="Bottom"
                                      Margin="16"
                                      HorizontalAlignment="Right"
-                                     Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                                     Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}"
                                      PlacementMode="TopAndAlignCentres"
                                      PopupMode="MouseOver"
                                      ToolTipService.Placement="Left"

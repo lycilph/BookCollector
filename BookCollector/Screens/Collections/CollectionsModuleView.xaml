@@ -76,7 +76,7 @@
                          Margin="32"
                          HorizontalAlignment="Right"
                          VerticalAlignment="Bottom"
-                         Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
+                         Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}"
                          PlacementMode="TopAndAlignCentres"
                          PopupMode="MouseOver"
                          ToolTipService.Placement="Left"

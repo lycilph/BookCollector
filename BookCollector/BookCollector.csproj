@@ -182,6 +182,10 @@
       <DependentUpon>IGoodreadsController.cs</DependentUpon>
     </Compile>
     <Compile Include="Application\Controllers\IGoodreadsController.cs" />
+    <Compile Include="Application\Controllers\IThemeController.cs" />
+    <Compile Include="Application\Controllers\ThemeController.cs">
+      <DependentUpon>IThemeController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application\Processor\BackgroundProcessor.cs">
       <DependentUpon>IBackgroundProcessor.cs</DependentUpon>
     </Compile>

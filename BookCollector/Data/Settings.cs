@@ -10,6 +10,9 @@ namespace BookCollector.Data
     {
         public bool LoadMostRecentCollectionOnStart { get; set; } = false;
         public int SnackbarMessageDuration { get; set; } = 2;
+        public string PrimaryColorName { get; set; } = "lightblue";
+        public string AccentColorName { get; set; } = "cyan";
+        public bool IsDarkTheme { get; set; } = false;
         public bool EnableShelfMatching { get; set; } = true;
         public bool CreateUnmatchedShelves { get; set; } = true;
         public int MaxEditDistanceForShelfMatching { get; set; } = 3;

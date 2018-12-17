@@ -34,18 +34,21 @@ namespace BookCollector.Application.Controllers
         private ISearchEngine<Book> search_engine;
         private IBackgroundProcessor background_processor;
         private IGoodreadsController goodreads_controller;
+        private IThemeController theme_controller;
 
-        public ApplicationController(IStateManager state_manager, 
-                                     IShellViewModel shell, 
-                                     ISearchEngine<Book> search_engine, 
-                                     IBackgroundProcessor background_processor, 
-                                     IGoodreadsController goodreads_controller)
+        public ApplicationController(IStateManager state_manager,
+                                     IShellViewModel shell,
+                                     ISearchEngine<Book> search_engine,
+                                     IBackgroundProcessor background_processor,
+                                     IGoodreadsController goodreads_controller,
+                                     IThemeController theme_controller)
         {
             this.state_manager = state_manager;
             this.shell = shell;
             this.search_engine = search_engine;
             this.background_processor = background_processor;
             this.goodreads_controller = goodreads_controller;
+            this.theme_controller = theme_controller;
         }
 
         public void Initialize()
@@ -55,6 +58,7 @@ namespace BookCollector.Application.Controllers
             InitializeSearchEngine();
             InitializeSpellChecker();
             state_manager.Initialize();
+            theme_controller.Initialize();
             goodreads_controller.Initialize();
             background_processor.Start();
         }

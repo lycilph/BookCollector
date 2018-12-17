@@ -28,6 +28,7 @@ namespace BookCollector.Application
             BindAsSingleton<IApplicationController, ApplicationController>();
             BindAsSingleton<IImportController, ImportController>();
             BindAsSingleton<IGoodreadsController, GoodreadsController>();
+            BindAsSingleton<IThemeController, ThemeController>();
             BindAsSingleton<IStateManager, StateManager>();
             BindAsSingleton<IRepository, Repository>();
             BindAsSingleton<ISearchEngine<Book>, SearchEngine<Book>>();
